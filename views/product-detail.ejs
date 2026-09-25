@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= product.name %> - Chi tiết sản phẩm</title>
+    <link rel="stylesheet" href="/css/user.css">
+</head>
+<body>
+    <header class="header">
+        <div class="auth-container">
+            <a href="/" class="btn btn-back">⬅ Quay lại trang chủ</a>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="product-detail-container" style="display: flex; gap: 30px; margin-top: 20px;">
+            <div class="product-image-large" style="flex: 1;">
+                <img src="<%= product.image %>" alt="<%= product.name %>" style="width: 100%; border-radius: 8px;">
+            </div>
+            <div class="product-detail-info" style="flex: 1;">
+                <h2><%= product.name %></h2>
+                <p class="product-price" style="font-size: 24px; color: #e74c3c; font-weight: bold;">
+                    <%= product.price.toLocaleString('vi-VN') %> VNĐ
+                </p>
+                <p class="product-desc" style="margin: 20px 0;"><%= product.description %></p>
+                <!-- Bạn có thể bổ sung thêm nút Thêm vào giỏ hàng hoặc các thông tin khác ở đây -->
+            </div>
+        </div>
+    </main>
+</body>
+</html>

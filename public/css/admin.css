@@ -1,0 +1,178 @@
+/* =========================
+   Global
+========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 40px 20px;
+    font-family: Arial, sans-serif;
+    background: #f4f6f8;
+    color: #333;
+}
+
+
+/* =========================
+   Container
+========================= */
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+
+/* =========================
+   Header
+========================= */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 30px;
+}
+
+.header p {
+    margin: 6px 0 0;
+    color: #777;
+}
+
+
+/* =========================
+   Logout
+========================= */
+
+.logout button {
+    background: #dc3545;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.logout button:hover {
+    background: #c82333;
+}
+
+
+/* =========================
+   Card
+========================= */
+
+.card {
+    background: white;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.card h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 21px;
+}
+
+
+/* =========================
+   Form
+========================= */
+
+.form-group {
+    margin-bottom: 17px;
+}
+
+label {
+    display: block;
+    margin-bottom: 7px;
+    font-weight: bold;
+}
+
+input,
+textarea,
+select {
+    width: 100%;
+    padding: 11px 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    outline: none;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: #007bff;
+}
+
+textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+
+/* =========================
+   Buttons
+========================= */
+
+.btn {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-category {
+    background: #28a745;
+}
+
+.btn-category:hover {
+    background: #218838;
+}
+
+.btn-product {
+    background: #007bff;
+}
+
+.btn-product:hover {
+    background: #0069d9;
+}
+
+
+/* =========================
+   Responsive
+========================= */
+
+@media (max-width: 600px) {
+    body {
+        padding: 20px 12px;
+    }
+
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .logout {
+        width: 100%;
+    }
+
+    .logout button {
+        width: 100%;
+    }
+}

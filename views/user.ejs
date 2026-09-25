@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang chủ - Cửa hàng thú cưng</title>
+    <!-- Liên kết file CSS riêng -->
+    <link rel="stylesheet" href="/css/user.css">
+</head>
+<body>
+    <!-- Header: Phần đăng nhập / đăng xuất -->
+    <header class="header">
+        <div class="auth-container">
+            <% if (user) { %>
+                <div class="user-greeting">
+                    <h1>Xin chào, <span><%= user.userName %></span>!</h1>
+                    <form action="/logout" method="POST">
+                        <button type="submit" class="btn btn-logout">Đăng xuất</button>
+                    </form>
+                </div>
+            <% } else { %>
+                <div class="guest-greeting">
+                    <h1>Chào khách!</h1>
+                    <div class="auth-buttons">
+                        <form action="/login" method="GET">
+                            <button type="submit" class="btn btn-login">Đăng nhập</button>
+                        </form>
+                        <form action="/register" method="GET">
+                            <button type="submit" class="btn btn-register">Đăng ký</button>  
+                        </form>
+                    </div>
+                </div>
+            <% } %>
+        </div>
+    </header>
+
+    <!-- Main Content: Danh sách sản phẩm -->
+    <main class="main-content">
+        <h2>Danh sách sản phẩm</h2>
+        
+        <div class="product-grid">
+            <% if (products && products.length > 0) { %>
+                <% products.forEach(product => { %>
+                    <div class="product-card">
+                        <div class="product-image-wrapper">
+                            <img src="<%= product.image %>" alt="<%= product.name %>">
+                        </div>
+                        <div class="product-info">
+                            <h3><%= product.name %></h3>
+                            <!-- Dùng toLocaleString để định dạng giá tiền có dấu phẩy/chấm -->
+                            <p class="product-price"><%= product.price.toLocaleString('vi-VN') %> VNĐ</p>
+                            <p class="product-desc"><%= product.description %></p>
+                            <a href="/product/<%= product._id %>" class="btn btn-detail">Xem chi tiết</a>
+                        </div>
+                    </div>
+                <% }) %>
+            <% } else { %>
+                <p class="no-product">Không có sản phẩm nào.</p>
+            <% } %>
+        </div>
+    </main>
+</body>
+</html>
