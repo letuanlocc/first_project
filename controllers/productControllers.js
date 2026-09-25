@@ -3,7 +3,15 @@ const Category  = require('../models/Category');
 
 const addProduct = async (req, res) => {
     try {
-        const product = await Product.create(req.body);
+        const {name, price, description, category, stock} = req.body
+        const product = await Product.create({
+            name,
+            price,
+            description,
+            category,
+            stock,
+            image: req.imageUrl
+        });
         return res.status(201).json({
             message: "Thêm sản phẩm thành công!",
             data: product
@@ -147,7 +155,7 @@ const detailProduct = async(req,res) => {
     try{
         const productId = req.params.id
 
-        const product = await Product.findByPK(productId)
+        const product = await Product.findByPk(productId)
 
         if(!product){
             return res.status(404).json({

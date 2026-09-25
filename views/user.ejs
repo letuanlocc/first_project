@@ -50,7 +50,7 @@
                             <!-- Dùng toLocaleString để định dạng giá tiền có dấu phẩy/chấm -->
                             <p class="product-price"><%= product.price.toLocaleString('vi-VN') %> VNĐ</p>
                             <p class="product-desc"><%= product.description %></p>
-                            <a href="/product/<%= product._id %>" class="btn btn-detail">Xem chi tiết</a>
+                            <a href="/product/<%= product.id %>" class="btn btn-detail">Xem chi tiết</a>
                         </div>
                     </div>
                 <% }) %>

@@ -103,22 +103,22 @@ updateProductBtn.addEventListener("click", async () => {
     }
 });
 addProductBtn.addEventListener("click",async () => {
-    const productData = {
-        name: productName.value.trim(),
-        price: price.value,
-        description: description.value,
-        image: image.value,
-        category: category.value,
-        stock: stock.value
-    } 
+    const formData = new FormData()
+
+    formData.append("name", productName.value.trim());
+    formData.append("price", price.value);
+    formData.append("description", description.value);
+    formData.append("category", category.value);
+    formData.append("stock", stock.value);
+
+    if (image.files[0]) {
+        formData.append("image", image.files[0]);
+    }
 
     try{
         const response = await fetch(`/product/addProduct`,{
             method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify(productData)
+            body: formData
         })
 
         const data = await response.json() 

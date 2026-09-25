@@ -8,7 +8,7 @@ const requireForm = async(req,res,next) => {
                 error: "Tên danh mục không được để trống"
             })
         }
-        const find = await Product.findOne({name: name})
+        const find = await Product.findOne({where: {name: name}})
         
         if (find){
             return res.status(400).json({
