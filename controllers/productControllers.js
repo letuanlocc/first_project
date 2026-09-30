@@ -3,14 +3,14 @@ const Category  = require('../models/Category');
 
 const addProduct = async (req, res) => {
     try {
-        const {name, price, description, category, stock} = req.body
+        const {name, price, description, category_id, stock} = req.body
         const product = await Product.create({
             name,
             price,
             description,
-            category,
+            category_id,
             stock,
-            image: req.imageUrl
+            image_url: req.imageUrl
         });
         return res.status(201).json({
             message: "Thêm sản phẩm thành công!",
@@ -88,7 +88,7 @@ const updateProduct = async (req, res) => {
             data.price == productData.price &&
             data.description === productData.description &&
             data.image === productData.image &&
-            data.category.toString() === productData.category &&
+            data.category.toString() === productData.category_id &&
             data.stock == productData.stock;
         
         if(isSame){

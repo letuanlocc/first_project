@@ -9,8 +9,17 @@ const uploadToCloudinary = require("../middleware/cloudinaryMiddleware");
 router.post( 
     "/addProduct",
     upload.single("image"),
+    (req, res, next) => {
+
+        console.log("========== 2. MULTER ==========");
+        console.log("req.file:", req.file);
+        console.log("req.body:", req.body);
+
+        next();
+    },
     requireForm,
     uploadToCloudinary,
+    
     addProduct
 )
 router.get("/view",viewProduct )

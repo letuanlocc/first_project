@@ -28,8 +28,7 @@
     <!-- Thêm danh mục -->
     <div class="card">
         <h2>Thêm danh mục</h2>
-        <form>
-
+        <form enctype="multipart/form-data">
             <div class="form-group">
                 <label for="categoryName">Tên danh mục</label>
 
@@ -111,7 +110,7 @@
             <div class="form-group">
                 <label for="category">Danh mục</label>
 
-                <select name="category" id="category" required>
+                <select name="category_id" id="category" required>
 
                     <option value="">
                         -- Chọn danh mục --
@@ -119,7 +118,7 @@
 
                     <% Categories.forEach(Category => { %>
 
-                        <option value="<%= Category._id %>">
+                        <option value="<%= Category.id %>">
                             <%= Category.name %>
                         </option>
 

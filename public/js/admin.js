@@ -1,6 +1,5 @@
 
 let productId = null;
-let categoryId = null;
 const productName = document.getElementById("productName");
 const price = document.getElementById("price");
 const description = document.getElementById("description");
@@ -16,7 +15,7 @@ const productTableBody = document.getElementById('productTableBody');
 console.log("ADMIN JS RUN");
 console.log(updateProductBtn);
 searchProductBtn.addEventListener("click", async () => {
-
+    console.log("searchProduct ==========")
     const name = productName.value.trim();
 
     if (!name) {
@@ -43,16 +42,15 @@ searchProductBtn.addEventListener("click", async () => {
         }
 
         // Lưu ID sản phẩm
-        productId = product._id;
-
+        productId = product.id;
+        console.log("findInformation ========")
         // Điền thông tin
         productName.value = product.name;
         price.value = product.price;
         description.value = product.description || "";
         image.value = product.image || "";
         stock.value = product.stock;
-
-        category.value = product.category.toString();
+        category.value = product.category_id.toString();
 
         alert("Đã tìm thấy sản phẩm");
 
@@ -73,7 +71,7 @@ updateProductBtn.addEventListener("click", async () => {
         price: price.value,
         description: description.value,
         image: image.value,
-        category: category.value,
+        category_id: category.value,
         stock: stock.value
     };
 
@@ -108,7 +106,7 @@ addProductBtn.addEventListener("click",async () => {
     formData.append("name", productName.value.trim());
     formData.append("price", price.value);
     formData.append("description", description.value);
-    formData.append("category", category.value);
+    formData.append("category_id", category.value);
     formData.append("stock", stock.value);
 
     if (image.files[0]) {

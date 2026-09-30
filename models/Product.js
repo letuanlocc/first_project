@@ -18,7 +18,11 @@ const Product = sequelize.define('Product', {
   },
   image_url: {
     type: DataTypes.STRING(255)
-  }
+  },
+  category_id: {
+        type: DataTypes.INTEGER,
+        allowNull: true
+    }
 }, {
   tableName: 'products',
   timestamps: true
