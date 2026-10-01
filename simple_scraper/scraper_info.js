@@ -1,11 +1,11 @@
 const axios = require("axios");
 const cheerio = require("cheerio");
 const fs = require("fs");
-
+const path = require("path");
 async function scraper() {
     try {
-
-        const rawData = fs.readFileSync('categoryALL.json', 'utf8');
+        const filePath = path.join(__dirname, '../data/categoryALL.json');
+        const rawData = fs.readFileSync(filePath, 'utf8');
         const categories = JSON.parse(rawData);
 
         const allProducts = [];
@@ -13,7 +13,7 @@ async function scraper() {
         for (const item of categories) {
 
             const nameUrl = item.name || item.name_category;
-            
+            const name_category = nameUrl;
             if (!nameUrl) continue;
 
             const URL = `https://cellphones.com.vn/mobile/${nameUrl}.html`;
@@ -27,22 +27,21 @@ async function scraper() {
                     const price = $(element).find("a .box-info__box-price .product__price--show").text().trim();
                     const image_url = $(element).find('a img').attr('src');
 
-                    if (name) {
                         allProducts.push({
                             name,
                             price,
-                            image_url
+                            image_url,
+                            name_category
                         });
-                    }
                 });
 
             } catch (pageError) {
                 console.warn(`Bỏ qua trang ${URL} do lỗi:`, pageError.message);
             }
         }
-
+        
         fs.writeFileSync(
-            "data.json",
+            path.join(__dirname, '../data/data.json'),
             JSON.stringify(allProducts, null, 2)
         );
 

@@ -8,7 +8,7 @@ const authRoutes = require("./routes/authRoutes");
 const cookieParser =  require('cookie-parser');
 const userRoutes = require('./routes/userRoutes')
 const productRoutes = require('./routes/productRoutes')
-
+const categoryRoutes = require('./routes/categoryRoutes')
 const startServer = async () => {
 
   dotenv.config()
@@ -30,6 +30,7 @@ const startServer = async () => {
   app.use('/product', productRoutes);
   app.use('/admin', adminRoutes);
   app.use('/', userRoutes);
+  app.use('/category', categoryRoutes);
 
   const port = process.env.PORT || 3000
   app.listen(port, () => {

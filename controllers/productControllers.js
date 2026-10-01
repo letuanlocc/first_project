@@ -154,7 +154,7 @@ const deleteCategory = async(req,res) => {
 const detailProduct = async(req,res) => {
     try{
         const productId = req.params.id
-
+        const Categories = await Category.findAll();
         const product = await Product.findByPk(productId)
 
         if(!product){
@@ -163,7 +163,7 @@ const detailProduct = async(req,res) => {
             })
         }
 
-        res.render('product-detail', { product });
+        res.render('product-detail', { product, Categories, user: req.user });
     }catch(error){
          return res.status(500).json({
             error: "Lỗi hệ thống khi tìm kiếm danh mục"

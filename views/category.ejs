@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title><%= result.name %></title>
+
+    <!-- DÙNG CSS CỦA HOME -->
+    <link rel="stylesheet" href="/css/user.css">
+
+    <!-- CSS riêng cho category -->
+    <link rel="stylesheet" href="/css/category.css">
+</head>
+
+<body>
+
+    <!-- ================================================= -->
+    <!-- HEADER - GIỮ NGUYÊN HEADER CỦA HOME -->
+    <!-- ================================================= -->
+
+<header class="header">
+        <div class="header-container">
+
+            <!-- Logo -->
+            <a href="/" class="logo">
+                Phone<span>Shop</span>
+            </a>
+
+            <!-- Danh mục -->
+            <div class="category-dropdown">
+                <button class="category-btn">
+                    ☰
+                    <span>Danh mục</span>
+                </button>
+                <div class="category-list">
+                    <% Categories.forEach(Category => { %>
+                        <a href="/category/<%= Category.id %>">
+                            <%= Category.name %>
+                        </a>
+                    <% }) %>
+                </div>
+            </div>
+            <!-- Khu vực -->
+            <button class="location-btn">
+                ◉
+                <span>Đà Nẵng</span>
+            </button>
+
+            <!-- Search -->
+            <form class="search-box" action="/" method="GET">
+                <input
+                    type="text"
+                    name="search"
+                    placeholder="Bạn muốn mua gì hôm nay?"
+                >
+                <button type="submit">⌕</button>
+            </form>
+
+            <!-- Cart -->
+            <a href="/cart" class="header-link cart">
+                🛒
+                <span>Giỏ hàng</span>
+            </a>
+
+            <!-- Auth -->
+            <% if (user) { %>
+
+                <div class="user-menu">
+                    <span class="user-icon">◯</span>
+                    <span><%= user.userName %></span>
+
+                    <form action="/logout" method="POST">
+                        <button type="submit">Đăng xuất</button>
+                    </form>
+                </div>
+
+            <% } else { %>
+
+                <a href="/login" class="login-btn">
+                    ◯
+                    <span>Đăng nhập</span>
+                </a>
+
+            <% } %>
+
+        </div>
+    </header>
+
+    <!-- ================================================= -->
+    <!-- CATEGORY CONTENT -->
+    <!-- ================================================= -->
+
+    <main class="category-page">
+
+        <!-- Breadcrumb -->
+        <div class="category-breadcrumb">
+
+            <a href="/">
+                🏠 Trang chủ
+            </a>
+
+            <span>/</span>
+
+            <span>Điện thoại</span>
+
+            <span>/</span>
+
+            <span class="current">
+                <%= result.name %>
+            </span>
+
+        </div>
+
+
+        <!-- ================= BANNER ================= -->
+
+        <div class="category-banners">
+
+            <div class="category-banner">
+                <img src="" alt="">
+            </div>
+
+            <div class="category-banner">
+                <img src="" alt="">
+            </div>
+
+        </div>
+
+
+        <!-- ================= CATEGORY NAME ================= -->
+
+        <h1 class="category-title">
+            <%= result.name %>
+        </h1>
+
+
+        <!-- ================= SUB CATEGORY ================= -->
+
+
+        <!-- ================= FILTER ================= -->
+
+        <h2 class="section-title">
+            Chọn theo tiêu chí
+        </h2>
+
+
+        <div class="filter-list">
+
+            <button class="filter-btn active">
+                ⚱ Bộ lọc
+            </button>
+
+            <button class="filter-btn">
+                🚚 Sẵn hàng
+            </button>
+
+            <button class="filter-btn">
+                🛒 Hàng mới về
+            </button>
+
+            <button class="filter-btn">
+                ⓓ Xem theo giá
+            </button>
+
+            <button class="filter-btn">
+                Bộ nhớ trong
+                <span>⌄</span>
+            </button>
+
+            <button class="filter-btn">
+                Dung lượng RAM
+                <span>⌄</span>
+            </button>
+
+            <button class="filter-btn">
+                Kích thước màn hình
+                <span>⌄</span>
+            </button>
+
+            <button class="filter-btn">
+                Nhu cầu sử dụng
+                <span>⌄</span>
+            </button>
+
+            <button class="filter-btn">
+                Kiểu màn hình
+                <span>⌄</span>
+            </button>
+
+            <button class="filter-btn">
+                Tính năng camera
+                <span>⌄</span>
+            </button>
+
+            <button class="filter-btn">
+                Tần số quét
+                <span>⌄</span>
+            </button>
+
+            <button class="filter-btn">
+                Tính năng đặc biệt
+                <span>⌄</span>
+            </button>
+
+        </div>
+
+
+        <!-- ================= SORT ================= -->
+
+        <div class="sort-header">
+
+            <h2 class="section-title">
+                Sắp xếp theo
+            </h2>
+
+            <div class="sort-list">
+
+                <button class="sort-btn active">
+                    ☆ Phổ biến
+                </button>
+
+                <button class="sort-btn">
+                    ⚙ Khuyến mãi HOT
+                </button>
+
+                <button class="sort-btn">
+                    ☷ Giá Thấp - Cao
+                </button>
+
+                <button class="sort-btn">
+                    ☷ Giá Cao - Thấp
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- ================= PRODUCTS ================= -->
+        <div class="category-products">
+
+        <% if (result.Products && result.Products.length > 0) { %>
+
+        <% result.Products.forEach(product => { %>
+                    <div class="category-product-card">
+
+            <!-- IMAGE -->
+            <div class="category-product-image">
+
+                <a href="/product/<%= product.id %>">
+
+                    <img
+                        src="<%= product.image_url %>"
+                        alt="<%= product.name %>"
+                    >
+
+                </a>
+
+            </div>
+
+
+            <!-- INFO -->
+            <div class="category-product-info">
+
+                <!-- Tên -->
+                <a
+                    href="/product/<%= product.id %>"
+                    class="product-name"
+                >
+                    <%= product.name %>
+                </a>
+
+
+                <!-- Trạng thái -->
+                <div class="product-status">
+                    Hàng mới về
+                </div>
+
+
+                <!-- Giá -->
+                <div class="price-row">
+
+                    <span class="product-price">
+                        <%= Number(product.price).toLocaleString('vi-VN') %>đ
+                    </span>
+
+                </div>
+
+
+                <!-- Thông số -->
+                <div class="specs">
+
+                    <span>6.3 inches</span>
+
+                    <span>256 GB</span>
+
+                </div>
+
+
+                <!-- Khuyến mãi -->
+                <div class="promotion">
+                    Smember giảm đến 300.000đ
+                </div>
+
+
+                <!-- Rating -->
+                <div class="product-bottom">
+
+                    <div class="rating">
+                        <span>★</span>
+                        5
+                    </div>
+
+                    <button
+                        class="favorite"
+                        type="button"
+                    >
+                        ♡
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+        <% }) %>
+
+    <% } else { %>
+
+        <div class="no-products">
+            Không có sản phẩm nào trong danh mục này.
+        </div>
+
+    <% } %>
+
+</div>
+
+    </main>
+
+
+    <!-- Nút liên hệ -->
+    <button class="contact-button">
+        Liên hệ 🎧
+    </button>
+
+
+</body>
+</html>

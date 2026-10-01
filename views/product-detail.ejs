@@ -1,32 +1,309 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title><%= product.name %> - Chi tiết sản phẩm</title>
+
     <link rel="stylesheet" href="/css/user.css">
+    <link rel="stylesheet" href="/css/detail.css">
 </head>
+
 <body>
+
+    <!-- ================= HEADER ================= -->
     <header class="header">
-        <div class="auth-container">
-            <a href="/" class="btn btn-back">⬅ Quay lại trang chủ</a>
+
+        <div class="header-container">
+
+            <!-- Logo -->
+            <a href="/" class="logo">
+                cellphone<span>S</span>
+            </a>
+
+            <!-- Danh mục -->
+            <div class="category-dropdown">
+
+                <button class="category-btn">
+                    ☰
+                    <span>Danh mục</span>
+                    <span>⌄</span>
+                </button>
+
+                <div class="category-list">
+
+                    <% Categories.forEach(Category => { %>
+
+                        <a href="/category/<%= Category.id %>">
+                            <%= Category.name %>
+                        </a>
+
+                    <% }) %>
+
+                </div>
+
+            </div>
+
+            <!-- Location -->
+            <button class="location-btn">
+                📍 Đà Nẵng
+                <span>⌄</span>
+            </button>
+
+            <!-- Search -->
+            <div class="search-box">
+                <span>⌕</span>
+
+                <input
+                    type="text"
+                    placeholder="Bạn muốn mua gì hôm nay?"
+                >
+            </div>
+
+            <!-- Cart -->
+            <a href="#" class="cart-btn">
+                🛒
+                <span>Giỏ hàng</span>
+            </a>
+
+            <!-- Login -->
+            <% if (user) { %>
+
+                <a href="#" class="login-btn">
+                    <%= user.username %>
+                </a>
+
+            <% } else { %>
+
+                <a href="/login" class="login-btn">
+                    Đăng nhập
+                </a>
+
+            <% } %>
+
         </div>
+
     </header>
 
-    <main class="main-content">
-        <div class="product-detail-container" style="display: flex; gap: 30px; margin-top: 20px;">
-            <div class="product-image-large" style="flex: 1;">
-                <img src="<%= product.image %>" alt="<%= product.name %>" style="width: 100%; border-radius: 8px;">
-            </div>
-            <div class="product-detail-info" style="flex: 1;">
-                <h2><%= product.name %></h2>
-                <p class="product-price" style="font-size: 24px; color: #e74c3c; font-weight: bold;">
-                    <%= product.price.toLocaleString('vi-VN') %> VNĐ
-                </p>
-                <p class="product-desc" style="margin: 20px 0;"><%= product.description %></p>
-                <!-- Bạn có thể bổ sung thêm nút Thêm vào giỏ hàng hoặc các thông tin khác ở đây -->
-            </div>
+
+    <!-- ================= MAIN ================= -->
+
+    <main class="detail-container">
+
+        <!-- Breadcrumb -->
+
+        <div class="breadcrumb">
+
+            <a href="/">Trang chủ</a>
+
+            <span>/</span>
+
+            <span><%= product.name %></span>
+
         </div>
+
+
+        <!-- Product title -->
+
+        <h1 class="product-title">
+            <%= product.name %>
+        </h1>
+
+
+        <!-- Rating / actions -->
+
+        <div class="product-actions">
+
+            <span class="product-status">
+                ✓ Hàng mới
+            </span>
+
+            <span class="rating">
+                ⭐ 5
+            </span>
+
+            <span class="review">
+                (0 đánh giá)
+            </span>
+
+            <span class="action-item">
+                ♡ Yêu thích
+            </span>
+
+            <span class="action-item">
+                💬 Hỏi đáp
+            </span>
+
+            <span class="action-item">
+                ⚙ Thông số
+            </span>
+
+        </div>
+
+
+        <!-- ================= PRODUCT ================= -->
+
+        <div class="product-detail">
+
+            <!-- LEFT -->
+
+            <div class="product-left">
+
+                <div class="product-image-box">
+
+                    <img
+                        src="<%= product.image_url %>"
+                        alt="<%= product.name %>"
+                    >
+
+                </div>
+
+            </div>
+
+
+            <!-- RIGHT -->
+
+            <div class="product-right">
+
+                <!-- Price -->
+
+                <div class="price-box">
+
+                    <div>
+
+                        <div class="current-price">
+
+                            <%= Number(product.price).toLocaleString('vi-VN') %>đ
+
+                        </div>
+
+                        <div class="old-price">
+
+                            Giá niêm yết
+
+                        </div>
+
+                    </div>
+
+                    <div class="installment">
+
+                        Hoặc
+
+                        <strong>
+                            Trả góp
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Description -->
+
+                <div class="detail-section">
+
+                    <h2>Mô tả sản phẩm</h2>
+
+                    <% if (product.description) { %>
+
+                        <p>
+                            <%= product.description %>
+                        </p>
+
+                    <% } else { %>
+
+                        <p class="empty-description">
+                            Chưa có mô tả cho sản phẩm này.
+                        </p>
+
+                    <% } %>
+
+                </div>
+
+
+                <!-- Stock -->
+
+                <% if (product.stock !== undefined && product.stock !== null) { %>
+
+                    <div class="stock-box">
+
+                        <% if (product.stock > 0) { %>
+
+                            <span class="stock-success">
+                                ✓ Còn <%= product.stock %> sản phẩm
+                            </span>
+
+                        <% } else { %>
+
+                            <span class="stock-out">
+                                ✕ Hết hàng
+                            </span>
+
+                        <% } %>
+
+                    </div>
+
+                <% } %>
+
+
+                <!-- Buttons -->
+
+                <div class="buy-section">
+
+                    <button class="btn-add-cart">
+                        🛒 Thêm vào giỏ hàng
+                    </button>
+
+                    <button class="btn-buy-now">
+                        Mua ngay
+                    </button>
+
+                </div>
+
+
+                <!-- Benefits -->
+
+                <div class="benefits">
+
+                    <div class="benefit">
+                        🚚
+                        <div>
+                            <strong>Giao hàng nhanh</strong>
+                            <p>Giao hàng tận nơi</p>
+                        </div>
+                    </div>
+
+                    <div class="benefit">
+                        🔄
+                        <div>
+                            <strong>Đổi trả dễ dàng</strong>
+                            <p>Hỗ trợ đổi trả sản phẩm</p>
+                        </div>
+                    </div>
+
+                    <div class="benefit">
+                        🛡
+                        <div>
+                            <strong>Cam kết chính hãng</strong>
+                            <p>Đảm bảo chất lượng</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
     </main>
+
+
+    <!-- Contact -->
+
+    <button class="contact-button">
+        ☎ Liên hệ
+    </button>
+
 </body>
 </html>

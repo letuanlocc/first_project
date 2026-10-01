@@ -5,21 +5,13 @@ const { addProduct, addCategory, findProductByName, updateProduct, deleteProduct
 const {requireForm} = require('../middleware/productMiddleware')
 const upload = require("../middleware/uploadMiddleware");
 const uploadToCloudinary = require("../middleware/cloudinaryMiddleware");
+const Category  = require('../models/Category');
 
 router.post( 
     "/addProduct",
     upload.single("image"),
-    (req, res, next) => {
-
-        console.log("========== 2. MULTER ==========");
-        console.log("req.file:", req.file);
-        console.log("req.body:", req.body);
-
-        next();
-    },
     requireForm,
     uploadToCloudinary,
-    
     addProduct
 )
 router.get("/view",viewProduct )

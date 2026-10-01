@@ -1,63 +1,265 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trang chủ - Cửa hàng thú cưng</title>
-    <!-- Liên kết file CSS riêng -->
+    <title>Phone Shop</title>
     <link rel="stylesheet" href="/css/user.css">
 </head>
+
 <body>
-    <!-- Header: Phần đăng nhập / đăng xuất -->
+
+    <!-- HEADER -->
     <header class="header">
-        <div class="auth-container">
+        <div class="header-container">
+
+            <!-- Logo -->
+            <a href="/" class="logo">
+                Phone<span>Shop</span>
+            </a>
+
+            <!-- Danh mục -->
+            <div class="category-dropdown">
+                <button class="category-btn">
+                    ☰
+                    <span>Danh mục</span>
+                </button>
+                <div class="category-list">
+                    <% Categories.forEach(Category => { %>
+                        <a href="/category/<%= Category.id %>">
+                            <%= Category.name %>
+                        </a>
+                    <% }) %>
+                </div>
+            </div>
+            <!-- Khu vực -->
+            <button class="location-btn">
+                ◉
+                <span>Đà Nẵng</span>
+            </button>
+
+            <!-- Search -->
+            <form class="search-box" action="/" method="GET">
+                <input
+                    type="text"
+                    name="search"
+                    placeholder="Bạn muốn mua gì hôm nay?"
+                >
+                <button type="submit">⌕</button>
+            </form>
+
+            <!-- Cart -->
+            <a href="/cart" class="header-link cart">
+                🛒
+                <span>Giỏ hàng</span>
+            </a>
+
+            <!-- Auth -->
             <% if (user) { %>
-                <div class="user-greeting">
-                    <h1>Xin chào, <span><%= user.userName %></span>!</h1>
+
+                <div class="user-menu">
+                    <span class="user-icon">◯</span>
+                    <span><%= user.userName %></span>
+
                     <form action="/logout" method="POST">
-                        <button type="submit" class="btn btn-logout">Đăng xuất</button>
+                        <button type="submit">Đăng xuất</button>
                     </form>
                 </div>
+
             <% } else { %>
-                <div class="guest-greeting">
-                    <h1>Chào khách!</h1>
-                    <div class="auth-buttons">
-                        <form action="/login" method="GET">
-                            <button type="submit" class="btn btn-login">Đăng nhập</button>
-                        </form>
-                        <form action="/register" method="GET">
-                            <button type="submit" class="btn btn-register">Đăng ký</button>  
-                        </form>
-                    </div>
-                </div>
+
+                <a href="/login" class="login-btn">
+                    ◯
+                    <span>Đăng nhập</span>
+                </a>
+
             <% } %>
+
         </div>
     </header>
 
-    <!-- Main Content: Danh sách sản phẩm -->
-    <main class="main-content">
-        <h2>Danh sách sản phẩm</h2>
-        
-        <div class="product-grid">
-            <% if (products && products.length > 0) { %>
-                <% products.forEach(product => { %>
-                    <div class="product-card">
-                        <div class="product-image-wrapper">
-                            <img src="<%= product.image %>" alt="<%= product.name %>">
-                        </div>
-                        <div class="product-info">
-                            <h3><%= product.name %></h3>
-                            <!-- Dùng toLocaleString để định dạng giá tiền có dấu phẩy/chấm -->
-                            <p class="product-price"><%= product.price.toLocaleString('vi-VN') %> VNĐ</p>
-                            <p class="product-desc"><%= product.description %></p>
-                            <a href="/product/<%= product.id %>" class="btn btn-detail">Xem chi tiết</a>
-                        </div>
-                    </div>
-                <% }) %>
-            <% } else { %>
-                <p class="no-product">Không có sản phẩm nào.</p>
-            <% } %>
+
+    <!-- FILTER -->
+    <section class="filter-container">
+
+        <button class="filter-btn">
+            Nhu cầu sử dụng
+            <span>⌄</span>
+        </button>
+
+        <button class="filter-btn">
+            Kiểu màn hình
+            <span>⌄</span>
+        </button>
+
+        <button class="filter-btn">
+            Tính năng camera
+            <span>⌄</span>
+        </button>
+
+        <button class="filter-btn">
+            Tần số quét
+            <span>⌄</span>
+        </button>
+
+        <button class="filter-btn">
+            Tính năng đặc biệt
+            <span>⌄</span>
+        </button>
+
+    </section>
+
+
+    <!-- MAIN -->
+    <main class="main-container">
+
+        <!-- SORT -->
+        <div class="sort-container">
+
+            <h2>Sắp xếp theo</h2>
+
+            <div class="sort-buttons">
+
+                <button class="sort-btn active">
+                    ☆ Phổ biến
+                </button>
+
+                <button class="sort-btn">
+                    ⚙ Khuyến mãi HOT
+                </button>
+
+                <button class="sort-btn">
+                    ⇅ Giá Thấp - Cao
+                </button>
+
+                <button class="sort-btn">
+                    ⇵ Giá Cao - Thấp
+                </button>
+
+            </div>
+
         </div>
+
+
+        <!-- PRODUCTS -->
+        <div class="product-grid">
+
+            <% if (products && products.length > 0) { %>
+
+                <% products.forEach(product => { %>
+
+                    <div class="product-card">
+
+                        <!-- Discount -->
+                        <div class="discount">
+                            Giảm 10%
+                        </div>
+
+                        <!-- Installment -->
+                        <div class="installment">
+                            Trả góp 0%
+                        </div>
+
+
+                        <!-- IMAGE -->
+                        <a
+                            href="/product/<%= product.id %>"
+                            class="product-image"
+                        >
+                            <img
+                                src="<%= product.image_url %>"
+                                alt="<%= product.name %>"
+                            >
+                        </a>
+
+
+                        <!-- INFO -->
+                        <div class="product-info">
+                            <a
+                                href="/product/<%= product.id %>"
+                                class="product-name"
+                            >
+                                <%= product.name %>
+                            </a>
+
+
+                            <!-- Status -->
+                            <div class="product-status">
+                                Hàng mới về
+                            </div>
+
+
+                            <!-- PRICE -->
+                            <div class="price-row">
+
+                                <span class="product-price">
+                                    <%= Number(product.price).toLocaleString('vi-VN') %>đ
+                                </span>
+
+                            </div>
+
+
+                            <!-- Specs -->
+                            <div class="specs">
+
+                                <span>6.3 inches</span>
+
+                                <span>256 GB</span>
+
+                            </div>
+
+
+                            <!-- Promotion -->
+                            <div class="promotion">
+                                Smember giảm đến 300.000đ
+                            </div>
+
+
+                            <!-- Rating -->
+                            <div class="product-bottom">
+
+                                <div class="rating">
+                                    <span>★</span>
+                                    5
+                                </div>
+
+                                <button class="favorite">
+                                    ♡
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                <% }) %>
+
+            <% } else { %>
+
+                <div class="no-product">
+                    Không có sản phẩm nào.
+                </div>
+
+            <% } %>
+
+        </div>
+
     </main>
+
+
+    <!-- BACK TO TOP -->
+    <button class="back-top">
+        Lên đầu
+        <span>⌃</span>
+    </button>
+
+
+    <!-- CONTACT -->
+    <button class="contact">
+        Liên hệ
+        <span>◉</span>
+    </button>
+
 </body>
 </html>
