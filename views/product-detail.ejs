@@ -138,54 +138,33 @@
             <span class="action-item">
                 ⚙ Thông số
             </span>
-
         </div>
-
-
         <!-- ================= PRODUCT ================= -->
-
         <div class="product-detail">
-
             <!-- LEFT -->
-
             <div class="product-left">
-
                 <div class="product-image-box">
-
                     <img
                         src="<%= product.image_url %>"
                         alt="<%= product.name %>"
                     >
-
                 </div>
-
             </div>
-
-
             <!-- RIGHT -->
-
             <div class="product-right">
-
-                <!-- Price -->
-
+              <!-- Price -->
                 <div class="price-box">
-
                     <div>
-
                         <div class="current-price">
 
                             <%= Number(product.price).toLocaleString('vi-VN') %>đ
-
                         </div>
-
-                        <div class="old-price">
+                        <!-- <div class="old-price">
 
                             Giá niêm yết
 
-                        </div>
-
+                        </div> -->
                     </div>
-
                     <div class="installment">
 
                         Hoặc

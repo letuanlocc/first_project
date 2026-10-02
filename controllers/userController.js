@@ -11,7 +11,6 @@ const categoryDetailAndRender = async (req, res) => {
         if (!result) {
             return res.status(404).send("Không tìm thấy category");
         }
-        console.log("Kết quả tìm kiếm category:", result);
         res.render("category", {
             Categories,
             result,
