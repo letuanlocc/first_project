@@ -26,11 +26,13 @@ async function scraper() {
                     const name = $(element).find("a .product__name").text().trim();
                     const price = $(element).find("a .box-info__box-price .product__price--show").text().trim();
                     const image_url = $(element).find('a img').attr('src');
+                    const href = $(element).find('a').attr('href');
 
                         allProducts.push({
                             name,
                             price,
                             image_url,
+                            href,
                             name_category
                         });
                 });
@@ -41,11 +43,11 @@ async function scraper() {
         }
         
         fs.writeFileSync(
-            path.join(__dirname, '../data/data.json'),
+            path.join(__dirname, '../data/data_href.json'),
             JSON.stringify(allProducts, null, 2)
         );
 
-        console.log(`Hoàn tất! Đã lưu tổng cộng ${allProducts.length} sản phẩm vào file data.json`);
+        console.log(`Hoàn tất! Đã lưu tổng cộng ${allProducts.length} sản phẩm vào file data_href.json`);
 
     } catch (error) {
         console.error("Scraping error:", error.message);

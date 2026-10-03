@@ -619,3 +619,146 @@ body {
     }
 
 }
+/* ================= TECHNICAL SPECS ================= */
+
+.technical-specs {
+    grid-column: 1 / -1;
+    width: 100%;
+    margin-top: 35px;
+    padding: 0;
+}
+
+/* Header */
+.specs-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 16px;
+}
+
+.specs-header h2 {
+    margin: 0;
+
+    font-size: 24px;
+    font-weight: 600;
+
+    color: #222;
+}
+
+.view-all {
+    color: #1677ff;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    text-decoration: none;
+}
+
+.view-all:hover {
+    text-decoration: underline;
+}
+
+
+/* ================= TABLE ================= */
+
+.specs-table {
+    width: 100%;
+
+    border: 1px solid #ddd;
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    background: white;
+}
+
+
+/* Một dòng */
+.spec-row {
+    display: grid;
+
+    grid-template-columns: 220px minmax(0, 1fr);
+
+    border-bottom: 1px solid #ddd;
+}
+
+.spec-row:last-child {
+    border-bottom: none;
+}
+
+
+/* Cột tên thông số */
+.spec-name {
+    display: flex;
+    align-items: flex-start;
+
+    background: #f3f3f3;
+
+    padding: 14px 20px;
+
+    font-size: 17px;
+
+    color: #555;
+
+    border-right: 1px solid #ddd;
+
+    line-height: 1.5;
+}
+
+
+/* Cột giá trị */
+.spec-value {
+    padding: 14px 20px;
+
+    font-size: 17px;
+
+    color: #555;
+
+    line-height: 1.5;
+
+    white-space: pre-line;
+
+    overflow-wrap: anywhere;
+}
+
+
+/* ================= EMPTY ================= */
+
+.empty-description {
+    margin: 0;
+
+    padding: 20px;
+
+    color: #888;
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 600px) {
+
+    .technical-specs {
+        margin-top: 25px;
+    }
+
+    .specs-header h2 {
+        font-size: 20px;
+    }
+
+    .view-all {
+        font-size: 14px;
+    }
+
+    .spec-row {
+        grid-template-columns: 130px minmax(0, 1fr);
+    }
+
+    .spec-name,
+    .spec-value {
+        padding: 12px;
+
+        font-size: 14px;
+    }
+}

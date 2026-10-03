@@ -1,0 +1,4087 @@
+[
+  {
+    "name": "iPhone 18 Pro 256GB",
+    "description": {
+      "Hệ điều hành khi ra mắt": "iOS 27",
+      "Chipset": "A20 Pro",
+      "Bộ nhớ trong": "256 GB",
+      "Loại CPU": "CPU 6 lõi với 2 siêu lõi và 4 lõi hiệu suất",
+      "GPU": "GPU 7 lõi",
+      "Kích thước màn hình": "6.3 inches",
+      "Công nghệ màn hình": "Super Retina XDR",
+      "Độ phân giải màn hình": "2622 x 1206  pixels",
+      "Tính năng màn hình": "Tần số quét 120 HzĐộ sáng tối đa 3000 nits ngoài trờiĐộ sáng 1000 nit tiêu chuẩnĐộ sáng đỉnh 1600 nit HDRĐộ sáng tối thiểu 1 nitDynamic IslandMàn hình Luôn BậtProMotionHDRTrue ToneDải màu rộng P3Haptic Touch",
+      "Camera sau": "48 MP Fusion Main, f/1,48 / f/1,8 / f/2,8 / f/4,048 MP Fusion Ultra Wide, f/2,248 MP Fusion Telephoto, f/2,8Telephoto 2x chất lượng quang học 12 MPTelephoto 8x chất lượng quang học 12 MP, f/2,8",
+      "Camera trước": "18 MP Center Stagef/1,9 Tự động lấy nét theo pha Focus Pixels",
+      "Pin": "Pin lithium-ion tích hợp",
+      "Hỗ trợ mạng": "5G",
+      "Thẻ SIM": "Nano-SIM + eSIM",
+      "Công nghệ NFC": "Có",
+      "Thời điểm ra mắt": "09/2026"
+    }
+  },
+  {
+    "name": "iPhone 17 Pro 256GB | Chính hãng",
+    "description": {
+      "Hệ điều hành khi ra mắt": "iOS 26",
+      "Chipset": "Chip A19 Pro",
+      "Bộ nhớ trong": "256 GB",
+      "Loại CPU": "CPU 6 lõi với 2 lõi hiệu năng và 4 lõi tiết kiệm điện",
+      "GPU": "GPU 6 lõi với Neural Accelerator",
+      "Kích thước màn hình": "6.3 inches",
+      "Công nghệ màn hình": "Super Retina XDR",
+      "Độ phân giải màn hình": "2622 x 1206  pixels",
+      "Tính năng màn hình": "Màn hình Luôn Bật, ProMotion 120Hz, HDR, True Tone, Dải màu rộng (P3), Haptic Touch, Tỷ lệ tương phản 2.000.000:1, Độ sáng 1000 nit (tiêu chuẩn), 1600 nit (HDR), 3000 nit (ngoài trời) / tối thiểu 1 nit, Lớp phủ kháng dầu, Chống phản chiếu, Hỗ trợ đa ngôn",
+      "Camera sau": "Chính: 48MP khẩu độ ƒ/1.6 OIS hỗ trợ chụp 24MP hoặc 48MPGóc Siêu Rộng: 48MP khẩu độ ƒ/2.2 góc nhìn 120°Telephoto: 48MP khẩu độ ƒ/2.8 OIS zoom quang học lên đến 8x",
+      "Camera trước": "Camera 18MP Center Stage Khẩu độ ƒ/1.9",
+      "Thẻ SIM": "Sim kép (nano-Sim và e-Sim) - Hỗ trợ 2 e-Sim",
+      "Công nghệ NFC": "Có",
+      "Thời điểm ra mắt": "09/2025"
+    }
+  },
+  {
+    "name": "iPhone 18 Pro Max 256GB",
+    "description": {
+      "Hệ điều hành khi ra mắt": "iOS 27",
+      "Chipset": "Apple A20 Pro",
+      "Bộ nhớ trong": "256 GB",
+      "Loại CPU": "CPU 6 lõi với 2 siêu lõi và 4 lõi hiệu suất",
+      "GPU": "GPU 7 lõi",
+      "Kích thước màn hình": "6.9 inches",
+      "Công nghệ màn hình": "Super Retina XDR",
+      "Độ phân giải màn hình": "2868 x 1320 pixels",
+      "Tính năng màn hình": "Tần số quét 120 HzĐộ sáng tối đa 3000 nits ngoài trờiĐộ sáng 1000 nit tiêu chuẩnĐộ sáng đỉnh 1600 nit HDRĐộ sáng tối thiểu 1 nitDynamic IslandMàn hình Luôn BậtProMotionHDRTrue ToneDải màu rộng P3Haptic Touch",
+      "Camera sau": "48 MP Fusion Main, f/1,48 / f/1,8 / f/2,8 / f/4,048 MP Fusion Ultra Wide, f/2,248 MP Fusion Telephoto, f/2,8Telephoto 2x chất lượng quang học 12 MPTelephoto 8x chất lượng quang học 12 MP, f/2,8",
+      "Camera trước": "18 MP Center Stage, f/1,9Tự động lấy nét theo pha Focus Pixels",
+      "Pin": "Pin lithium-ion tích hợp",
+      "Hỗ trợ mạng": "5G",
+      "Thẻ SIM": "Nano-SIM + eSIM",
+      "Công nghệ NFC": "Có",
+      "Thời điểm ra mắt": "09/2026"
+    }
+  },
+  {
+    "name": "iPhone 17 Pro Max 256GB | Chính hãng",
+    "description": {
+      "Hệ điều hành khi ra mắt": "iOS 26",
+      "Chipset": "Chip A19 Pro",
+      "Bộ nhớ trong": "256 GB",
+      "Loại CPU": "CPU 6 lõi với 2 lõi hiệu năng và 4 lõi tiết kiệm điện",
+      "GPU": "GPU 6 lõi với Neural Accelerator",
+      "Kích thước màn hình": "6.9 inches",
+      "Công nghệ màn hình": "Super Retina XDR",
+      "Độ phân giải màn hình": "2868 x 1320 pixels",
+      "Tính năng màn hình": "Màn hình Luôn Bật, ProMotion 120Hz, HDR, True Tone, Dải màu rộng (P3), Haptic Touch, Tỷ lệ tương phản 2.000.000:1, Độ sáng 1000 nit (tiêu chuẩn), 1600 nit (HDR), 3000 nit (ngoài trời) / tối thiểu 1 nit, Lớp phủ kháng dầu, Chống phản chiếu, Hỗ trợ đa ngôn",
+      "Camera sau": "Chính: 48MP khẩu độ ƒ/1.6 OIS hỗ trợ chụp 24MP hoặc 48MPGóc Siêu Rộng: 48MP khẩu độ ƒ/2.2 góc nhìn 120°Telephoto: 48MP khẩu độ ƒ/2.8 OIS zoom quang học lên đến 8x",
+      "Camera trước": "Camera 18MP Center Stage Khẩu độ ƒ/1.9",
+      "Hỗ trợ mạng": "5G",
+      "Thẻ SIM": "Sim kép (nano-Sim và e-Sim) - Hỗ trợ 2 e-Sim",
+      "Công nghệ NFC": "Có",
+      "Thời điểm ra mắt": "09/2025"
+    }
+  },
+  {
+    "name": "iPhone 17 256GB | Chính hãng",
+    "description": {
+      "Hệ điều hành khi ra mắt": "iOS 26",
+      "Chipset": "Apple A19",
+      "Bộ nhớ trong": "256 GB",
+      "Loại CPU": "6 lõi (2 hiệu năng + 4 tiết kiệm điện)",
+      "GPU": "GPU 5 lõi với Neural Accelerator",
+      "Kích thước màn hình": "6.3 inches",
+      "Công nghệ màn hình": "Super Retina XDR OLED",
+      "Độ phân giải màn hình": "2622 x 1206  pixels",
+      "Tính năng màn hình": "Dynamic IslandMàn hình luôn bậtHDR460 ppiTrue ToneDải màu rộng (P3)Haptic TouchTỷ lệ tương phản 2.000.000:1Độ sáng 1000 nit (typ)Đỉnh 1600 nit (HDR)Đỉnh 3000 nit (ngoài trời)Lớp phủ chống vân tay, chống phản chi",
+      "Camera sau": "48MP Fusion Main f/1.6 OIS12MP Tele 2x f/1.6 OIS48MP Ultra Wide f/2.2 120°",
+      "Camera trước": "18MP Center Stage, f/1.9, PDAF",
+      "Pin": "Xem video: 30 giờXem video trực tuyến: 27 giờ",
+      "Hỗ trợ mạng": "5G",
+      "Thẻ SIM": "Sim kép (nano-Sim và e-Sim) - Hỗ trợ 2 e-Sim",
+      "Công nghệ NFC": "Có",
+      "Thời điểm ra mắt": "09/2025"
+    }
+  },
+  {
+    "name": "iPhone 18 Pro Max 2TB",
+    "description": {
+      "Hệ điều hành khi ra mắt": "iOS 27",
+      "Chipset": "Chip A20 Pro",
+      "Bộ nhớ trong": "2 TB",
+      "Loại CPU": "CPU 6 lõi với 2 siêu lõi và 4 lõi hiệu suất",
+      "GPU": "GPU 7 lõi",
+      "Kích thước màn hình": "6.9 inches",
+      "Công nghệ màn hình": "Super Retina XDR",
+      "Độ phân giải màn hình": "2868 x 1320 pixels",
+      "Tính năng màn hình": "Công nghệ ProMotion 120Hz, Màn hình HDR, Tỷ lệ tương phản 2.000.000:1, Màu rộng (P3), Độ sáng tối đa 1000 nits (điển hình), Độ sáng đỉnh 1600 nits (HDR), Độ sáng đỉnh 3000 nits (ngoài trời), Độ sáng tối thiểu 1 nit",
+      "Camera sau": "Chính (Fusion Main) 48MPGóc siêu rộng (Fusion Ultra Wide) 48MPTelephoto (Fusion Telephoto) 48MPZoom quang học 8x, zoom quang học 2x, dải zoom quang học 16x, zoom kỹ thuật số lên đến 40x",
+      "Camera trước": "18MP Center Stage, ƒ/1.9",
+      "Pin": "Pin lithium-ion tích hợp",
+      "Hỗ trợ mạng": "5G",
+      "Công nghệ NFC": "Có",
+      "Thời điểm ra mắt": "09/2026"
+    }
+  },
+  {
+    "name": "iPhone 18 Pro Max 512GB",
+    "description": {
+      "Hệ điều hành khi ra mắt": "iOS 27",
+      "Chipset": "Chip A20 Pro",
+      "Bộ nhớ trong": "512 GB",
+      "Loại CPU": "CPU 6 lõi với 2 siêu lõi và 4 lõi hiệu suất",
+      "GPU": "GPU 7 lõi",
+      "Kích thước màn hình": "6.9 inches",
+      "Công nghệ màn hình": "Super Retina XDR",
+      "Độ phân giải màn hình": "2868 x 1320 pixels",
+      "Tính năng màn hình": "Tần số quét 120 HzĐộ sáng tối đa 3000 nits ngoài trờiĐộ sáng 1000 nit tiêu chuẩnĐộ sáng đỉnh 1600 nit HDRĐộ sáng tối thiểu 1 nitDynamic IslandMàn hình Luôn BậtProMotionHDRTrue ToneDải màu rộng P3Haptic Touch",
+      "Camera sau": "48 MP Fusion Main, f/1,48 / f/1,8 / f/2,8 / f/4,048 MP Fusion Ultra Wide, f/2,248 MP Fusion Telephoto, f/2,8Telephoto 2x chất lượng quang học 12 MPTelephoto 8x chất lượng quang học 12 MP, f/2,8",
+      "Camera trước": "18 MP Center Stage, f/1,9Tự động lấy nét theo pha Focus Pixels",
+      "Pin": "Pin lithium-ion tích hợp",
+      "Hỗ trợ mạng": "5G",
+      "Thẻ SIM": "2 Nano-SIM + eSIM",
+      "Công nghệ NFC": "Có",
+      "Thời điểm ra mắt": "09/2026"
+    }
+  },
+  {
+    "name": "iPhone 18 Pro 2TB",
+    "description": {
+      "Hệ điều hành khi ra mắt": "iOS 27",
+      "Chipset": "A20 Pro",
+      "Bộ nhớ trong": "2 TB",
+      "Loại CPU": "CPU 6 lõi với 2 siêu lõi và 4 lõi hiệu suất",
+      "GPU": "GPU 7 lõi",
+      "Kích thước màn hình": "6.3 inches",
+      "Công nghệ màn hình": "Super Retina XDR",
+      "Độ phân giải màn hình": "2622 x 1206  pixels",
+      "Tính năng màn hình": "Tần số quét 120 HzĐộ sáng tối đa 3000 nits ngoài trờiĐộ sáng 1000 nit tiêu chuẩnĐộ sáng đỉnh 1600 nit HDRĐộ sáng tối thiểu 1 nitDynamic IslandMàn hình Luôn BậtProMotionHDRTrue ToneDải màu rộng P3Haptic Touch",
+      "Camera sau": "48 MP Fusion Main, f/1,48 / f/1,8 / f/2,8 / f/4,048 MP Fusion Ultra Wide, f/2,248 MP Fusion Telephoto, f/2,8Telephoto 2x chất lượng quang học 12 MPTelephoto 8x chất lượng quang học 12 MP, f/2,8",
+      "Camera trước": "18 MP Center Stagef/1,9 Tự động lấy nét theo pha Focus Pixels",
+      "Pin": "Pin lithium-ion tích hợp",
+      "Hỗ trợ mạng": "5G",
+      "Thẻ SIM": "Nano-SIM + eSIM",
+      "Công nghệ NFC": "Có",
+      "Thời điểm ra mắt": "09/2026"
+    }
+  },
+  {
+    "name": "iPhone Air 256GB | Chính hãng",
+    "description": {
+      "Hệ điều hành khi ra mắt": "iOS 26",
+      "Chipset": "Chip A19 Pro",
+      "Bộ nhớ trong": "256 GB",
+      "Loại CPU": "6 lõi (2 hiệu năng + 4 tiết kiệm điện)",
+      "GPU": "GPU 5 lõi với Neural Accelerator",
+      "Kích thước màn hình": "6.5 inches",
+      "Công nghệ màn hình": "Super Retina XDR",
+      "Độ phân giải màn hình": "2736 x 1260 pixels",
+      "Tính năng màn hình": "Dynamic IslandMàn hình luôn bậtHDR460 ppiTrue ToneDải màu rộng (P3)Haptic TouchTỷ lệ tương phản 2.000.000:1Độ sáng 1000 nit (typ)Đỉnh 1600 nit (HDR)Đỉnh 3000 nit (ngoài trời)Lớp phủ chống vân tay, chống phản chi",
+      "Camera sau": "48MP Fusion Main f/1.6",
+      "Camera trước": "18MP Center Stage f/1.6",
+      "Pin": "Xem video: 27 giờXem video trực tuyến: 22 giờ",
+      "Hỗ trợ mạng": "5G",
+      "Thẻ SIM": "2 eSIM",
+      "Công nghệ NFC": "Có",
+      "Thời điểm ra mắt": "09/2025"
+    }
+  },
+  {
+    "name": "iPhone 17 Pro Max 512GB | Chính hãng",
+    "description": {
+      "Hệ điều hành khi ra mắt": "iOS 26",
+      "Chipset": "Chip A19 Pro",
+      "Bộ nhớ trong": "512 GB",
+      "Loại CPU": "CPU 6 lõi với 2 lõi hiệu năng và 4 lõi tiết kiệm điện",
+      "GPU": "GPU 6 lõi với Neural Accelerator",
+      "Kích thước màn hình": "6.9 inches",
+      "Công nghệ màn hình": "Super Retina XDR",
+      "Độ phân giải màn hình": "2868 x 1320 pixels",
+      "Tính năng màn hình": "Màn hình Luôn Bật, ProMotion 120Hz, HDR, True Tone, Dải màu rộng (P3), Haptic Touch, Tỷ lệ tương phản 2.000.000:1, Độ sáng 1000 nit (tiêu chuẩn), 1600 nit (HDR), 3000 nit (ngoài trời) / tối thiểu 1 nit, Lớp phủ kháng dầu, Chống phản chiếu, Hỗ trợ đa ngôn",
+      "Camera sau": "Chính: 48MP khẩu độ ƒ/1.6 OIS hỗ trợ chụp 24MP hoặc 48MPGóc Siêu Rộng: 48MP khẩu độ ƒ/2.2 góc nhìn 120°Telephoto: 48MP khẩu độ ƒ/2.8 OIS zoom quang học lên đến 8x",
+      "Camera trước": "Camera 18MP Center Stage Khẩu độ ƒ/1.9",
+      "Hỗ trợ mạng": "5G",
+      "Công nghệ NFC": "Có",
+      "Thời điểm ra mắt": "09/2025"
+    }
+  },
+  {
+    "name": "Điện thoại iPhone 16 Pro Max 256GB",
+    "description": {
+      "Hệ điều hành khi ra mắt": "iOS 18",
+      "Chipset": "Apple A18 Pro",
+      "Dung lượng RAM": "8 GB",
+      "Bộ nhớ trong": "256 GB",
+      "Loại CPU": "CPU 6 lõi mới với 2 lõi hiệu năng và 4 lõi hiệu suất",
+      "GPU": "GPU 6 lõi mới",
+      "Kích thước màn hình": "6.9 inches",
+      "Công nghệ màn hình": "Super Retina XDR OLED",
+      "Độ phân giải màn hình": "2868 x 1320 pixels",
+      "Tính năng màn hình": "Dynamic IslandMàn hình Luôn Bật Công nghệ ProMotion với tốc độ làm mới thích ứng lên đến 120Hz Màn hình HDR True Tone Dải màu rộng (P3) Haptic Touch Tỷ lệ tương phản 2.000.000:1",
+      "Camera sau": "Camera chính: 48MP, f/1.78, 24mm, 2µm, chống rung quang học dịch chuyển cảm biến thế hệ thứ hai, Focus Pixels 100%Telephoto 2x 12MP: 52 mm, ƒ/1.6 Camera góc siêu rộng: 48MP, 13 mm,ƒ/2.2 và trường ảnh 120°, Hybrid Focus Pixels, ảnh có độ phân giải",
+      "Camera trước": "12MP, ƒ/1.9, Tự động lấy nét theo pha Focus Pixels",
+      "Hỗ trợ mạng": "5G",
+      "Thẻ SIM": "Sim kép (nano-Sim và e-Sim) - Hỗ trợ 2 e-Sim",
+      "Công nghệ NFC": "Có",
+      "Thời điểm ra mắt": "09/2024"
+    }
+  },
+  {
+    "name": "iPhone 15 128GB | Chính hãng VN/A",
+    "description": {
+      "Hệ điều hành khi ra mắt": "iOS 17",
+      "Chipset": "Apple A16 Bionic 6 nhân",
+      "Dung lượng RAM": "6 GB",
+      "Bộ nhớ trong": "128 GB",
+      "Loại CPU": "CPU 6 lõi với 2 lõi hiệu năng và 4 lõi tiết kiệm điện",
+      "GPU": "5‑core GPU",
+      "Kích thước màn hình": "6.1 inches",
+      "Công nghệ màn hình": "Super Retina XDR OLED",
+      "Độ phân giải màn hình": "2556 x 1179 pixels",
+      "Tính năng màn hình": "Dynamic Island HDR display True Tone Wide color (P3) Haptic TouchLớp phủ oleophobia chống dấu vân tayĐộ sáng tối đa: 2000 nitsMặt kính cảm ứng: Kính cường lực Ceramic ShieldTần số quét 60 Hz",
+      "Camera sau": "Chính 48 MP & Phụ 12 MP",
+      "Camera trước": "12MP, ƒ/1.9",
+      "Pin": "3349 mAh",
+      "Hỗ trợ mạng": "5G",
+      "Thẻ SIM": "2 SIM (nano‑SIM và eSIM)",
+      "Công nghệ NFC": "Có",
+      "Thời điểm ra mắt": "09/2023"
+    }
+  },
+  {
+    "name": "iPhone 17 Pro 512GB | Chính hãng",
+    "description": {
+      "Hệ điều hành khi ra mắt": "iOS 26",
+      "Chipset": "Chip A19 Pro",
+      "Bộ nhớ trong": "512 GB",
+      "Loại CPU": "CPU 6 lõi với 2 lõi hiệu năng và 4 lõi tiết kiệm điện",
+      "GPU": "GPU 6 lõi với Neural Accelerator",
+      "Kích thước màn hình": "6.3 inches",
+      "Công nghệ màn hình": "Super Retina XDR",
+      "Độ phân giải màn hình": "2622 x 1206  pixels",
+      "Tính năng màn hình": "Màn hình Luôn Bật, ProMotion 120Hz, HDR, True Tone, Dải màu rộng (P3), Haptic Touch, Tỷ lệ tương phản 2.000.000:1, Độ sáng 1000 nit (tiêu chuẩn), 1600 nit (HDR), 3000 nit (ngoài trời) / tối thiểu 1 nit, Lớp phủ kháng dầu, Chống phản chiếu, Hỗ trợ đa ngôn",
+      "Camera sau": "Chính: 48MP khẩu độ ƒ/1.6 OIS hỗ trợ chụp 24MP hoặc 48MPGóc Siêu Rộng: 48MP khẩu độ ƒ/2.2 góc nhìn 120°Telephoto: 48MP khẩu độ ƒ/2.8 OIS zoom quang học lên đến 8x",
+      "Camera trước": "Camera 18MP Center Stage Khẩu độ ƒ/1.9",
+      "Hỗ trợ mạng": "5G",
+      "Thẻ SIM": "Sim kép (nano-Sim và e-Sim) - Hỗ trợ 2 e-Sim",
+      "Công nghệ NFC": "Có",
+      "Thời điểm ra mắt": "09/2025"
+    }
+  },
+  {
+    "name": "iPhone 18 Pro 512GB",
+    "description": {
+      "Hệ điều hành khi ra mắt": "iOS 27",
+      "Chipset": "A20 Pro",
+      "Bộ nhớ trong": "512 GB",
+      "Loại CPU": "CPU 6 lõi với 2 siêu lõi và 4 lõi hiệu suất",
+      "GPU": "GPU 7 lõi",
+      "Kích thước màn hình": "6.3 inches",
+      "Công nghệ màn hình": "Super Retina XDR",
+      "Độ phân giải màn hình": "2622 x 1206  pixels",
+      "Tính năng màn hình": "Tần số quét 120 HzĐộ sáng tối đa 3000 nits ngoài trờiĐộ sáng 1000 nit tiêu chuẩnĐộ sáng đỉnh 1600 nit HDRĐộ sáng tối thiểu 1 nitDynamic IslandMàn hình Luôn BậtProMotionHDRTrue ToneDải màu rộng P3Haptic Touch",
+      "Camera sau": "48 MP Fusion Main, f/1,48 / f/1,8 / f/2,8 / f/4,048 MP Fusion Ultra Wide, f/2,248 MP Fusion Telephoto, f/2,8Telephoto 2x chất lượng quang học 12 MPTelephoto 8x chất lượng quang học 12 MP, f/2,8",
+      "Camera trước": "18 MP Center Stagef/1,9 Tự động lấy nét theo pha Focus Pixels",
+      "Pin": "Pin lithium-ion tích hợp",
+      "Hỗ trợ mạng": "5G",
+      "Thẻ SIM": "Nano-SIM + eSIM",
+      "Công nghệ NFC": "Có",
+      "Thời điểm ra mắt": "09/2026"
+    }
+  },
+  {
+    "name": "iPhone 16e 128GB | Chính hãng VN/A",
+    "description": {
+      "Hệ điều hành khi ra mắt": "iOS 18",
+      "Chipset": "Chip A18",
+      "Bộ nhớ trong": "128 GB",
+      "Loại CPU": "CPU 6 lõi mới với 2 lõi hiệu năng và 4 lõi tiết kiệm điện",
+      "GPU": "GPU 4 lõi mớiNeural Engine 16 lõi mới",
+      "Kích thước màn hình": "6.1 inches",
+      "Công nghệ màn hình": "Super Retina XDR",
+      "Độ phân giải màn hình": "2532 x 1170 pixels",
+      "Tính năng màn hình": "Màn hình HDR True Tone Dải màu rộng (P3) Haptic Touch Tỷ lệ tương phản 2.000.000:1 (tiêu chuẩn) Độ sáng tối đa 800 nit (tiêu chuẩn); độ sáng đỉnh 1200 nit (HDR) Lớp phủ kháng dầu chống in dấu vân tay Thu Phóng Màn Hình",
+      "Camera sau": "Hệ thống camera 2 trong 1Fusion 48MP: 26 mm, khẩu độ ƒ/1.6, chống rung quang học, Hybrid Focus Pixels, ảnh có độ phân giải siêu cao (24MP và 48MP)Đồng thời hỗ trợ Telephoto 2x 12MP: 52 mm, khẩu độ ƒ/1.6, chống rung quang học, Hybrid Focus Pixels",
+      "Camera trước": "Camera 12MP Khẩu độ ƒ/1.9 Camera TrueDepth hỗ trợ nhận diện khuôn mặt",
+      "Pin": "Thời gian xem video Lên đến 26 giờ Thời gian xem video (trực tuyến) Lên đến 21 giờThời gian nghe nhạc Lên đến 90 giờ",
+      "Hỗ trợ mạng": "5G",
+      "Thẻ SIM": "Sim kép (nano-Sim và e-Sim) - Hỗ trợ 2 e-Sim",
+      "Công nghệ NFC": "Có",
+      "Thời điểm ra mắt": "02/2025"
+    }
+  },
+  {
+    "name": "iPhone 18 Pro Max 1TB",
+    "description": {
+      "Hệ điều hành khi ra mắt": "iOS 27",
+      "Chipset": "Chip A20 Pro",
+      "Bộ nhớ trong": "1 TB",
+      "Loại CPU": "CPU 6 lõi với 2 siêu lõi và 4 lõi hiệu suất",
+      "GPU": "GPU 7 lõi",
+      "Kích thước màn hình": "6.9 inches",
+      "Công nghệ màn hình": "Super Retina XDR",
+      "Độ phân giải màn hình": "2868 x 1320 pixels",
+      "Tính năng màn hình": "Tần số quét 120 HzĐộ sáng tối đa 3000 nits ngoài trờiĐộ sáng 1000 nit tiêu chuẩnĐộ sáng đỉnh 1600 nit HDRĐộ sáng tối thiểu 1 nitDynamic IslandMàn hình Luôn BậtProMotionHDRTrue ToneDải màu rộng P3Haptic Touch",
+      "Camera sau": "48 MP Fusion Main, f/1,48 / f/1,8 / f/2,8 / f/4,048 MP Fusion Ultra Wide, f/2,248 MP Fusion Telephoto, f/2,8Telephoto 2x chất lượng quang học 12 MPTelephoto 8x chất lượng quang học 12 MP, f/2,8",
+      "Camera trước": "18 MP Center Stage, f/1,9Tự động lấy nét theo pha Focus Pixels",
+      "Pin": "Pin lithium-ion tích hợp",
+      "Hỗ trợ mạng": "5G",
+      "Thẻ SIM": "Nano-SIM + eSIM",
+      "Công nghệ NFC": "Có",
+      "Thời điểm ra mắt": "09/2026"
+    }
+  },
+  {
+    "name": "iPhone 16 128GB | Chính hãng VN/A",
+    "description": {
+      "Hệ điều hành khi ra mắt": "iOS 18",
+      "Chipset": "Apple A18",
+      "Dung lượng RAM": "8 GB",
+      "Bộ nhớ trong": "128 GB",
+      "Loại CPU": "CPU 6 lõi mới với 2 lõi hiệu năng và 4 lõi tiết kiệm điện",
+      "GPU": "GPU 5 lõi mới",
+      "Kích thước màn hình": "6.1 inches",
+      "Công nghệ màn hình": "Super Retina XDR OLED",
+      "Độ phân giải màn hình": "2556 x 1179 pixels",
+      "Tính năng màn hình": "Dynamic IslandMàn hình HDRTrue ToneDải màu rộng (P3)Haptic TouchTỷ lệ tương phản 2.000.000:1Độ sáng tối đa 1000 nit460 ppiLớp phủ kháng dầu chống in dấu vân tayHỗ trợ hiển thị đồng thời nhiều ngôn ngữ và ký tự",
+      "Camera sau": "Camera chính: 48MP, f/1.6, 26mm, Focus Pixels 100%, hỗ trợ ảnh có độ phân giải siêu cao Camera góc siêu rộng: 12MP, ƒ/2.2, 13 mm, Focus Pixels 100%, Độ phóng đại quang học 2x, độ thu nhỏ quang học 2x; phạm vi thu phóng quang học 4x Độ thu phóng kỹ thu",
+      "Camera trước": "12MP, ƒ/1.9, Tự động lấy nét theo pha Focus Pixels",
+      "Hỗ trợ mạng": "5G",
+      "Thẻ SIM": "Sim kép (nano-Sim và e-Sim) - Hỗ trợ 2 e-Sim",
+      "Công nghệ NFC": "Có",
+      "Thời điểm ra mắt": "09/2024"
+    }
+  },
+  {
+    "name": "iPhone 13 128GB | Chính hãng VN/A",
+    "description": {
+      "Hệ điều hành khi ra mắt": "iOS 15",
+      "Chipset": "Apple A15",
+      "Dung lượng RAM": "4 GB",
+      "Bộ nhớ trong": "128 GB",
+      "Loại CPU": "3.22 GHz",
+      "GPU": "Apple GPU 4 nhân",
+      "Kích thước màn hình": "6.1 inches",
+      "Công nghệ màn hình": "Super Retina XDR OLED",
+      "Độ phân giải màn hình": "2532 x 1170 pixels",
+      "Tính năng màn hình": "Màn hình super Retina XDR, OLED, 460 ppi, HDR display, công nghệ True Tone Wide color (P3), Haptic Touch, Lớp phủ oleophobic chống bám vân tay",
+      "Camera sau": "Camera góc rộng: 12MP, f/1.6  Camera góc siêu rộng: 12MP, ƒ/2.4",
+      "Camera trước": "12MP, f/2.2",
+      "Pin": "3240mAh",
+      "Hỗ trợ mạng": "5G",
+      "Thẻ SIM": "2 SIM (nano‑SIM và eSIM)",
+      "Công nghệ NFC": "Có",
+      "Thời điểm ra mắt": "09/2021"
+    }
+  },
+  {
+    "name": "iPhone 17e 256GB | Chính hãng",
+    "description": {
+      "Hệ điều hành khi ra mắt": "iOS 26",
+      "Chipset": "Apple A19",
+      "Bộ nhớ trong": "256 GB",
+      "Loại CPU": "6 lõi với 2 lõi hiệu năng và 4 lõi tiết kiệm điện",
+      "GPU": "4 lõi với Neural Accelerators",
+      "Kích thước màn hình": "6.1 inches",
+      "Công nghệ màn hình": "Super Retina XDR",
+      "Độ phân giải màn hình": "2532 x 1170 pixels",
+      "Tính năng màn hình": "HDR460 ppiTrue ToneDải màu rộng (P3)Haptic TouchTỷ lệ tương phản 2.000.000:1Độ sáng 800 nit (tiêu chuẩn)Độ sáng đỉnh: 1200 nit (HDR)",
+      "Camera sau": "48MP, ƒ/1.6Telephoto 2x: 12MP, ƒ/1.6",
+      "Camera trước": "12MP, ƒ/1.9",
+      "Pin": "Xem video: 26 giờXem video trực tuyến: 21 giờ",
+      "Hỗ trợ mạng": "5G",
+      "Thẻ SIM": "2 SIM (nano‑SIM và eSIM)",
+      "Công nghệ NFC": "Có"
+    }
+  },
+  {
+    "name": "iPhone 16 Pro Max 512GB | Chính hãng VN/A",
+    "description": {
+      "Hệ điều hành khi ra mắt": "iOS 18",
+      "Chipset": "Apple A18 Pro",
+      "Bộ nhớ trong": "512 GB",
+      "Loại CPU": "CPU 6 lõi mới với 2 lõi hiệu năng và 4 lõi hiệu suất",
+      "GPU": "GPU 6 lõi mới",
+      "Kích thước màn hình": "6.9 inches",
+      "Công nghệ màn hình": "Super Retina XDR OLED",
+      "Độ phân giải màn hình": "2868 x 1320 pixels",
+      "Tính năng màn hình": "Dynamic IslandMàn hình Luôn Bật Công nghệ ProMotion với tốc độ làm mới thích ứng lên đến 120Hz Màn hình HDR True Tone Dải màu rộng (P3) Haptic Touch Tỷ lệ tương phản 2.000.000:1",
+      "Camera sau": "Camera chính: 48MP, f/1.78, 24mm, 2µm, chống rung quang học dịch chuyển cảm biến thế hệ thứ hai, Focus Pixels 100%Telephoto 2x 12MP: 52 mm, ƒ/1.6 Camera góc siêu rộng: 48MP, 13 mm,ƒ/2.2 và trường ảnh 120°, Hybrid Focus Pixels, ảnh có độ phân giải",
+      "Camera trước": "12MP, ƒ/1.9, Tự động lấy nét theo pha Focus Pixels",
+      "Hỗ trợ mạng": "5G",
+      "Thẻ SIM": "Sim kép (nano-Sim và e-Sim) - Hỗ trợ 2 e-Sim",
+      "Công nghệ NFC": "Có",
+      "Thời điểm ra mắt": "09/2024"
+    }
+  },
+  {
+    "name": "Samsung Galaxy S26 Ultra 5G 12GB 256GB",
+    "description": {
+      "Hệ điều hành khi ra mắt": "Android 16",
+      "Chipset": "Snapdragon 8 Elite Gen 5",
+      "Dung lượng RAM": "12 GB",
+      "Bộ nhớ trong": "256 GB",
+      "Loại CPU": "8 nhân",
+      "GPU": "Adreno 840",
+      "Kích thước màn hình": "6.9 inches",
+      "Công nghệ màn hình": "Dynamic AMOLED 2X",
+      "Độ phân giải màn hình": "3120 x 1440 pixels (Quad HD+)",
+      "Tính năng màn hình": "Độ sáng tối đa 2600 nits",
+      "Camera sau": "Góc rộng 200 MP, f/1.4Góc siêu rộng 50 MP, f/1.9Tele 50 MP, f/2.9Tele 10 MP, f/2.4",
+      "Camera trước": "12 MP, f/2.2",
+      "Pin": "5000 mAh",
+      "Hỗ trợ mạng": "5G",
+      "Thẻ SIM": "2 Nano SIM hoặc 2 eSIM hoặc 1 Nano SIM + 1 eSIM",
+      "Công nghệ NFC": "Có",
+      "Thời điểm ra mắt": "02/2026"
+    }
+  },
+  {
+    "name": "Samsung Galaxy S26 FE 5G 8GB 128GB",
+    "description": {
+      "Hệ điều hành khi ra mắt": "Android 17, One UI 9",
+      "Chipset": "Exynos 2500 (3nm)",
+      "Dung lượng RAM": "8 GB",
+      "Bộ nhớ trong": "128 GB",
+      "Loại CPU": "1 nhân 3.3GHz, 2 nhân 2.74GHz, 5 nhân 2.36GHz, 2 nhân 1.8GHz",
+      "GPU": "Xclipse 950 thế hệ thứ 4",
+      "Kích thước màn hình": "6.7 inches",
+      "Công nghệ màn hình": "Dynamic AMOLED",
+      "Độ phân giải màn hình": "2340 x 1080-pixel",
+      "Tính năng màn hình": "Tần số quét 120 Hz, Độ sáng tối đa 1900 nits, Kính Corning Gorilla Glass Victus+",
+      "Camera sau": "50 MP (góc rộng) + 8 MP (tele, zoom quang học 3x) + 12 MP (góc siêu rộng)",
+      "Camera trước": "12 MP, f/N/A, góc 85°",
+      "Pin": "4900 mAh",
+      "Hỗ trợ mạng": "5G",
+      "Thẻ SIM": "2 Nano-SIM + eSIM",
+      "Công nghệ NFC": "Có",
+      "Thời điểm ra mắt": "08/2026"
+    }
+  },
+  {
+    "name": "Samsung Galaxy Z Fold8 Ultra 5G 12GB 256GB",
+    "description": {
+      "Hệ điều hành khi ra mắt": "Android 17, One UI 9",
+      "Chipset": "Snapdragon® 8 Elite Gen 5",
+      "Dung lượng RAM": "12 GB",
+      "Bộ nhớ trong": "256 GB",
+      "GPU": "8 nhân - 2 nhân 4.74 GHz và 6 nhân 3.62 GHz",
+      "Kích thước màn hình": "Chính 8.0 inches, Phụ 6.5 inches",
+      "Công nghệ màn hình": "Dynamic AMOLED 2X",
+      "Độ phân giải màn hình": "Chính: 2184 x 1968 Chính: 1080 × 2520 pixels (FHD+) - Phụ: 1048 × 948 pixels (QXGA+) - Phụ: 2520 x 1080 Chính: 1080 × 2520 pixels (FHD+) - Phụ: 1048 × 948 pixels (FHD+)",
+      "Tính năng màn hình": "Tần số quét 120 HzĐộ sáng tối đa 3000 nitsMặt kính Corning Gorilla Glass Ceramic 316 triệu màu",
+      "Camera sau": "Góc rộng 200 MP, f/1.7Góc siêu rộng 50 MP, f/2.2Tele 10 MP, f/2.4",
+      "Camera trước": "10 MP, f/2.210 MP",
+      "Pin": "5000 mAh",
+      "Hỗ trợ mạng": "5G",
+      "Thẻ SIM": "Nano-SIM + eSIM",
+      "Công nghệ NFC": "Có",
+      "Thời điểm ra mắt": "08/2026"
+    }
+  },
+  {
+    "name": "Samsung Galaxy A57 5G 8GB 128GB",
+    "description": {
+      "Hệ điều hành khi ra mắt": "Android 16",
+      "Chipset": "Exynos 1680",
+      "Dung lượng RAM": "8 GB",
+      "Bộ nhớ trong": "128 GB",
+      "Loại CPU": "1 nhân 2.9 GHz, 3 nhân 2.6 GHz & 4 nhân 1.95 GHz",
+      "GPU": "Xclipse 550",
+      "Kích thước màn hình": "6.7 inches",
+      "Công nghệ màn hình": "Super AMOLED Plus",
+      "Độ phân giải màn hình": "1080 x 2340 pixels (FullHD+)",
+      "Tính năng màn hình": "Tần số quét: 120Hz16 triệu màu1900 nits",
+      "Camera sau": "Camera chính: 50MPGóc siêu rộng 12MPMacro 5MP",
+      "Camera trước": "12MP",
+      "Pin": "5000 mAh",
+      "Hỗ trợ mạng": "5G",
+      "Công nghệ NFC": "Có",
+      "Thời điểm ra mắt": "03/2026"
+    }
+  },
+  {
+    "name": "Samsung Galaxy A37 5G 8GB 128GB",
+    "description": {
+      "Hệ điều hành khi ra mắt": "Android 16",
+      "Chipset": "Exynos 1480",
+      "Dung lượng RAM": "8 GB",
+      "Bộ nhớ trong": "128 GB",
+      "Loại CPU": "4 nhân 2.75 GHz & 4 nhân 2 GHz",
+      "GPU": "Xclipse 530",
+      "Kích thước màn hình": "6.7 inches",
+      "Công nghệ màn hình": "Super AMOLED",
+      "Độ phân giải màn hình": "1080 x 2340 pixels (FullHD+)",
+      "Tính năng màn hình": "Tần số quét: 120Hz1900 nits",
+      "Camera sau": "Camera chính: 50MPGóc siêu rộng 12MPMacro 5MP",
+      "Camera trước": "12MP",
+      "Pin": "5000 mAh",
+      "Hỗ trợ mạng": "5G",
+      "Công nghệ NFC": "Có",
+      "Thời điểm ra mắt": "03/2026"
+    }
+  },
+  {
+    "name": "Samsung Galaxy S25 Ultra 12GB 256GB",
+    "description": {
+      "Hệ điều hành khi ra mắt": "Android 15",
+      "Chipset": "Snapdragon 8 Elite dành cho Galaxy (3nm)",
+      "Dung lượng RAM": "12 GB",
+      "Bộ nhớ trong": "256 GB",
+      "Kích thước màn hình": "6.9 inches",
+      "Công nghệ màn hình": "Dynamic AMOLED 2X",
+      "Độ phân giải màn hình": "3120 x 1440 pixels (Quad HD+)",
+      "Tính năng màn hình": "120Hz2600 nitsCorning® Gorilla® Armor 2",
+      "Camera sau": "Camera siêu rộng 50MPCamera góc rộng 200 MPCamera Tele (5x) 50MPCamera Tele (3x) 10MP\"",
+      "Camera trước": "12 MP",
+      "Pin": "5000 mAh",
+      "Hỗ trợ mạng": "5G",
+      "Thẻ SIM": "2 Nano-SIM + eSIM",
+      "Công nghệ NFC": "Có",
+      "Thời điểm ra mắt": "02-2025"
+    }
+  },
+  {
+    "name": "Samsung Galaxy Z Fold8 5G 12GB 256GB",
+    "description": {
+      "Hệ điều hành khi ra mắt": "Android 17, One UI 9",
+      "Chipset": "Snapdragon® 8 Elite Gen 5",
+      "Dung lượng RAM": "12 GB",
+      "Bộ nhớ trong": "256 GB",
+      "GPU": "8 nhân: 2 nhân 4.74 GHz và 6 nhân 3.62 GHz",
+      "Kích thước màn hình": "Chính 7.6 inches, Phụ 5.5 inches",
+      "Công nghệ màn hình": "Dynamic AMOLED 2X",
+      "Độ phân giải màn hình": "Chính: 2448 x 1848 pixels (QXGA+) - Phụ: 1972 x 1248 pixels (FHD+)",
+      "Tính năng màn hình": "Tần số quét 120 HzĐộ sáng tối đa 3000 nitsKính Corning Gorilla Glass Ceramic 3",
+      "Camera sau": "Góc rộng 50 MP, f/1.9Góc siêu rộng 50 MP, f/1.8",
+      "Camera trước": "10 MP, f/2.210 MP",
+      "Pin": "4800 mAh",
+      "Hỗ trợ mạng": "5G",
+      "Thẻ SIM": "Nano-SIM + eSIM",
+      "Công nghệ NFC": "Có",
+      "Thời điểm ra mắt": "08/2026"
+    }
+  },
+  {
+    "name": "Samsung Galaxy A17 5G 8GB 128GB",
+    "description": {
+      "Hệ điều hành khi ra mắt": "Android 15",
+      "Chipset": "Exynos 1330",
+      "Dung lượng RAM": "8 GB",
+      "Bộ nhớ trong": "128 GB",
+      "Loại CPU": "8 nhân (2 nhân 2.4 GHz & 6 nhân 2.0 GHz)",
+      "GPU": "Mali-G68",
+      "Kích thước màn hình": "6.7 inches",
+      "Công nghệ màn hình": "Super AMOLED",
+      "Độ phân giải màn hình": "1080 x 2340 pixels (FullHD+)",
+      "Tính năng màn hình": "Độ sáng tối đa 800 nitsKính cường lực Corning Gorilla Glass 7",
+      "Camera sau": "Chính 50 MPPhụ 5 MP, 2 MP",
+      "Camera trước": "13 MP",
+      "Pin": "Li-Ion 5000 mAh",
+      "Hỗ trợ mạng": "5G",
+      "Thẻ SIM": "2 Nano SIM (Sim 2 chung khe với thẻ nhớ)",
+      "Công nghệ NFC": "Có",
+      "Thời điểm ra mắt": "08/2025"
+    }
+  },
+  {
+    "name": "Samsung Galaxy S25 FE 8GB 128GB",
+    "description": {
+      "Kích thước màn hình": "6.7 inches",
+      "Công nghệ màn hình": "Dynamic AMOLED 2X",
+      "Camera sau": "50MP, f/1.8 góc rộng12MP, f/2.2 góc siêu rộng8MP, f/2.4 Tele",
+      "Camera trước": "12MP, f/2.2",
+      "Chipset": "Exynos 2400",
+      "Công nghệ NFC": "Có",
+      "Dung lượng RAM": "8 GB",
+      "Bộ nhớ trong": "128 GB",
+      "Pin": "4900 mAh",
+      "Thẻ SIM": "2 Nano-SIM + eSIM",
+      "Hệ điều hành": "Android 16, One UI 8",
+      "Độ phân giải màn hình": "1080 x 2340 pixels (FullHD+)",
+      "Tính năng màn hình": "Độ sáng tối đa 1900 nitsGorilla® Victus+16 triệu màu",
+      "Loại CPU": "10 nhân (3.2 GHz, 2.9 GHz, 2.6 GHz, 1.95 GHz)"
+    }
+  },
+  {
+    "name": "Samsung Galaxy Z Flip8 5G 12GB 256GB",
+    "description": {
+      "Hệ điều hành khi ra mắt": "Android 17, One UI 9",
+      "Chipset": "Exynos 2600",
+      "Dung lượng RAM": "12 GB",
+      "Bộ nhớ trong": "256 GB",
+      "GPU": "10 nhân, tốc độ 3.8 GHz, 3.25 GHz và 2.75 GHz",
+      "Kích thước màn hình": "Chính 6.9 inches, Phụ 4.1 inches",
+      "Công nghệ màn hình": "Dynamic AMOLED 2X",
+      "Độ phân giải màn hình": "Chính: 1080 × 2520 pixels (FHD+) - Phụ: 1048 × 948 pixels",
+      "Tính năng màn hình": "Tần số quét 120HzĐộ sáng tối đa 2600 nitsKính Corning Gorilla Glass Ceramic 316 triệu màu",
+      "Camera sau": "Góc rộng 50 MP, f/1.8Góc siêu rộng 12 MP, f/2.2",
+      "Camera trước": "10 MP, f/2.2",
+      "Pin": "4300 mAh",
+      "Hỗ trợ mạng": "5G",
+      "Thẻ SIM": "Nano-SIM + eSIM",
+      "Công nghệ NFC": "Có",
+      "Thời điểm ra mắt": "08/2026"
+    }
+  },
+  {
+    "name": "Samsung Galaxy S26 5G 12GB 256GB",
+    "description": {
+      "Hệ điều hành khi ra mắt": "Android 16",
+      "Chipset": "Exynos 2600 (2nm)",
+      "Dung lượng RAM": "12 GB",
+      "Bộ nhớ trong": "256 GB",
+      "Loại CPU": "10 nhân",
+      "GPU": "Xclipse 960",
+      "Kích thước màn hình": "6.3 inches",
+      "Công nghệ màn hình": "Dynamic AMOLED 2X",
+      "Độ phân giải màn hình": "2340 x 1080-pixel",
+      "Tính năng màn hình": "16 triệu màuĐộ sáng tối đa 2600 nits",
+      "Camera sau": "Góc rộng 50MP, f/1.8Góc siêu rộng 12MP, f/2.2Tele 10MP, f/2.4",
+      "Camera trước": "12 MP, f/2.2",
+      "Pin": "4300 mAh",
+      "Hỗ trợ mạng": "5G",
+      "Thẻ SIM": "2 Nano SIM hoặc 2 eSIM hoặc 1 Nano SIM + 1 eSIM",
+      "Công nghệ NFC": "Có",
+      "Thời điểm ra mắt": "02/2026"
+    }
+  },
+  {
+    "name": "Samsung Galaxy A27 5G 6GB 128GB",
+    "description": {
+      "Hệ điều hành khi ra mắt": "Android 16",
+      "Chipset": "Snapdragon 6 Gen 3",
+      "Dung lượng RAM": "6 GB",
+      "Bộ nhớ trong": "128 GB",
+      "Kích thước màn hình": "6.7 inches",
+      "Công nghệ màn hình": "Super AMOLED",
+      "Tính năng màn hình": "Tần số quét 120 HzĐộ sáng tối đa 800 nits",
+      "Camera sau": "Chính 50 MPGóc siêu rộng 5 MPMacro 2 MP",
+      "Camera trước": "12 MP",
+      "Pin": "5000 mAh",
+      "Hỗ trợ mạng": "5G",
+      "Thẻ SIM": "2 Nano-SIM",
+      "Thời điểm ra mắt": "06/2026"
+    }
+  },
+  {
+    "name": "Samsung Galaxy S25 Plus 256GB",
+    "description": {
+      "Chipset": "Snapdragon 8 Elite dành cho Galaxy (3nm)",
+      "Dung lượng RAM": "12 GB",
+      "Bộ nhớ trong": "256 GB",
+      "Loại CPU": "Tốc độ CPU: 4.47GHz, 3.5GHz  8 nhân",
+      "Kích thước màn hình": "6.7 inches",
+      "Công nghệ màn hình": "Dynamic AMOLED 2X",
+      "Độ phân giải màn hình": "3120 x 1440 pixels (Quad HD+)",
+      "Tính năng màn hình": "120Hz2600 nitsCorning® Gorilla® Armor 2",
+      "Camera sau": "Camera siêu rộng 12MP  Camera góc rộng 50MPCamera Tele 10MP",
+      "Camera trước": "12MP",
+      "Pin": "4900 mAh",
+      "Hỗ trợ mạng": "5G",
+      "Thẻ SIM": "2 Nano-SIM + eSIM",
+      "Công nghệ NFC": "Có",
+      "Thời điểm ra mắt": "02-2025"
+    }
+  },
+  {
+    "name": "Samsung Galaxy A07 4GB 128GB",
+    "description": {
+      "Kích thước màn hình": "6.7 inches",
+      "Công nghệ màn hình": "IPS LCD",
+      "Camera sau": "Chính 50 MPPhụ 2 MP",
+      "Camera trước": "8 MP",
+      "Chipset": "MediaTek Helio G99",
+      "Công nghệ NFC": "Không",
+      "Dung lượng RAM": "4 GB",
+      "Bộ nhớ trong": "128 GB",
+      "Pin": "Li-Ion 5000 mAh",
+      "Thẻ SIM": "2 Nano-SIM",
+      "Hệ điều hành": "Android 15",
+      "Độ phân giải màn hình": "720 x 1600 pixel",
+      "Tính năng màn hình": "Độ sáng tối đa 480 nitsKính cường lực Panda",
+      "Loại CPU": "8 nhân (2 nhân 2.2 GHz & 6 nhân 2.0 GHz)"
+    }
+  },
+  {
+    "name": "Samsung Galaxy A17 8GB 128GB",
+    "description": {
+      "Kích thước màn hình": "6.7 inches",
+      "Công nghệ màn hình": "Super AMOLED",
+      "Camera sau": "Chính 50 MPPhụ 5 MP, 2 MP",
+      "Camera trước": "13 MP",
+      "Chipset": "MediaTek Helio G99",
+      "Công nghệ NFC": "Có",
+      "Dung lượng RAM": "8 GB",
+      "Bộ nhớ trong": "128 GB",
+      "Pin": "Li-Ion 5000 mAh",
+      "Thẻ SIM": "2 Nano SIM (Sim 2 chung khe với thẻ nhớ)",
+      "Hệ điều hành": "Android 15",
+      "Độ phân giải màn hình": "1080 x 2340 pixels (FullHD+)",
+      "Tính năng màn hình": "Độ sáng tối đa 800 nitsKính cường lực Corning Gorilla Glass 7",
+      "Loại CPU": "8 nhân (2 nhân 2.2GHz & 6 nhân 2.0GHz)"
+    }
+  },
+  {
+    "name": "Samsung Galaxy A56 5G 8GB 128GB",
+    "description": {
+      "Hệ điều hành khi ra mắt": "Android",
+      "Chipset": "Exynos 1580",
+      "Dung lượng RAM": "8 GB",
+      "Bộ nhớ trong": "128 GB",
+      "Loại CPU": "8 nhân 2.9GHz, 2.6GHz, 1.9GHz",
+      "Kích thước màn hình": "6.7 inches",
+      "Công nghệ màn hình": "Super AMOLED",
+      "Độ phân giải màn hình": "1080 x 2340 pixels (FullHD+)",
+      "Tính năng màn hình": "16 triệu màu, 120 Hz, 1200 nit, kính cường lực Corning Gorilla Glass Victus+",
+      "Camera sau": "50.0 MP, F/1.8  + 12.0 MP, F/2.2  + 5.0 MP, F/2.4",
+      "Camera trước": "12.0 MP, F/2.2",
+      "Pin": "5000 mAh",
+      "Hỗ trợ mạng": "5G",
+      "Thẻ SIM": "SIM 1 + SIM 2 / SIM 1 + eSIM / 2 eSIM",
+      "Công nghệ NFC": "Có"
+    }
+  },
+  {
+    "name": "Samsung Galaxy S24 Ultra 12GB 256GB",
+    "description": {
+      "Kích thước màn hình": "6.8 inches",
+      "Công nghệ màn hình": "Dynamic AMOLED 2X",
+      "Camera sau": "Camera chính: 200MP, Laser AF, OIS Camera: 50MP,  PDAF, OIS, zoom quang học 5xCamera tele: 10MPCamera góc siêu rộng: 12 MP, f/2.2, 13mm, 120˚",
+      "Camera trước": "12 MP, f/2.2",
+      "Chipset": "Snapdragon 8 Gen 3 For Galaxy",
+      "Công nghệ NFC": "Có",
+      "Dung lượng RAM": "12 GB",
+      "Bộ nhớ trong": "256 GB",
+      "Pin": "5,000mAh",
+      "Thẻ SIM": "SIM 1 + SIM 2 / SIM 1 + eSIM / 2 eSIM",
+      "Hệ điều hành": "Android 14, One UI 6.1",
+      "Độ phân giải màn hình": "1440 x 3120 pixels",
+      "Tính năng màn hình": "Độ sáng cao nhất 2,600 nits, 120Hz, Corning® Gorilla® Armor®, 16 triệu màu",
+      "Loại CPU": "3.39GHz,3.1GHz,2.9GHz,2.2GHz",
+      "Tương thích": "Bút SPEN - tích hợp sẵn lên máy"
+    }
+  },
+  {
+    "name": "Samsung Galaxy A07 5G 4GB 128GB",
+    "description": {
+      "Hệ điều hành": "Android",
+      "Chipset": "MediaTek Dimensity 6300 5G",
+      "Dung lượng RAM": "4 GB",
+      "Bộ nhớ trong": "128 GB",
+      "Loại CPU": "8 nhân, 2.4GHz, 2GHz",
+      "GPU": "Mali-G57",
+      "Kích thước màn hình": "6.7 inches",
+      "Công nghệ màn hình": "PLS LCD",
+      "Độ phân giải màn hình": "720 x 1600 pixel",
+      "Tính năng màn hình": "Tần số quét: 120HzĐộ sâu màu sắc:16M",
+      "Camera sau": "50 MP, F1.8 + 2 MP, F2.4",
+      "Camera trước": "8 MP, F2.0",
+      "Pin": "6000 mAh",
+      "Hỗ trợ mạng": "5G",
+      "Thẻ SIM": "2 Nano-SIM",
+      "Thời điểm ra mắt": "01/2026"
+    }
+  },
+  {
+    "name": "Samsung Galaxy Z Fold7 12GB 256GB",
+    "description": {
+      "Hệ điều hành khi ra mắt": "Android 16",
+      "Chipset": "Qualcomm Snapdragon 8 Elite For Galaxy",
+      "Dung lượng RAM": "12 GB",
+      "Bộ nhớ trong": "256 GB",
+      "Loại CPU": "8 nhân",
+      "GPU": "Adreno 830",
+      "Kích thước màn hình": "Chính 8.0 inches, Phụ 6.5 inches",
+      "Công nghệ màn hình": "Dynamic AMOLED 2X",
+      "Độ phân giải màn hình": "Chính: 2184 x 1968 pixels, Phụ: 2520 x 1080 pixels",
+      "Tính năng màn hình": "Tần số quét 120 HzĐộ sáng tối đa 2600 nitsĐộ sâu màu sắc 16MKính cường lực Corning Gorilla Glass Ceramic 2",
+      "Camera sau": "200 MP + 12 MP + 10 MP, f/1.7, f/2.2, f/2.4",
+      "Camera trước": "Trong 10 MP, f/2.2Ngoài 10 MP, f/2.2",
+      "Pin": "4400 mAh",
+      "Hỗ trợ mạng": "5G",
+      "Thẻ SIM": "2 Nano SIM hoặc 2 eSIM hoặc 1 Nano SIM + 1 eSIM",
+      "Công nghệ NFC": "Có",
+      "Thời điểm ra mắt": "07/2025"
+    }
+  },
+  {
+    "name": "Samsung Galaxy Z Fold8 Ultra 5G 12GB 512GB",
+    "description": {
+      "Hệ điều hành khi ra mắt": "Android 17, One UI 9",
+      "Chipset": "Snapdragon® 8 Elite Gen 5",
+      "Dung lượng RAM": "12 GB",
+      "Bộ nhớ trong": "512 GB",
+      "GPU": "8 nhân - 2 nhân 4.74 GHz và 6 nhân 3.62 GHz",
+      "Kích thước màn hình": "Chính 8.0 inches, Phụ 6.5 inches",
+      "Công nghệ màn hình": "Dynamic AMOLED 2X",
+      "Độ phân giải màn hình": "Chính: 2184 x 1968 Chính: 1080 × 2520 pixels (FHD+) - Phụ: 1048 × 948 pixels (QXGA+) - Phụ: 2520 x 1080 Chính: 1080 × 2520 pixels (FHD+) - Phụ: 1048 × 948 pixels (FHD+)",
+      "Tính năng màn hình": "Tần số quét 120 HzĐộ sáng tối đa 3000 nitsMặt kính Corning Gorilla Glass Ceramic 316 triệu màu",
+      "Camera sau": "Góc rộng 200 MP, f/1.7Góc siêu rộng 50 MP, f/2.2Tele 10 MP, f/2.4",
+      "Camera trước": "10 MP, f/2.210 MP",
+      "Pin": "5000 mAh",
+      "Hỗ trợ mạng": "5G",
+      "Thẻ SIM": "Nano-SIM + eSIM",
+      "Công nghệ NFC": "Có",
+      "Thời điểm ra mắt": "08/2026"
+    }
+  },
+  {
+    "name": "OPPO Reno16 F 5G 8GB 256GB",
+    "description": {
+      "Hệ điều hành khi ra mắt": "ColorOS 16, nền tảng Android 16",
+      "Chipset": "Dimensity 7300-Energy 5G",
+      "Dung lượng RAM": "8 GB",
+      "Bộ nhớ trong": "256 GB",
+      "GPU": "Arm Mali-G615@1.047GHz",
+      "Kích thước màn hình": "6.57 inches",
+      "Công nghệ màn hình": "AMOLED",
+      "Độ phân giải màn hình": "1080 x 2372 pixels (FullHD+)",
+      "Tính năng màn hình": "Tần số quét 120HzĐộ sáng tối đa 1400 nitsKính cường lực AGC DT Star D+1 tỷ màu",
+      "Camera sau": "50MP OIS, f/1.88MP góc rộng, f/2.250MP OIS Tele, f/2.8",
+      "Camera trước": "50MP, f/2.0",
+      "Pin": "7000 mAh",
+      "Hỗ trợ mạng": "5G",
+      "Thẻ SIM": "Dual nano-SIM hoặc 1 nano-SIM + 1 thẻ nhớ",
+      "Công nghệ NFC": "Có",
+      "Thời điểm ra mắt": "06/2026"
+    }
+  },
+  {
+    "name": "OPPO Find X9s 12GB 256GB",
+    "description": {
+      "Hệ điều hành khi ra mắt": "ColorOS 16.0",
+      "Chipset": "MediaTek Dimensity 9500s",
+      "Dung lượng RAM": "12 GB",
+      "Bộ nhớ trong": "256 GB",
+      "Loại CPU": "8 nhân",
+      "GPU": "ARM Immortalis G925 MC12",
+      "Kích thước màn hình": "6.59 inches",
+      "Công nghệ màn hình": "AMOLED",
+      "Độ phân giải màn hình": "1256 x 2760 pixels",
+      "Tính năng màn hình": "Độ sáng tối đa 1800 nitsTần số lấy mẫu cảm ứng tối đa 240Hz1.07 tỷ màu460 PPI100% DCI-P3",
+      "Camera sau": "Góc siêu rộng 50 MP, f/2.0Góc rộng 50 MP, f/1.8Telephoto 50 MP, f/2.6",
+      "Camera trước": "32 MP, f/2.4",
+      "Pin": "7025 mAh",
+      "Hỗ trợ mạng": "5G",
+      "Thẻ SIM": "Dual nano-SIM hoặc 1 nano-SIM + 1 eSIM",
+      "Công nghệ NFC": "Có",
+      "Thời điểm ra mắt": "5/2026"
+    }
+  },
+  {
+    "name": "OPPO Find N6 16GB 512GB",
+    "description": {
+      "Hệ điều hành khi ra mắt": "ColorOS 16.0",
+      "Chipset": "Snapdragon 8 Elite Gen 5",
+      "Dung lượng RAM": "16 GB",
+      "Bộ nhớ trong": "512 GB",
+      "Loại CPU": "7 nhân",
+      "GPU": "Adreno 840",
+      "Kích thước màn hình": "Chính 8.12 inches - Phụ 6.62 inches",
+      "Công nghệ màn hình": "AMOLED",
+      "Độ phân giải màn hình": "Chính: 2480 x 2248 pixels - Phụ: 2616 x 1140 pixels",
+      "Tính năng màn hình": "Tần số quét 120HzĐộ sáng tối đa 1800 nits1.07 tỉ màu100% DCI-P3Màn hình chính 412 PPIMàn hình phụ 431 PPI",
+      "Camera sau": "Chính 200 MP, f/1.8Góc siêu rộng 50 MP, f/2.0Telephoto 50 MP, f/2.7Monochrome 2 MP, f/2.4",
+      "Camera trước": "Trong 20 MP, f/2.4Ngoài 20 MP, f/2.4",
+      "Pin": "6000 mAh",
+      "Hỗ trợ mạng": "5G",
+      "Thẻ SIM": "Dual nano-SIM hoặc 1 nano-SIM + 1 eSIM",
+      "Công nghệ NFC": "Có",
+      "Thời điểm ra mắt": "03/2026"
+    }
+  },
+  {
+    "name": "OPPO Find X9 Ultra 12GB 512GB",
+    "description": {
+      "Hệ điều hành khi ra mắt": "ColorOS 16 Android 16",
+      "Chipset": "Snapdragon 8 Elite Gen 5",
+      "Dung lượng RAM": "12 GB",
+      "Bộ nhớ trong": "512 GB",
+      "Loại CPU": "8 nhân",
+      "GPU": "Adreno 840",
+      "Kích thước màn hình": "6.82 inches",
+      "Công nghệ màn hình": "AMOLED",
+      "Độ phân giải màn hình": "3168 x 1440 pixel",
+      "Tính năng màn hình": "Độ sáng tối đa 3600 nitsTần số lấy mẫu cảm ứng tối đa 300Hz1.07 tỷ màu510 PPI100% DCI-P3",
+      "Camera sau": "Góc siêu rộng 50 MP, f/2.0Góc rộng 200 MP, f/1.5Tele 200 MP, f/2.2Tele siêu xa 50 MP, f/3.5Đơn sắc 3.2 MP, f/2.4",
+      "Camera trước": "50 MP, f/2.4",
+      "Pin": "7050 mAh",
+      "Hỗ trợ mạng": "5G",
+      "Thẻ SIM": "2 Nano SIM hoặc 2 eSIM hoặc 1 Nano SIM + 1 eSIM",
+      "Công nghệ NFC": "Có",
+      "Thời điểm ra mắt": "5/2026"
+    }
+  },
+  {
+    "name": "OPPO Reno15 5G 12GB 256GB",
+    "description": {
+      "Hệ điều hành khi ra mắt": "ColorOS 16.0",
+      "Chipset": "Qualcomm Snapdragon 7 Gen4 5G",
+      "Dung lượng RAM": "12 GB",
+      "Bộ nhớ trong": "256 GB",
+      "Loại CPU": "8 nhân",
+      "GPU": "Adreno 722",
+      "Kích thước màn hình": "6.59 inches",
+      "Công nghệ màn hình": "AMOLED",
+      "Độ phân giải màn hình": "1256 x 2760 pixels",
+      "Tính năng màn hình": "Cảm ứng 240Hz, 100% DCI-P3, 10-bit (1.07 tỷ màu), Độ sáng tối đa 1200 nits",
+      "Camera sau": "Chính 50MP f/1.8 (OIS) + Telephoto 50MP f/2.8 (OIS) + Góc siêu rộng 8MP f/2.2",
+      "Camera trước": "50MP f/2.0",
+      "Pin": "6500 mAh",
+      "Hỗ trợ mạng": "5G",
+      "Thẻ SIM": "Dual nano-SIM hoặc 1 nano-SIM + 1 eSIM",
+      "Công nghệ NFC": "Có",
+      "Thời điểm ra mắt": "01/2026"
+    }
+  },
+  {
+    "name": "OPPO Reno15 F 5G 8GB 256GB",
+    "description": {
+      "Hệ điều hành khi ra mắt": "ColorOS 16.0",
+      "Chipset": "Qualcomm Snapdragon 6 Gen 1 5G",
+      "Dung lượng RAM": "8 GB",
+      "Bộ nhớ trong": "256 GB",
+      "Loại CPU": "8 nhân",
+      "GPU": "Adreno 710",
+      "Kích thước màn hình": "6.57 inches",
+      "Công nghệ màn hình": "AMOLED",
+      "Độ phân giải màn hình": "1080 x 2372 pixels (FullHD+)",
+      "Tính năng màn hình": "1.07 tỷ màu (10-bit), DCI-P3 100%, Độ sáng tối đa 1400 nits",
+      "Camera sau": "Chính 50MP f/1.8 (OIS, AF) + Góc siêu rộng 8MP f/2.2 + Macro 2MP f/2.4",
+      "Camera trước": "50MP f/2.0, hỗ trợ AF",
+      "Pin": "7000mAh",
+      "Hỗ trợ mạng": "5G",
+      "Thẻ SIM": "2 Nano SIM (Sim 2 chung khe với thẻ nhớ)",
+      "Công nghệ NFC": "Có",
+      "Thời điểm ra mắt": "01/"
+    }
+  },
+  {
+    "name": "OPPO Reno12 5G 12GB 256GB",
+    "description": {
+      "Hệ điều hành khi ra mắt": "Android 14",
+      "Chipset": "MediaTek Dimensity 7300",
+      "Dung lượng RAM": "12 GB",
+      "Bộ nhớ trong": "256 GB",
+      "Kích thước màn hình": "6.7 inches",
+      "Công nghệ màn hình": "AMOLED",
+      "Tính năng màn hình": "Tần số quét 120Hz",
+      "Camera sau": "50MP + OIS  Camera góc rộng: 8MP Camera xóa phông: 2MP",
+      "Camera trước": "32MP",
+      "Pin": "5000mAh",
+      "Hỗ trợ mạng": "5G",
+      "Công nghệ NFC": "Có"
+    }
+  },
+  {
+    "name": "OPPO Find X8 16GB 512GB",
+    "description": {
+      "Hệ điều hành khi ra mắt": "ColorOS 15, nền tảng Android 15",
+      "Chipset": "MediaTek Dimensity 9400",
+      "Dung lượng RAM": "16 GB",
+      "Bộ nhớ trong": "512 GB",
+      "Loại CPU": "8 nhân",
+      "GPU": "Immortalis G925 MC12",
+      "Kích thước màn hình": "6.59 inches",
+      "Công nghệ màn hình": "AMOLED",
+      "Độ phân giải màn hình": "1256 x 2760 pixels",
+      "Tính năng màn hình": "Tần số quét: 120Hz, Kính cường lực GG 7i  Độ sáng tối đa: 1600 nits  Màu sắc hiển thị: 1 tỷ màu",
+      "Camera sau": "50MP OIS (Chính) + 50MP (Chân dung Tele) + 50MP (Góc rộng)",
+      "Camera trước": "32MP, khẩu độ F/2.4",
+      "Pin": "5630 mAh",
+      "Hỗ trợ mạng": "5G",
+      "Thẻ SIM": "Dual nano-SIM hoặc 1 nano-SIM + 1 eSIM",
+      "Công nghệ NFC": "Có"
+    }
+  },
+  {
+    "name": "OPPO Reno10 Pro+ 5G 12GB 256GB",
+    "description": {
+      "Hệ điều hành khi ra mắt": "Android 13",
+      "Chipset": "Snapdragon 8 plus Gen 1 8 nhân",
+      "Dung lượng RAM": "12 GB",
+      "Bộ nhớ trong": "256 GB",
+      "Loại CPU": "1x3.0 GHz Cortex-X2 & 3x2.75 GHz Cortex-A710 & 4x2.0 GHz Cortex-A510",
+      "GPU": "Adreno 730",
+      "Kích thước màn hình": "6.74 inches",
+      "Công nghệ màn hình": "AMOLED",
+      "Độ phân giải màn hình": "1240 x 2772 pixels",
+      "Tính năng màn hình": "1 tỷ màu, tần số quét 120Hz, HDR10+, 1100 nits, Kính cường lực AGC DT-Star2",
+      "Camera sau": "Camera góc rộng: 50 MPKính tiềm vọng: 64 MP, PDAF, 5x optical zoomCamera góc siêu rộng: 8 MP, f/2.2",
+      "Camera trước": "Camera góc rộng: 32 MP, f/2.4",
+      "Pin": "4700 mAh",
+      "Hỗ trợ mạng": "5G",
+      "Thẻ SIM": "2 SIM (Nano-SIM)",
+      "Công nghệ NFC": "Có",
+      "Thời điểm ra mắt": "09/2023"
+    }
+  },
+  {
+    "name": "OPPO A6t 4GB 128GB",
+    "description": {
+      "Kích thước màn hình": "6.75 inches",
+      "Công nghệ màn hình": "LCD",
+      "Camera sau": "13MP + QVGA, f/2.2 + f/3.0",
+      "Camera trước": "5MP, f/2.2",
+      "Chipset": "Qualcomm Snapdragon 685",
+      "Công nghệ NFC": "Có",
+      "Dung lượng RAM": "4 GB",
+      "Bộ nhớ trong": "128 GB",
+      "Pin": "6100mAh",
+      "Thẻ SIM": "2 Nano-SIM",
+      "Hệ điều hành": "ColorOS 15, nền tảng Android 15",
+      "Tính năng màn hình": "Kính cường lực Panda, Độ sáng: 1125 nits, 16.7 triệu màu",
+      "Loại CPU": "Qualcomm Snapdragon 685, tối đa 2.8GHz"
+    }
+  },
+  {
+    "name": "OPPO A6c 4GB 128GB",
+    "description": {
+      "Hệ điều hành khi ra mắt": "ColorOS, nền tảng Android 16",
+      "Chipset": "UNISOC T7250",
+      "Dung lượng RAM": "4 GB",
+      "Bộ nhớ trong": "128 GB",
+      "Loại CPU": "8 nhân",
+      "GPU": "Mali-G57@850MHz",
+      "Kích thước màn hình": "6.75 inches",
+      "Công nghệ màn hình": "LCD",
+      "Độ phân giải màn hình": "720 x 1570 pixels",
+      "Tính năng màn hình": "Độ sáng tối đa 900 nitsKính cường lực Panda16.7 triệu màu256 PPI",
+      "Camera sau": "13 MP, f/2.2",
+      "Camera trước": "5 MP, f/2.2",
+      "Pin": "7000 mAh",
+      "Hỗ trợ mạng": "4G",
+      "Thẻ SIM": "2 Nano-SIM",
+      "Công nghệ NFC": "Không",
+      "Thời điểm ra mắt": "06/2026"
+    }
+  },
+  {
+    "name": "OPPO A6c 4GB 64GB",
+    "description": {
+      "Hệ điều hành khi ra mắt": "ColorOS, nền tảng Android 16",
+      "Chipset": "Unisoc T7250",
+      "Dung lượng RAM": "4 GB",
+      "Bộ nhớ trong": "64 GB",
+      "Loại CPU": "8 nhân",
+      "GPU": "Mali-G57@850MHz",
+      "Kích thước màn hình": "6.75 inches",
+      "Công nghệ màn hình": "LCD",
+      "Độ phân giải màn hình": "720 x 1570 pixels",
+      "Tính năng màn hình": "Độ sáng tối đa 900 nitsKính cường lực Panda16.7 triệu màu256 PPI",
+      "Camera sau": "13 MP, f/2.2",
+      "Camera trước": "5 MP, f/2.2",
+      "Pin": "7000 mAh",
+      "Hỗ trợ mạng": "4G",
+      "Thẻ SIM": "2 Nano-SIM",
+      "Công nghệ NFC": "Không",
+      "Thời điểm ra mắt": "06/2026"
+    }
+  },
+  {
+    "name": "OPPO A6t Pro 8GB 128GB",
+    "description": {
+      "Hệ điều hành khi ra mắt": "ColorOS 15, nền tảng Android 15",
+      "Chipset": "Qualcomm Snapdragon 685",
+      "Dung lượng RAM": "8 GB",
+      "Bộ nhớ trong": "128 GB",
+      "Loại CPU": "8 nhân",
+      "GPU": "Adreno 610",
+      "Kích thước màn hình": "6.75 inches",
+      "Công nghệ màn hình": "LCD",
+      "Độ phân giải màn hình": "720 x 1570 pixels",
+      "Tính năng màn hình": "Độ sáng tối đa 1125 nits16.7 triệu màu256 PPIKính cường lực Panda",
+      "Camera sau": "Chính 50 MP, f/1.8Phụ 2 MP, f/2.4",
+      "Camera trước": "8 MP, f/2.0",
+      "Pin": "7000 mAh",
+      "Hỗ trợ mạng": "4G",
+      "Thẻ SIM": "Dual nano-SIM hoặc 1 nano-SIM + 1 thẻ nhớ",
+      "Công nghệ NFC": "Có",
+      "Thời điểm ra mắt": "6/2026"
+    }
+  },
+  {
+    "name": "OPPO A79 5G 8GB 256GB",
+    "description": {
+      "Hệ điều hành khi ra mắt": "Android 13",
+      "Chipset": "MediaTek Dimensity 6020 5G 8 nhân",
+      "Dung lượng RAM": "8 GB",
+      "Bộ nhớ trong": "256 GB",
+      "Loại CPU": "2 nhân 2.2 GHz & 6 nhân 2.0 GHz",
+      "GPU": "Mali-G57 MC2",
+      "Kích thước màn hình": "6.72 inches",
+      "Độ phân giải màn hình": "1080 x 2400 pixels (FullHD+)",
+      "Tính năng màn hình": "Tần số quét 90Hz, 391 PPI",
+      "Camera sau": "Camera chính: 50MP; f/1.8; FOV 77°; ống kính 5P2MP, f/2.4; FOV 89°; ống kính 3P; hỗ trợ FF",
+      "Camera trước": "8MP; f/2.0; FOV 80°; ống kính 4P",
+      "Pin": "5000mAh",
+      "Hỗ trợ mạng": "5G",
+      "Thẻ SIM": "2 SIM (Nano-SIM)",
+      "Công nghệ NFC": "Có",
+      "Thời điểm ra mắt": "11/2023"
+    }
+  },
+  {
+    "name": "OPPO A6t 6GB 256GB",
+    "description": {
+      "Hệ điều hành khi ra mắt": "ColorOS 15, nền tảng Android 15",
+      "Chipset": "Qualcomm Snapdragon 685",
+      "Dung lượng RAM": "6 GB",
+      "Bộ nhớ trong": "256 GB",
+      "Loại CPU": "Qualcomm Snapdragon 685, tối đa 2.8GHz",
+      "GPU": "Adreno 610",
+      "Kích thước màn hình": "6.75 inches",
+      "Công nghệ màn hình": "LCD",
+      "Tính năng màn hình": "Kính cường lực Panda, Độ sáng: 1125 nits, 16.7 triệu màu",
+      "Camera sau": "13MP + QVGA, f/2.2 + f/3.0",
+      "Camera trước": "5MP, f/2.2",
+      "Pin": "6100mAh",
+      "Hỗ trợ mạng": "4G",
+      "Thẻ SIM": "2 Nano-SIM",
+      "Công nghệ NFC": "Có"
+    }
+  },
+  {
+    "name": "OPPO Reno14 5G 12GB 256GB",
+    "description": {
+      "Hệ điều hành khi ra mắt": "ColorOS 15, Android 15",
+      "Chipset": "MediaTek Dimensity 8350 5G, tối đa 3.35GHz",
+      "Dung lượng RAM": "12 GB",
+      "Bộ nhớ trong": "256 GB",
+      "Loại CPU": "8 nhân, 3.35GHz",
+      "GPU": "ARM G615-MC6",
+      "Kích thước màn hình": "6.59 inches",
+      "Công nghệ màn hình": "AMOLED",
+      "Độ phân giải màn hình": "1256 x 2760 pixels",
+      "Tính năng màn hình": "Tần số quét 120Hz, độ sáng 1200 nits, kính GG7i",
+      "Camera sau": "Chính 50MP OIS, F/1.8Tele 50MP OIS, F/2.8Góc rộng 8MP, F/2.2",
+      "Camera trước": "50MP, F/2.0",
+      "Pin": "6000mAh",
+      "Hỗ trợ mạng": "5G",
+      "Thẻ SIM": "2 Nano-SIM",
+      "Công nghệ NFC": "Có",
+      "Thời điểm ra mắt": "07/2025"
+    }
+  },
+  {
+    "name": "OPPO A6t 4GB 64GB",
+    "description": {
+      "Hệ điều hành khi ra mắt": "ColorOS 15, nền tảng Android 15",
+      "Chipset": "Qualcomm Snapdragon 685",
+      "Dung lượng RAM": "4 GB",
+      "Bộ nhớ trong": "64 GB",
+      "Loại CPU": "Qualcomm Snapdragon 685, tối đa 2.8GHz",
+      "GPU": "Adreno 610",
+      "Kích thước màn hình": "6.75 inches",
+      "Công nghệ màn hình": "LCD",
+      "Tính năng màn hình": "Kính cường lực Panda, Độ sáng: 1125 nits, 16.7 triệu màu",
+      "Camera sau": "13MP + QVGA, f/2.2 + f/3.0",
+      "Camera trước": "5MP, f/2.2",
+      "Pin": "6100mAh",
+      "Hỗ trợ mạng": "4G",
+      "Thẻ SIM": "2 Nano-SIM",
+      "Công nghệ NFC": "Có"
+    }
+  },
+  {
+    "name": "OPPO Find X5 Pro 5G 12GB 256GB",
+    "description": {
+      "Hệ điều hành khi ra mắt": "ColorOS 12.1 dựa trên Android 12",
+      "Chipset": "Qualcomm Snapdragon 8 Gen 1",
+      "Dung lượng RAM": "12 GB",
+      "Bộ nhớ trong": "256 GB",
+      "Loại CPU": "MariSilicon X Imaging NPU",
+      "GPU": "Adreno 730 @818MHz",
+      "Kích thước màn hình": "6.7 inches",
+      "Công nghệ màn hình": "AMOLED",
+      "Độ phân giải màn hình": "1440 x 3216 pixels (QHD+)",
+      "Tính năng màn hình": "Tần số quét 120 Hz (Dynamic)  1.07 tỉ màu  Corning Gorilla Glass VictusGam màu: Chế độ sống động: 97% NTSC/100% DCI-P3 (Tiêu chuẩn) Chế độ dịu nhẹ: 71% NTSC/100% sRGB (Tiêu chuẩn)Độ sáng tối đa 1300 nits",
+      "Camera sau": "Camera chính: 50MP, f/1.7  Camera góc rộng: 50MP, f/2.2; FOV 112°Camera tele: 13MP,  f/2.4",
+      "Camera trước": "Camera chính 32MP: f/2.4; FOV 90°, ống kính: 5P, lấy nét cố định",
+      "Pin": "5.000 mAh",
+      "Hỗ trợ mạng": "5G",
+      "Thẻ SIM": "2 SIM (Nano-SIM)",
+      "Công nghệ NFC": "Có",
+      "Thời điểm ra mắt": "05/2022"
+    }
+  },
+  {
+    "name": "OPPO Find X9 16GB 512GB",
+    "description": {
+      "Kích thước màn hình": "6.59 inches",
+      "Công nghệ màn hình": "AMOLED",
+      "Camera sau": "50MP OIS (Chính) + 50MP OIS (Tele) + 50MP (Góc rộng) + 2MP (Mono)",
+      "Camera trước": "32MP f/2.4",
+      "Chipset": "Dimensity 9500 5G",
+      "Công nghệ NFC": "Có",
+      "Dung lượng RAM": "16 GB",
+      "Bộ nhớ trong": "512 GB",
+      "Pin": "7025mAh (Typ)",
+      "Thẻ SIM": "Dual nano-SIM hoặc 1 nano-SIM + 1 eSIM",
+      "Hệ điều hành": "ColorOS 16, nền tảng Android 16",
+      "Độ phân giải màn hình": "1256 x 2760 pixels",
+      "Tính năng màn hình": "Tần số quét 120Hz, Cảm ứng 240Hz, 1.07 tỷ màu (10-bit), 100% DCI-P3, Độ sáng 1800nits",
+      "Loại CPU": "8 nhân"
+    }
+  },
+  {
+    "name": "OPPO Find N3 16GB 512GB",
+    "description": {
+      "Hệ điều hành khi ra mắt": "Android 13",
+      "Chipset": "Snapdragon 8 Gen 2 8 nhân",
+      "Dung lượng RAM": "16 GB",
+      "Bộ nhớ trong": "512 GB",
+      "Loại CPU": "1x3.2 GHz Cortex-X3 & 2x2.8 GHz Cortex-A715 & 2x2.8 GHz Cortex-A710 & 3x2.0 GHz Cortex-A510",
+      "GPU": "Adreno 740",
+      "Kích thước màn hình": "7.82 inches",
+      "Công nghệ màn hình": "OLED",
+      "Độ phân giải màn hình": "2268 x 2440 pixels",
+      "Tính năng màn hình": "Màn hình chính: 7.82 inches, 2K+ (2268 x 2440 Pixels), OLED, 120Hz, 2800 nit, 1 tỷ màu, Kính UTGMàn hình phụ: 6.31 inches, FHD+ (1116 x 2484 Pixels), 120Hz, Kính siêu mỏng Nanocrystal",
+      "Camera sau": "Camera chính: 48MP, f/1.7, OISCamera góc rộng: 48MP, f/2.2Camera Tele: 64MP, f/2.6",
+      "Camera trước": "Màn hình chính: 20MP, f/2.2 Màn hình ngoài: 32MP, f/2.4",
+      "Pin": "4805 mAh",
+      "Hỗ trợ mạng": "5G",
+      "Thẻ SIM": "Nano-SIM + eSIM",
+      "Công nghệ NFC": "Có",
+      "Thời điểm ra mắt": "10/2023"
+    }
+  },
+  {
+    "name": "POCO X8 Pro Max 12GB 256GB",
+    "description": {
+      "Hệ điều hành khi ra mắt": "Xiaomi HyperOS 3 (Android 16)",
+      "Chipset": "MediaTek Dimensity 9500s",
+      "Dung lượng RAM": "12 GB",
+      "Bộ nhớ trong": "256 GB",
+      "Loại CPU": "1 × Cortex-X925 (tối đa 3.73GHz) + 3 × Cortex-X4 (tối đa 3.3GHz) + 4 × Cortex-A720 (tối đa 2.4GHz)",
+      "GPU": "Immortalis-G925 MC11",
+      "Kích thước màn hình": "6.83 inches",
+      "Công nghệ màn hình": "AMOLED",
+      "Độ phân giải màn hình": "2772 x 1280 pixels",
+      "Tính năng màn hình": "Độ sáng tối đa 3.500 nits, PWM 3840Hz, 68 tỷ màu, dải màu DCI-P3, HDR10+",
+      "Camera sau": "50 MP f/1.5 (cảm biến Light Hunter 600, OIS) + 8 MP (góc siêu rộng)",
+      "Camera trước": "20 MP",
+      "Pin": "8.500 mAh",
+      "Thẻ SIM": "Dual nano-SIM hoặc 1 nano-SIM + 1 eSIM",
+      "Thời điểm ra mắt": "03/2026"
+    }
+  },
+  {
+    "name": "Xiaomi POCO F8 Pro 5G 12GB 256GB",
+    "description": {
+      "Hệ điều hành khi ra mắt": "Xiaomi HyperOS 3",
+      "Chipset": "Snapdragon® 8 Elite",
+      "Dung lượng RAM": "12 GB",
+      "Bộ nhớ trong": "256 GB",
+      "Loại CPU": "8 nhân",
+      "GPU": "Adreno™",
+      "Kích thước màn hình": "6.59 inches",
+      "Công nghệ màn hình": "AMOLED",
+      "Độ phân giải màn hình": "2510 x 1156 pixels",
+      "Tính năng màn hình": "Độ sáng tối đa 3500 nitsTỷ lệ tương phản 5.000.000:1Độ sáng HBM 2000 nits68 tỷ màu | Dải màu rộng DCI-P3Cảm ứng kháng nước 2.0Chứng nhận TUV (ánh sáng xanh thấp, chống nhấp nháy, nhịp sinh học)",
+      "Camera sau": "50MP chính (Light Fusion 800, 1/1.55\", f/1.88, OIS, 6P) + 50MP tele 60mm (f/2.2) + 8MP góc siêu rộng (f/2.2)",
+      "Camera trước": "20MP",
+      "Pin": "6210mAh",
+      "Hỗ trợ mạng": "5G",
+      "Thẻ SIM": "2 Nano SIM hoặc 2 eSIM hoặc 1 Nano SIM + 1 eSIM",
+      "Công nghệ NFC": "Có",
+      "Thời điểm ra mắt": "10/2025"
+    }
+  },
+  {
+    "name": "Xiaomi Redmi Note 14 Pro Plus 5G 8GB 256GB",
+    "description": {
+      "Hệ điều hành khi ra mắt": "Android 14",
+      "Chipset": "Snapdragon® 7s Gen 3",
+      "Dung lượng RAM": "8 GB",
+      "Bộ nhớ trong": "256 GB",
+      "Loại CPU": "8 nhân, xung nhịp 2.5Ghz",
+      "GPU": "Qualcomm® Adreno™ GPU",
+      "Kích thước màn hình": "6.67 inches",
+      "Công nghệ màn hình": "AMOLED",
+      "Độ phân giải màn hình": "2712 x 1220 pixels",
+      "Tính năng màn hình": "Tần số quét: Lên đến 120Hz  Độ sáng: 3000 nits   Độ sâu màu: 12-bit  Tỷ lệ tương phản: 5,000,000:1",
+      "Camera sau": "Chính 200MP, OIS - f/1.65  Góc siêu rộng 8MP - f/2.2 Macro 2MP - f/2.4",
+      "Camera trước": "Camera trước - f/2.2",
+      "Pin": "5110 mAh",
+      "Hỗ trợ mạng": "5G",
+      "Thẻ SIM": "2 Nano-SIM",
+      "Công nghệ NFC": "Có"
+    }
+  },
+  {
+    "name": "POCO X8 Pro Max 12GB 512GB",
+    "description": {
+      "Hệ điều hành khi ra mắt": "Xiaomi HyperOS 3 (Android 16)",
+      "Chipset": "MediaTek Dimensity 9500s",
+      "Dung lượng RAM": "12 GB",
+      "Bộ nhớ trong": "512 GB",
+      "Loại CPU": "1 × Cortex-X925 (tối đa 3.73GHz) + 3 × Cortex-X4 (tối đa 3.3GHz) + 4 × Cortex-A720 (tối đa 2.4GHz)",
+      "GPU": "Immortalis-G925 MC11",
+      "Kích thước màn hình": "6.83 inches",
+      "Công nghệ màn hình": "AMOLED",
+      "Độ phân giải màn hình": "2772 x 1280 pixels",
+      "Tính năng màn hình": "Độ sáng tối đa 3.500 nits, PWM 3840Hz, 68 tỷ màu, dải màu DCI-P3, HDR10+",
+      "Camera sau": "50 MP f/1.5 (cảm biến Light Hunter 600, OIS) + 8 MP (góc siêu rộng)",
+      "Camera trước": "20 MP",
+      "Pin": "8.500 mAh",
+      "Thẻ SIM": "Dual nano-SIM hoặc 1 nano-SIM + 1 eSIM",
+      "Thời điểm ra mắt": "03/2026"
+    }
+  },
+  {
+    "name": "Xiaomi POCO F9 Ultra 5G 12GB 256GB",
+    "description": {
+      "Hệ điều hành khi ra mắt": "Xiaomi HyperOS 3",
+      "Chipset": "Snapdragon 8 Elite Gen 5",
+      "Dung lượng RAM": "12 GB",
+      "Bộ nhớ trong": "256 GB",
+      "Loại CPU": "8 nhân",
+      "GPU": "Adreno",
+      "Kích thước màn hình": "6.9 inches",
+      "Công nghệ màn hình": "AMOLED",
+      "Tính năng màn hình": "Tần số quét 185 HzTỷ lệ tương phản 5.000.000:168 tỷ màuDC dimmingHDR10+Dolby Vision",
+      "Camera sau": "Chính 200 MP, f/1.68, OISTele tiềm vọng 50 MP, f/3.0Góc siêu rộng 50 MP, f/2.4",
+      "Camera trước": "32 MP",
+      "Pin": "8050 mAh",
+      "Hỗ trợ mạng": "5G",
+      "Thẻ SIM": "Nano SIM hoặc eSIM",
+      "Thời điểm ra mắt": "8/2026"
+    }
+  },
+  {
+    "name": "POCO X8 Pro Max 12GB 256GB",
+    "description": {
+      "Hệ điều hành khi ra mắt": "Xiaomi HyperOS 3 (Android 16)",
+      "Chipset": "MediaTek Dimensity 9500s",
+      "Dung lượng RAM": "12 GB",
+      "Bộ nhớ trong": "256 GB",
+      "Loại CPU": "1 × Cortex-X925 (tối đa 3.73GHz) + 3 × Cortex-X4 (tối đa 3.3GHz) + 4 × Cortex-A720 (tối đa 2.4GHz)",
+      "GPU": "Immortalis-G925 MC11",
+      "Kích thước màn hình": "6.83 inches",
+      "Công nghệ màn hình": "AMOLED",
+      "Độ phân giải màn hình": "2772 x 1280 pixels",
+      "Tính năng màn hình": "Độ sáng tối đa 3.500 nits, PWM 3840Hz, 68 tỷ màu, dải màu DCI-P3, HDR10+",
+      "Camera sau": "50 MP f/1.5 (cảm biến Light Hunter 600, OIS) + 8 MP (góc siêu rộng)",
+      "Camera trước": "20 MP",
+      "Pin": "8.500 mAh",
+      "Thẻ SIM": "Dual nano-SIM hoặc 1 nano-SIM + 1 eSIM",
+      "Thời điểm ra mắt": "03/2026"
+    }
+  },
+  {
+    "name": "Xiaomi Redmi Note 17 4GB 128GB",
+    "description": {
+      "Hệ điều hành khi ra mắt": "Xiaomi HyperOS 3",
+      "Chipset": "Snapdragon 6s Gen 2 4G 8 nhân",
+      "Dung lượng RAM": "4 GB",
+      "Bộ nhớ trong": "128 GB",
+      "Loại CPU": "8 nhân, 4 nhân 2.9 GHz, 4 nhân 1.9 GHz",
+      "GPU": "Adreno 610",
+      "Công nghệ màn hình": "AMOLED",
+      "Tính năng màn hình": "Độ phân giải màn hình: Full HD+ (1080 x 2396 pixels)Tần số quét 120 HzĐộ sáng tối đa 1800 nitsKính cường lực Corning Gorilla Glass 7i",
+      "Camera sau": "Chính 50 MP & Ống kính phụ",
+      "Camera trước": "16 MP",
+      "Pin": "7700 mAh",
+      "Hỗ trợ mạng": "4G",
+      "Thẻ SIM": "2 Nano-SIM",
+      "Công nghệ NFC": "Có",
+      "Thời điểm ra mắt": "08/2026"
+    }
+  },
+  {
+    "name": "Xiaomi Redmi Note 17 Pro Max 5G 8GB 512GB",
+    "description": {
+      "Hệ điều hành khi ra mắt": "Xiaomi HyperOS 3",
+      "Chipset": "Snapdragon 6 Gen 5 5G 8 nhân",
+      "Dung lượng RAM": "8 GB",
+      "Bộ nhớ trong": "512 GB",
+      "Loại CPU": "8 nhân, 4 nhân 2.6 GHz & 4 nhân 2.0 GHz",
+      "GPU": "Adreno 810",
+      "Kích thước màn hình": "6.83 inches",
+      "Công nghệ màn hình": "AMOLED",
+      "Tính năng màn hình": "Độ phân giải màn hình: 1.5K (1280 x 2772 Pixels)Tần số quét 120 HzĐộ sáng tối đa 3500 nitsKính cường lực Corning Gorilla Glass Victus 2",
+      "Camera sau": "Camera chính: 50 MPCamera phụ: 8 MP",
+      "Camera trước": "32 MP",
+      "Pin": "10000 mAh",
+      "Hỗ trợ mạng": "5G",
+      "Thẻ SIM": "2 Nano-SIM",
+      "Công nghệ NFC": "Có",
+      "Thời điểm ra mắt": "08/2026"
+    }
+  },
+  {
+    "name": "Xiaomi Redmi Note 17 5G 6GB 128GB",
+    "description": {
+      "Hệ điều hành khi ra mắt": "Xiaomi HyperOS 3",
+      "Chipset": "Snapdragon 4 Gen 4 5G 8 nhân",
+      "Dung lượng RAM": "6 GB",
+      "Bộ nhớ trong": "128 GB",
+      "Loại CPU": "8 nhân, 2 nhân 2.3 GHz & 6 nhân 2.0 GHz",
+      "GPU": "Adreno 613",
+      "Công nghệ màn hình": "AMOLED",
+      "Tính năng màn hình": "Độ phân giải màn hình: Full HD+ (1080 x 2396 pixels)Tần số quét 120 HzĐộ sáng tối đa 1800 nitsKính cường lực Corning Gorilla Glass 7i",
+      "Camera sau": "Chính 50 MP & Ống kính phụ",
+      "Camera trước": "16 MP",
+      "Pin": "7700 mAh",
+      "Hỗ trợ mạng": "5G",
+      "Thẻ SIM": "2 Nano-SIM",
+      "Công nghệ NFC": "Có",
+      "Thời điểm ra mắt": "08/2026"
+    }
+  },
+  {
+    "name": "Xiaomi 17T 5G 12GB 512GB",
+    "description": {
+      "Hệ điều hành khi ra mắt": "Xiaomi HyperOS 3",
+      "Chipset": "MediaTek Dimensity 8500-Ultra",
+      "Dung lượng RAM": "12 GB",
+      "Bộ nhớ trong": "512 GB",
+      "Loại CPU": "8 nhân",
+      "GPU": "Mali-G720 MC8",
+      "Kích thước màn hình": "6.59 inches",
+      "Công nghệ màn hình": "AMOLED",
+      "Độ phân giải màn hình": "2756 x 1268 pixels",
+      "Tính năng màn hình": "Độ sáng tối đa 3500 nits460 PPI100% DCI-P312bit, 68 tỉ màuDolby VisionHDR10+",
+      "Camera sau": "Chính 50 MP, f/1.7Tele 0 MP, f/3.0Góc siêu rộng 12 MP, f/2.2",
+      "Camera trước": "32 MP, f/2.2",
+      "Pin": "6500 mAh",
+      "Hỗ trợ mạng": "5G",
+      "Thẻ SIM": "2 Nano SIM hoặc 2 eSIM hoặc 1 Nano SIM + 1 eSIM",
+      "Công nghệ NFC": "Có",
+      "Thời điểm ra mắt": "5/2026"
+    }
+  },
+  {
+    "name": "Xiaomi Redmi Note 17 Pro 5G 6GB 256GB",
+    "description": {
+      "Hệ điều hành khi ra mắt": "Xiaomi HyperOS 3",
+      "Chipset": "Snapdragon 6s Gen 4 8 nhân",
+      "Dung lượng RAM": "6 GB",
+      "Bộ nhớ trong": "256 GB",
+      "Loại CPU": "Adreno 710",
+      "GPU": "8 nhân, 4 nhân 2.4 GHz & 4 nhân 1.8 GHz",
+      "Kích thước màn hình": "6.83 inches",
+      "Công nghệ màn hình": "AMOLED",
+      "Tính năng màn hình": "Độ phân giải màn hình: 1.5K (1280 x 2772 Pixels)Tần số quét 120 HzĐộ sáng tối đa 3500 nitsKính cường lực Corning Gorilla Glass Victus 2",
+      "Camera sau": "Camera chính: 50 MPCamera phụ: 8 MP",
+      "Camera trước": "16 MP",
+      "Pin": "8340 mAh",
+      "Hỗ trợ mạng": "5G",
+      "Thẻ SIM": "2 Nano-SIM",
+      "Công nghệ NFC": "Có",
+      "Thời điểm ra mắt": "08/2026"
+    }
+  },
+  {
+    "name": "Xiaomi POCO F8 Pro 5G 12GB 256GB",
+    "description": {
+      "Hệ điều hành khi ra mắt": "Xiaomi HyperOS 3",
+      "Chipset": "Snapdragon® 8 Elite",
+      "Dung lượng RAM": "12 GB",
+      "Bộ nhớ trong": "256 GB",
+      "Loại CPU": "8 nhân",
+      "GPU": "Adreno™",
+      "Kích thước màn hình": "6.59 inches",
+      "Công nghệ màn hình": "AMOLED",
+      "Độ phân giải màn hình": "2510 x 1156 pixels",
+      "Tính năng màn hình": "Độ sáng tối đa 3500 nitsTỷ lệ tương phản 5.000.000:1Độ sáng HBM 2000 nits68 tỷ màu | Dải màu rộng DCI-P3Cảm ứng kháng nước 2.0Chứng nhận TUV (ánh sáng xanh thấp, chống nhấp nháy, nhịp sinh học)",
+      "Camera sau": "50MP chính (Light Fusion 800, 1/1.55\", f/1.88, OIS, 6P) + 50MP tele 60mm (f/2.2) + 8MP góc siêu rộng (f/2.2)",
+      "Camera trước": "20MP",
+      "Pin": "6210mAh",
+      "Hỗ trợ mạng": "5G",
+      "Thẻ SIM": "2 Nano SIM hoặc 2 eSIM hoặc 1 Nano SIM + 1 eSIM",
+      "Công nghệ NFC": "Có",
+      "Thời điểm ra mắt": "10/2025"
+    }
+  },
+  {
+    "name": "Xiaomi 17 Ultra 5G 16GB 512GB",
+    "description": {
+      "Hệ điều hành khi ra mắt": "Android 16 với HyperOS",
+      "Chipset": "Qualcomm Snapdragon 8 Elite Gen 5",
+      "Dung lượng RAM": "16 GB",
+      "Bộ nhớ trong": "512 GB",
+      "Loại CPU": "8 nhân",
+      "GPU": "Adreno 840",
+      "Kích thước màn hình": "6.9 inches",
+      "Công nghệ màn hình": "LTPO AMOLED",
+      "Tính năng màn hình": "Độ phân giải màn hình: 2608 × 1200 pixelsĐộ sáng tối đa 3500 nits",
+      "Camera sau": "Camera chính: 200 MPGóc siêu rộng: 50 MP",
+      "Camera trước": "50 MP",
+      "Pin": "6000 mAh",
+      "Hỗ trợ mạng": "5G",
+      "Thẻ SIM": "2 Nano-SIM",
+      "Công nghệ NFC": "Có",
+      "Thời điểm ra mắt": "02/2026"
+    }
+  },
+  {
+    "name": "Xiaomi 17T Pro 5G 12GB 512GB",
+    "description": {
+      "Chipset": "MediaTek Dimensity 9500",
+      "Dung lượng RAM": "12 GB",
+      "Bộ nhớ trong": "512 GB",
+      "Kích thước màn hình": "6.83 inches",
+      "Công nghệ màn hình": "AMOLED",
+      "Tính năng màn hình": "Độ sáng tối đa 3500 nits, tối thiểu 1 nit; 68 tỷ màu; dải màu điện ảnh DCI-P3; DC dimming; HDR10+; Dolby Vision; chứng nhận TÜV Rheinland Low Blue Light (Hardware Solution), Flicker Free, Circadian Friendly, Intelligent Eye Care",
+      "Camera sau": "Camera chính Leica 50MP f/1.67 OISCamera tele Leica 5X 50MP f/3.0 OISCamera góc siêu rộng Leica 12MP f/2.2",
+      "Camera trước": "32MP f/2.2, 90°, tiêu cự 21mm",
+      "Pin": "7000mAh",
+      "Hỗ trợ mạng": "5G"
+    }
+  },
+  {
+    "name": "Xiaomi Redmi Note 15 6GB 128GB",
+    "description": {
+      "Hệ điều hành khi ra mắt": "Xiaomi HyperOS 2",
+      "Chipset": "MediaTek Helio G100-Ultra",
+      "Dung lượng RAM": "6 GB",
+      "Bộ nhớ trong": "128 GB",
+      "Kích thước màn hình": "6.77 inches",
+      "Công nghệ màn hình": "AMOLED",
+      "Độ phân giải màn hình": "1080 x 2392 pixels",
+      "Tính năng màn hình": "Độ sáng tối đa 3200 nits, 12-bit, DCI-P3, PWM 3840Hz, TÜV Rheinland giảm ánh sáng xanh, TÜV Rheinland thân thiện nhịp sinh học, TÜV Rheinland Flicker Free",
+      "Camera sau": "Camera chính 108MP ƒ/1.7 + Camera phụ 2MP ƒ/2.4",
+      "Camera trước": "20MP ƒ/2.2",
+      "Pin": "6000 mAh",
+      "Hỗ trợ mạng": "4G",
+      "Thời điểm ra mắt": "01/2026"
+    }
+  },
+  {
+    "name": "Xiaomi Redmi A7 3GB 64GB",
+    "description": {
+      "Hệ điều hành khi ra mắt": "Android 15",
+      "Chipset": "Unisoc T7250",
+      "Dung lượng RAM": "3 GB",
+      "Bộ nhớ trong": "64 GB",
+      "Loại CPU": "8 nhân, 2A75@1.8GHz + 6A55@1.6GHz",
+      "GPU": "Mali-G57",
+      "Kích thước màn hình": "6.88 inches",
+      "Công nghệ màn hình": "LCD",
+      "Độ phân giải màn hình": "720 x 1640 pixels",
+      "Tính năng màn hình": "Tần số quét 120 Hz260 PPIĐộ sáng 450 nitsĐộ sâu màu 8-bitTỷ lệ tương phản 1500:1Dải màu 70% NTSCDC DimmingChứng nhận TÜV Rheinland",
+      "Camera sau": "13 MP, f/2.2",
+      "Camera trước": "8 MP, f/2.0",
+      "Pin": "5200 mAh",
+      "Hỗ trợ mạng": "4G",
+      "Thẻ SIM": "2 Nano-SIM"
+    }
+  },
+  {
+    "name": "Xiaomi Redmi Note 14 Pro Plus 5G 8GB 256GB",
+    "description": {
+      "Hệ điều hành khi ra mắt": "Android 14",
+      "Chipset": "Snapdragon® 7s Gen 3",
+      "Dung lượng RAM": "8 GB",
+      "Bộ nhớ trong": "256 GB",
+      "Loại CPU": "8 nhân, xung nhịp 2.5Ghz",
+      "GPU": "Qualcomm® Adreno™ GPU",
+      "Kích thước màn hình": "6.67 inches",
+      "Công nghệ màn hình": "AMOLED",
+      "Độ phân giải màn hình": "2712 x 1220 pixels",
+      "Tính năng màn hình": "Tần số quét: Lên đến 120Hz  Độ sáng: 3000 nits   Độ sâu màu: 12-bit  Tỷ lệ tương phản: 5,000,000:1",
+      "Camera sau": "Chính 200MP, OIS - f/1.65  Góc siêu rộng 8MP - f/2.2 Macro 2MP - f/2.4",
+      "Camera trước": "Camera trước - f/2.2",
+      "Pin": "5110 mAh",
+      "Hỗ trợ mạng": "5G",
+      "Thẻ SIM": "2 Nano-SIM",
+      "Công nghệ NFC": "Có"
+    }
+  },
+  {
+    "name": "Xiaomi Redmi Note 15 5G 6GB 128GB",
+    "description": {
+      "Hệ điều hành khi ra mắt": "Xiaomi HyperOS 2",
+      "Chipset": "Snapdragon® 6 Gen 3",
+      "Dung lượng RAM": "6 GB",
+      "Bộ nhớ trong": "128 GB",
+      "Kích thước màn hình": "6.77 inches",
+      "Công nghệ màn hình": "AMOLED",
+      "Độ phân giải màn hình": "1080 x 2392 pixels",
+      "Tính năng màn hình": "Độ sáng tối đa 3200 nits, 12-bit, DCI-P3, PWM 3840Hz, chứng nhận TÜV Rheinland",
+      "Camera sau": "Camera chính 108MP ƒ/1.7 OIS + Camera siêu rộng 8MP ƒ/2.2",
+      "Camera trước": "20MP ƒ/2.2",
+      "Pin": "5520mAh",
+      "Hỗ trợ mạng": "5G",
+      "Thời điểm ra mắt": "01/2026"
+    }
+  },
+  {
+    "name": "Xiaomi Redmi Note 15 Pro 12GB 256GB",
+    "description": {
+      "Hệ điều hành khi ra mắt": "Xiaomi HyperOS 2",
+      "Chipset": "MediaTek Helio G200-Ultra",
+      "Dung lượng RAM": "12 GB",
+      "Bộ nhớ trong": "256 GB",
+      "Kích thước màn hình": "6.77 inches",
+      "Công nghệ màn hình": "AMOLED",
+      "Độ phân giải màn hình": "1080 x 2392 pixels",
+      "Tính năng màn hình": "Độ sáng tối đa 3200 nits, 12-bit, DCI-P3, PWM 3840Hz, TÜV Rheinland",
+      "Camera sau": "200MP (chính) + 8MP (siêu rộng)",
+      "Camera trước": "32MP",
+      "Pin": "6500mAh",
+      "Hỗ trợ mạng": "4G",
+      "Thời điểm ra mắt": "01/2026"
+    }
+  },
+  {
+    "name": "Xiaomi Redmi Note 15 Pro 5G 12GB 256GB",
+    "description": {
+      "Kích thước màn hình": "6.83 inches",
+      "Công nghệ màn hình": "AMOLED",
+      "Camera sau": "Camera chính: 200MP, OIS, f/1.7Camera góc siêu rộng: 8MP, f/2.2",
+      "Camera trước": "20MP, f/2.2",
+      "Chipset": "MediaTek Dimensity 7400-Ultra",
+      "Công nghệ NFC": "Có",
+      "Dung lượng RAM": "12 GB",
+      "Bộ nhớ trong": "256 GB",
+      "Pin": "6580mAh(typ)",
+      "Thẻ SIM": "2 Nano SIM hoặc 1 Nano + 1 eSIM",
+      "Hệ điều hành": "Xiaomi HyperOS 2",
+      "Độ phân giải màn hình": "2772 x 1280 pixels",
+      "Tính năng màn hình": "Tần số quét: lên đến 120HzDCI-P3 rộng, độ sâu màu 12-bitPWM dimming 3840HzĐộ sáng: 3200 nits1800 nits (HBM)Tỷ lệ tương phản: 8,000,000:1Điều chỉnh độ sáng tự động 16,000 cấp",
+      "Loại CPU": "8 nhân lên đến 2.6 GHz"
+    }
+  },
+  {
+    "name": "POCO X8 Pro Max 12GB 512GB",
+    "description": {
+      "Hệ điều hành khi ra mắt": "Xiaomi HyperOS 3 (Android 16)",
+      "Chipset": "MediaTek Dimensity 9500s",
+      "Dung lượng RAM": "12 GB",
+      "Bộ nhớ trong": "512 GB",
+      "Loại CPU": "1 × Cortex-X925 (tối đa 3.73GHz) + 3 × Cortex-X4 (tối đa 3.3GHz) + 4 × Cortex-A720 (tối đa 2.4GHz)",
+      "GPU": "Immortalis-G925 MC11",
+      "Kích thước màn hình": "6.83 inches",
+      "Công nghệ màn hình": "AMOLED",
+      "Độ phân giải màn hình": "2772 x 1280 pixels",
+      "Tính năng màn hình": "Độ sáng tối đa 3.500 nits, PWM 3840Hz, 68 tỷ màu, dải màu DCI-P3, HDR10+",
+      "Camera sau": "50 MP f/1.5 (cảm biến Light Hunter 600, OIS) + 8 MP (góc siêu rộng)",
+      "Camera trước": "20 MP",
+      "Pin": "8.500 mAh",
+      "Thẻ SIM": "Dual nano-SIM hoặc 1 nano-SIM + 1 eSIM",
+      "Thời điểm ra mắt": "03/2026"
+    }
+  },
+  {
+    "name": "Xiaomi 17 Ultra 5G 16GB 1TB",
+    "description": {
+      "Hệ điều hành khi ra mắt": "Android 16 với HyperOS",
+      "Chipset": "Qualcomm Snapdragon 8 Elite Gen 5",
+      "Dung lượng RAM": "16 GB",
+      "Bộ nhớ trong": "1 TB",
+      "Loại CPU": "8 nhân",
+      "GPU": "Adreno 840",
+      "Kích thước màn hình": "6.9 inches",
+      "Công nghệ màn hình": "LTPO OLED",
+      "Tính năng màn hình": "Độ phân giải màn hình: 2608 × 1200 pixelsĐộ sáng tối đa 3500 nits",
+      "Camera sau": "Camera chính: 200 MPGóc siêu rộng: 50 MP",
+      "Camera trước": "50 MP",
+      "Pin": "6000 mAh",
+      "Hỗ trợ mạng": "5G",
+      "Thẻ SIM": "2 Nano-SIM",
+      "Công nghệ NFC": "Có",
+      "Thời điểm ra mắt": "02/2026"
+    }
+  },
+  {
+    "name": "Xiaomi POCO F9 Ultra 5G 16GB 512GB",
+    "description": {
+      "Hệ điều hành khi ra mắt": "Xiaomi HyperOS 3",
+      "Chipset": "Snapdragon 8 Elite Gen 5",
+      "Dung lượng RAM": "16 GB",
+      "Bộ nhớ trong": "512 GB",
+      "Loại CPU": "8 nhân",
+      "GPU": "Adreno",
+      "Kích thước màn hình": "6.9 inches",
+      "Công nghệ màn hình": "AMOLED",
+      "Tính năng màn hình": "Tần số quét 185 HzTỷ lệ tương phản 5.000.000:168 tỷ màuDC dimmingHDR10+Dolby Vision",
+      "Camera sau": "Chính 200 MP, f/1.68, OISTele tiềm vọng 50 MP, f/3.0Góc siêu rộng 50 MP, f/2.4",
+      "Camera trước": "32 MP",
+      "Pin": "8050 mAh",
+      "Hỗ trợ mạng": "5G",
+      "Thẻ SIM": "Nano SIM hoặc eSIM",
+      "Thời điểm ra mắt": "8/2026"
+    }
+  },
+  {
+    "name": "Xiaomi Redmi 15 5G 8GB 256GB",
+    "description": {
+      "Hệ điều hành khi ra mắt": "Xiaomi HyperOS 2",
+      "Chipset": "Snapdragon® 6s Gen 3",
+      "Dung lượng RAM": "8 GB",
+      "Bộ nhớ trong": "256 GB",
+      "Loại CPU": "Kryo, up to 2.3GHz",
+      "GPU": "Adreno",
+      "Kích thước màn hình": "6.9 inches",
+      "Công nghệ màn hình": "IPS LCD",
+      "Độ phân giải màn hình": "2340 x 1080-pixel",
+      "Tính năng màn hình": "Độ sáng 700 nits850 nits (HBM)Tỉ lệ tương phản 1400:1Cảm ứng 288HzĐạt chứng nhận TÜV Rheinland: Giảm ánh sáng xanh, Không nhấp nháy, Thân thiện nhịp sinh học",
+      "Camera sau": "50MP, Ống kính -5P, f/1.8",
+      "Camera trước": "8MP f/2.05",
+      "Pin": "7000mAh",
+      "Hỗ trợ mạng": "5G",
+      "Thẻ SIM": "2 SIM (Nano-SIM)",
+      "Công nghệ NFC": "Có"
+    }
+  },
+  {
+    "name": "TECNO CAMON 40 8GB 128GB",
+    "description": {
+      "Kích thước màn hình": "6.78 inches",
+      "Công nghệ màn hình": "AMOLED",
+      "Camera sau": "50MP, ƒ/1.8Góc siêu rộng 8MP",
+      "Camera trước": "32MP",
+      "Chipset": "Mediatek Helio G100 Ultimate",
+      "Công nghệ NFC": "Có",
+      "Dung lượng RAM": "8 GB",
+      "Bộ nhớ trong": "128 GB",
+      "Pin": "5200 mAh",
+      "Thẻ SIM": "2 Nano-SIM",
+      "Hệ điều hành": "Android 15",
+      "Tính năng màn hình": "Màn hình phẳngFHD+Tần số quét 120HzĐộ sáng màn hình 1300 nitsHDR"
+    }
+  },
+  {
+    "name": "Tecno Pova Curve 2 5G 8GB 128GB",
+    "description": {
+      "Hệ điều hành khi ra mắt": "HiOS 16 (Dựa trên Android 16)",
+      "Chipset": "MediaTek Dimensity 7100 5G",
+      "Dung lượng RAM": "8 GB",
+      "Bộ nhớ trong": "128 GB",
+      "Loại CPU": "6nm, Octa-core, Lên đến 2.4GHz",
+      "GPU": "Arm Mali-G610 MC2",
+      "Kích thước màn hình": "6.78 inches",
+      "Công nghệ màn hình": "AMOLED",
+      "Tính năng màn hình": "Độ phân giải: 2364*1080Tần số quét: 144HzĐộ sáng: 4500nits Peak; 1600nits HBMMàu sắc: 1,07 tỷPPI: 429",
+      "Camera sau": "50 MP + 2 MP",
+      "Camera trước": "13 MP",
+      "Pin": "8000mAh",
+      "Hỗ trợ mạng": "5G",
+      "Công nghệ NFC": "Có"
+    }
+  },
+  {
+    "name": "TECNO Spark 40 Pro+ 8GB 256GB",
+    "description": {
+      "Kích thước màn hình": "6.78 inches",
+      "Công nghệ màn hình": "AMOLED",
+      "Camera sau": "50 MP",
+      "Camera trước": "13 MP",
+      "Chipset": "MediaTek Helio G200",
+      "Dung lượng RAM": "8 GB",
+      "Bộ nhớ trong": "256 GB",
+      "Pin": "5200mAh, 45W",
+      "Thẻ SIM": "2 SIM (Nano-SIM)",
+      "Hệ điều hành": "Android 15",
+      "Tính năng màn hình": "1224 x 2720 pixels6.78'' 144Hz & 1.5K 3D AMOLED Display"
+    }
+  },
+  {
+    "name": "TECNO Spark 50 4GB 128GB",
+    "description": {
+      "Hệ điều hành khi ra mắt": "Android 16",
+      "Chipset": "MediaTek Helio G81",
+      "Dung lượng RAM": "4 GB",
+      "Bộ nhớ trong": "128 GB",
+      "Loại CPU": "2*A75 up to 2.0Ghz, 6*A55 up to 1.7Ghz",
+      "GPU": "Mali-G52 MC2",
+      "Kích thước màn hình": "6.78 inches",
+      "Công nghệ màn hình": "LCD",
+      "Tính năng màn hình": "Tần số quét 120 Hz, Độ sáng tối đa 700 nits",
+      "Camera sau": "50 MP",
+      "Camera trước": "8 MP",
+      "Pin": "6700 mAh",
+      "Hỗ trợ mạng": "4G",
+      "Thẻ SIM": "2 Nano-SIM"
+    }
+  },
+  {
+    "name": "TECNO CAMON 40 Pro 8GB 256GB",
+    "description": {
+      "Kích thước màn hình": "6.78 inches",
+      "Công nghệ màn hình": "AMOLED",
+      "Camera sau": "50MP, ƒ/1.8Góc siêu rộng 8MP",
+      "Camera trước": "50MP",
+      "Chipset": "Mediatek Helio G100 Ultimate",
+      "Công nghệ NFC": "Có",
+      "Dung lượng RAM": "8 GB",
+      "Bộ nhớ trong": "256 GB",
+      "Pin": "5200mAh",
+      "Thẻ SIM": "2 Nano-SIM",
+      "Hệ điều hành": "Android 15",
+      "Tính năng màn hình": "Màn hình cong đôiFHD+Tần số quét 120HzĐộ sáng màn hình 1300 nitsHDR"
+    }
+  },
+  {
+    "name": "TECNO Spark Go 3 4GB 64GB",
+    "description": {
+      "Hệ điều hành khi ra mắt": "Android 15",
+      "Chipset": "UNISOC T7250",
+      "Dung lượng RAM": "4 GB",
+      "Bộ nhớ trong": "64 GB",
+      "Loại CPU": "2 nhân 2.2 GHz & 6 nhân 2.0 GHz",
+      "GPU": "Mali-G57 MC2",
+      "Kích thước màn hình": "6.75 inches",
+      "Độ phân giải màn hình": "720 x 1600 pixel",
+      "Tính năng màn hình": "Độ sáng tối đa 600 nits",
+      "Camera sau": "13 MP + đèn flash kép",
+      "Camera trước": "8 MP",
+      "Pin": "5000 mAh",
+      "Hỗ trợ mạng": "4G",
+      "Thẻ SIM": "2 Nano-SIM",
+      "Thời điểm ra mắt": "04/2026"
+    }
+  },
+  {
+    "name": "TECNO CAMON 40 8GB 256GB",
+    "description": {
+      "Kích thước màn hình": "6.78 inches",
+      "Công nghệ màn hình": "AMOLED",
+      "Camera sau": "50MP, ƒ/1.8Góc siêu rộng 8MP",
+      "Camera trước": "32MP",
+      "Chipset": "Mediatek Helio G100 Ultimate",
+      "Công nghệ NFC": "Có",
+      "Dung lượng RAM": "8 GB",
+      "Bộ nhớ trong": "256 GB",
+      "Pin": "5200 mAh",
+      "Thẻ SIM": "2 Nano-SIM",
+      "Hệ điều hành": "Android 15",
+      "Tính năng màn hình": "Màn hình phẳngFHD+Tần số quét 120HzĐộ sáng màn hình 1300 nitsHDR"
+    }
+  },
+  {
+    "name": "Tecno Pova Curve 2 5G 8GB 256GB",
+    "description": {
+      "Hệ điều hành khi ra mắt": "HiOS 16 (Dựa trên Android 16)",
+      "Chipset": "MediaTek Dimensity 7100 5G",
+      "Dung lượng RAM": "8 GB",
+      "Bộ nhớ trong": "256 GB",
+      "Loại CPU": "6nm, Octa-core, Lên đến 2.4GHz",
+      "GPU": "Arm Mali-G610 MC2",
+      "Kích thước màn hình": "6.78 inches",
+      "Công nghệ màn hình": "AMOLED",
+      "Tính năng màn hình": "Độ phân giải: 2364*1080Tần số quét: 144HzĐộ sáng: 4500nits Peak; 1600nits HBMMàu sắc: 1,07 tỷPPI: 429",
+      "Camera sau": "50 MP + 2 MP",
+      "Camera trước": "13 MP",
+      "Pin": "8000mAh",
+      "Hỗ trợ mạng": "5G",
+      "Công nghệ NFC": "Có"
+    }
+  },
+  {
+    "name": "TECNO Pova 8 8GB 128GB",
+    "description": {
+      "Dung lượng RAM": "4 GB",
+      "Bộ nhớ trong": "128 GB"
+    }
+  },
+  {
+    "name": "TECNO Spark 50 Pro 4GB 128GB",
+    "description": {
+      "Dung lượng RAM": "4 GB",
+      "Bộ nhớ trong": "128 GB"
+    }
+  },
+  {
+    "name": "Tecno Phantom V Fold",
+    "description": {
+      "Công nghệ màn hình": "LTPO AMOLED",
+      "Camera sau": "Camera góc rộng: 50MP, f/1.9, 1/1.3\", 1.2µm, PDAF  Camera Tele: 50MP, f/2.0, 1/2.8\", 0.64µm, PDAF  Camera góc siêu rộng: 1 MP, f/2.2, 120˚, 1/3\", 1.12µm, PDAF",
+      "Camera trước": "Camera góc rộng: 16 MP, f/2.5, 1/2.8\", 1.12µm  32 MP, f/2.5, 1/2.8\", 0.8µm",
+      "Chipset": "Mediatek Dimensity 9000+ (4 nm)",
+      "Công nghệ NFC": "Có",
+      "Dung lượng RAM": "12 GB",
+      "Bộ nhớ trong": "256 GB",
+      "Pin": "5000 mAh",
+      "Thẻ SIM": "2 SIM (Nano-SIM)",
+      "Hệ điều hành": "Android 13",
+      "Tính năng màn hình": "1 tỷ màu  Tần số quét 120Hz  Độ sáng 1100 nits",
+      "Loại CPU": "1x3.20 GHz Cortex-X2 & 3x2.85 GHz Cortex-A710 & 4x1.80 GHz Cortex-A510"
+    }
+  },
+  {
+    "name": "Tecno Spark 10C",
+    "description": {
+      "Kích thước màn hình": "6.6 inches",
+      "Camera sau": "16MP",
+      "Camera trước": "8MP",
+      "Chipset": "Dimensity 9200 Plus",
+      "Công nghệ NFC": "Không",
+      "Dung lượng RAM": "16 GB",
+      "Bộ nhớ trong": "128 GB",
+      "Pin": "5000 mAh",
+      "Độ phân giải màn hình": "720 x 1612 (HD+)",
+      "Tính năng màn hình": "Tần số quét 90Hz"
+    }
+  },
+  {
+    "name": "TECNO Pova 8 8GB 256GB",
+    "description": {
+      "Dung lượng RAM": "4 GB",
+      "Bộ nhớ trong": "256 GB"
+    }
+  },
+  {
+    "name": "TECNO CAMON 20 Pro 5G",
+    "description": {
+      "Kích thước màn hình": "6.67 inches",
+      "Công nghệ màn hình": "AMOLED",
+      "Camera sau": "Camera góc rộng: 64 MP, f/1.7, 1/1.7\", 0.8µm, PDAF, OISMáy ảnh đo chiều sâu: 2 MP, f/2.4Camera macro: 2 MP, f/2.4",
+      "Camera trước": "Camera góc rộng: 32 MP, f/2.5, 24mm, 1/2.8\", 0.8µm",
+      "Chipset": "Mediatek Dimensity 8050 (6 nm)",
+      "Công nghệ NFC": "Có",
+      "Dung lượng RAM": "8 GB",
+      "Bộ nhớ trong": "256 GB",
+      "Pin": "5000 mAh",
+      "Thẻ SIM": "2 SIM (Nano-SIM)",
+      "Hệ điều hành": "Android 13",
+      "Độ phân giải màn hình": "1080 x 2400 pixels (FullHD+)",
+      "Tính năng màn hình": "Tần số quét 120Hz",
+      "Loại CPU": "1x3.0 GHz Cortex-A78 & 3x2.6 GHz Cortex-A78 & 4x2.0 GHz Cortex-A55"
+    }
+  },
+  {
+    "name": "Tecno Camon 19",
+    "description": {
+      "Kích thước màn hình": "6.8 inches",
+      "Công nghệ màn hình": "IPS LCD",
+      "Camera sau": "Camera góc rộng: 64 MP, f/1.7, PDAF  Camera góc sâu: 2 MP, f/2.4",
+      "Camera trước": "Camera góc rộng: 16 MP, f/2.0,",
+      "Chipset": "MediaTek Helio G85 (12nm)",
+      "Công nghệ NFC": "Có",
+      "Dung lượng RAM": "4 GB",
+      "Bộ nhớ trong": "128 GB",
+      "Pin": "Li-Po 5000 mAh, không thể tháo rời",
+      "Thẻ SIM": "2 SIM (Nano-SIM)",
+      "Hệ điều hành": "Android 12, HIOS 8.6",
+      "Độ phân giải màn hình": "2460x1080 pixels",
+      "Loại CPU": "2x2,0 GHz Cortex-A75 & 6x1,8 GHz Cortex-A55"
+    }
+  },
+  {
+    "name": "TECNO CAMON 20 Premier",
+    "description": {
+      "Kích thước màn hình": "6.0 inches",
+      "Công nghệ màn hình": "AMOLED",
+      "Camera sau": "camera góc rộng: 108MP  Camera góc siêu rộng 13MP",
+      "Chipset": "Dimensity 1200",
+      "Công nghệ NFC": "Có",
+      "Dung lượng RAM": "8 GB",
+      "Bộ nhớ trong": "512 GB",
+      "Hệ điều hành": "Android 13",
+      "Tính năng màn hình": "Tần số quét 120 Hz"
+    }
+  },
+  {
+    "name": "Tecno Pova Neo 5G",
+    "description": {
+      "Kích thước màn hình": "6.8 inches",
+      "Công nghệ màn hình": "IPS LCD",
+      "Camera sau": "Camera góc rộng: 50 MP, AF  QVGA",
+      "Camera trước": "8 MP",
+      "Chipset": "MediaTek MT6833P Mật độ 810 (6 nm)",
+      "Công nghệ NFC": "Không",
+      "Dung lượng RAM": "4 GB",
+      "Bộ nhớ trong": "128 GB",
+      "Pin": "6000 mAh",
+      "Thẻ SIM": "2 SIM (Nano-SIM)",
+      "Hệ điều hành": "Android 12",
+      "Độ phân giải màn hình": "2460x1080 pixels",
+      "Tính năng màn hình": "IPS LCD, 120Hz, 500 nits",
+      "Loại CPU": "2x2,4 GHz Cortex-A76 & 6x2,0 GHz Cortex-A55"
+    }
+  },
+  {
+    "name": "TECNO POP 20C",
+    "description": {}
+  },
+  {
+    "name": "TECNO Spark 50S 5G",
+    "description": {}
+  },
+  {
+    "name": "Tecno Spark 9",
+    "description": {
+      "Kích thước màn hình": "6.6 inches",
+      "Công nghệ màn hình": "IPS LCD",
+      "Camera sau": "Camera góc rộng: 13 MP, f / 1.9, 27 mm,  AF",
+      "Camera trước": "Camera góc rộng: 8 MP",
+      "Chipset": "Mediatek MT6765V / CB Helio G37 (12 nm)",
+      "Công nghệ NFC": "Không",
+      "Dung lượng RAM": "3 GB",
+      "Bộ nhớ trong": "64 GB",
+      "Pin": "Li-Po 5000 mAh, không thể tháo rời",
+      "Thẻ SIM": "2 SIM (Nano-SIM)",
+      "Hệ điều hành": "Android 12, HIOS 8.6",
+      "Độ phân giải màn hình": "720 x 1600 pixel",
+      "Loại CPU": "4x2,3 GHz Cortex-A53 & 4x1,8 GHz Cortex-A53"
+    }
+  },
+  {
+    "name": "HONOR X9d 5G 8GB 256GB",
+    "description": {
+      "Hệ điều hành khi ra mắt": "MagicOS 9.0 (Dựa trên Android 15）",
+      "Chipset": "Snapdragon 6 Gen 4",
+      "Dung lượng RAM": "8 GB",
+      "Bộ nhớ trong": "256 GB",
+      "Loại CPU": "8 nhân (1× A720 2.3GHz + 3× A720 2.2GHz + 4× A520 1.8GHz)",
+      "GPU": "Adreno A810",
+      "Kích thước màn hình": "6.79 inches",
+      "Công nghệ màn hình": "AMOLED",
+      "Độ phân giải màn hình": "1200 x 2640 pixels",
+      "Tính năng màn hình": "100% DCI-P3, 1,07 tỷ màu800 nits (điển hình), 1800 nits (chế độ HBM), 6000 nits (chế độ APL)Bảo vệ mắtMàn hình ban đêm sinh họcGiảm độ sáng độngKhử nháy sáng PWM 3840Hz",
+      "Camera sau": "Camera chính 108MP (F1.75) + Camera góc rộng 5MP (F2.2)",
+      "Camera trước": "16MP (F2.45)",
+      "Pin": "8300 mAh",
+      "Hỗ trợ mạng": "5G",
+      "Thẻ SIM": "2 Nano-SIM",
+      "Công nghệ NFC": "Có",
+      "Thời điểm ra mắt": "12/2025"
+    }
+  },
+  {
+    "name": "HONOR 600 5G 8GB 256GB",
+    "description": {
+      "Hệ điều hành khi ra mắt": "MagicOS 10, dựa trên Android 16",
+      "Chipset": "Snapdragon 7 Gen 4",
+      "Dung lượng RAM": "8 GB",
+      "Bộ nhớ trong": "256 GB",
+      "Loại CPU": "8 nhân",
+      "GPU": "Adreno 722",
+      "Kích thước màn hình": "6.57 inches",
+      "Công nghệ màn hình": "AMOLED",
+      "Độ phân giải màn hình": "2728 x 1264 pixels",
+      "Tính năng màn hình": "Tần số quét 120Hz1,07 tỷ màuĐộ sáng 8000 nitsAI HDR 2.0458 PPIDải màu rộng DCI-P3",
+      "Camera sau": "200 MP, f/1.9",
+      "Camera trước": "50 MP, f/2.0",
+      "Pin": "7000 mAh",
+      "Hỗ trợ mạng": "5G",
+      "Thẻ SIM": "2 Nano SIM hoặc 1 Nano + 1 eSIM",
+      "Công nghệ NFC": "Có",
+      "Thời điểm ra mắt": "06/2026"
+    }
+  },
+  {
+    "name": "HONOR X9d 5G 12GB 256GB",
+    "description": {
+      "Hệ điều hành khi ra mắt": "MagicOS 9.0 (Dựa trên Android 15）",
+      "Chipset": "Snapdragon 6 Gen 4",
+      "Dung lượng RAM": "12 GB",
+      "Bộ nhớ trong": "256 GB",
+      "Loại CPU": "8 nhân (1× A720 2.3GHz + 3× A720 2.2GHz + 4× A520 1.8GHz)",
+      "GPU": "Adreno A810",
+      "Kích thước màn hình": "6.79 inches",
+      "Công nghệ màn hình": "AMOLED",
+      "Độ phân giải màn hình": "1200 x 2640 pixels",
+      "Tính năng màn hình": "100% DCI-P3, 1,07 tỷ màu800 nits (điển hình), 1800 nits (chế độ HBM), 6000 nits (chế độ APL)Bảo vệ mắtMàn hình ban đêm sinh họcGiảm độ sáng độngKhử nháy sáng PWM 3840Hz",
+      "Camera sau": "Camera chính 108MP (F1.75) + Camera góc rộng 5MP (F2.2)",
+      "Camera trước": "16MP (F2.45)",
+      "Pin": "8300 mAh",
+      "Hỗ trợ mạng": "5G",
+      "Thẻ SIM": "2 Nano-SIM",
+      "Công nghệ NFC": "Có",
+      "Thời điểm ra mắt": "12/2025"
+    }
+  },
+  {
+    "name": "HONOR 400 5G 12GB 256GB",
+    "description": {
+      "Hệ điều hành khi ra mắt": "MagicOS 9.0 (dựa trên Android 15)",
+      "Chipset": "Snapdragon 7 Gen 3",
+      "Dung lượng RAM": "12 GB",
+      "Bộ nhớ trong": "256 GB",
+      "Loại CPU": "8 lõi",
+      "GPU": "Adreno 720",
+      "Kích thước màn hình": "6.55 inches",
+      "Công nghệ màn hình": "AMOLED",
+      "Độ phân giải màn hình": "2736 × 1264 pixels",
+      "Tính năng màn hình": "1.07 tỷ màu",
+      "Camera sau": "Camera chính AI 200MP (f/1.9, OIS) + 12MP Camera Góc Siêu Rộng (f/2.2)",
+      "Camera trước": "50MP (f/2.0)",
+      "Pin": "6000 mAh (Li-Po, công nghệ Pin Silicon-Carbon)",
+      "Hỗ trợ mạng": "5G",
+      "Thẻ SIM": "2 Nano SIM hoặc 1 Nano + 1 eSIM",
+      "Công nghệ NFC": "Có"
+    }
+  },
+  {
+    "name": "HONOR X7d 8GB 128GB",
+    "description": {
+      "Hệ điều hành khi ra mắt": "Android 15, MagicOS 9.0",
+      "Chipset": "Qualcomm Snapdragon 685",
+      "Dung lượng RAM": "8 GB",
+      "Bộ nhớ trong": "128 GB",
+      "Loại CPU": "8 nhân: 4 × Cortex-A73 (2,8 GHz) + 4 × Cortex-A53 (1,9 GHz)",
+      "GPU": "Adreno 610",
+      "Kích thước màn hình": "6.77 inches",
+      "Công nghệ màn hình": "TFT LCD",
+      "Tính năng màn hình": "Độ phân giải HD+ (720 × 1.610 px), 120 Hz, 850 nits",
+      "Camera sau": "108 MP, f/1.8 + 2MP",
+      "Camera trước": "8MP, f/2.0",
+      "Pin": "6500 mAh",
+      "Hỗ trợ mạng": "4G",
+      "Thẻ SIM": "2 Nano-SIM",
+      "Thời điểm ra mắt": "10/2025"
+    }
+  },
+  {
+    "name": "HONOR 400 Pro 5G 12GB 512GB",
+    "description": {
+      "Hệ điều hành khi ra mắt": "MagicOS 9.0 (Android 15)",
+      "Chipset": "Snapdragon 8 Gen 3",
+      "Dung lượng RAM": "12 GB",
+      "Bộ nhớ trong": "512 GB",
+      "Loại CPU": "8 nhân",
+      "GPU": "Adreno 750",
+      "Kích thước màn hình": "6.7 inches",
+      "Công nghệ màn hình": "AMOLED",
+      "Độ phân giải màn hình": "2800 x 1280 pixels",
+      "Tính năng màn hình": "1.07 tỷ màu",
+      "Camera sau": "Camera chính AI siêu nét 200MP (f/1.9, OIS) + 50MP Camera Tele (f/2.4 , OIS) + 12MP Camera Góc Siêu Rộng (f/2.2)",
+      "Camera trước": "50MP (khẩu độ f/2.0)",
+      "Pin": "6000 mAh",
+      "Hỗ trợ mạng": "5G",
+      "Thẻ SIM": "2 Nano SIM hoặc 1 Nano + 1 eSIM",
+      "Công nghệ NFC": "Có"
+    }
+  },
+  {
+    "name": "HONOR X7d 8GB 256GB",
+    "description": {
+      "Hệ điều hành khi ra mắt": "Android 15, MagicOS 9.0",
+      "Chipset": "Qualcomm Snapdragon 685",
+      "Dung lượng RAM": "8 GB",
+      "Bộ nhớ trong": "256 GB",
+      "Loại CPU": "8 nhân: 4 × Cortex-A73 (2,8 GHz) + 4 × Cortex-A53 (1,9 GHz)",
+      "GPU": "Adreno 610",
+      "Kích thước màn hình": "6.77 inches",
+      "Công nghệ màn hình": "TFT LCD",
+      "Tính năng màn hình": "Độ phân giải HD+ (720 × 1.610 px), 120 Hz",
+      "Camera sau": "108 MP, f/1.8 + 2MP",
+      "Camera trước": "8MP, f/2.0",
+      "Pin": "6500 mAh",
+      "Thẻ SIM": "Nano-SIM"
+    }
+  },
+  {
+    "name": "HONOR Magic V5 16GB 512GB",
+    "description": {
+      "Hệ điều hành khi ra mắt": "MagicOS 9.0.1 (Dựa trên Android 15)",
+      "Chipset": "Qualcomm Snapdragon 8 Elite",
+      "Dung lượng RAM": "16 GB",
+      "Bộ nhớ trong": "512 GB",
+      "Loại CPU": "Tám nhân (2×Prime 4,32 GHz+6×Performance 3,53 GHz)",
+      "GPU": "Adreno 830",
+      "Kích thước màn hình": "6.43 inches",
+      "Công nghệ màn hình": "OLED",
+      "Tính năng màn hình": "Màn hình trong: 2352 x 2172 pixelMàn hình ngoài: 2376 x 1060 pixel1,07 tỷ màu, Màn hình chăm sóc mắt cận thị AI, tần số 4320Hz PWM giảm nháy sáng, Điều chỉnh độ sáng động, Màn hình đêm theo nhịp sinh học, Màn hình tông màu tự nhiên",
+      "Camera sau": "Camera góc siêu rộng 50MP (khẩu độ f/2.0)Camera góc rộng 50MP (khẩu độ f/1.6, OIS)Camera tele 64MP (khẩu độ f/2.5, OIS)",
+      "Camera trước": "Màn hình trong: Camera góc rộng 20MP (f/2.2)Màn hình ngoài: Camera góc rộng 20MP (f/2.2)",
+      "Pin": "5820 mAh",
+      "Hỗ trợ mạng": "5G",
+      "Thẻ SIM": "SIM 1 + SIM 2 / SIM 1 + eSIM / 2 eSIM",
+      "Công nghệ NFC": "Có",
+      "Thời điểm ra mắt": "10/2025"
+    }
+  },
+  {
+    "name": "HONOR X9d 5G 12GB 512GB",
+    "description": {
+      "Hệ điều hành khi ra mắt": "MagicOS 9.0 (Dựa trên Android 15）",
+      "Chipset": "Snapdragon 6 Gen 4",
+      "Dung lượng RAM": "12 GB",
+      "Bộ nhớ trong": "512 GB",
+      "Loại CPU": "8 nhân (1× A720 2.3GHz + 3× A720 2.2GHz + 4× A520 1.8GHz)",
+      "GPU": "Adreno A810",
+      "Kích thước màn hình": "6.79 inches",
+      "Công nghệ màn hình": "AMOLED",
+      "Độ phân giải màn hình": "1200 x 2640 pixels",
+      "Tính năng màn hình": "100% DCI-P3, 1,07 tỷ màu800 nits (điển hình), 1800 nits (chế độ HBM), 6000 nits (chế độ APL)Bảo vệ mắtMàn hình ban đêm sinh họcGiảm độ sáng độngKhử nháy sáng PWM 3840Hz",
+      "Camera sau": "Camera chính 108MP (F1.75) + Camera góc rộng 5MP (F2.2)",
+      "Camera trước": "16MP (F2.45)",
+      "Pin": "8300 mAh",
+      "Hỗ trợ mạng": "5G",
+      "Thẻ SIM": "2 Nano-SIM",
+      "Công nghệ NFC": "Có",
+      "Thời điểm ra mắt": "12/2025"
+    }
+  },
+  {
+    "name": "HONOR X7d 5G 8GB 256GB",
+    "description": {
+      "Kích thước màn hình": "6.77 inches",
+      "Công nghệ màn hình": "TFT LCD",
+      "Camera sau": "Camera chính 50MP (f/1.8)Camera độ sâu 2MP (f/2.4)",
+      "Camera trước": "5 MP (khẩu độ f/2.2)",
+      "Chipset": "Qualcomm Snapdragon 6s Gen 3",
+      "Công nghệ NFC": "Có",
+      "Dung lượng RAM": "8 GB",
+      "Bộ nhớ trong": "256 GB",
+      "Pin": "6500 mAh",
+      "Thẻ SIM": "2 Nano-SIM",
+      "Hệ điều hành": "MagicOS 9.0 (Dựa trên Android 15)",
+      "Độ phân giải màn hình": "1612 × 720 pixel",
+      "Tính năng màn hình": "Độ sáng: 850 nit (HBM), 700 nit (Typical)Màu sắc: 16,7 triệu màu, 85% NTSCChế độ bảo vệ mắt/Dynamic Dimming",
+      "Loại CPU": "8 nhân: 2xA78@2.3GHz, 6xA55@2.0GHz"
+    }
+  },
+  {
+    "name": "HONOR X6c 6GB 128GB NFC",
+    "description": {
+      "Hệ điều hành khi ra mắt": "MagicOS 9.0 (Trên nền tảng Android 15）",
+      "Chipset": "MediaTek Helio G81 Ultra",
+      "Dung lượng RAM": "6 GB",
+      "Bộ nhớ trong": "128 GB",
+      "Loại CPU": "2xA75 *2.0Ghz + 6xA55 *1.7Ghz",
+      "GPU": "ARM Mail G52 MC2",
+      "Kích thước màn hình": "6.6 inches",
+      "Công nghệ màn hình": "TFT LCD",
+      "Độ phân giải màn hình": "720 x 1604 (HD+)",
+      "Tính năng màn hình": "16,7 triệu màuTFT LCDCử chỉ đa chạm, hỗ trợ tối đa 10 điểm chạm.",
+      "Camera sau": "Camera chính 50MP (F1.8) + Cảm biến chiều sâu",
+      "Camera trước": "5MP  (F2.2)",
+      "Pin": "5300mAh, 35W (11V/3.2A)",
+      "Hỗ trợ mạng": "4G",
+      "Thẻ SIM": "2 SIM (Nano-SIM)",
+      "Công nghệ NFC": "Có"
+    }
+  },
+  {
+    "name": "HONOR 400 5G 12GB 512GB",
+    "description": {
+      "Hệ điều hành khi ra mắt": "MagicOS 9.0 (Dựa trên Android 15)",
+      "Chipset": "Snapdragon 7 Gen 3",
+      "Dung lượng RAM": "12 GB",
+      "Bộ nhớ trong": "512 GB",
+      "Loại CPU": "8 lõi",
+      "GPU": "Adreno 720",
+      "Kích thước màn hình": "6.55 inches",
+      "Công nghệ màn hình": "AMOLED",
+      "Độ phân giải màn hình": "2736 × 1264 pixels",
+      "Tính năng màn hình": "1,07 tỷ màu",
+      "Camera sau": "Camera chính AI 200MP (f/1.9, OIS) + 12MP Camera Góc Siêu Rộng (f/2.2)",
+      "Camera trước": "50MP (f/2.0)",
+      "Pin": "6000 mAh (Li-Po, công nghệ Pin Silicon-Carbon)",
+      "Hỗ trợ mạng": "5G",
+      "Thẻ SIM": "2 Nano SIM hoặc 1 Nano + 1 eSIM",
+      "Công nghệ NFC": "Có"
+    }
+  },
+  {
+    "name": "HONOR X9d 5G 8GB 256GB",
+    "description": {
+      "Hệ điều hành khi ra mắt": "MagicOS 9.0 (Dựa trên Android 15）",
+      "Chipset": "Snapdragon 6 Gen 4",
+      "Dung lượng RAM": "8 GB",
+      "Bộ nhớ trong": "256 GB",
+      "Loại CPU": "8 nhân (1× A720 2.3GHz + 3× A720 2.2GHz + 4× A520 1.8GHz)",
+      "GPU": "Adreno A810",
+      "Kích thước màn hình": "6.79 inches",
+      "Công nghệ màn hình": "AMOLED",
+      "Độ phân giải màn hình": "1200 x 2640 pixels",
+      "Tính năng màn hình": "100% DCI-P3, 1,07 tỷ màu800 nits (điển hình), 1800 nits (chế độ HBM), 6000 nits (chế độ APL)Bảo vệ mắtMàn hình ban đêm sinh họcGiảm độ sáng độngKhử nháy sáng PWM 3840Hz",
+      "Camera sau": "Camera chính 108MP (F1.75) + Camera góc rộng 5MP (F2.2)",
+      "Camera trước": "16MP (F2.45)",
+      "Pin": "8300 mAh",
+      "Hỗ trợ mạng": "5G",
+      "Thẻ SIM": "2 Nano-SIM",
+      "Công nghệ NFC": "Có",
+      "Thời điểm ra mắt": "12/2025"
+    }
+  },
+  {
+    "name": "HONOR 600 5G 8GB 256GB",
+    "description": {
+      "Hệ điều hành khi ra mắt": "MagicOS 10, dựa trên Android 16",
+      "Chipset": "Snapdragon 7 Gen 4",
+      "Dung lượng RAM": "8 GB",
+      "Bộ nhớ trong": "256 GB",
+      "Loại CPU": "8 nhân",
+      "GPU": "Adreno 722",
+      "Kích thước màn hình": "6.57 inches",
+      "Công nghệ màn hình": "AMOLED",
+      "Độ phân giải màn hình": "2728 x 1264 pixels",
+      "Tính năng màn hình": "Tần số quét 120Hz1,07 tỷ màuĐộ sáng 8000 nitsAI HDR 2.0458 PPIDải màu rộng DCI-P3",
+      "Camera sau": "200 MP, f/1.9",
+      "Camera trước": "50 MP, f/2.0",
+      "Pin": "7000 mAh",
+      "Hỗ trợ mạng": "5G",
+      "Thẻ SIM": "2 Nano SIM hoặc 1 Nano + 1 eSIM",
+      "Công nghệ NFC": "Có",
+      "Thời điểm ra mắt": "06/2026"
+    }
+  },
+  {
+    "name": "HONOR X9d 5G 12GB 256GB",
+    "description": {
+      "Hệ điều hành khi ra mắt": "MagicOS 9.0 (Dựa trên Android 15）",
+      "Chipset": "Snapdragon 6 Gen 4",
+      "Dung lượng RAM": "12 GB",
+      "Bộ nhớ trong": "256 GB",
+      "Loại CPU": "8 nhân (1× A720 2.3GHz + 3× A720 2.2GHz + 4× A520 1.8GHz)",
+      "GPU": "Adreno A810",
+      "Kích thước màn hình": "6.79 inches",
+      "Công nghệ màn hình": "AMOLED",
+      "Độ phân giải màn hình": "1200 x 2640 pixels",
+      "Tính năng màn hình": "100% DCI-P3, 1,07 tỷ màu800 nits (điển hình), 1800 nits (chế độ HBM), 6000 nits (chế độ APL)Bảo vệ mắtMàn hình ban đêm sinh họcGiảm độ sáng độngKhử nháy sáng PWM 3840Hz",
+      "Camera sau": "Camera chính 108MP (F1.75) + Camera góc rộng 5MP (F2.2)",
+      "Camera trước": "16MP (F2.45)",
+      "Pin": "8300 mAh",
+      "Hỗ trợ mạng": "5G",
+      "Thẻ SIM": "2 Nano-SIM",
+      "Công nghệ NFC": "Có",
+      "Thời điểm ra mắt": "12/2025"
+    }
+  },
+  {
+    "name": "HONOR 400 5G 12GB 256GB",
+    "description": {
+      "Hệ điều hành khi ra mắt": "MagicOS 9.0 (dựa trên Android 15)",
+      "Chipset": "Snapdragon 7 Gen 3",
+      "Dung lượng RAM": "12 GB",
+      "Bộ nhớ trong": "256 GB",
+      "Loại CPU": "8 lõi",
+      "GPU": "Adreno 720",
+      "Kích thước màn hình": "6.55 inches",
+      "Công nghệ màn hình": "AMOLED",
+      "Độ phân giải màn hình": "2736 × 1264 pixels",
+      "Tính năng màn hình": "1.07 tỷ màu",
+      "Camera sau": "Camera chính AI 200MP (f/1.9, OIS) + 12MP Camera Góc Siêu Rộng (f/2.2)",
+      "Camera trước": "50MP (f/2.0)",
+      "Pin": "6000 mAh (Li-Po, công nghệ Pin Silicon-Carbon)",
+      "Hỗ trợ mạng": "5G",
+      "Thẻ SIM": "2 Nano SIM hoặc 1 Nano + 1 eSIM",
+      "Công nghệ NFC": "Có"
+    }
+  },
+  {
+    "name": "HONOR X7d 8GB 128GB",
+    "description": {
+      "Hệ điều hành khi ra mắt": "Android 15, MagicOS 9.0",
+      "Chipset": "Qualcomm Snapdragon 685",
+      "Dung lượng RAM": "8 GB",
+      "Bộ nhớ trong": "128 GB",
+      "Loại CPU": "8 nhân: 4 × Cortex-A73 (2,8 GHz) + 4 × Cortex-A53 (1,9 GHz)",
+      "GPU": "Adreno 610",
+      "Kích thước màn hình": "6.77 inches",
+      "Công nghệ màn hình": "TFT LCD",
+      "Tính năng màn hình": "Độ phân giải HD+ (720 × 1.610 px), 120 Hz, 850 nits",
+      "Camera sau": "108 MP, f/1.8 + 2MP",
+      "Camera trước": "8MP, f/2.0",
+      "Pin": "6500 mAh",
+      "Hỗ trợ mạng": "4G",
+      "Thẻ SIM": "2 Nano-SIM",
+      "Thời điểm ra mắt": "10/2025"
+    }
+  },
+  {
+    "name": "HONOR 400 Pro 5G 12GB 512GB",
+    "description": {
+      "Hệ điều hành khi ra mắt": "MagicOS 9.0 (Android 15)",
+      "Chipset": "Snapdragon 8 Gen 3",
+      "Dung lượng RAM": "12 GB",
+      "Bộ nhớ trong": "512 GB",
+      "Loại CPU": "8 nhân",
+      "GPU": "Adreno 750",
+      "Kích thước màn hình": "6.7 inches",
+      "Công nghệ màn hình": "AMOLED",
+      "Độ phân giải màn hình": "2800 x 1280 pixels",
+      "Tính năng màn hình": "1.07 tỷ màu",
+      "Camera sau": "Camera chính AI siêu nét 200MP (f/1.9, OIS) + 50MP Camera Tele (f/2.4 , OIS) + 12MP Camera Góc Siêu Rộng (f/2.2)",
+      "Camera trước": "50MP (khẩu độ f/2.0)",
+      "Pin": "6000 mAh",
+      "Hỗ trợ mạng": "5G",
+      "Thẻ SIM": "2 Nano SIM hoặc 1 Nano + 1 eSIM",
+      "Công nghệ NFC": "Có"
+    }
+  },
+  {
+    "name": "HONOR X8d 8GB 128GB",
+    "description": {
+      "Hệ điều hành khi ra mắt": "MagicOS 10 (Dựa trên Android 16)",
+      "Chipset": "Snapdragon 6s 4G thế hệ 2",
+      "Dung lượng RAM": "8 GB",
+      "Bộ nhớ trong": "128 GB",
+      "Loại CPU": "Octa-core, 4 * A73 2,9 GHz + 4 * A53 1,9 GHz",
+      "GPU": "Adreno 610",
+      "Kích thước màn hình": "6.77 inches",
+      "Công nghệ màn hình": "AMOLED",
+      "Độ phân giải màn hình": "1080 x 2392 pixels",
+      "Tính năng màn hình": "Màu sắc: 1,07 tỷ màuCông nghệ Eye Comfort800 nit (điển hình) 1300 nit (loại HBM) 3000 nit (loại APL)Chất liệu kính Thủy tinh Aluminosilicate",
+      "Camera sau": "Camera chính 108MP (f/1.75) + Camera rộng 5MP (f/2.2)",
+      "Camera trước": "16MP (f/2.45)",
+      "Pin": "6800mAh (giá trị định mức), 7000 mAh (giá trị điển hình)",
+      "Hỗ trợ mạng": "4G",
+      "Thẻ SIM": "2 Nano-SIM",
+      "Công nghệ NFC": "Có"
+    }
+  },
+  {
+    "name": "HONOR X7d 8GB 256GB",
+    "description": {
+      "Hệ điều hành khi ra mắt": "Android 15, MagicOS 9.0",
+      "Chipset": "Qualcomm Snapdragon 685",
+      "Dung lượng RAM": "8 GB",
+      "Bộ nhớ trong": "256 GB",
+      "Loại CPU": "8 nhân: 4 × Cortex-A73 (2,8 GHz) + 4 × Cortex-A53 (1,9 GHz)",
+      "GPU": "Adreno 610",
+      "Kích thước màn hình": "6.77 inches",
+      "Công nghệ màn hình": "TFT LCD",
+      "Tính năng màn hình": "Độ phân giải HD+ (720 × 1.610 px), 120 Hz",
+      "Camera sau": "108 MP, f/1.8 + 2MP",
+      "Camera trước": "8MP, f/2.0",
+      "Pin": "6500 mAh",
+      "Thẻ SIM": "Nano-SIM"
+    }
+  },
+  {
+    "name": "HONOR Magic V5 16GB 512GB",
+    "description": {
+      "Hệ điều hành khi ra mắt": "MagicOS 9.0.1 (Dựa trên Android 15)",
+      "Chipset": "Qualcomm Snapdragon 8 Elite",
+      "Dung lượng RAM": "16 GB",
+      "Bộ nhớ trong": "512 GB",
+      "Loại CPU": "Tám nhân (2×Prime 4,32 GHz+6×Performance 3,53 GHz)",
+      "GPU": "Adreno 830",
+      "Kích thước màn hình": "6.43 inches",
+      "Công nghệ màn hình": "OLED",
+      "Tính năng màn hình": "Màn hình trong: 2352 x 2172 pixelMàn hình ngoài: 2376 x 1060 pixel1,07 tỷ màu, Màn hình chăm sóc mắt cận thị AI, tần số 4320Hz PWM giảm nháy sáng, Điều chỉnh độ sáng động, Màn hình đêm theo nhịp sinh học, Màn hình tông màu tự nhiên",
+      "Camera sau": "Camera góc siêu rộng 50MP (khẩu độ f/2.0)Camera góc rộng 50MP (khẩu độ f/1.6, OIS)Camera tele 64MP (khẩu độ f/2.5, OIS)",
+      "Camera trước": "Màn hình trong: Camera góc rộng 20MP (f/2.2)Màn hình ngoài: Camera góc rộng 20MP (f/2.2)",
+      "Pin": "5820 mAh",
+      "Hỗ trợ mạng": "5G",
+      "Thẻ SIM": "SIM 1 + SIM 2 / SIM 1 + eSIM / 2 eSIM",
+      "Công nghệ NFC": "Có",
+      "Thời điểm ra mắt": "10/2025"
+    }
+  },
+  {
+    "name": "HONOR X9d 5G 12GB 512GB",
+    "description": {
+      "Hệ điều hành khi ra mắt": "MagicOS 9.0 (Dựa trên Android 15）",
+      "Chipset": "Snapdragon 6 Gen 4",
+      "Dung lượng RAM": "12 GB",
+      "Bộ nhớ trong": "512 GB",
+      "Loại CPU": "8 nhân (1× A720 2.3GHz + 3× A720 2.2GHz + 4× A520 1.8GHz)",
+      "GPU": "Adreno A810",
+      "Kích thước màn hình": "6.79 inches",
+      "Công nghệ màn hình": "AMOLED",
+      "Độ phân giải màn hình": "1200 x 2640 pixels",
+      "Tính năng màn hình": "100% DCI-P3, 1,07 tỷ màu800 nits (điển hình), 1800 nits (chế độ HBM), 6000 nits (chế độ APL)Bảo vệ mắtMàn hình ban đêm sinh họcGiảm độ sáng độngKhử nháy sáng PWM 3840Hz",
+      "Camera sau": "Camera chính 108MP (F1.75) + Camera góc rộng 5MP (F2.2)",
+      "Camera trước": "16MP (F2.45)",
+      "Pin": "8300 mAh",
+      "Hỗ trợ mạng": "5G",
+      "Thẻ SIM": "2 Nano-SIM",
+      "Công nghệ NFC": "Có",
+      "Thời điểm ra mắt": "12/2025"
+    }
+  },
+  {
+    "name": "HONOR Win RT",
+    "description": {
+      "Kích thước màn hình": "6.83 inches",
+      "Công nghệ màn hình": "TFT LCD",
+      "Camera sau": "Camera chính: 50 MPCamera telephoto: 50 MPCamera góc siêu rộng: 12 MP",
+      "Camera trước": "50 MP",
+      "Chipset": "Snapdragon 8 Elite",
+      "Công nghệ NFC": "Có",
+      "Pin": "10.000 mAh",
+      "Thẻ SIM": "2 Nano-SIM",
+      "Hệ điều hành": "MagicOS 10 (dựa trên Android 16)",
+      "Tính năng màn hình": "Độ phân giải màn hình: FHD+ 1272*2800True 1,07 tỷ màu, gam màu rộng DCI-P3Độ sáng đỉnh tối đa: 6000nitsĐộ sáng đỉnh toàn cầu: 2000nitsĐộ sáng tối thiểu: 1nitHỗ trợ đa chạm, lên đến 10 chạm",
+      "Loại CPU": "Tám lõi, 2×Prime 4.32GHz+6×Hiệu suất 3.53GHz"
+    }
+  },
+  {
+    "name": "HONOR X7d 5G 8GB 256GB",
+    "description": {
+      "Kích thước màn hình": "6.77 inches",
+      "Công nghệ màn hình": "TFT LCD",
+      "Camera sau": "Camera chính 50MP (f/1.8)Camera độ sâu 2MP (f/2.4)",
+      "Camera trước": "5 MP (khẩu độ f/2.2)",
+      "Chipset": "Qualcomm Snapdragon 6s Gen 3",
+      "Công nghệ NFC": "Có",
+      "Dung lượng RAM": "8 GB",
+      "Bộ nhớ trong": "256 GB",
+      "Pin": "6500 mAh",
+      "Thẻ SIM": "2 Nano-SIM",
+      "Hệ điều hành": "MagicOS 9.0 (Dựa trên Android 15)",
+      "Độ phân giải màn hình": "1612 × 720 pixel",
+      "Tính năng màn hình": "Độ sáng: 850 nit (HBM), 700 nit (Typical)Màu sắc: 16,7 triệu màu, 85% NTSCChế độ bảo vệ mắt/Dynamic Dimming",
+      "Loại CPU": "8 nhân: 2xA78@2.3GHz, 6xA55@2.0GHz"
+    }
+  },
+  {
+    "name": "HONOR X6c 6GB 128GB NFC",
+    "description": {
+      "Hệ điều hành khi ra mắt": "MagicOS 9.0 (Trên nền tảng Android 15）",
+      "Chipset": "MediaTek Helio G81 Ultra",
+      "Dung lượng RAM": "6 GB",
+      "Bộ nhớ trong": "128 GB",
+      "Loại CPU": "2xA75 *2.0Ghz + 6xA55 *1.7Ghz",
+      "GPU": "ARM Mail G52 MC2",
+      "Kích thước màn hình": "6.6 inches",
+      "Công nghệ màn hình": "TFT LCD",
+      "Độ phân giải màn hình": "720 x 1604 (HD+)",
+      "Tính năng màn hình": "16,7 triệu màuTFT LCDCử chỉ đa chạm, hỗ trợ tối đa 10 điểm chạm.",
+      "Camera sau": "Camera chính 50MP (F1.8) + Cảm biến chiều sâu",
+      "Camera trước": "5MP  (F2.2)",
+      "Pin": "5300mAh, 35W (11V/3.2A)",
+      "Hỗ trợ mạng": "4G",
+      "Thẻ SIM": "2 SIM (Nano-SIM)",
+      "Công nghệ NFC": "Có"
+    }
+  },
+  {
+    "name": "HONOR 400 5G 12GB 512GB",
+    "description": {
+      "Hệ điều hành khi ra mắt": "MagicOS 9.0 (Dựa trên Android 15)",
+      "Chipset": "Snapdragon 7 Gen 3",
+      "Dung lượng RAM": "12 GB",
+      "Bộ nhớ trong": "512 GB",
+      "Loại CPU": "8 lõi",
+      "GPU": "Adreno 720",
+      "Kích thước màn hình": "6.55 inches",
+      "Công nghệ màn hình": "AMOLED",
+      "Độ phân giải màn hình": "2736 × 1264 pixels",
+      "Tính năng màn hình": "1,07 tỷ màu",
+      "Camera sau": "Camera chính AI 200MP (f/1.9, OIS) + 12MP Camera Góc Siêu Rộng (f/2.2)",
+      "Camera trước": "50MP (f/2.0)",
+      "Pin": "6000 mAh (Li-Po, công nghệ Pin Silicon-Carbon)",
+      "Hỗ trợ mạng": "5G",
+      "Thẻ SIM": "2 Nano SIM hoặc 1 Nano + 1 eSIM",
+      "Công nghệ NFC": "Có"
+    }
+  },
+  {
+    "name": "HONOR Power 2",
+    "description": {
+      "Kích thước màn hình": "6.79 inches",
+      "Công nghệ màn hình": "AMOLED",
+      "Camera sau": "Camera kép 50 MP + 5 MP góc siêu rộng",
+      "Camera trước": "16 MP",
+      "Chipset": "MediaTek Dimensity 8500 Elite",
+      "Công nghệ NFC": "Có",
+      "Pin": "10080mAh",
+      "Thẻ SIM": "2 Nano-SIM",
+      "Hệ điều hành": "MagicOS 10 (dựa trên Android 16)",
+      "Tính năng màn hình": "Độ phân giải màn hình: 2640*1200 điểm ảnhGam màu rộng DCI-P3, 1,07 tỷ màuĐộ sáng cực đại HDR: 8000nitsĐộ sáng đỉnh toàn cầu: 1800nitsHỗ trợ đa chạm, lên đến 10 chạm",
+      "Loại CPU": "Tám lõi, 1x A725 @3.4GHz+3x A725 @3.2GHz+4x A725 @2.2GHz"
+    }
+  },
+  {
+    "name": "Honor X5c Plus 4GB 64GB",
+    "description": {
+      "Hệ điều hành khi ra mắt": "Android 15, MagicOS 9",
+      "Chipset": "MediaTek Helio G81",
+      "Dung lượng RAM": "4 GB",
+      "Bộ nhớ trong": "64 GB",
+      "Loại CPU": "8 nhân, 2*A75 2.0Ghz + 6*A55 1.7Ghz",
+      "GPU": "ARM Mail G52 MC2",
+      "Kích thước màn hình": "6.74 inches",
+      "Công nghệ màn hình": "TFT LCD",
+      "Độ phân giải màn hình": "720 x 1600 pixel",
+      "Tính năng màn hình": "Tần số quét 90Hz, 16,7 triệu màu",
+      "Camera sau": "Camera chính 50MP (f/1.8) + QVGA 0.08MP",
+      "Camera trước": "Camera 5 MP (khẩu độ f/2.2)",
+      "Pin": "5130mAh (giá trị định mức)5260mAh (giá trị điển hình)",
+      "Hỗ trợ mạng": "4G",
+      "Thẻ SIM": "Nano-SIM",
+      "Công nghệ NFC": "Có"
+    }
+  },
+  {
+    "name": "HONOR Play 10 4GB 128GB",
+    "description": {
+      "Hệ điều hành khi ra mắt": "Android 15",
+      "Chipset": "MediaTek Helio G81",
+      "Dung lượng RAM": "4 GB",
+      "Bộ nhớ trong": "128 GB",
+      "Loại CPU": "8 nhân",
+      "Kích thước màn hình": "6.74 inches",
+      "Công nghệ màn hình": "TFT LCD",
+      "Độ phân giải màn hình": "720 x 1600 pixel",
+      "Tính năng màn hình": "Tần số quét 90Hz16.7 triệu màu, 480 nitsHỗ trợ 10 điểm chạm cùng lúc",
+      "Camera sau": "13 MP (Đèn Flash)",
+      "Camera trước": "5 MP",
+      "Pin": "5000mAh",
+      "Hỗ trợ mạng": "4G",
+      "Thẻ SIM": "2 Nano-SIM"
+    }
+  },
+  {
+    "name": "Honor Magic 5 Pro",
+    "description": {
+      "Kích thước màn hình": "6.8 inches",
+      "Công nghệ màn hình": "LTPO OLED",
+      "Camera sau": "Camera chính: 50 MP, f/1.6Camera tele: 50 MP, f/2.0Camera góc siêu rộng: 50 MP, f/3.0Camera selfie: 12 MP, f/2.4",
+      "Camera trước": "12.5 MP",
+      "Chipset": "Snapdragon 8+ Gen 3",
+      "Công nghệ NFC": "Có",
+      "Dung lượng RAM": "8 GB",
+      "Bộ nhớ trong": "256 GB",
+      "Pin": "5.100  mAh",
+      "Độ phân giải màn hình": "1312 x 2848 pixels",
+      "Tính năng màn hình": "Tần số quét 120 Hz, 1.800 nits"
+    }
+  },
+  {
+    "name": "Honor Magic 6 Pro",
+    "description": {
+      "Kích thước màn hình": "6.8 inches",
+      "Công nghệ màn hình": "OLED",
+      "Camera sau": "Camera chính: 50 MP, f/1.4Camera góc siêu rộng: 50 MP, f/2.0Camera Telephoto tiềm vọng: 180MP, f/2.6, Zoom quang 2,5x, Zoom kỹ thuật số 100x, OIS",
+      "Camera trước": "50MP, f/2.0  Camera độ sâu 3D",
+      "Chipset": "Snapdragon 8 Gen 3",
+      "Công nghệ NFC": "Có",
+      "Dung lượng RAM": "12 GB",
+      "Bộ nhớ trong": "512 GB",
+      "Pin": "5600 mAh",
+      "Thẻ SIM": "2 SIM (Nano-SIM)",
+      "Hệ điều hành": "Android 14",
+      "Tính năng màn hình": "1.07 tỷ màu",
+      "Loại CPU": "1×Cortex-X4 3.3GHz+3×Cortex-A720 3.2GHz+2×Cortex-A720 3.0GHz+2×Cortex-A520 2.3GHz"
+    }
+  },
+  {
+    "name": "Honor Magic 5",
+    "description": {
+      "Kích thước màn hình": "6.73 inches",
+      "Công nghệ màn hình": "OLED",
+      "Camera sau": "Camera chính góc rộng: 54MP, f/1.9  Camera chính góc siêu rộng: 50MP, f/2.0  Camera Telephoto: 32MP, f/2.4, 2.5x Optical Zoom, 50x Digital Zoom, OIS",
+      "Camera trước": "12MP",
+      "Chipset": "Snapdragon 8 Gen 2",
+      "Công nghệ NFC": "Có",
+      "Dung lượng RAM": "12 GB",
+      "Bộ nhớ trong": "256 GB",
+      "Pin": "5100 mAh",
+      "Thẻ SIM": "2 SIM (Nano-SIM)",
+      "Hệ điều hành": "Android 13",
+      "Tính năng màn hình": "1.07 tỷ màu",
+      "Loại CPU": "1×Cortex-X3 3.19GHz+2×Cortex-A715 2.8GHz+2×Cortex-A710 2.8GHz+3×Cortex-A510 2.0GHz"
+    }
+  },
+  {
+    "name": "Nubia Neo 5 5G 8GB 128GB",
+    "description": {
+      "Hệ điều hành khi ra mắt": "MyOS 16 (Dựa trên Android 16)",
+      "Chipset": "Unisoc T9300",
+      "Dung lượng RAM": "8 GB",
+      "Bộ nhớ trong": "128 GB",
+      "Loại CPU": "Octa-core 2.4GHz",
+      "Kích thước màn hình": "6.8 inches",
+      "Tính năng màn hình": "Độ phân giải màn hình: 1940 × 900pixelsĐộ sáng 1000 nits",
+      "Camera sau": "50MP AF + 2MP",
+      "Camera trước": "16MP FF",
+      "Pin": "6050mAh",
+      "Hỗ trợ mạng": "5G",
+      "Thẻ SIM": "2 Nano-SIM",
+      "Công nghệ NFC": "Có"
+    }
+  },
+  {
+    "name": "Nubia Neo 5 5G 8GB 256GB",
+    "description": {
+      "Hệ điều hành khi ra mắt": "MyOS 16 (Dựa trên Android 16)",
+      "Chipset": "Unisoc T9300",
+      "Dung lượng RAM": "8 GB",
+      "Bộ nhớ trong": "256 GB",
+      "Loại CPU": "Octa-core 2.4GHz",
+      "Kích thước màn hình": "6.8 inches",
+      "Tính năng màn hình": "Độ phân giải màn hình: 1940 × 900pixelsĐộ sáng 1000 nits",
+      "Camera sau": "50MP AF + 2MP",
+      "Camera trước": "16MP FF",
+      "Pin": "6050mAh",
+      "Hỗ trợ mạng": "5G",
+      "Thẻ SIM": "2 Nano-SIM",
+      "Công nghệ NFC": "Có"
+    }
+  },
+  {
+    "name": "Nubia Neo 5 GT 8GB 256GB",
+    "description": {
+      "Hệ điều hành khi ra mắt": "MyOS 16 (dựa trên Android 16)",
+      "Chipset": "MediaTek D7400",
+      "Dung lượng RAM": "8 GB",
+      "Bộ nhớ trong": "256 GB",
+      "Loại CPU": "Octa-core 2.6GHz",
+      "Kích thước màn hình": "6.8 inches",
+      "Công nghệ màn hình": "AMOLED",
+      "Tính năng màn hình": "Độ phân giải màn hình 1.5KĐộ sáng 4500 nits",
+      "Camera sau": "50MP AF + 2MP",
+      "Camera trước": "16MP FF",
+      "Pin": "6210mAh",
+      "Hỗ trợ mạng": "5G",
+      "Thẻ SIM": "2 Nano-SIM",
+      "Công nghệ NFC": "Có",
+      "Thời điểm ra mắt": "04/2026"
+    }
+  },
+  {
+    "name": "Nubia Neo 5 GT Special Edition 12GB 256GB",
+    "description": {
+      "Hệ điều hành khi ra mắt": "MyOS 16 (dựa trên Android 16)",
+      "Chipset": "MediaTek D7400",
+      "Dung lượng RAM": "12 GB",
+      "Bộ nhớ trong": "256 GB",
+      "Loại CPU": "8 nhân, tốc độ tối đa 2,6 GHz",
+      "Kích thước màn hình": "6.8 inches",
+      "Công nghệ màn hình": "AMOLED",
+      "Độ phân giải màn hình": "1224 × 2720 pixels",
+      "Tính năng màn hình": "Tần số quét 144 HzĐộ sáng tối đa 4500 nitsĐộ tương phản 1.000.000:1Tần số cảm ứng tức thì 3049 HzMagic Touch 3.0Bảo vệ mắt",
+      "Camera sau": "Chính 50 MPCamera chiều sâu 2 MP",
+      "Camera trước": "16 MP",
+      "Pin": "6210 mAh",
+      "Hỗ trợ mạng": "5G",
+      "Thẻ SIM": "2 Nano-SIM",
+      "Công nghệ NFC": "Có",
+      "Thời điểm ra mắt": "07/2026"
+    }
+  },
+  {
+    "name": "Nubia Neo 5 Max 5G 8GB 256GB",
+    "description": {
+      "Hệ điều hành khi ra mắt": "Android 16",
+      "Chipset": "MediaTek D7100",
+      "Dung lượng RAM": "8 GB",
+      "Bộ nhớ trong": "256 GB",
+      "Loại CPU": "Octa-Core 2.4GHz",
+      "Kích thước màn hình": "7.5 inches",
+      "Công nghệ màn hình": "IPS LCD",
+      "Độ phân giải màn hình": "1280 × 2664 pixels",
+      "Tính năng màn hình": "Tần số quét 120 HzĐộ sáng tối đa 1000 nitsTrue DC Dimming",
+      "Camera sau": "50 MP",
+      "Camera trước": "16 MP",
+      "Pin": "7100 mAh",
+      "Hỗ trợ mạng": "5G",
+      "Thẻ SIM": "2 Nano-SIM",
+      "Công nghệ NFC": "Có"
+    }
+  },
+  {
+    "name": "Nubia V80 Design 8GB 128GB",
+    "description": {
+      "Chipset": "Unisoc T7280",
+      "Dung lượng RAM": "8 GB",
+      "Bộ nhớ trong": "128 GB",
+      "Kích thước màn hình": "6.75 inches",
+      "Công nghệ màn hình": "IPS LCD",
+      "Tính năng màn hình": "Tần số quét 120Hz",
+      "Camera sau": "50 MP + 2 MP + 0.08 MP",
+      "Camera trước": "16 MP",
+      "Pin": "5000 mAh",
+      "Thẻ SIM": "2 Nano-SIM",
+      "Công nghệ NFC": "Có"
+    }
+  },
+  {
+    "name": "Nubia Neo 3 GT 12GB 256GB",
+    "description": {
+      "Hệ điều hành khi ra mắt": "Android 15",
+      "Chipset": "Unisoc T9100",
+      "Dung lượng RAM": "12 GB",
+      "Bộ nhớ trong": "256 GB",
+      "Kích thước màn hình": "6.8 inches",
+      "Công nghệ màn hình": "OLED",
+      "Độ phân giải màn hình": "1080 x 2392 pixels",
+      "Tính năng màn hình": "FullHD+Tần số 120HzĐộ sáng cực đại 1300 nitGam màu DCI-P3 100%Tỷ lệ tương phản 1000000:1Tần số lấy mẫu cảm ứng tức thời 1200Hz",
+      "Camera sau": "50MP + 2MP",
+      "Camera trước": "16MP",
+      "Pin": "6000mAh",
+      "Hỗ trợ mạng": "5G",
+      "Thẻ SIM": "2 Nano-SIM",
+      "Công nghệ NFC": "Có"
+    }
+  },
+  {
+    "name": "Nubia V80 Max 8GB 256GB",
+    "description": {
+      "Chipset": "Unisoc T7250",
+      "Dung lượng RAM": "8 GB",
+      "Bộ nhớ trong": "256 GB",
+      "Kích thước màn hình": "6.9 inches",
+      "Công nghệ màn hình": "IPS LCD",
+      "Tính năng màn hình": "Tần số quét 120Hz",
+      "Camera sau": "50 MP + 2 MP + 0.08 MP",
+      "Camera trước": "16 MP",
+      "Pin": "6000 mAh",
+      "Thẻ SIM": "2 Nano-SIM",
+      "Công nghệ NFC": "Có"
+    }
+  },
+  {
+    "name": "Nubia Neo 5 GT 12GB 256GB",
+    "description": {
+      "Hệ điều hành khi ra mắt": "MyOS 16 (dựa trên Android 16)",
+      "Chipset": "MediaTek D7400",
+      "Dung lượng RAM": "12 GB",
+      "Bộ nhớ trong": "256 GB",
+      "Loại CPU": "Octa-core 2.6GHz",
+      "Kích thước màn hình": "6.8 inches",
+      "Công nghệ màn hình": "AMOLED",
+      "Tính năng màn hình": "Độ phân giải màn hình 1.5KĐộ sáng 4500 nits",
+      "Camera sau": "50MP AF + 2MP",
+      "Camera trước": "16MP FF",
+      "Pin": "6210mAh",
+      "Hỗ trợ mạng": "5G",
+      "Thẻ SIM": "2 Nano-SIM",
+      "Công nghệ NFC": "Có",
+      "Thời điểm ra mắt": "04/2026"
+    }
+  },
+  {
+    "name": "ZTE Nubia Z60S Pro 16GB 512GB",
+    "description": {
+      "Kích thước màn hình": "6.78 inches",
+      "Công nghệ màn hình": "AMOLED",
+      "Camera sau": "Camera chính: 50MP, f/1.56Camera Tele: 8MP, f/2.4Camera góc siêu rộng: 50MP",
+      "Camera trước": "16MP, f/2.45",
+      "Chipset": "Snapdragon 8 Gen 2 (4 nm)",
+      "Công nghệ NFC": "Có",
+      "Dung lượng RAM": "16 GB",
+      "Bộ nhớ trong": "512 GB",
+      "Pin": "5100 mAh",
+      "Thẻ SIM": "2 Nano-SIM",
+      "Hệ điều hành": "Android 14",
+      "Độ phân giải màn hình": "2160 x 1440 pixels",
+      "Tính năng màn hình": "Tần số quét 120 Hz, 1200 nits, 452PPI, 100% DCI-P3, 1,07 tỷ màu sắc"
+    }
+  },
+  {
+    "name": "Nubia V80 Max 6GB 128GB",
+    "description": {
+      "Chipset": "Unisoc T7250",
+      "Dung lượng RAM": "6 GB",
+      "Bộ nhớ trong": "128 GB",
+      "Kích thước màn hình": "6.9 inches",
+      "Công nghệ màn hình": "IPS LCD",
+      "Tính năng màn hình": "Tần số quét 120Hz,",
+      "Camera sau": "50 MP + 2 MP + 0.08 MP",
+      "Camera trước": "16 MP",
+      "Pin": "6000 mAh",
+      "Thẻ SIM": "2 Nano-SIM",
+      "Công nghệ NFC": "Có"
+    }
+  },
+  {
+    "name": "Nubia V80 Design 4GB 128GB",
+    "description": {
+      "Hệ điều hành": "Android 16",
+      "Chipset": "Unisoc T7280",
+      "Dung lượng RAM": "4 GB",
+      "Bộ nhớ trong": "128 GB",
+      "Loại CPU": "Octa-core (2x2.2 GHz Cortex-A75 & 6x2.0 GHz Cortex-A55)",
+      "GPU": "Mali-G57 MP1",
+      "Kích thước màn hình": "6.75 inches",
+      "Công nghệ màn hình": "IPS LCD",
+      "Tính năng màn hình": "Tần số quét 120Hz",
+      "Camera sau": "50 MP + 2 MP + 0.08 MP",
+      "Camera trước": "16 MP",
+      "Pin": "5000 mAh",
+      "Hỗ trợ mạng": "4G",
+      "Thẻ SIM": "2 Nano-SIM",
+      "Công nghệ NFC": "Có"
+    }
+  },
+  {
+    "name": "Nubia Neo 3 4G 8GB 128GB",
+    "description": {
+      "Chipset": "Unisoc T8100",
+      "Dung lượng RAM": "8 GB",
+      "Bộ nhớ trong": "128 GB",
+      "Loại CPU": "Octa-Core (4*Cortex-A76 @ 2.2GHz + 4*Cortex-A55 @2.0GHz)",
+      "GPU": "G57@4C 650MHz",
+      "Kích thước màn hình": "6.8 inches",
+      "Tính năng màn hình": "Độ phân giải màn hình: 900 x 2030 pixel (FHD)Tần số: 120HzĐộ sáng: 530 nits16.7 tỷ màuIPS",
+      "Camera sau": "50MP + 2MP",
+      "Camera trước": "16MP",
+      "Pin": "6000mAh",
+      "Hỗ trợ mạng": "4G",
+      "Thẻ SIM": "2 Nano-SIM",
+      "Công nghệ NFC": "Có"
+    }
+  },
+  {
+    "name": "Nubia Neo 3 5G 8GB 256GB",
+    "description": {
+      "Kích thước màn hình": "6.8 inches",
+      "Công nghệ màn hình": "IPS LCD",
+      "Camera sau": "50M+2M, ƒ/1.8",
+      "Camera trước": "16MP, ƒ/2.0",
+      "Chipset": "Unisoc T8300",
+      "Công nghệ NFC": "Có",
+      "Dung lượng RAM": "8 GB",
+      "Bộ nhớ trong": "256 GB",
+      "Pin": "6000mAh",
+      "Thẻ SIM": "Nano-SIM",
+      "Hệ điều hành": "Android 15",
+      "Tính năng màn hình": "Độ phân giải: 900 x 2030 pixel (FHD)Tần số: 120HzĐộ sáng: 1000 nits",
+      "Loại CPU": "Octa-Core (2*Cortex-A78 @ 2.2GHz + 6*Cortex-A55 @2.0GHz)"
+    }
+  },
+  {
+    "name": "Nubia Neo 5 Max 5G 8GB 512GB",
+    "description": {
+      "Hệ điều hành khi ra mắt": "MyOS 16",
+      "Chipset": "MediaTek D7100",
+      "Dung lượng RAM": "8 GB",
+      "Bộ nhớ trong": "512 GB",
+      "Loại CPU": "Octa-Core 2.4GHz",
+      "Kích thước màn hình": "7.5 inches",
+      "Công nghệ màn hình": "IPS LCD",
+      "Độ phân giải màn hình": "1280 × 2664 pixels",
+      "Tính năng màn hình": "Tần số quét 120 HzĐộ sáng tối đa 1000 nitsTrue DC Dimming",
+      "Camera sau": "50 MP",
+      "Camera trước": "16 MP",
+      "Pin": "7000 mAh",
+      "Hỗ trợ mạng": "5G",
+      "Thẻ SIM": "2 Nano-SIM",
+      "Công nghệ NFC": "Có"
+    }
+  },
+  {
+    "name": "Nubia Air 5G 8GB 256GB",
+    "description": {
+      "Hệ điều hành khi ra mắt": "Android 15",
+      "Chipset": "Unisoc T8300",
+      "Dung lượng RAM": "8 GB",
+      "Bộ nhớ trong": "256 GB",
+      "Kích thước màn hình": "6.78 inches",
+      "Công nghệ màn hình": "AMOLED",
+      "Tính năng màn hình": "Độ phân giải: 2720 x 1224 pixelTần số: 120HzĐộ sáng tối đa: 450 nits",
+      "Camera sau": "50MP + 2M",
+      "Camera trước": "20MP",
+      "Pin": "5000mAh",
+      "Hỗ trợ mạng": "5G",
+      "Thẻ SIM": "2 Nano-SIM"
+    }
+  },
+  {
+    "name": "Nubia V80 Max 8GB 128GB",
+    "description": {
+      "Kích thước màn hình": "6.9 inches",
+      "Công nghệ màn hình": "IPS LCD",
+      "Camera sau": "50 MP + 2 MP + 0.08 MP",
+      "Camera trước": "16 MP",
+      "Chipset": "Unisoc T7250",
+      "Công nghệ NFC": "Có",
+      "Dung lượng RAM": "8 GB",
+      "Bộ nhớ trong": "128 GB",
+      "Pin": "6000 mAh",
+      "Thẻ SIM": "2 Nano-SIM",
+      "Tính năng màn hình": "Tần số quét 120Hz,"
+    }
+  },
+  {
+    "name": "Nubia V70 Max 6GB 128GB",
+    "description": {
+      "Kích thước màn hình": "6.9 inches",
+      "Công nghệ màn hình": "IPS LCD",
+      "Camera sau": "50 MP, ƒ/1.82.0 MP",
+      "Camera trước": "8.0 MP",
+      "Chipset": "Unisoc T606",
+      "Công nghệ NFC": "Có",
+      "Dung lượng RAM": "6 GB",
+      "Bộ nhớ trong": "128 GB",
+      "Pin": "6000 mAh",
+      "Thẻ SIM": "2 Nano-SIM",
+      "Hệ điều hành": "Android 15",
+      "Độ phân giải màn hình": "720 x 1640 pixels",
+      "Tính năng màn hình": "120Hz, 254 ppi"
+    }
+  },
+  {
+    "name": "Nubia Red Magic 9 Pro",
+    "description": {
+      "Kích thước màn hình": "6.8 inches",
+      "Công nghệ màn hình": "AMOLED",
+      "Camera sau": "Camera góc rộng: 50 MP, 1/1.57\", 1.0µm, PDAF, OISCamera siêu góc rộng: 50 MP, 1/2.76\", 0.64µm Camera macro:2 MP, f/2.4",
+      "Camera trước": "Camera góc rộng: 16 MP, f/2.0,, 1.12µm, under display",
+      "Chipset": "Qualcomm SM8650-AB Snapdragon 8 Gen 3 (4 nm)",
+      "Công nghệ NFC": "Có",
+      "Dung lượng RAM": "8 GB",
+      "Bộ nhớ trong": "256 GB",
+      "Pin": "6500 mAh",
+      "Thẻ SIM": "2 SIM (Nano-SIM)",
+      "Hệ điều hành": "Android 14",
+      "Độ phân giải màn hình": "1116 x 2480 pixels",
+      "Tính năng màn hình": "1 tỷ màu, 120Hz, 1600 nits",
+      "Loại CPU": "1x3.3 GHz Cortex-X4 & 5x3.2 GHz Cortex-A720 & 2x2.3 GHz Cortex-A520"
+    }
+  },
+  {
+    "name": "Red Magic 7S Pro",
+    "description": {
+      "Hệ điều hành": "Android 12",
+      "Chipset": "Snapdragon 8+ thế hệ 1 (4 nm)",
+      "Dung lượng RAM": "12 GB",
+      "Bộ nhớ trong": "256 GB",
+      "Loại CPU": "1x3,19 GHz Cortex-X2 & 3x2,75 GHz Cortex-A710 & 4x1.80 GHz Cortex-A510",
+      "GPU": "Adreno 730",
+      "Kích thước màn hình": "6.8 inches",
+      "Công nghệ màn hình": "AMOLED",
+      "Độ phân giải màn hình": "1080 x 2400 pixels (FullHD+)",
+      "Tính năng màn hình": "120Hz, Kính cường lực Corning Gorilla Glass 5",
+      "Camera sau": "Camera góc rộng: 64 MP, f/1.8, PDAF  Camera góc siêu rộng: 8 MP, f / 2.2, 120˚  Camera Macro: 2 MP, f / 2.4",
+      "Camera trước": "Camera góc rộng: 16 MP",
+      "Pin": "5000 mAh",
+      "Hỗ trợ mạng": "5G",
+      "Thẻ SIM": "2 SIM (Nano-SIM)",
+      "Công nghệ NFC": "Có"
+    }
+  },
+  {
+    "name": "Sony Xperia 1 VIII 5G 12GB 256GB",
+    "description": {
+      "Hệ điều hành khi ra mắt": "Android 16",
+      "Chipset": "Snapdragon® 8 Elite Gen 5",
+      "Dung lượng RAM": "12 GB",
+      "Bộ nhớ trong": "256 GB",
+      "Kích thước màn hình": "6.5 inches",
+      "Công nghệ màn hình": "OLED",
+      "Độ phân giải màn hình": "1080 x 2340 pixels (FullHD+)",
+      "Tính năng màn hình": "Tần số quét 120 HzHDRDCI-P3 100%BRAVIASunlight Vision",
+      "Camera sau": "52 MP, f/1.9Tele 50 MP, f/2.8Góc siêu rộng 50 MP, f/2.0",
+      "Camera trước": "12MP, f/2.0",
+      "Pin": "5000 mAh",
+      "Hỗ trợ mạng": "5G",
+      "Thẻ SIM": "2 SIM (Nano-SIM)",
+      "Công nghệ NFC": "Có",
+      "Thời điểm ra mắt": "08/2026"
+    }
+  },
+  {
+    "name": "Sony Xperia 1 VII 12GB 256GB",
+    "description": {
+      "Hệ điều hành": "Android 15",
+      "Chipset": "Snapdragon® 8 Elite",
+      "Dung lượng RAM": "12 GB",
+      "Bộ nhớ trong": "256 GB",
+      "Loại CPU": "Kryo",
+      "GPU": "Adreno",
+      "Kích thước màn hình": "6.5 inches",
+      "Công nghệ màn hình": "OLED",
+      "Độ phân giải màn hình": "1080 x 2340 pixels (FullHD+)",
+      "Tính năng màn hình": "DCI-P3 100%, BT.2020, 10-bit, cảm biến ánh sáng trước/sau",
+      "Camera sau": "Chính 52MP, f/1.9Tele 12MP, f/2.3–f/3.5Góc siêu rộng 50MP, f/2.0",
+      "Camera trước": "12MP, f/2.0",
+      "Pin": "5.000 mAh",
+      "Hỗ trợ mạng": "5G",
+      "Thẻ SIM": "2 SIM (Nano-SIM)",
+      "Công nghệ NFC": "Có"
+    }
+  },
+  {
+    "name": "Sony Xperia 10 VII 8GB 128GB",
+    "description": {
+      "Hệ điều hành": "Android™ 15",
+      "Chipset": "Snapdragon® 6 Thế hệ 3",
+      "Dung lượng RAM": "8 GB",
+      "Bộ nhớ trong": "128 GB",
+      "Kích thước màn hình": "6.1 inches",
+      "Công nghệ màn hình": "FHD+ OLED",
+      "Độ phân giải màn hình": "1080 x 2340 pixels (FullHD+)",
+      "Tính năng màn hình": "Tần số quét 120Hz, cảm ứng 120Hz, DCI-P3 100%, Triluminous display, chuyển giữa nhiều cửa sổ",
+      "Camera sau": "50MP (F1.9, 24mm, 84°) + 13MP (F2.4, 16mm, 123°)",
+      "Camera trước": "8MP (F2.0, 26mm, 78°)",
+      "Pin": "5.000 mAh",
+      "Hỗ trợ mạng": "5G",
+      "Thẻ SIM": "2 Nano-SIM",
+      "Công nghệ NFC": "Có",
+      "Thời điểm ra mắt": "10/2025"
+    }
+  },
+  {
+    "name": "Sony Xperia 10 VIII",
+    "description": {
+      "Hệ điều hành khi ra mắt": "Android™ 16",
+      "Chipset": "Snapdragon® 6 Thế hệ 3",
+      "Loại CPU": "2 nhân 4.6 GHz & 6 nhân 3.62 GHz",
+      "Kích thước màn hình": "6.1 inches",
+      "Công nghệ màn hình": "FHD+ OLED",
+      "Độ phân giải màn hình": "1080 x 2340 pixels (FullHD+)",
+      "Tính năng màn hình": "Tần số quét 120 Hz, Tốc độ quét cảm ứng 120 Hz, DCI-P3 100%, Tối ưu hóa hình ảnh cho video",
+      "Camera sau": "50 MP + 13 MP",
+      "Camera trước": "8 MP",
+      "Pin": "5.000 mAh",
+      "Hỗ trợ mạng": "5G",
+      "Thẻ SIM": "2 Nano-SIM",
+      "Công nghệ NFC": "Có"
+    }
+  },
+  {
+    "name": "Xperia 10 V",
+    "description": {
+      "Hệ điều hành": "Android 13",
+      "Chipset": "Qualcomm SM6375 Snapdragon 695 5G (6 nm)",
+      "Dung lượng RAM": "8 GB",
+      "Bộ nhớ trong": "128 GB",
+      "Loại CPU": "2x2.2 GHz & 6x1.7 GHz",
+      "GPU": "Adreno 619",
+      "Kích thước màn hình": "6.1 inches",
+      "Công nghệ màn hình": "FHD+ OLED",
+      "Độ phân giải màn hình": "1080 x 2520 pixels",
+      "Tính năng màn hình": "1 tỷ màu, HDRCorning Gorilla Glass VictusMàn hình Triluminos Tần số quét 60hz",
+      "Camera sau": "Camera góc rộng: 48 MP, f/1.8, 26mm, PDAF, OISCamera góc siêu rộng: 8 MP, f/2.2, 120˚, 16mm",
+      "Camera trước": "Camera góc rộng: 8 MP, f/2.0, 26mm, HDR",
+      "Pin": "5000 mAh",
+      "Hỗ trợ mạng": "5G",
+      "Thẻ SIM": "2 SIM (Nano-SIM)",
+      "Công nghệ NFC": "Có"
+    }
+  },
+  {
+    "name": "Xperia 5 V",
+    "description": {
+      "Hệ điều hành": "Android 13",
+      "Chipset": "Qualcomm Snapdragon 8 Gen 2 (4 nm)",
+      "Dung lượng RAM": "8 GB",
+      "Bộ nhớ trong": "256 GB",
+      "Loại CPU": "1x3.2 GHz & 2x2.8 GHz & 2x2.8 GHz & 3x2.0 GHz",
+      "GPU": "Adreno 740",
+      "Kích thước màn hình": "6.1 inches",
+      "Công nghệ màn hình": "OLED",
+      "Độ phân giải màn hình": "1080 x 2520 pixels",
+      "Tính năng màn hình": "1 tỷ màu, tần số quét 120Hz, HDR10Corning Gorilla Glass Victus 2 Giảm nhèo do chuyển động 240hz, DCI-P3 100%,",
+      "Camera sau": "Camera góc rộng: 48 MP, f/1.9, 24mm, Dual Pixel PDAF, OISCamera góc siêu rộng:12 MP, f/2.2, 123˚, 16mm, Dual Pixel PDAF",
+      "Camera trước": "Camera góc rộng: 12 MP, f/2.0, 24mm, HDR",
+      "Pin": "5000 mAh",
+      "Hỗ trợ mạng": "5G",
+      "Thẻ SIM": "2 SIM (Nano-SIM)",
+      "Công nghệ NFC": "Có"
+    }
+  },
+  {
+    "name": "Sony Xperia 5 IV",
+    "description": {
+      "Kích thước màn hình": "6.1 inches",
+      "Công nghệ màn hình": "OLED",
+      "Camera sau": "Camera góc rộng: 12MP, f/1.7, 1.8µm  Camera tele: 12MP, f/2.4, 60 mm, OIS  Camera góc siêu rộng: 12MP, f/2.2, 124˚, 16mm, PDAF",
+      "Camera trước": "Camera góc rộng: 12MP, f/2.0, 24mm, 1 / 2.9 \", 1.25µm",
+      "Chipset": "Qualcomm SM8450 Snapdragon 8 thế hệ 1 (4 nm)",
+      "Công nghệ NFC": "Có",
+      "Dung lượng RAM": "8 GB",
+      "Bộ nhớ trong": "128 GB",
+      "Pin": "5000 mAh",
+      "Thẻ SIM": "2 SIM (Nano-SIM)",
+      "Hệ điều hành": "Android 12",
+      "Tính năng màn hình": "OLED, 1B màu, 120Hz, HDR BT.2020",
+      "Loại CPU": "1x3.00 GHz Cortex-X2 & 3x2.50 GHz Cortex-A710 & 4x1.80 GHz Cortex-A510"
+    }
+  },
+  {
+    "name": "Sony Xperia X Compact",
+    "description": {
+      "Kích thước màn hình": "4.6 inches",
+      "Công nghệ màn hình": "IPS LCD",
+      "Camera sau": "Camera góc rộng: 23 MP, f/2.0, 24mm, 1/2.3\", PDAF",
+      "Camera trước": "5 MP",
+      "Chipset": "Snapdragon 650",
+      "Công nghệ NFC": "Có",
+      "Dung lượng RAM": "3 GB",
+      "Bộ nhớ trong": "32 GB",
+      "Pin": "2700 mAh",
+      "Thẻ SIM": "Nano-SIM",
+      "Hệ điều hành": "Android 8.0",
+      "Độ phân giải màn hình": "720 x 1280 pixels",
+      "Tính năng màn hình": "Kính cường lực Oleophobic (ion cường lực)",
+      "Loại CPU": "2 nhân 1.8 GHz & 4 nhân 1.44 GHz"
+    }
+  },
+  {
+    "name": "Nokia 220 4G",
+    "description": {
+      "Công nghệ màn hình": "QQVGA / TFT LCD",
+      "Kích thước màn hình": "2.8 inches",
+      "Chipset": "Unisoc T107",
+      "Bộ nhớ trong": "128 MB",
+      "Pin": "1450 mAh",
+      "Thẻ SIM": "2 Nano-SIM",
+      "Hệ điều hành": "S30+",
+      "Tính năng màn hình": "QVGA"
+    }
+  },
+  {
+    "name": "Nokia HMD 105 4G",
+    "description": {
+      "Kích thước màn hình": "2.4 inches",
+      "Chipset": "Unisoc 8910  & T127",
+      "Bộ nhớ trong": "128 MB",
+      "Pin": "1450 mAh",
+      "Tính năng màn hình": "QVGA"
+    }
+  },
+  {
+    "name": "Nokia 3210 4G",
+    "description": {
+      "Kích thước màn hình": "2.4 inches",
+      "Camera sau": "2MP",
+      "Chipset": "Unisoc T107",
+      "Bộ nhớ trong": "128 MB",
+      "Pin": "1450 mAh",
+      "Thẻ SIM": "2 Nano-SIM",
+      "Tính năng màn hình": "QVGA"
+    }
+  },
+  {
+    "name": "Nokia 105 4G Pro",
+    "description": {
+      "Kích thước màn hình": "1.77 inches",
+      "Công nghệ màn hình": "IPS LCD",
+      "Chipset": "Unisoc T107",
+      "Bộ nhớ trong": "128 MB",
+      "Pin": "1450mAh",
+      "Thẻ SIM": "2 SIM (Nano-SIM)"
+    }
+  },
+  {
+    "name": "Nokia 110 4G Pro",
+    "description": {
+      "Kích thước màn hình": "1.77 inches",
+      "Công nghệ màn hình": "IPS LCD",
+      "Camera sau": "QVGA",
+      "Chipset": "Unisoc T107",
+      "Bộ nhớ trong": "128 MB",
+      "Pin": "1450mAh",
+      "Thẻ SIM": "2 SIM (Nano-SIM)",
+      "Hệ điều hành": "S30+"
+    }
+  },
+  {
+    "name": "Nokia 150",
+    "description": {
+      "Kích thước màn hình": "2.4 inches",
+      "Camera sau": "VGA Camera",
+      "Dung lượng RAM": "4MB",
+      "Bộ nhớ trong": "4MB",
+      "Pin": "1.020 mAhTháo ráp",
+      "Thẻ SIM": "Mini-SIM",
+      "Hệ điều hành": "S30+",
+      "Tính năng màn hình": "Độ phân giải:QVGA",
+      "Loại CPU": "MTK"
+    }
+  },
+  {
+    "name": "Nokia 130",
+    "description": {
+      "Kích thước màn hình": "1.8 inches",
+      "Camera sau": "VGA Camera",
+      "Dung lượng RAM": "4MB",
+      "Bộ nhớ trong": "8MB",
+      "Pin": "1020 mAh",
+      "Thẻ SIM": "Mini-SIM"
+    }
+  },
+  {
+    "name": "Nokia 7.2",
+    "description": {
+      "Kích thước màn hình": "6.3 inches",
+      "Công nghệ màn hình": "IPS LCD",
+      "Camera sau": "Chính 48 MP & Phụ 8 MP, 5 MP",
+      "Camera trước": "20 MP",
+      "Chipset": "Qualcomm Snapdragon 660 8 nhân",
+      "Công nghệ NFC": "Có",
+      "Dung lượng RAM": "4 GB",
+      "Bộ nhớ trong": "64 GB",
+      "Pin": "Pin chuẩn Li-Ion 3500 mAh",
+      "Thẻ SIM": "2 SIM (Nano-SIM)",
+      "Hệ điều hành": "Android 9.0 (Pie)",
+      "Độ phân giải màn hình": "1080 x 2340 pixels (FullHD+)",
+      "Tính năng màn hình": "HDR10Corning Gorilla Glass 3",
+      "Loại CPU": "4 nhân 2.2 GHz & 4 nhân 1.8 GHz"
+    }
+  },
+  {
+    "name": "Nokia 3.2",
+    "description": {
+      "Kích thước màn hình": "6.26 inches",
+      "Công nghệ màn hình": "IPS LCD",
+      "Camera sau": "13 MP, f/2.2, 1/3\", 1.12µm, AF",
+      "Camera trước": "5 MP, f/2.2, 27mm (wide), 1.12µm",
+      "Chipset": "Qualcomm SDM429 Snapdragon 429",
+      "Dung lượng RAM": "3 GB",
+      "Bộ nhớ trong": "32 GB",
+      "Pin": "Li-Ion 4000 mAh",
+      "Thẻ SIM": "2 SIM (Nano-SIM)",
+      "Hệ điều hành": "Android 9.0 (Pie); Android One",
+      "Độ phân giải màn hình": "720 x 1520 pixels",
+      "Loại CPU": "Quad-core 1.8 GHz Cortex-A53",
+      "Cảm biến": "Vân tay, gia tốc kế, độ gần"
+    }
+  },
+  {
+    "name": "Infinix HOT 50i 4GB 128GB",
+    "description": {
+      "Kích thước màn hình": "6.7 inches",
+      "Công nghệ màn hình": "LCD",
+      "Camera sau": "Cảm biến chính: 48 MP, f/1.79",
+      "Camera trước": "8MP, f/2.0",
+      "Chipset": "MediaTek Helio G81",
+      "Dung lượng RAM": "4 GB",
+      "Bộ nhớ trong": "128 GB",
+      "Pin": "5,000mAh",
+      "Thẻ SIM": "2 Nano-SIM",
+      "Hệ điều hành": "Android 14 Go",
+      "Độ phân giải màn hình": "1600 x 720 pixels (HD+)",
+      "Tính năng màn hình": "Tỷ lệ khung hình 20:9 Tốc độ làm mới 120Hz"
+    }
+  },
+  {
+    "name": "Infinix Note 30 Pro",
+    "description": {
+      "Kích thước màn hình": "6.78 inches",
+      "Công nghệ màn hình": "AMOLED",
+      "Camera sau": "Camera góc rộng: 108 MP, PDAF Camera đo độ sâu: 2 MP, f/2.4",
+      "Camera trước": "Camera góc rộng: 16 MP, f/2.0",
+      "Chipset": "Mediatek Helio G99 (6nm)",
+      "Công nghệ NFC": "Có",
+      "Dung lượng RAM": "8GB + Mở rộng 8GB",
+      "Bộ nhớ trong": "256 GB",
+      "Pin": "5.000 mAh",
+      "Thẻ SIM": "2 SIM (Nano-SIM)",
+      "Hệ điều hành": "Android 13",
+      "Độ phân giải màn hình": "1080x2460 pixels",
+      "Tính năng màn hình": "Tần số quét 120Hz, 900 nits, 1 tỷ màu",
+      "Loại CPU": "2x2.2 GHz Cortex-A76 & 6x2.0 GHz Cortex-A55"
+    }
+  },
+  {
+    "name": "Infinix Hot 50 Pro 8GB 256GB",
+    "description": {
+      "Kích thước màn hình": "6.78 inches",
+      "Công nghệ màn hình": "AMOLED",
+      "Camera sau": "Máy ảnh chính 50MP",
+      "Camera trước": "8MP",
+      "Chipset": "MediaTek Helio G100",
+      "Dung lượng RAM": "8 GB",
+      "Bộ nhớ trong": "256 GB",
+      "Pin": "5,000 mAh",
+      "Hệ điều hành": "Android 14",
+      "Tính năng màn hình": "1,800 nits"
+    }
+  },
+  {
+    "name": "Infinix Smart 9 3GB 64GB",
+    "description": {
+      "Kích thước màn hình": "6.7 inches",
+      "Công nghệ màn hình": "IPS LCD",
+      "Camera sau": "13 MP, f/1.9, 27mm (rộng), AF",
+      "Camera trước": "8 MP, f/2.0, (rộng)",
+      "Chipset": "Mediatek Helio G81",
+      "Công nghệ NFC": "Không",
+      "Dung lượng RAM": "3 GB",
+      "Bộ nhớ trong": "64 GB",
+      "Pin": "5000mAh",
+      "Thẻ SIM": "2 Nano-SIM",
+      "Hệ điều hành": "Android 14, XOS 14",
+      "Độ phân giải màn hình": "720 x 1600 pixel",
+      "Tính năng màn hình": "120Hz, 500 nits, Tỷ lệ 20:9, 262 ppi",
+      "Loại CPU": "Octa-core (2x2.0 GHz Cortex-A75 & 6x1.7 GHz Cortex-A55)"
+    }
+  },
+  {
+    "name": "Nothing Phone 2A Plus 5G 12GB 256GB",
+    "description": {
+      "Hệ điều hành khi ra mắt": "Android 14",
+      "Chipset": "MediaTek Dimensity 7350 Pro 5G",
+      "Dung lượng RAM": "12 GB",
+      "Bộ nhớ trong": "256 GB",
+      "Loại CPU": "Up to 3.0 GHz",
+      "GPU": "ARM Mali G610 MC4",
+      "Kích thước màn hình": "6.7 inches",
+      "Công nghệ màn hình": "Flexible AMOLED On-cell",
+      "Độ phân giải màn hình": "1080 x 2412 pixels",
+      "Tính năng màn hình": "1300 nits120 Hz, 1,07 tỷ màu",
+      "Camera sau": "Camera chính: 50 MP, f/1.88, 1/1.57\"Camera góc siêu rộng: 50 MP, f/2.2, 1/2.76\"",
+      "Camera trước": "50 MP, f/2.2, 1/2.76\"",
+      "Pin": "5000 mAh",
+      "Hỗ trợ mạng": "5G",
+      "Thẻ SIM": "2 SIM (Nano-SIM)",
+      "Công nghệ NFC": "Có"
+    }
+  },
+  {
+    "name": "Nothing Phone 3A 8GB 128GB",
+    "description": {
+      "Kích thước màn hình": "6.77 inches",
+      "Công nghệ màn hình": "AMOLED",
+      "Camera sau": "Camera chính: 50MP, F1.88Camera góc siêu rộng: 8MP, F2.2Camera Tele: 50MP, F2.0",
+      "Camera trước": "32MP, F2.2",
+      "Chipset": "Qualcomm SM7635 Snapdragon 7s Gen 3",
+      "Công nghệ NFC": "Có",
+      "Dung lượng RAM": "8 GB",
+      "Bộ nhớ trong": "128 GB",
+      "Pin": "5000mAh",
+      "Thẻ SIM": "2 Nano-SIM",
+      "Hệ điều hành": "Nothing OS 3.1 (Based on Android 15)",
+      "Độ phân giải màn hình": "1080 x 2392 pixels",
+      "Tính năng màn hình": "120Hz, NTSC 105%, 387 ppi, 3000nit, 1.07 tỷ màu, DCI-P3 100%, HDR10+"
+    }
+  },
+  {
+    "name": "Nothing Phone 2A 5G 8GB 128GB",
+    "description": {
+      "Kích thước màn hình": "6.7 inches",
+      "Công nghệ màn hình": "Flexible AMOLED On-cell",
+      "Camera sau": "50 MP, f/1.88, 1/1.56\" 50 MP, f/2.2, 1/2.76\", 114° FOV",
+      "Camera trước": "32 MP, f/2.2, 1/2.74\"",
+      "Chipset": "MediaTek Dimensity 7200 Pro (4nm TSMC process)",
+      "Công nghệ NFC": "Có",
+      "Dung lượng RAM": "8 GB",
+      "Bộ nhớ trong": "128 GB",
+      "Pin": "5000 mAh",
+      "Thẻ SIM": "2 SIM (Nano-SIM)",
+      "Hệ điều hành": "Android 14",
+      "Độ phân giải màn hình": "1080 x 2412 pixels",
+      "Tính năng màn hình": "Corning® Gorilla® Glass 5Tỷ lệ tương phản: 1,000,000:1394 PPI1300 nits120 Hz",
+      "Loại CPU": "Up to 2.8 GHz"
+    }
+  },
+  {
+    "name": "Nothing Phone 2A 5G 12GB 256GB",
+    "description": {
+      "Kích thước màn hình": "6.7 inches",
+      "Công nghệ màn hình": "Flexible AMOLED On-cell",
+      "Camera sau": "50 MP, f/1.88, 1/1.56\" 50 MP, f/2.2, 1/2.76\", 114° FOV",
+      "Camera trước": "32 MP, f/2.2, 1/2.74\"",
+      "Chipset": "MediaTek Dimensity 7200 Pro (4nm TSMC process)",
+      "Công nghệ NFC": "Có",
+      "Dung lượng RAM": "12 GB",
+      "Bộ nhớ trong": "256 GB",
+      "Pin": "5000 mAh",
+      "Thẻ SIM": "2 SIM (Nano-SIM)",
+      "Hệ điều hành": "Android 14",
+      "Độ phân giải màn hình": "1080 x 2412 pixels",
+      "Tính năng màn hình": "Corning® Gorilla® Glass 5Tỷ lệ tương phản: 1,000,000:1394 PPI1300 nits120 Hz",
+      "Loại CPU": "Up to 2.8 GHz"
+    }
+  },
+  {
+    "name": "Nothing Phone 2",
+    "description": {
+      "Kích thước màn hình": "6.55 inches",
+      "Công nghệ màn hình": "OLED",
+      "Camera sau": "Camera góc rộng: 108 MP, f/1.9, 24mm, PDAF, OISCamera góc siêu rộng: 20 MP, f/2.2, 114˚Camera macro: 2 MP f/2.2",
+      "Camera trước": "16 MP",
+      "Chipset": "Snapdragon 8 Gen 2 (4 nm)",
+      "Công nghệ NFC": "Có",
+      "Dung lượng RAM": "8 GB",
+      "Bộ nhớ trong": "256 GB",
+      "Pin": "5000 mAh",
+      "Thẻ SIM": "2 SIM (Nano-SIM)",
+      "Hệ điều hành": "Android 13",
+      "Độ phân giải màn hình": "1080 x 2400 pixels (FullHD+)",
+      "Tính năng màn hình": "Tần số quét 120Hz1 tỷ màu, HDR10+, 500 nits (typ), 950 nits (tối đa)Corning Gorilla Glass 6",
+      "Loại CPU": "1x3.2 GHz & 2x2.8 GHz & 2x2.8 GHz & 3x2.0 GHz"
+    }
+  },
+  {
+    "name": "Nothing Phone 3A 12GB 256GB",
+    "description": {
+      "Kích thước màn hình": "6.77 inches",
+      "Công nghệ màn hình": "AMOLED",
+      "Camera sau": "Camera chính: 50MP, F1.88Camera góc siêu rộng: 8MP, F2.2Camera Tele: 50MP, F2.0",
+      "Camera trước": "32MP, F2.2",
+      "Chipset": "Qualcomm SM7635 Snapdragon 7s Gen 3",
+      "Công nghệ NFC": "Có",
+      "Dung lượng RAM": "12 GB",
+      "Bộ nhớ trong": "256 GB",
+      "Pin": "5000mAh",
+      "Thẻ SIM": "2 Nano-SIM",
+      "Hệ điều hành": "Nothing OS 3.1 (Based on Android 15)",
+      "Độ phân giải màn hình": "1080 x 2392 pixels",
+      "Tính năng màn hình": "120Hz, NTSC 105%, 387 ppi, 3000nit, 1.07 tỷ màu, DCI-P3 100%, HDR10+"
+    }
+  },
+  {
+    "name": "Nothing Phone 3A Pro",
+    "description": {
+      "Kích thước màn hình": "6.77 inches",
+      "Công nghệ màn hình": "AMOLED",
+      "Camera sau": "50MP, f/1.88, 1/1.56''8MP, f/2.2, 1/4''50MP, f/2.55, 1/1.953\"",
+      "Camera trước": "50MP, f/2.2, 1/2.76''",
+      "Chipset": "Qualcomm SM7635 Snapdragon 7s Gen 3 (4 nm)",
+      "Công nghệ NFC": "Có",
+      "Dung lượng RAM": "8 GB",
+      "Bộ nhớ trong": "256 GB",
+      "Pin": "5000mAh",
+      "Thẻ SIM": "2 Nano-SIM",
+      "Hệ điều hành": "Nothing OS 3.1 (Based on Android 15)",
+      "Độ phân giải màn hình": "1080 x 2392 pixels",
+      "Tính năng màn hình": "120Hz, NTSC 105%, 387 ppi, 3000nit, 1.07 tỷ màu, DCI-P3 100%"
+    }
+  },
+  {
+    "name": "Nothing Phone 1",
+    "description": {
+      "Kích thước màn hình": "6.55 inches",
+      "Công nghệ màn hình": "OLED",
+      "Camera sau": "50 MP + 50 MP",
+      "Camera trước": "16 MP",
+      "Chipset": "Qualcomm Snapdragon 778G+ 5G (6 nm)",
+      "Công nghệ NFC": "Có",
+      "Dung lượng RAM": "8 GB",
+      "Bộ nhớ trong": "128 GB",
+      "Pin": "4.500 mAh",
+      "Hệ điều hành": "Android 12",
+      "Độ phân giải màn hình": "1080 x 2400 pixels (FullHD+)",
+      "Tính năng màn hình": "Tần số quét 120HzGorilla Glass 5",
+      "Loại CPU": "1x2.5 GHz Cortex-A78 & 3x2.4 GHz Cortex-A78 & 4x1.8 GHz Cortex-A55"
+    }
+  },
+  {
+    "name": "Điện thoại trẻ em Masstel Alfa 5",
+    "description": {
+      "Kích thước màn hình": "3.5 inches",
+      "Công nghệ màn hình": "IPS LCD",
+      "Chipset": "ASR",
+      "Bộ nhớ trong": "128 MB",
+      "Pin": "1750 mAh",
+      "Thẻ SIM": "Nano-SIM",
+      "Độ phân giải màn hình": "240 x 320 pixels",
+      "Tính năng màn hình": "262K màu"
+    }
+  },
+  {
+    "name": "Masstel Izi 15 4G",
+    "description": {
+      "Kích thước màn hình": "1.77 inches",
+      "Chipset": "Unisoc UMS9117",
+      "Pin": "1000 mAh",
+      "Thẻ SIM": "2 SIM (Nano-SIM)",
+      "Tính năng màn hình": "QQVGA"
+    }
+  },
+  {
+    "name": "Masstel izi S5 4G",
+    "description": {
+      "Chipset": "UNISOC T107",
+      "Kích thước màn hình": "1.77 inches",
+      "Độ phân giải màn hình": "128 x 160 pixels (QVGA)",
+      "Tính năng màn hình": "262K màu",
+      "Pin": "Pin rời 1000mAh",
+      "Hỗ trợ mạng": "4G",
+      "Thẻ SIM": "2 SIM (Nano-SIM)"
+    }
+  },
+  {
+    "name": "Masstel Fami 8 4G",
+    "description": {
+      "Kích thước màn hình": "1.77 inches",
+      "Chipset": "UNISOC T107",
+      "Bộ nhớ trong": "128 MB",
+      "Pin": "1400 mAh",
+      "Thẻ SIM": "2 Nano-SIM",
+      "Độ phân giải màn hình": "128 x 160 pixels",
+      "Tính năng màn hình": "Công nghệ màn hình: QQVGA262K màu"
+    }
+  },
+  {
+    "name": "Masstel izi T8",
+    "description": {
+      "Kích thước màn hình": "2.4 inches",
+      "Pin": "2300mAh",
+      "Thẻ SIM": "2 Nano-SIM",
+      "Tính năng màn hình": "Màu màn hình: 262KĐộ phân giải: QVGA 240*320",
+      "Loại CPU": "ASR3603S"
+    }
+  },
+  {
+    "name": "Masstel izi T5 plus 4G",
+    "description": {
+      "Kích thước màn hình": "2.4 inches",
+      "Chipset": "UNISOC T107",
+      "Pin": "2300 mAh",
+      "Thẻ SIM": "2 SIM (Nano-SIM)",
+      "Độ phân giải màn hình": "240 x 320 pixels"
+    }
+  },
+  {
+    "name": "Masstel Izi S8",
+    "description": {
+      "Kích thước màn hình": "1.77 inches",
+      "Công nghệ màn hình": "TFT LCD",
+      "Chipset": "T107 (UMS9117)",
+      "Pin": "1400mAh",
+      "Thẻ SIM": "2 Nano-SIM",
+      "Tính năng màn hình": "Độ phân giải: QQVGA (128 × 160)Phông chữ to, dễ sử dụng"
+    }
+  },
+  {
+    "name": "Masstel Fami 25",
+    "description": {
+      "Kích thước màn hình": "1.77 inches",
+      "Công nghệ màn hình": "TFT LCD",
+      "Chipset": "T107 (UMS9117)",
+      "Dung lượng RAM": "48MB",
+      "Bộ nhớ trong": "128 MB",
+      "Pin": "1400 mAh",
+      "Thẻ SIM": "2 Nano-SIM",
+      "Tính năng màn hình": "QQVGA (160 × 128)"
+    }
+  },
+  {
+    "name": "Masstel izi  22",
+    "description": {
+      "Kích thước màn hình": "1.77 inches",
+      "Chipset": "ASR Platform",
+      "Công nghệ NFC": "Không",
+      "Pin": "1000 (thời gian chờ 7-10 ngày)",
+      "Độ phân giải màn hình": "128 x 160 pixels",
+      "Tính năng màn hình": "262KHiển thị rõ ràng, phông chữ lớn, dễ đọc"
+    }
+  },
+  {
+    "name": "Masstel Izi 10 4G",
+    "description": {
+      "Kích thước màn hình": "1.77 inches",
+      "Công nghệ màn hình": "TFT LCD",
+      "Chipset": "Unisoc UMS9117",
+      "Công nghệ NFC": "Không",
+      "Bộ nhớ trong": "128 MB",
+      "Pin": "1000 mAh",
+      "Thẻ SIM": "2 SIM (Nano-SIM)",
+      "Độ phân giải màn hình": "128 x 160 pixels",
+      "Tính năng màn hình": "QQVGA"
+    }
+  },
+  {
+    "name": "masstel fami 60",
+    "description": {
+      "Kích thước màn hình": "2.0 inches",
+      "Công nghệ màn hình": "TFT LCD",
+      "Chipset": "Unisoc UIS8910",
+      "Pin": "2000 mAh",
+      "Thẻ SIM": "2 SIM (Nano-SIM)",
+      "Tính năng màn hình": "Mặt kính cong 2.5D,QVGA"
+    }
+  },
+  {
+    "name": "realme 13+ 5G 8GB 256GB",
+    "description": {
+      "Kích thước màn hình": "6.67 inches",
+      "Công nghệ màn hình": "OLED",
+      "Camera sau": "50MP 882 OIS + 2MP + Flicker",
+      "Camera trước": "16MP, f/2.4",
+      "Chipset": "Dimensity 7300 Energy 5G",
+      "Công nghệ NFC": "Có",
+      "Dung lượng RAM": "8 GB",
+      "Bộ nhớ trong": "256 GB",
+      "Pin": "5000 mAh",
+      "Thẻ SIM": "2 Nano-SIM",
+      "Hệ điều hành": "Android 14",
+      "Độ phân giải màn hình": "1080 x 2400 pixels (FullHD+)",
+      "Tính năng màn hình": "16.7 triệu màu, 2000nits, 120HzAGC DT STAR2",
+      "Loại CPU": "Lõi tám nhân 4*A78 @2.5 GHz，4*A55 @2.5 GHz"
+    }
+  },
+  {
+    "name": "realme GT Neo 5",
+    "description": {
+      "Kích thước màn hình": "6.74 inches",
+      "Công nghệ màn hình": "AMOLED",
+      "Camera sau": "Camera chính Sony IMX 890 OIS: 50MP, f/1.88Camera góc siêu rộng: 8MP, 112°Camera tele: 2MP, f/3.3",
+      "Camera trước": "Camera góc rộng: 16MP, f/2.45",
+      "Chipset": "Chip Snapdragon® 8+ 5G",
+      "Công nghệ NFC": "Có",
+      "Dung lượng RAM": "16 GB",
+      "Bộ nhớ trong": "256 GB",
+      "Pin": "5000 mAh",
+      "Thẻ SIM": "2 SIM (Nano-SIM)",
+      "Hệ điều hành": "Android 13",
+      "Độ phân giải màn hình": "1240 x 2772 pixels",
+      "Tính năng màn hình": "144Hz, 1,07 tỷ màu, Độ bão hòa màu: DCI-P3 100%",
+      "Loại CPU": "Octa-core (1x3.19 GHz Cortex-X2 & 3x2.75 GHz Cortex-A710 & 4x1.80 GHz Cortex-A510)"
+    }
+  },
+  {
+    "name": "Realme GT3",
+    "description": {
+      "Kích thước màn hình": "6.74 inches",
+      "Công nghệ màn hình": "AMOLED",
+      "Camera sau": "Camera góc rộng: 50MP, f/1.9, 24mm, 1/1.56\", 1.0µm, PDAF, OIS  Camera góc siêu rộng: 8MP, f/2.2, 16mm, 112˚, 1/4.0\", 1.12µm  Microscope: 2 MP, f/3.3, 20mm",
+      "Camera trước": "Camera góc rộng: 16MP, f/2.5, 25mm, 1/3.09\", 1.0µm",
+      "Chipset": "Qualcomm SM8475 Snapdragon 8+ Gen 1 (4 nm)",
+      "Công nghệ NFC": "Có",
+      "Dung lượng RAM": "8 GB",
+      "Bộ nhớ trong": "128 GB",
+      "Pin": "4600 mAh",
+      "Thẻ SIM": "2 SIM (Nano-SIM)",
+      "Hệ điều hành": "Android 13",
+      "Độ phân giải màn hình": "1240 x 2772 pixels",
+      "Tính năng màn hình": "1 tỷ màu, tần số quét 144Hz, HDR10+, 1400 nits",
+      "Loại CPU": "1x3.19 GHz Cortex-X2 & 3x2.75 GHz Cortex-A710 & 4x1.80 GHz Cortex-A510"
+    }
+  },
+  {
+    "name": "realme 10 Pro Plus",
+    "description": {
+      "Kích thước màn hình": "6.7 inches",
+      "Công nghệ màn hình": "Super AMOLED",
+      "Camera sau": "Camera góc rộng:  108 MP, PDAF, OIS  Camera góc siêu rộng: 8MP  Camera góc sâu: 2MP, f/2.4",
+      "Camera trước": "Camera góc rộng: 16MP, f/2.4, 27mm, 1 / 3.09 \", 1.0µm",
+      "Chipset": "MediaTek Dimensity 1080 (6 nm)",
+      "Công nghệ NFC": "Có",
+      "Dung lượng RAM": "6 GB",
+      "Bộ nhớ trong": "64 GB",
+      "Pin": "5.000 mAh",
+      "Thẻ SIM": "2 SIM (Nano-SIM)",
+      "Hệ điều hành": "Android 12",
+      "Độ phân giải màn hình": "1080 x 2400 pixels (FullHD+)",
+      "Tính năng màn hình": "1B màu, Tần số quét 120Hz",
+      "Loại CPU": "2x2,6 GHz Cortex-A78 & 6x2,0 GHz Cortex-A55"
+    }
+  },
+  {
+    "name": "realme Narzo 50",
+    "description": {
+      "Kích thước màn hình": "6.6 inches",
+      "Công nghệ màn hình": "IPS LCD",
+      "Camera sau": "Camera góc rộng: 50 MP, f/1.8, PDAF  Camera Macro: 2 MP, f/2.4  Camera góc sâu: 2 MP, f/2.4",
+      "Camera trước": "Camera góc rộng: 16 MP, f/2.1",
+      "Chipset": "Mediatek Helio G96 (12 nm)",
+      "Công nghệ NFC": "Không",
+      "Dung lượng RAM": "4 GB",
+      "Bộ nhớ trong": "64 GB",
+      "Pin": "Li-Po 5000 mAh",
+      "Thẻ SIM": "2 SIM (Nano-SIM)",
+      "Hệ điều hành": "Android 11, Realme UI 2.0",
+      "Độ phân giải màn hình": "1080 x 2412 pixels",
+      "Loại CPU": "2x2,05 GHz Cortex-A76 & 6x2,0 GHz Cortex-A55"
+    }
+  },
+  {
+    "name": "realme 13+ 5G 12GB 256GB",
+    "description": {
+      "Kích thước màn hình": "6.67 inches",
+      "Công nghệ màn hình": "OLED",
+      "Camera sau": "50MP 882 OIS + 2MP + Flicker",
+      "Camera trước": "16MP, f/2.4",
+      "Chipset": "Dimensity 7300 Energy 5G",
+      "Công nghệ NFC": "Có",
+      "Dung lượng RAM": "12 GB",
+      "Bộ nhớ trong": "256 GB",
+      "Pin": "5000 mAh",
+      "Thẻ SIM": "2 Nano-SIM",
+      "Hệ điều hành": "Android 14",
+      "Độ phân giải màn hình": "1080 x 2400 pixels (FullHD+)",
+      "Tính năng màn hình": "16.7 triệu màu, 2000nits, 120HzAGC DT STAR2",
+      "Loại CPU": "Lõi tám nhân 4*A78 @2.5 GHz，4*A55 @2.5 GHz"
+    }
+  },
+  {
+    "name": "Realme 9 SE 5G",
+    "description": {
+      "Kích thước màn hình": "6.6 inches",
+      "Công nghệ màn hình": "IPS LCD",
+      "Camera sau": "48 MP, f/1.8, 26mm (wide), 1/2\", 0.8µm, PDAF  2 MP, f/2.4, (macro)  2 MP, f/2.4, (deoth)",
+      "Camera trước": "16 MP, f/2.1, 26mm (rộng), 1/3.09 \", 1.0µm",
+      "Chipset": "Qualcomm SM7325 Snapdragon 778G 5G (6 nm)",
+      "Công nghệ NFC": "Không",
+      "Dung lượng RAM": "6 GB",
+      "Bộ nhớ trong": "128 GB",
+      "Pin": "Li-Po 5000 mAh",
+      "Thẻ SIM": "2 SIM (Nano-SIM)",
+      "Hệ điều hành": "Android 11, Realme UI 2.0",
+      "Độ phân giải màn hình": "2412 x 1080 pixels",
+      "Tính năng màn hình": "IPS LCD  144Hz  480 nits (typ)  600 nits (HBM)",
+      "Loại CPU": "Octa-core (4x2.4 GHz Kryo 670 & 4x1.9 GHz Kryo 670)"
+    }
+  },
+  {
+    "name": "realme C67 8GB 256GB",
+    "description": {
+      "Kích thước màn hình": "6.72 inches",
+      "Công nghệ màn hình": "IPS LCD",
+      "Camera sau": "Camera AI: 108MP, f/1.82MP, f/2.4",
+      "Camera trước": "8 MP, f/2.05",
+      "Chipset": "Snapdragon 685 8 nhân",
+      "Công nghệ NFC": "Không",
+      "Dung lượng RAM": "8 GB",
+      "Bộ nhớ trong": "256 GB",
+      "Pin": "5000 mAh",
+      "Thẻ SIM": "2 SIM (Nano-SIM)",
+      "Hệ điều hành": "Android 14",
+      "Độ phân giải màn hình": "1080 x 2400 pixels (FullHD+)",
+      "Tính năng màn hình": "Tần số quét 90 Hz950 nitsMặt kính cảm ứng:\tKính cường lực Panda"
+    }
+  },
+  {
+    "name": "Điện thoại Itel P55 Plus NFC 8GB 256GB",
+    "description": {
+      "Hệ điều hành khi ra mắt": "Android 13",
+      "Chipset": "Unisoc T606",
+      "Dung lượng RAM": "8 GB",
+      "Bộ nhớ trong": "256 GB",
+      "Loại CPU": "Octa-core Processor",
+      "Kích thước màn hình": "6.6 inches",
+      "Tính năng màn hình": "Tần số quét 90Hz",
+      "Camera sau": "Camera góc rộng: 50 MP",
+      "Camera trước": "8 MP",
+      "Pin": "5000mAh",
+      "Hỗ trợ mạng": "4G",
+      "Công nghệ NFC": "Có"
+    }
+  },
+  {
+    "name": "Huawei Mate X7 16GB 512GB",
+    "description": {
+      "Hệ điều hành khi ra mắt": "EMUI 15.0",
+      "Dung lượng RAM": "16 GB",
+      "Bộ nhớ trong": "512 GB",
+      "Kích thước màn hình": "8.0 inches",
+      "Công nghệ màn hình": "OLED",
+      "Tính năng màn hình": "Màn hình: 1.07 tỷ màu, gam màu rộng P3Màn hình chính: 2416 × 2210 pixelMàn hình ngoài: 2444 × 1080 pixelTốc độ làm mới thích ứng LTPO 1-120 Hz, thay đổi cường độ sáng PWM tần số cao 1440 HzMật độ điểm ảnh 412 PPI",
+      "Camera sau": "Camera chính Ultra Lighting HDR 50MP (OIS, khẩu độ F1.49 - F4.0)Camera góc siêu rộng 40MPCamera telephoto macro 50MP (OIS)",
+      "Camera trước": "Khi gập lại: Camera 8 MP (khẩu độ F2.4)Khi mở ra: Camera 8 MP (khẩu độ F2.2)",
+      "Pin": "5600 mAh",
+      "Hỗ trợ mạng": "4G",
+      "Công nghệ NFC": "Có"
+    }
+  },
+  {
+    "name": "Huawei P60 Pro",
+    "description": {
+      "Kích thước màn hình": "6.66 inches",
+      "Công nghệ màn hình": "OLED",
+      "Camera sau": "Camera góc rộng: 48MP, f/1.4, PDAF, Laser AF, OIS  Camera kính viễn vọng: 48MP, f/2.1, PDAF, OIS  Camera góc siêu rộng: 13MP, f/2.2",
+      "Camera trước": "Camera góc rộng: 13MP, f/2.4, AF",
+      "Chipset": "Snapdragon 8+ Gen 1 4G",
+      "Công nghệ NFC": "Có",
+      "Dung lượng RAM": "8 GB",
+      "Bộ nhớ trong": "256 GB",
+      "Pin": "4815 mAh",
+      "Thẻ SIM": "2 SIM (Nano-SIM)",
+      "Hệ điều hành": "HarmonyOS 3.0",
+      "Tính năng màn hình": "Tốc độ làm mới 120Hz, 1.07  tỷ màu",
+      "Loại CPU": "1 × Cortex-X2@3.2 GHz + 3 × Cortex-A710@2.75 GHz + 4 × Cortex-A510@2.0 GHz"
+    }
+  },
+  {
+    "name": "Huawei Nova 10 SE",
+    "description": {
+      "Kích thước màn hình": "6.66 inches",
+      "Công nghệ màn hình": "OLED",
+      "Camera sau": "108 MP + 8 MP + 2 MP",
+      "Camera trước": "16 MP",
+      "Chipset": "Qualcomm Snapdragon 778G",
+      "Công nghệ NFC": "Có",
+      "Dung lượng RAM": "8 GB",
+      "Bộ nhớ trong": "256 GB",
+      "Pin": "4500 mAh",
+      "Thẻ SIM": "2 SIM (Nano-SIM)",
+      "Hệ điều hành": "HarmonyOS",
+      "Độ phân giải màn hình": "1080 x 2400 pixels (FullHD+)",
+      "Tính năng màn hình": "OLED, 395 ppi, 90 Hz",
+      "Loại CPU": "2,4 GHz, Lõi đơn, Kryo 670 + 2,2 GHz, Lõi ba, Kryo 670 + 1,9 GHz, Lõi tứ, Kryo 670"
+    }
+  },
+  {
+    "name": "Huawei Nova 10",
+    "description": {
+      "Kích thước màn hình": "6.66 inches",
+      "Công nghệ màn hình": "OLED",
+      "Camera sau": "Camera góc rộng: 50 MP, f/1.9, 27mm, PDAF Camera siêu rộng: 8 MP, f/2.2, 112˚  Camera góc sâu: 2 MP, f/2.4",
+      "Camera trước": "Camera góc siêu rộng: 60 MP, f/2.4, 100˚",
+      "Chipset": "Qualcomm SM7325 Snapdragon 778G 4G (6 nm)",
+      "Công nghệ NFC": "Có",
+      "Dung lượng RAM": "8 GB",
+      "Bộ nhớ trong": "128 GB",
+      "Pin": "4000 mAh",
+      "Thẻ SIM": "2 SIM (Nano-SIM)",
+      "Hệ điều hành": "EMUI 12",
+      "Độ phân giải màn hình": "1080 x 2400 pixels (FullHD+)",
+      "Tính năng màn hình": "OLED, 1B màu, 120Hz, HDR10",
+      "Loại CPU": "4x2,4 GHz Kryo 670 & 4x1,8 GHz Kryo 670"
+    }
+  },
+  {
+    "name": "Huawei Pocket S",
+    "description": {
+      "Kích thước màn hình": "6.9 inches",
+      "Công nghệ màn hình": "OLED",
+      "Camera sau": "Camera góc rộng: 40MP, f/1.8, PDAF, Laser AF  Camera góc siêu rộng: 13MP, f/2.2, 120˚, AF",
+      "Camera trước": "Camera góc siêu rộng: 10,7MP, f/2.2",
+      "Chipset": "Qualcomm SM7325 Snapdragon 778G 4G (6 nm)",
+      "Công nghệ NFC": "Có",
+      "Dung lượng RAM": "8 GB",
+      "Bộ nhớ trong": "128 GB",
+      "Pin": "4000 mAh",
+      "Thẻ SIM": "2 SIM (Nano-SIM)",
+      "Hệ điều hành": "HarmonyOS 3.0",
+      "Tính năng màn hình": "Màn hình chính: OLED có thể gập lại, 1.07 tỉ màu, Tần số quét 120Hz,  FHD+, 2790 × 1188 pixelsMàn hình phụ:  1.04 inches, 16.7 triệu màu,120 Hz",
+      "Loại CPU": "4x2,4 GHz Kryo 670 & 4x1,8 GHz Kryo 670"
+    }
+  },
+  {
+    "name": "Huawei Nova 10 Pro",
+    "description": {
+      "Kích thước màn hình": "6.78 inches",
+      "Công nghệ màn hình": "OLED",
+      "Camera sau": "Camera góc rộng: 50 MP, f/1.8, 27mm, PDAF Camera siêu rộng: 8 MP, f/2.2, 112˚, AF Camera góc sâu: 2 MP, f/2.4",
+      "Camera trước": "Camera dọc: 8 MP, f/2.2  Camera siêu rộng: 60 MP, f/2.4, 100˚, AF",
+      "Chipset": "Qualcomm SM7325 Snapdragon 778G 4G (6 nm)",
+      "Công nghệ NFC": "Có",
+      "Dung lượng RAM": "8 GB",
+      "Bộ nhớ trong": "128 GB",
+      "Pin": "4500 mAh",
+      "Thẻ SIM": "2 SIM (Nano-SIM)",
+      "Hệ điều hành": "HarmonyOS 2.0",
+      "Tính năng màn hình": "OLED, 1B màu, HDR10, 120Hz",
+      "Loại CPU": "4x2,4 GHz Kryo 670 & 4x1,8 GHz Kryo 670"
+    }
+  },
+  {
+    "name": "Huawei Nova 9 SE",
+    "description": {
+      "Kích thước màn hình": "6.78 inches",
+      "Công nghệ màn hình": "IPS LCD",
+      "Camera sau": "108 MP, f/1.9, (wide), 1/1.52\", 0.7µm, PDAF8 MP, f/2.2, 112˚ (ultrawide)2 MP, f/2.4, (macro)2 MP, f/2.4, (depth)",
+      "Camera trước": "16 MP, f/2.2, 22mm (wide)",
+      "Chipset": "Qualcomm SM6225 Snapdragon 680 4G (6 nm)",
+      "Công nghệ NFC": "Có",
+      "Dung lượng RAM": "8 GB",
+      "Bộ nhớ trong": "128 GB",
+      "Pin": "Li-Po 4000 mAh không thể tháo rời",
+      "Thẻ SIM": "2 SIM (Nano-SIM)",
+      "Hệ điều hành": "Android 11, EMUI 12, không có dịch vụ Google Play",
+      "Độ phân giải màn hình": "1080 x 2388 pixels",
+      "Tính năng màn hình": "90Hz",
+      "Loại CPU": "Octa-core (4x2.4 GHz Kryo 265 Gold & 4x1.9 GHz Kryo 265 Silver)"
+    }
+  },
+  {
+    "name": "Huawei Nova 10z",
+    "description": {
+      "Kích thước màn hình": "6.6 inches",
+      "Công nghệ màn hình": "IPS LCD",
+      "Camera sau": "Camera góc rộng: 64 MP, f/1.9, PDAF Camera góc cực rộng: 8 MP, f/2.4  Camera macro: 2 MP, f/2.4, PDAF",
+      "Camera trước": "Camera góc rộng: 16 MP, f/2.0",
+      "Công nghệ NFC": "Không",
+      "Bộ nhớ trong": "128 GB",
+      "Pin": "Li-Po 4000 mAh",
+      "Thẻ SIM": "2 SIM (Nano-SIM)",
+      "Hệ điều hành": "HarmonyOS 2.0",
+      "Độ phân giải màn hình": "1080 x 2400 pixels (FullHD+)"
+    }
+  },
+  {
+    "name": "Huawei Nova 9 SE",
+    "description": {
+      "Kích thước màn hình": "6.78 inches",
+      "Công nghệ màn hình": "IPS LCD",
+      "Camera sau": "108 MP, f/1.9, (wide), 1/1.52\", 0.7µm, PDAF  8 MP, f/2.2, 112˚ (ultrawide)  2 MP, f/2.4, (macro)  2 MP, f/2.4, (depth)",
+      "Camera trước": "16 MP, f/2.2, 22mm (wide)",
+      "Chipset": "Qualcomm SM6225 Snapdragon 680 4G (6 nm)",
+      "Công nghệ NFC": "Có",
+      "Dung lượng RAM": "8 GB",
+      "Bộ nhớ trong": "128 GB",
+      "Pin": "Li-Po 4000 mAh",
+      "Thẻ SIM": "2 SIM (Nano-SIM)",
+      "Hệ điều hành": "Android 11, EMUI 12  Không có dịch vụ của Google Play",
+      "Độ phân giải màn hình": "1080 x 2388 pixels",
+      "Tính năng màn hình": "IPS LCD, 90Hz",
+      "Loại CPU": "Octa-core (4x2.4 GHz Kryo 265 Gold & 4x1.9 GHz Kryo 265 Silver)"
+    }
+  },
+  {
+    "name": "Huawei Nova 7 SE",
+    "description": {
+      "Kích thước màn hình": "6.5 inches",
+      "Công nghệ màn hình": "LTPS IPS LCD, 16 triệu màu",
+      "Camera sau": "64 MP, f/1.8, 26mm (wide), PDAF 8 MP, f/2.4, 17mm (ultrawide) 2 MP, f/2.4, (macro) 2 MP, f/2.4, (depth)",
+      "Camera trước": "16 MP, f/2.0, (wide)",
+      "Chipset": "Kirin 820 5G (7nm)",
+      "Công nghệ NFC": "Không",
+      "Dung lượng RAM": "8 GB",
+      "Bộ nhớ trong": "128 GB",
+      "Pin": "Li-Po 4000 mAh, Fast charging 40W, Reverse charging 5W",
+      "Thẻ SIM": "2 SIM (Nano-SIM)",
+      "Hệ điều hành": "Android 10, EMUI 10.1, no Google Play Services",
+      "Độ phân giải màn hình": "1080 x 2400 pixels (FullHD+)",
+      "Loại CPU": "Octa-core (1x2.36 GHz Cortex-A76 & 3x2.22 GHz Cortex-A76 & 4x1.84 GHz Cortex-A55)",
+      "Cảm biến": "Cảm biến vân tay, cảm biến tiệm cận, gia tốc kế, la bàn, con quay hồi chuyển"
+    }
+  },
+  {
+    "name": "Huawei P30 Lite",
+    "description": {
+      "Kích thước màn hình": "6.15 inches",
+      "Công nghệ màn hình": "IPS LCD",
+      "Camera sau": "24MP + 8MP + 2MP",
+      "Camera trước": "32MP",
+      "Chipset": "Kirin 710",
+      "Công nghệ NFC": "Có",
+      "Dung lượng RAM": "6 GB",
+      "Bộ nhớ trong": "128 GB",
+      "Pin": "4300 mAh",
+      "Thẻ SIM": "2 SIM (Nano-SIM)",
+      "Hệ điều hành": "Android v9.0 (Pie)",
+      "Độ phân giải màn hình": "1080 x 2312 pixels (FullHD+)",
+      "Loại CPU": "8 nhân (4 x Cortex-A73 2,2GHz + 4 x Cortex-A53 1,7GHz)",
+      "Cảm biến": "Cảm biến trọng lực, Cảm biến ánh sáng môi trường, Cảm biến tiệm cận, Con quay hồi chuyển, La bàn, Cảm biến vân tay"
+    }
+  },
+  {
+    "name": "Huawei P30 Pro",
+    "description": {
+      "Kích thước màn hình": "6.4 inches",
+      "Công nghệ màn hình": "OLED, cảm ứng điện dung",
+      "Camera sau": "40 MP, 20 MP và 8 MP (3 camera)",
+      "Camera trước": "32 MP",
+      "Chipset": "Hisilicon Kirin 980 8 nhân 64-bit",
+      "Công nghệ NFC": "Có",
+      "Dung lượng RAM": "8 GB",
+      "Bộ nhớ trong": "256 GB",
+      "Pin": "4200 mAh",
+      "Thẻ SIM": "2 SIM (Nano-SIM)",
+      "Hệ điều hành": "Android v9.0 (Pie)",
+      "Độ phân giải màn hình": "1080 x 2340 pixels (FullHD+)",
+      "Loại CPU": "8 nhân (2 nhân 2.6 GHz Cortex A76 & 2 nhân 1.92 GHz Cortex A76 & 4 nhân 1.8 GHz Cortex A55)",
+      "Cảm biến": "Cảm biến ánh sáng xung quanh, Cảm biến vân tay trên màn hình, Con quay hồi chuyển, La bàn, Cảm biến tiệm cận, Cảm biến trọng lực, Cảm biến Hall, Cảm biến hồng ngoại, Cảm biến nhiệt độ màu"
+    }
+  },
+  {
+    "name": "Huawei P30",
+    "description": {
+      "Kích thước màn hình": "6.1 inches",
+      "Công nghệ màn hình": "OLED, cảm ứng điện dung 16.7 triệu màu",
+      "Camera sau": "40 MP, 16 MP và 8 MP (3 camera)",
+      "Camera trước": "32 MP",
+      "Chipset": "HiSilicon Kirin 980",
+      "Công nghệ NFC": "Có",
+      "Dung lượng RAM": "8 GB",
+      "Bộ nhớ trong": "128 GB",
+      "Pin": "3650 mAh",
+      "Thẻ SIM": "2 SIM (Nano-SIM)",
+      "Hệ điều hành": "Android v9.0 (Pie)",
+      "Độ phân giải màn hình": "1080 x 2340 pixels (FullHD+)",
+      "Loại CPU": "8 nhân (2 nhân Cortex-A76 2,6GHz+ 2 nhân Cortex-A76 1,92GHz + 4 nhân Cortex-A55 1,8GHz)",
+      "Cảm biến": "Cảm biến ánh sáng xung quanh, Cảm biến vân tay trên màn hình, Con quay hồi chuyển, La bàn, Cảm biến tiệm cận, Cảm biến trọng lực, Cảm biến Hall, Cảm biến hồng ngoại, Cảm biến nhiệt độ màu"
+    }
+  },
+  {
+    "name": "Điện thoại Meizu Mblu Note 21 Pro NFC 8GB 256GB",
+    "description": {
+      "Hệ điều hành khi ra mắt": "Android 14, Flyme AIOS",
+      "Chipset": "Mediatek Helio G99 (6 nm)",
+      "Dung lượng RAM": "8 GB",
+      "Bộ nhớ trong": "256 GB",
+      "Loại CPU": "8 nhân (2 x 2.2 GHz Cortex-A76 và  6 x 2.0 GHz Cortex-A55)",
+      "GPU": "GPU Mali-G57 MC2",
+      "Kích thước màn hình": "6.78 inches",
+      "Công nghệ màn hình": "IPS LCD",
+      "Độ phân giải màn hình": "1080 x 2400 pixels (FullHD+)",
+      "Tính năng màn hình": "Mật độ điểm ảnh 388ppi, tần số quét 120Hz, độ sáng tối đa 550 nits",
+      "Camera sau": "64 MP + 2 MP",
+      "Camera trước": "13 MP",
+      "Pin": "5000mAh",
+      "Hỗ trợ mạng": "4G",
+      "Thẻ SIM": "2 Nano-SIM",
+      "Công nghệ NFC": "Có"
+    }
+  }
+]

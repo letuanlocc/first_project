@@ -2,3 +2,4 @@
 .dockerignore
 *.sql
 node_modules/
+data/**/*

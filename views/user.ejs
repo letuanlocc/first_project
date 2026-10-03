@@ -142,6 +142,10 @@
 
                 <% products.forEach(product => { %>
 
+                    <% const productDescription = product.description || {}; %>
+                    <% const screenSizeKey = Object.keys(productDescription).find(key => key.includes("Kích thước màn hình")); %>
+                    <% const storageKey = Object.keys(productDescription).find(key => key.includes("Bộ nhớ trong")); %>
+
                     <div class="product-card">
 
                         <!-- Discount -->
@@ -178,9 +182,9 @@
 
 
                             <!-- Status -->
-                            <div class="product-status">
+                            <!-- <div class="product-status">
                                 Hàng mới về
-                            </div>
+                            </div> -->
 
 
                             <!-- PRICE -->
@@ -194,19 +198,22 @@
 
 
                             <!-- Specs -->
-                            <div class="specs">
-
-                                <span>6.3 inches</span>
-
-                                <span>256 GB</span>
-
-                            </div>
+                            <% if (screenSizeKey || storageKey) { %>
+                                <div class="specs">
+                                    <% if (screenSizeKey) { %>
+                                        <span><%= productDescription[screenSizeKey] %></span>
+                                    <% } %>
+                                    <% if (storageKey) { %>
+                                        <span><%= productDescription[storageKey] %></span>
+                                    <% } %>
+                                </div>
+                            <% } %>
 
 
                             <!-- Promotion -->
-                            <div class="promotion">
+                            <!-- <div class="promotion">
                                 Smember giảm đến 300.000đ
-                            </div>
+                            </div> -->
 
 
                             <!-- Rating -->

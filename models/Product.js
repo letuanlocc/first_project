@@ -14,7 +14,7 @@ const Product = sequelize.define('Product', {
     allowNull: false
   },
   description: {
-    type: DataTypes.TEXT
+    type: DataTypes.JSONB
   },
   image_url: {
     type: DataTypes.STRING(255)

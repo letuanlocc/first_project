@@ -19,7 +19,7 @@
 
             <!-- Logo -->
             <a href="/" class="logo">
-                cellphone<span>S</span>
+                PhoneShop
             </a>
 
             <!-- Danh mục -->
@@ -178,29 +178,6 @@
                 </div>
 
 
-                <!-- Description -->
-
-                <div class="detail-section">
-
-                    <h2>Mô tả sản phẩm</h2>
-
-                    <% if (product.description) { %>
-
-                        <p>
-                            <%= product.description %>
-                        </p>
-
-                    <% } else { %>
-
-                        <p class="empty-description">
-                            Chưa có mô tả cho sản phẩm này.
-                        </p>
-
-                    <% } %>
-
-                </div>
-
-
                 <!-- Stock -->
 
                 <% if (product.stock !== undefined && product.stock !== null) { %>
@@ -231,7 +208,7 @@
                 <div class="buy-section">
 
                     <button class="btn-add-cart">
-                        🛒 Thêm vào giỏ hàng
+                        Thêm vào giỏ hàng
                     </button>
 
                     <button class="btn-buy-now">
@@ -246,7 +223,6 @@
                 <div class="benefits">
 
                     <div class="benefit">
-                        🚚
                         <div>
                             <strong>Giao hàng nhanh</strong>
                             <p>Giao hàng tận nơi</p>
@@ -254,7 +230,6 @@
                     </div>
 
                     <div class="benefit">
-                        🔄
                         <div>
                             <strong>Đổi trả dễ dàng</strong>
                             <p>Hỗ trợ đổi trả sản phẩm</p>
@@ -262,7 +237,6 @@
                     </div>
 
                     <div class="benefit">
-                        🛡
                         <div>
                             <strong>Cam kết chính hãng</strong>
                             <p>Đảm bảo chất lượng</p>
@@ -270,6 +244,52 @@
                     </div>
 
                 </div>
+
+            </div>
+
+            <div class="technical-specs">
+
+                <div class="specs-header">
+                    <h2>Thông số kỹ thuật</h2>
+
+                    <span class="view-all">
+                        Xem tất cả ›
+                    </span>
+                </div>
+
+                <% if (
+                    product.description &&
+                    typeof product.description === 'object' &&
+                    Object.keys(product.description).length > 0
+                ) { %>
+
+                    <div class="specs-table">
+
+                        <% Object.entries(product.description).forEach(([key, value]) => { %>
+
+                            <div class="spec-row">
+
+                                <div class="spec-name">
+                                    <%= key %>
+                                </div>
+
+                                <div class="spec-value">
+                                    <%= value %>
+                                </div>
+
+                            </div>
+
+                        <% }) %>
+
+                    </div>
+
+                <% } else { %>
+
+                    <p class="empty-description">
+                        Chưa có thông số kỹ thuật cho sản phẩm này.
+                    </p>
+
+                <% } %>
 
             </div>
 

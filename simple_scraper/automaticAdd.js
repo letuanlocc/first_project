@@ -64,4 +64,27 @@ const uploadImage = async () => {
     }
 };
 
-uploadImage();
+const automaticAddDescription = async () => {
+    const filePath = path.join(__dirname, '../data/data_description.json');
+    const rawData = fs.readFileSync(filePath, 'utf8');
+
+    const descriptions = JSON.parse(rawData);
+
+    try{
+        for (const item of descriptions) {
+            const product = await Product.findOne({
+                where: { name: item.name }
+            });
+            if (product) {
+                await product.update({ description: item.description });
+                console.log("Cập nhật mô tả cho sản phẩm:", product.name);
+            } else {
+                console.log("Không tìm thấy sản phẩm:", item.name);
+            }
+        }
+    } catch(error){
+        console.log(error.message);
+    }
+}
+
+automaticAddDescription();
