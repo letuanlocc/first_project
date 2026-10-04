@@ -257,24 +257,20 @@
                     </span>
                 </div>
 
-                <% if (
-                    product.description &&
-                    typeof product.description === 'object' &&
-                    Object.keys(product.description).length > 0
-                ) { %>
+                <% if (productDescriptions && productDescriptions.length > 0) { %>
 
                     <div class="specs-table">
 
-                        <% Object.entries(product.description).forEach(([key, value]) => { %>
+                        <% productDescriptions.forEach(specification => { %>
 
                             <div class="spec-row">
 
                                 <div class="spec-name">
-                                    <%= key %>
+                                    <%= specification.key %>
                                 </div>
 
                                 <div class="spec-value">
-                                    <%= value %>
+                                    <%= specification.value %>
                                 </div>
 
                             </div>

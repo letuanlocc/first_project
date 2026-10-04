@@ -39,12 +39,26 @@
             </button>
 
             <!-- Search -->
-            <form class="search-box" action="/" method="GET">
+            <form class="search-box" id="product-search-form" action="/" method="GET">
                 <input
                     type="text"
+                    id="product-search-input"
                     name="search"
+                    value="<%= search || '' %>"
                     placeholder="Bạn muốn mua gì hôm nay?"
                 >
+                <select id="product-search-suggestions" aria-label="Gợi ý tìm kiếm">
+                    <option value="">Gợi ý</option>
+                    <% searchOptions.forEach(group => { %>
+                        <optgroup label="<%= group.label %>">
+                            <% group.options.forEach(option => { %>
+                                <option value="<%= option.value %>" <%= search === option.value ? 'selected' : '' %>>
+                                    <%= option.label %>
+                                </option>
+                            <% }) %>
+                        </optgroup>
+                    <% }) %>
+                </select>
                 <button type="submit">⌕</button>
             </form>
 
@@ -77,31 +91,6 @@
 
         </div>
     </header>
-
-
-    <!-- FILTER -->
-    <section class="filter-container">
-        <button class="filter-btn">
-            Nhu cầu sử dụng
-        </button>
-
-        <button class="filter-btn">
-            Kiểu màn hình
-        </button>
-
-        <button class="filter-btn">
-            Tính năng camera
-        </button>
-
-        <button class="filter-btn">
-            Tần số quét
-        </button>
-
-        <button class="filter-btn">
-            Tính năng đặc biệt
-        </button>
-
-    </section>
 
 
     <!-- MAIN -->
@@ -142,9 +131,9 @@
 
                 <% products.forEach(product => { %>
 
-                    <% const productDescription = product.description || {}; %>
-                    <% const screenSizeKey = Object.keys(productDescription).find(key => key.includes("Kích thước màn hình")); %>
-                    <% const storageKey = Object.keys(productDescription).find(key => key.includes("Bộ nhớ trong")); %>
+                    <% const productSpecifications = product.descriptions || []; %>
+                    <% const screenSizeSpec = productSpecifications.find(spec => spec.key.includes("Kích thước màn hình")); %>
+                    <% const storageSpec = productSpecifications.find(spec => spec.key.includes("Bộ nhớ trong")); %>
 
                     <div class="product-card">
 
@@ -200,13 +189,13 @@
 
 
                             <!-- Specs -->
-                            <% if (screenSizeKey || storageKey) { %>
+                            <% if (screenSizeSpec || storageSpec) { %>
                                 <div class="specs">
-                                    <% if (screenSizeKey) { %>
-                                        <span><%= productDescription[screenSizeKey] %></span>
+                                    <% if (screenSizeSpec) { %>
+                                        <span><%= screenSizeSpec.value %></span>
                                     <% } %>
-                                    <% if (storageKey) { %>
-                                        <span><%= productDescription[storageKey] %></span>
+                                    <% if (storageSpec) { %>
+                                        <span><%= storageSpec.value %></span>
                                     <% } %>
                                 </div>
                             <% } %>
@@ -264,5 +253,18 @@
         <span>◉</span>
     </button>
 
+<script>
+    const searchInput = document.getElementById('product-search-input');
+    const searchSuggestions = document.getElementById('product-search-suggestions');
+    const productSearchForm = document.getElementById('product-search-form');
+
+    searchSuggestions.addEventListener('change', () => {
+        if (searchSuggestions.value) searchInput.value = searchSuggestions.value;
+    });
+
+    productSearchForm.addEventListener('submit', () => {
+        if (searchSuggestions.value) searchInput.value = searchSuggestions.value;
+    });
+</script>
 </body>
 </html>

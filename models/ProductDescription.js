@@ -8,7 +8,7 @@ const ProductDescription = sequelize.define('ProductDescription', {
   },
 
   key: {
-    type: DataTypes.STRING(150),
+    type: DataTypes.TEXT,
     allowNull: false
   },
 

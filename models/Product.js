@@ -18,9 +18,6 @@ const Product = sequelize.define('Product', {
     type: DataTypes.INTEGER,
     allowNull: false
   },
-  description: {
-    type: DataTypes.JSONB
-  },
   image_url: {
     type: DataTypes.STRING(255)
   },

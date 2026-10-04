@@ -3,6 +3,7 @@ const Category  = require('../models/Category');
 const fs = require('fs');
 const path = require('path')
 const cloudinary = require("../config/cloudinary")
+const ProductDescription = require('../models/ProductDescription');
 const createSlug = (text) => {
     return text
         .toLowerCase()
@@ -82,15 +83,42 @@ const automaticAddDescription = async () => {
 
     try{
         for (const item of descriptions) {
-            const [updatedCount] = await Product.update(
-                { description: item.description },
-                { where: { name: item.name } }
-            );
-            if (updatedCount > 0) {
-                console.log(`Cập nhật mô tả cho ${updatedCount} sản phẩm:`, item.name);
-            } else {
+            const products = await Product.findAll({
+                where: { name: item.name },
+                attributes: ['id', 'name']
+            });
+
+            if (products.length === 0) {
                 console.log("Không tìm thấy sản phẩm:", item.name);
+                continue;
             }
+
+            const specs = Object.entries(item.description || {});
+            for (const product of products) {
+                const existingSpecs = await ProductDescription.findAll({
+                    where: { product_id: product.id }
+                });
+                const specsByKey = new Map(existingSpecs.map(spec => [spec.key, spec]));
+                const newSpecs = [];
+
+                for (const [key, value] of specs) {
+                    const existingSpec = specsByKey.get(key);
+                    if (existingSpec) {
+                        await existingSpec.update({ value: String(value) });
+                    } else {
+                        newSpecs.push({
+                            product_id: product.id,
+                            key,
+                            value: String(value)
+                        });
+                    }
+                }
+
+                if (newSpecs.length > 0) {
+                    await ProductDescription.bulkCreate(newSpecs);
+                }
+            }
+            console.log(`Cập nhật spec cho ${products.length} sản phẩm:`, item.name);
         }
     } catch(error){
         console.log(error.message);
@@ -161,4 +189,4 @@ const addSlug = async () => {
     }
 }
 
-addSlug();
+automaticAddDescription();

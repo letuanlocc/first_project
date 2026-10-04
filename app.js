@@ -27,7 +27,7 @@ const startServer = async () => {
 
   app.set('view engine', 'ejs')
   app.set('views', path.join(__dirname, 'views'))
-  app.use('/product', productRoutes);
+  app.use('/api', productRoutes);
   app.use('/admin', adminRoutes);
   app.use('/', userRoutes);
   app.use('/category', categoryRoutes);

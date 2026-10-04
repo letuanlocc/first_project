@@ -1,19 +1,45 @@
-const Product  = require('../models/Product');
-const Category  = require('../models/Category');
+const { Product, Category, ProductDescription } = require('../models');
 const cloudinary = require('../config/cloudinary');
+const { Op } = require('sequelize');
+
+const parseSpecifications = (input) => {
+    if (input == null || input === '') return [];
+
+    const specifications = typeof input === 'string' ? JSON.parse(input) : input;
+    if (!specifications || typeof specifications !== 'object' || Array.isArray(specifications)) {
+        throw new Error('Thông số kỹ thuật phải là một object JSON');
+    }
+
+    return Object.entries(specifications).map(([key, value]) => ({
+        key: key.trim(),
+        value: String(value ?? '')
+    })).filter(specification => specification.key);
+};
 
 const addProduct = async (req, res) => {
     try {
-        const {name, price, description, category_id, stock} = req.body
+        const {name, price, category_id, stock} = req.body;
+        let specifications;
+        try {
+            specifications = parseSpecifications(req.body.specifications);
+        } catch (error) {
+            return res.status(400).json({ error: error.message });
+        }
+
         const product = await Product.create({
             name,
             price,
-            description,
             category_id,
             stock,
             image_url: req.imageUrl,
             public_id: req.publicId
         });
+        if (specifications.length > 0) {
+            await ProductDescription.bulkCreate(specifications.map(specification => ({
+                ...specification,
+                product_id: product.id
+            })));
+        }
         return res.status(201).json({
             message: "Thêm sản phẩm thành công!",
             data: product
@@ -26,25 +52,24 @@ const addProduct = async (req, res) => {
 }
 
 const addCategory = async (req, res) => {
-    const { name} = req.body;
-    console.log(name)
-    if(!name || name.trim() === "") {
+    const name = req.body.name?.trim();
+    if(!name) {
         return res.status(400).json({
             error: "Tên danh mục không dược để trống"
         })
     }
 
-    const find = await Category.findOne({where: {name: name}});
-    
+    const find = await Category.findOne({where: {name}});
     if(find){
         return res.status(400).json({
             error: "Tên danh mục đã tồn tại"
         })
     }
     try {
-        const category = await Category.create( req.body );   
+        const category = await Category.create({ name });
         return res.status(201).json({
             message: "Thêm danh mục thành công",
+            data: category
         })
     } catch (error) {
          return res.status(500).json({
@@ -53,27 +78,65 @@ const addCategory = async (req, res) => {
     }
 };
 
-const findProductByName = async (req, res) => {
-    const { name } = req.query;
+const listCategories = async (req, res) => {
     try {
-        if (!name || name.trim() === "") {
-            return res.status(400).json({
-                error: "Tên sản phẩm không được để trống"
-            });
+        const categories = await Category.findAll({ order: [['id', 'ASC']] });
+        return res.status(200).json({ categories });
+    } catch (error) {
+        console.error("Lỗi lấy danh sách danh mục:", error);
+        return res.status(500).json({ error: "Lỗi lấy danh sách danh mục" });
+    }
+};
+
+const detailCategoryById = async (req, res) => {
+    try {
+        const category = await Category.findByPk(req.params.id);
+        if (!category) {
+            return res.status(404).json({ error: "Danh mục không tồn tại" });
         }
-        const find = await Product.findOne({where: {name: name} })
-        
-        if(!find) {
-            return res.status(404).json({
-                error: "Tên sản phẩm không tồn tại"
-            });
+        return res.status(200).json({ category });
+    } catch (error) {
+        console.error("Lỗi lấy danh mục:", error);
+        return res.status(500).json({ error: "Lỗi lấy danh mục" });
+    }
+};
+
+const listProducts = async (req, res) => {
+    try {
+        const name = req.query.name?.trim();
+        const search = req.query.search?.trim();
+        const where = {};
+
+        if (name) {
+            where.name = name;
+        } else if (search) {
+            where.name = { [Op.iLike]: `%${search}%` };
         }
-        res.json(find);
-    }catch(err){
-            console.error("Lỗi tìm kiếm sản phẩm:", err);
-            res.status(500).json({ error: "Lỗi tìm kiếm sản phẩm" });
-        };
-    };
+
+        const records = await Product.findAll({
+            where,
+            include: [{
+                model: ProductDescription,
+                as: 'descriptions',
+                attributes: ['key', 'value'],
+                required: false
+            }],
+            order: [['id', 'ASC']]
+        });
+        const products = records.map(record => {
+            const product = record.toJSON();
+            product.specifications = Object.fromEntries(
+                (product.descriptions || []).map(specification => [specification.key, specification.value])
+            );
+            delete product.descriptions;
+            return product;
+        });
+        return res.status(200).json({ products });
+    } catch(error) {
+        console.error("Lỗi lấy danh sách sản phẩm:", error);
+        return res.status(500).json({ error: "Lỗi lấy danh sách sản phẩm" });
+    }
+};
 
 const updateProduct = async (req, res) => {
     try{
@@ -84,26 +147,40 @@ const updateProduct = async (req, res) => {
             })
         }
         const productData = req.body;
-        
-        const isSame =
-            data.name === productData.name &&
-            data.price == productData.price &&
-            data.description === productData.description &&
-            data.image === productData.image &&
-            data.category.toString() === productData.category_id &&
-            data.stock == productData.stock;
-        
-        if(isSame){
-            return res.status(404).json({
-                error: "Không có dòng nào bị thay đổi"
-            });
+        let specifications;
+        try {
+            specifications = parseSpecifications(productData.specifications);
+        } catch (error) {
+            return res.status(400).json({ error: error.message });
         }
 
-        const updatedProduct = data.update(productData)
+        const transaction = await Product.sequelize.transaction();
+        try {
+            await data.update({
+                name: productData.name,
+                price: productData.price,
+                category_id: productData.category_id,
+                stock: productData.stock
+            }, { transaction });
+            await ProductDescription.destroy({
+                where: { product_id: data.id },
+                transaction
+            });
+            if (specifications.length > 0) {
+                await ProductDescription.bulkCreate(specifications.map(specification => ({
+                    ...specification,
+                    product_id: data.id
+                })), { transaction });
+            }
+            await transaction.commit();
+        } catch (error) {
+            await transaction.rollback();
+            throw error;
+        }
 
         return res.status(200).json({
             message: "Cập nhật sản phẩm thành công",
-            product: updatedProduct
+            product: data
         });
     }catch(err){
         console.error("Lỗi cập nhật sản phẩm:", err);
@@ -139,15 +216,14 @@ const deleteProduct = async(req,res) => {
 }
 
 const deleteCategory = async(req,res) => {
-    const { name } = req.query
     try{
-        const deletedCategory = await Category.destroy({where: {name: name}})
-        
-        if (!deletedCategory) {
+        const category = await Category.findByPk(req.params.id);
+        if (!category) {
             return res.status(404).json({
-                error: "Danh mục này không tồn tại hoặc đã bị xóa trước đó!"
+                error: "Danh mục không tồn tại"
             });
         }
+        await category.destroy();
         return res.status(200).json({
             message: "Xóa thành công"
         })
@@ -170,32 +246,13 @@ const detailProduct = async(req,res) => {
             })
         }
 
-        res.render('product-detail', { product, Categories, user: req.user });
+        const productDescriptions = await ProductDescription.findAll({
+            where: { product_id: product.id },
+            attributes: ['key', 'value']
+        });
+        res.render('product-detail', { product, Categories, user: req.user, productDescriptions });
     }catch(error){
          return res.status(500).json({
-            error: "Lỗi hệ thống khi tìm kiếm danh mục"
-        })
-    }
-}
-
-const viewProduct = async(req,res) => {
-    console.log("=== ĐÃ CHẠY VÀO ĐƯỢC CONTROLLER XEM SẢN PHẨM ===");
-    try{
-        const data = await Product.findAll()
-        if(!data){
-            return res.status(404).json({
-                error: "Không có dữ liệu nào được tìm thấy"
-            })
-        }
-
-        return res.status(200).json({
-            message: "Tìm các sản phẩm thành công",
-            products: data
-        })
-    }catch(error){
-        console.error("LỖI CHI TIẾT TẠI VIEW PRODUCT:", error.message); 
-        console.error(error);
-        return res.status(500).json({
             error: "Lỗi hệ thống khi tìm kiếm danh mục"
         })
     }
@@ -211,7 +268,14 @@ const detailProductById = async(req,res) =>{
             })
         }
 
-       res.json(data)
+      const specifications = await ProductDescription.findAll({
+          where: { product_id: data.id },
+          attributes: ['key', 'value']
+       });
+      res.json({
+          ...data.toJSON(),
+          specifications: Object.fromEntries(specifications.map(specification => [specification.key, specification.value]))
+      });
     }catch(error){
         return res.status(500).json({
             error: "Lỗi hệ thống khi tìm kiếm danh mục"
@@ -221,4 +285,4 @@ const detailProductById = async(req,res) =>{
 
 
 }
-module.exports = { addProduct, addCategory, findProductByName, updateProduct, deleteProduct, deleteCategory, detailProduct, viewProduct, detailProductById};
+module.exports = { addProduct, addCategory, listCategories, detailCategoryById, listProducts, updateProduct, deleteProduct, deleteCategory, detailProduct, detailProductById};

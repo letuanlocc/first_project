@@ -2,13 +2,14 @@
 let productId = null;
 const productName = document.getElementById("productName");
 const price = document.getElementById("price");
-const description = document.getElementById("description");
+const specifications = document.getElementById("specifications");
 const image = document.getElementById("image");
 const category = document.getElementById("category");
 const stock = document.getElementById("stock");
 const searchProductBtn = document.getElementById("searchProductBtn");
 const updateProductBtn = document.getElementById("updateProductBtn");
 const categoryName = document.getElementById("categoryName")
+const categoryToDelete = document.getElementById("categoryToDelete");
 const productTableContainer = document.getElementById("productTableContainer")
 const productTableBody = document.getElementById('productTableBody');
 
@@ -25,16 +26,17 @@ searchProductBtn.addEventListener("click", async () => {
 
     try {
         const response = await fetch(
-            `/product/search?name=${encodeURIComponent(name)}`
+            `/api/products?name=${encodeURIComponent(name)}`
         );
 
-        const product = await response.json();
+        const result = await response.json();
 
         if (!response.ok) {
-            alert(product.error);
+            alert(result.error);
             return;
         }
 
+        const product = result.products?.[0];
         if (!product) {
             productId = null;
             alert("Không tìm thấy sản phẩm");
@@ -47,10 +49,9 @@ searchProductBtn.addEventListener("click", async () => {
         // Điền thông tin
         productName.value = product.name;
         price.value = product.price;
-        description.value = product.description || "";
-        image.value = product.image || "";
+        specifications.value = JSON.stringify(product.specifications || {}, null, 2);
         stock.value = product.stock;
-        category.value = product.category_id.toString();
+        category.value = product.category_id?.toString() || "";
 
         alert("Đã tìm thấy sản phẩm");
 
@@ -69,15 +70,14 @@ updateProductBtn.addEventListener("click", async () => {
     const productData = {
         name: productName.value.trim(),
         price: price.value,
-        description: description.value,
-        image: image.value,
+        specifications: specifications.value,
         category_id: category.value,
         stock: stock.value
     };
 
 
     try {
-        const response = await fetch(`/product/update/${productId}`, {
+        const response = await fetch(`/api/products/${productId}`, {
             method: "PATCH",
             headers: {
                 "Content-Type": "application/json"
@@ -105,7 +105,7 @@ addProductBtn.addEventListener("click",async () => {
 
     formData.append("name", productName.value.trim());
     formData.append("price", price.value);
-    formData.append("description", description.value);
+    formData.append("specifications", specifications.value);
     formData.append("category_id", category.value);
     formData.append("stock", stock.value);
 
@@ -114,7 +114,7 @@ addProductBtn.addEventListener("click",async () => {
     }
 
     try{
-        const response = await fetch(`/product/addProduct`,{
+        const response = await fetch(`/api/products`,{
             method: "POST",
             body: formData
         })
@@ -147,7 +147,7 @@ deleteProductBtn.addEventListener("click", async ()=> {
         return; 
     }
     try{
-        const response = await fetch(`/product/delete/${productId}`,{
+        const response = await fetch(`/api/products/${productId}`,{
             method: "DELETE"
         })
         
@@ -168,7 +168,7 @@ deleteProductBtn.addEventListener("click", async ()=> {
 
 addCategoryBtn.addEventListener("click", async() => {
     try{
-        const response = await fetch(`/product/addCategory/`, {
+        const response = await fetch(`/api/categories`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -193,9 +193,13 @@ deleteCategoryBtn.addEventListener("click", async() =>{
     if (!isConfirmed) {
         return; 
     }
-    const name = categoryName.value.trim()
+    const categoryId = categoryToDelete.value;
+    if (!categoryId) {
+        alert("Chọn danh mục cần xóa");
+        return;
+    }
     try{
-        const response = await fetch(`/product/deleteCategory?name=${encodeURIComponent(name)}`, {
+        const response = await fetch(`/api/categories/${categoryId}`, {
             method: "DELETE"
         })
 
@@ -218,7 +222,7 @@ viewProductBtn.addEventListener("click", async() => {
         productTableContainer.style.display = 'block'
         viewProductBtn.innerText = 'Ẩn bảng sản phẩm'
         try {
-            const response = await fetch('/product/view'); 
+            const response = await fetch('/api/products'); 
             const result = await response.json(); 
 
             if (response.ok && result.products) {
@@ -233,8 +237,8 @@ viewProductBtn.addEventListener("click", async() => {
                         <td>${product.price}</td>
                         <td>${product.stock}</td>
                         <td>
-                            <button class="btn-edit" data-id="${product._id}">Sửa</button>
-                            <button class="btn-delete" data-id="${product._id}">Xóa</button>
+                            <button class="btn-edit" data-id="${product.id}">Sửa</button>
+                            <button class="btn-delete" data-id="${product.id}">Xóa</button>
                         </td>
                     `;
                     productTableBody.appendChild(row);
@@ -252,10 +256,10 @@ viewProductBtn.addEventListener("click", async() => {
 })
 
 productTableBody.addEventListener("click" , async(e) =>{
-    if(e.target.classList.contains("btn-edit")){
+    if(e.target.classList.contains("btn-edit") || e.target.classList.contains("btn-delete") ){
         const id = e.target.getAttribute('data-id')
         try{
-            const response = await fetch(`/product/detail/${id}`)
+            const response = await fetch(`/api/products/${id}`)
 
             const data = await response.json()
 
@@ -264,15 +268,14 @@ productTableBody.addEventListener("click" , async(e) =>{
                 return
             }
 
-            productId = data._id;
+            productId = data.id;
 
             productName.value = data.name;
             price.value = data.price;
-            description.value = data.description || "";
-            image.value = data.image || "";
+            specifications.value = JSON.stringify(data.specifications || {}, null, 2);
             stock.value = data.stock;
 
-            category.value = data.category.toString();
+            category.value = data.category_id?.toString() || "";
             alert("Tìm kiếm thành công trả về kết quả trên form")
 
         }catch(err){
@@ -280,3 +283,4 @@ productTableBody.addEventListener("click" , async(e) =>{
         }
     }
 })
+

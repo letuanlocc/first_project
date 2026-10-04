@@ -1,24 +1,32 @@
 const express = require('express');
 const router = express.Router();
-const path = require('path');
-const { addProduct, addCategory, findProductByName, updateProduct, deleteProduct, deleteCategory, viewProduct, detailProductById} = require('../controllers/productControllers');
+const { addProduct, addCategory, listCategories, detailCategoryById, listProducts, updateProduct, deleteProduct, deleteCategory, detailProductById} = require('../controllers/productControllers');
+const { requireAdmin } = require('../middleware/authMiddleware');
 const {requireForm} = require('../middleware/productMiddleware')
 const upload = require("../middleware/uploadMiddleware");
 const uploadToCloudinary = require("../middleware/cloudinaryMiddleware");
-const Category  = require('../models/Category');
 
-router.post( 
-    "/addProduct",
+router.route('/products')
+    .get(requireAdmin, listProducts)
+    .post(
+    requireAdmin,
     upload.single("image"),
     requireForm,
     uploadToCloudinary,
     addProduct
-)
-router.get("/view",viewProduct )
-router.post('/addCategory', addCategory)
-router.delete('/deleteCategory', deleteCategory)
-router.get("/search", findProductByName);
-router.get("/detail/:id", detailProductById)
-router.patch("/update/:id", updateProduct);
-router.delete("/delete/:id", deleteProduct);
+);
+
+router.route('/products/:id')
+    .get(requireAdmin, detailProductById)
+    .patch(requireAdmin, updateProduct)
+    .delete(requireAdmin, deleteProduct);
+
+router.route('/categories')
+    .get(requireAdmin, listCategories)
+    .post(requireAdmin, addCategory);
+
+router.route('/categories/:id')
+    .get(requireAdmin, detailCategoryById)
+    .delete(requireAdmin, deleteCategory);
+
 module.exports = router;
