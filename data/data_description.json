@@ -1349,26 +1349,6 @@
     }
   },
   {
-    "name": "POCO X8 Pro Max 12GB 256GB",
-    "description": {
-      "Hệ điều hành khi ra mắt": "Xiaomi HyperOS 3 (Android 16)",
-      "Chipset": "MediaTek Dimensity 9500s",
-      "Dung lượng RAM": "12 GB",
-      "Bộ nhớ trong": "256 GB",
-      "Loại CPU": "1 × Cortex-X925 (tối đa 3.73GHz) + 3 × Cortex-X4 (tối đa 3.3GHz) + 4 × Cortex-A720 (tối đa 2.4GHz)",
-      "GPU": "Immortalis-G925 MC11",
-      "Kích thước màn hình": "6.83 inches",
-      "Công nghệ màn hình": "AMOLED",
-      "Độ phân giải màn hình": "2772 x 1280 pixels",
-      "Tính năng màn hình": "Độ sáng tối đa 3.500 nits, PWM 3840Hz, 68 tỷ màu, dải màu DCI-P3, HDR10+",
-      "Camera sau": "50 MP f/1.5 (cảm biến Light Hunter 600, OIS) + 8 MP (góc siêu rộng)",
-      "Camera trước": "20 MP",
-      "Pin": "8.500 mAh",
-      "Thẻ SIM": "Dual nano-SIM hoặc 1 nano-SIM + 1 eSIM",
-      "Thời điểm ra mắt": "03/2026"
-    }
-  },
-  {
     "name": "Xiaomi Redmi Note 17 4GB 128GB",
     "description": {
       "Hệ điều hành khi ra mắt": "Xiaomi HyperOS 3",
@@ -1473,28 +1453,6 @@
     }
   },
   {
-    "name": "Xiaomi POCO F8 Pro 5G 12GB 256GB",
-    "description": {
-      "Hệ điều hành khi ra mắt": "Xiaomi HyperOS 3",
-      "Chipset": "Snapdragon® 8 Elite",
-      "Dung lượng RAM": "12 GB",
-      "Bộ nhớ trong": "256 GB",
-      "Loại CPU": "8 nhân",
-      "GPU": "Adreno™",
-      "Kích thước màn hình": "6.59 inches",
-      "Công nghệ màn hình": "AMOLED",
-      "Độ phân giải màn hình": "2510 x 1156 pixels",
-      "Tính năng màn hình": "Độ sáng tối đa 3500 nitsTỷ lệ tương phản 5.000.000:1Độ sáng HBM 2000 nits68 tỷ màu | Dải màu rộng DCI-P3Cảm ứng kháng nước 2.0Chứng nhận TUV (ánh sáng xanh thấp, chống nhấp nháy, nhịp sinh học)",
-      "Camera sau": "50MP chính (Light Fusion 800, 1/1.55\", f/1.88, OIS, 6P) + 50MP tele 60mm (f/2.2) + 8MP góc siêu rộng (f/2.2)",
-      "Camera trước": "20MP",
-      "Pin": "6210mAh",
-      "Hỗ trợ mạng": "5G",
-      "Thẻ SIM": "2 Nano SIM hoặc 2 eSIM hoặc 1 Nano SIM + 1 eSIM",
-      "Công nghệ NFC": "Có",
-      "Thời điểm ra mắt": "10/2025"
-    }
-  },
-  {
     "name": "Xiaomi 17 Ultra 5G 16GB 512GB",
     "description": {
       "Hệ điều hành khi ra mắt": "Android 16 với HyperOS",
@@ -1569,27 +1527,6 @@
     }
   },
   {
-    "name": "Xiaomi Redmi Note 14 Pro Plus 5G 8GB 256GB",
-    "description": {
-      "Hệ điều hành khi ra mắt": "Android 14",
-      "Chipset": "Snapdragon® 7s Gen 3",
-      "Dung lượng RAM": "8 GB",
-      "Bộ nhớ trong": "256 GB",
-      "Loại CPU": "8 nhân, xung nhịp 2.5Ghz",
-      "GPU": "Qualcomm® Adreno™ GPU",
-      "Kích thước màn hình": "6.67 inches",
-      "Công nghệ màn hình": "AMOLED",
-      "Độ phân giải màn hình": "2712 x 1220 pixels",
-      "Tính năng màn hình": "Tần số quét: Lên đến 120Hz  Độ sáng: 3000 nits   Độ sâu màu: 12-bit  Tỷ lệ tương phản: 5,000,000:1",
-      "Camera sau": "Chính 200MP, OIS - f/1.65  Góc siêu rộng 8MP - f/2.2 Macro 2MP - f/2.4",
-      "Camera trước": "Camera trước - f/2.2",
-      "Pin": "5110 mAh",
-      "Hỗ trợ mạng": "5G",
-      "Thẻ SIM": "2 Nano-SIM",
-      "Công nghệ NFC": "Có"
-    }
-  },
-  {
     "name": "Xiaomi Redmi Note 15 5G 6GB 128GB",
     "description": {
       "Hệ điều hành khi ra mắt": "Xiaomi HyperOS 2",
@@ -1642,26 +1579,6 @@
       "Độ phân giải màn hình": "2772 x 1280 pixels",
       "Tính năng màn hình": "Tần số quét: lên đến 120HzDCI-P3 rộng, độ sâu màu 12-bitPWM dimming 3840HzĐộ sáng: 3200 nits1800 nits (HBM)Tỷ lệ tương phản: 8,000,000:1Điều chỉnh độ sáng tự động 16,000 cấp",
       "Loại CPU": "8 nhân lên đến 2.6 GHz"
-    }
-  },
-  {
-    "name": "POCO X8 Pro Max 12GB 512GB",
-    "description": {
-      "Hệ điều hành khi ra mắt": "Xiaomi HyperOS 3 (Android 16)",
-      "Chipset": "MediaTek Dimensity 9500s",
-      "Dung lượng RAM": "12 GB",
-      "Bộ nhớ trong": "512 GB",
-      "Loại CPU": "1 × Cortex-X925 (tối đa 3.73GHz) + 3 × Cortex-X4 (tối đa 3.3GHz) + 4 × Cortex-A720 (tối đa 2.4GHz)",
-      "GPU": "Immortalis-G925 MC11",
-      "Kích thước màn hình": "6.83 inches",
-      "Công nghệ màn hình": "AMOLED",
-      "Độ phân giải màn hình": "2772 x 1280 pixels",
-      "Tính năng màn hình": "Độ sáng tối đa 3.500 nits, PWM 3840Hz, 68 tỷ màu, dải màu DCI-P3, HDR10+",
-      "Camera sau": "50 MP f/1.5 (cảm biến Light Hunter 600, OIS) + 8 MP (góc siêu rộng)",
-      "Camera trước": "20 MP",
-      "Pin": "8.500 mAh",
-      "Thẻ SIM": "Dual nano-SIM hoặc 1 nano-SIM + 1 eSIM",
-      "Thời điểm ra mắt": "03/2026"
     }
   },
   {
@@ -2270,134 +2187,6 @@
     }
   },
   {
-    "name": "HONOR X9d 5G 8GB 256GB",
-    "description": {
-      "Hệ điều hành khi ra mắt": "MagicOS 9.0 (Dựa trên Android 15）",
-      "Chipset": "Snapdragon 6 Gen 4",
-      "Dung lượng RAM": "8 GB",
-      "Bộ nhớ trong": "256 GB",
-      "Loại CPU": "8 nhân (1× A720 2.3GHz + 3× A720 2.2GHz + 4× A520 1.8GHz)",
-      "GPU": "Adreno A810",
-      "Kích thước màn hình": "6.79 inches",
-      "Công nghệ màn hình": "AMOLED",
-      "Độ phân giải màn hình": "1200 x 2640 pixels",
-      "Tính năng màn hình": "100% DCI-P3, 1,07 tỷ màu800 nits (điển hình), 1800 nits (chế độ HBM), 6000 nits (chế độ APL)Bảo vệ mắtMàn hình ban đêm sinh họcGiảm độ sáng độngKhử nháy sáng PWM 3840Hz",
-      "Camera sau": "Camera chính 108MP (F1.75) + Camera góc rộng 5MP (F2.2)",
-      "Camera trước": "16MP (F2.45)",
-      "Pin": "8300 mAh",
-      "Hỗ trợ mạng": "5G",
-      "Thẻ SIM": "2 Nano-SIM",
-      "Công nghệ NFC": "Có",
-      "Thời điểm ra mắt": "12/2025"
-    }
-  },
-  {
-    "name": "HONOR 600 5G 8GB 256GB",
-    "description": {
-      "Hệ điều hành khi ra mắt": "MagicOS 10, dựa trên Android 16",
-      "Chipset": "Snapdragon 7 Gen 4",
-      "Dung lượng RAM": "8 GB",
-      "Bộ nhớ trong": "256 GB",
-      "Loại CPU": "8 nhân",
-      "GPU": "Adreno 722",
-      "Kích thước màn hình": "6.57 inches",
-      "Công nghệ màn hình": "AMOLED",
-      "Độ phân giải màn hình": "2728 x 1264 pixels",
-      "Tính năng màn hình": "Tần số quét 120Hz1,07 tỷ màuĐộ sáng 8000 nitsAI HDR 2.0458 PPIDải màu rộng DCI-P3",
-      "Camera sau": "200 MP, f/1.9",
-      "Camera trước": "50 MP, f/2.0",
-      "Pin": "7000 mAh",
-      "Hỗ trợ mạng": "5G",
-      "Thẻ SIM": "2 Nano SIM hoặc 1 Nano + 1 eSIM",
-      "Công nghệ NFC": "Có",
-      "Thời điểm ra mắt": "06/2026"
-    }
-  },
-  {
-    "name": "HONOR X9d 5G 12GB 256GB",
-    "description": {
-      "Hệ điều hành khi ra mắt": "MagicOS 9.0 (Dựa trên Android 15）",
-      "Chipset": "Snapdragon 6 Gen 4",
-      "Dung lượng RAM": "12 GB",
-      "Bộ nhớ trong": "256 GB",
-      "Loại CPU": "8 nhân (1× A720 2.3GHz + 3× A720 2.2GHz + 4× A520 1.8GHz)",
-      "GPU": "Adreno A810",
-      "Kích thước màn hình": "6.79 inches",
-      "Công nghệ màn hình": "AMOLED",
-      "Độ phân giải màn hình": "1200 x 2640 pixels",
-      "Tính năng màn hình": "100% DCI-P3, 1,07 tỷ màu800 nits (điển hình), 1800 nits (chế độ HBM), 6000 nits (chế độ APL)Bảo vệ mắtMàn hình ban đêm sinh họcGiảm độ sáng độngKhử nháy sáng PWM 3840Hz",
-      "Camera sau": "Camera chính 108MP (F1.75) + Camera góc rộng 5MP (F2.2)",
-      "Camera trước": "16MP (F2.45)",
-      "Pin": "8300 mAh",
-      "Hỗ trợ mạng": "5G",
-      "Thẻ SIM": "2 Nano-SIM",
-      "Công nghệ NFC": "Có",
-      "Thời điểm ra mắt": "12/2025"
-    }
-  },
-  {
-    "name": "HONOR 400 5G 12GB 256GB",
-    "description": {
-      "Hệ điều hành khi ra mắt": "MagicOS 9.0 (dựa trên Android 15)",
-      "Chipset": "Snapdragon 7 Gen 3",
-      "Dung lượng RAM": "12 GB",
-      "Bộ nhớ trong": "256 GB",
-      "Loại CPU": "8 lõi",
-      "GPU": "Adreno 720",
-      "Kích thước màn hình": "6.55 inches",
-      "Công nghệ màn hình": "AMOLED",
-      "Độ phân giải màn hình": "2736 × 1264 pixels",
-      "Tính năng màn hình": "1.07 tỷ màu",
-      "Camera sau": "Camera chính AI 200MP (f/1.9, OIS) + 12MP Camera Góc Siêu Rộng (f/2.2)",
-      "Camera trước": "50MP (f/2.0)",
-      "Pin": "6000 mAh (Li-Po, công nghệ Pin Silicon-Carbon)",
-      "Hỗ trợ mạng": "5G",
-      "Thẻ SIM": "2 Nano SIM hoặc 1 Nano + 1 eSIM",
-      "Công nghệ NFC": "Có"
-    }
-  },
-  {
-    "name": "HONOR X7d 8GB 128GB",
-    "description": {
-      "Hệ điều hành khi ra mắt": "Android 15, MagicOS 9.0",
-      "Chipset": "Qualcomm Snapdragon 685",
-      "Dung lượng RAM": "8 GB",
-      "Bộ nhớ trong": "128 GB",
-      "Loại CPU": "8 nhân: 4 × Cortex-A73 (2,8 GHz) + 4 × Cortex-A53 (1,9 GHz)",
-      "GPU": "Adreno 610",
-      "Kích thước màn hình": "6.77 inches",
-      "Công nghệ màn hình": "TFT LCD",
-      "Tính năng màn hình": "Độ phân giải HD+ (720 × 1.610 px), 120 Hz, 850 nits",
-      "Camera sau": "108 MP, f/1.8 + 2MP",
-      "Camera trước": "8MP, f/2.0",
-      "Pin": "6500 mAh",
-      "Hỗ trợ mạng": "4G",
-      "Thẻ SIM": "2 Nano-SIM",
-      "Thời điểm ra mắt": "10/2025"
-    }
-  },
-  {
-    "name": "HONOR 400 Pro 5G 12GB 512GB",
-    "description": {
-      "Hệ điều hành khi ra mắt": "MagicOS 9.0 (Android 15)",
-      "Chipset": "Snapdragon 8 Gen 3",
-      "Dung lượng RAM": "12 GB",
-      "Bộ nhớ trong": "512 GB",
-      "Loại CPU": "8 nhân",
-      "GPU": "Adreno 750",
-      "Kích thước màn hình": "6.7 inches",
-      "Công nghệ màn hình": "AMOLED",
-      "Độ phân giải màn hình": "2800 x 1280 pixels",
-      "Tính năng màn hình": "1.07 tỷ màu",
-      "Camera sau": "Camera chính AI siêu nét 200MP (f/1.9, OIS) + 50MP Camera Tele (f/2.4 , OIS) + 12MP Camera Góc Siêu Rộng (f/2.2)",
-      "Camera trước": "50MP (khẩu độ f/2.0)",
-      "Pin": "6000 mAh",
-      "Hỗ trợ mạng": "5G",
-      "Thẻ SIM": "2 Nano SIM hoặc 1 Nano + 1 eSIM",
-      "Công nghệ NFC": "Có"
-    }
-  },
-  {
     "name": "HONOR X8d 8GB 128GB",
     "description": {
       "Hệ điều hành khi ra mắt": "MagicOS 10 (Dựa trên Android 16)",
@@ -2419,67 +2208,6 @@
     }
   },
   {
-    "name": "HONOR X7d 8GB 256GB",
-    "description": {
-      "Hệ điều hành khi ra mắt": "Android 15, MagicOS 9.0",
-      "Chipset": "Qualcomm Snapdragon 685",
-      "Dung lượng RAM": "8 GB",
-      "Bộ nhớ trong": "256 GB",
-      "Loại CPU": "8 nhân: 4 × Cortex-A73 (2,8 GHz) + 4 × Cortex-A53 (1,9 GHz)",
-      "GPU": "Adreno 610",
-      "Kích thước màn hình": "6.77 inches",
-      "Công nghệ màn hình": "TFT LCD",
-      "Tính năng màn hình": "Độ phân giải HD+ (720 × 1.610 px), 120 Hz",
-      "Camera sau": "108 MP, f/1.8 + 2MP",
-      "Camera trước": "8MP, f/2.0",
-      "Pin": "6500 mAh",
-      "Thẻ SIM": "Nano-SIM"
-    }
-  },
-  {
-    "name": "HONOR Magic V5 16GB 512GB",
-    "description": {
-      "Hệ điều hành khi ra mắt": "MagicOS 9.0.1 (Dựa trên Android 15)",
-      "Chipset": "Qualcomm Snapdragon 8 Elite",
-      "Dung lượng RAM": "16 GB",
-      "Bộ nhớ trong": "512 GB",
-      "Loại CPU": "Tám nhân (2×Prime 4,32 GHz+6×Performance 3,53 GHz)",
-      "GPU": "Adreno 830",
-      "Kích thước màn hình": "6.43 inches",
-      "Công nghệ màn hình": "OLED",
-      "Tính năng màn hình": "Màn hình trong: 2352 x 2172 pixelMàn hình ngoài: 2376 x 1060 pixel1,07 tỷ màu, Màn hình chăm sóc mắt cận thị AI, tần số 4320Hz PWM giảm nháy sáng, Điều chỉnh độ sáng động, Màn hình đêm theo nhịp sinh học, Màn hình tông màu tự nhiên",
-      "Camera sau": "Camera góc siêu rộng 50MP (khẩu độ f/2.0)Camera góc rộng 50MP (khẩu độ f/1.6, OIS)Camera tele 64MP (khẩu độ f/2.5, OIS)",
-      "Camera trước": "Màn hình trong: Camera góc rộng 20MP (f/2.2)Màn hình ngoài: Camera góc rộng 20MP (f/2.2)",
-      "Pin": "5820 mAh",
-      "Hỗ trợ mạng": "5G",
-      "Thẻ SIM": "SIM 1 + SIM 2 / SIM 1 + eSIM / 2 eSIM",
-      "Công nghệ NFC": "Có",
-      "Thời điểm ra mắt": "10/2025"
-    }
-  },
-  {
-    "name": "HONOR X9d 5G 12GB 512GB",
-    "description": {
-      "Hệ điều hành khi ra mắt": "MagicOS 9.0 (Dựa trên Android 15）",
-      "Chipset": "Snapdragon 6 Gen 4",
-      "Dung lượng RAM": "12 GB",
-      "Bộ nhớ trong": "512 GB",
-      "Loại CPU": "8 nhân (1× A720 2.3GHz + 3× A720 2.2GHz + 4× A520 1.8GHz)",
-      "GPU": "Adreno A810",
-      "Kích thước màn hình": "6.79 inches",
-      "Công nghệ màn hình": "AMOLED",
-      "Độ phân giải màn hình": "1200 x 2640 pixels",
-      "Tính năng màn hình": "100% DCI-P3, 1,07 tỷ màu800 nits (điển hình), 1800 nits (chế độ HBM), 6000 nits (chế độ APL)Bảo vệ mắtMàn hình ban đêm sinh họcGiảm độ sáng độngKhử nháy sáng PWM 3840Hz",
-      "Camera sau": "Camera chính 108MP (F1.75) + Camera góc rộng 5MP (F2.2)",
-      "Camera trước": "16MP (F2.45)",
-      "Pin": "8300 mAh",
-      "Hỗ trợ mạng": "5G",
-      "Thẻ SIM": "2 Nano-SIM",
-      "Công nghệ NFC": "Có",
-      "Thời điểm ra mắt": "12/2025"
-    }
-  },
-  {
     "name": "HONOR Win RT",
     "description": {
       "Kích thước màn hình": "6.83 inches",
@@ -2493,67 +2221,6 @@
       "Hệ điều hành": "MagicOS 10 (dựa trên Android 16)",
       "Tính năng màn hình": "Độ phân giải màn hình: FHD+ 1272*2800True 1,07 tỷ màu, gam màu rộng DCI-P3Độ sáng đỉnh tối đa: 6000nitsĐộ sáng đỉnh toàn cầu: 2000nitsĐộ sáng tối thiểu: 1nitHỗ trợ đa chạm, lên đến 10 chạm",
       "Loại CPU": "Tám lõi, 2×Prime 4.32GHz+6×Hiệu suất 3.53GHz"
-    }
-  },
-  {
-    "name": "HONOR X7d 5G 8GB 256GB",
-    "description": {
-      "Kích thước màn hình": "6.77 inches",
-      "Công nghệ màn hình": "TFT LCD",
-      "Camera sau": "Camera chính 50MP (f/1.8)Camera độ sâu 2MP (f/2.4)",
-      "Camera trước": "5 MP (khẩu độ f/2.2)",
-      "Chipset": "Qualcomm Snapdragon 6s Gen 3",
-      "Công nghệ NFC": "Có",
-      "Dung lượng RAM": "8 GB",
-      "Bộ nhớ trong": "256 GB",
-      "Pin": "6500 mAh",
-      "Thẻ SIM": "2 Nano-SIM",
-      "Hệ điều hành": "MagicOS 9.0 (Dựa trên Android 15)",
-      "Độ phân giải màn hình": "1612 × 720 pixel",
-      "Tính năng màn hình": "Độ sáng: 850 nit (HBM), 700 nit (Typical)Màu sắc: 16,7 triệu màu, 85% NTSCChế độ bảo vệ mắt/Dynamic Dimming",
-      "Loại CPU": "8 nhân: 2xA78@2.3GHz, 6xA55@2.0GHz"
-    }
-  },
-  {
-    "name": "HONOR X6c 6GB 128GB NFC",
-    "description": {
-      "Hệ điều hành khi ra mắt": "MagicOS 9.0 (Trên nền tảng Android 15）",
-      "Chipset": "MediaTek Helio G81 Ultra",
-      "Dung lượng RAM": "6 GB",
-      "Bộ nhớ trong": "128 GB",
-      "Loại CPU": "2xA75 *2.0Ghz + 6xA55 *1.7Ghz",
-      "GPU": "ARM Mail G52 MC2",
-      "Kích thước màn hình": "6.6 inches",
-      "Công nghệ màn hình": "TFT LCD",
-      "Độ phân giải màn hình": "720 x 1604 (HD+)",
-      "Tính năng màn hình": "16,7 triệu màuTFT LCDCử chỉ đa chạm, hỗ trợ tối đa 10 điểm chạm.",
-      "Camera sau": "Camera chính 50MP (F1.8) + Cảm biến chiều sâu",
-      "Camera trước": "5MP  (F2.2)",
-      "Pin": "5300mAh, 35W (11V/3.2A)",
-      "Hỗ trợ mạng": "4G",
-      "Thẻ SIM": "2 SIM (Nano-SIM)",
-      "Công nghệ NFC": "Có"
-    }
-  },
-  {
-    "name": "HONOR 400 5G 12GB 512GB",
-    "description": {
-      "Hệ điều hành khi ra mắt": "MagicOS 9.0 (Dựa trên Android 15)",
-      "Chipset": "Snapdragon 7 Gen 3",
-      "Dung lượng RAM": "12 GB",
-      "Bộ nhớ trong": "512 GB",
-      "Loại CPU": "8 lõi",
-      "GPU": "Adreno 720",
-      "Kích thước màn hình": "6.55 inches",
-      "Công nghệ màn hình": "AMOLED",
-      "Độ phân giải màn hình": "2736 × 1264 pixels",
-      "Tính năng màn hình": "1,07 tỷ màu",
-      "Camera sau": "Camera chính AI 200MP (f/1.9, OIS) + 12MP Camera Góc Siêu Rộng (f/2.2)",
-      "Camera trước": "50MP (f/2.0)",
-      "Pin": "6000 mAh (Li-Po, công nghệ Pin Silicon-Carbon)",
-      "Hỗ trợ mạng": "5G",
-      "Thẻ SIM": "2 Nano SIM hoặc 1 Nano + 1 eSIM",
-      "Công nghệ NFC": "Có"
     }
   },
   {

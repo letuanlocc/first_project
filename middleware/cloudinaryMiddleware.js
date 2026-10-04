@@ -39,6 +39,7 @@ const uploadToCloudinary = async (req, res, next) => {
         console.log("URL:", result.secure_url);
 
         req.imageUrl = result.secure_url;
+        req.publicId = result.public_id;
 
         console.log("req.imageUrl:", req.imageUrl);
 

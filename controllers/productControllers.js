@@ -1,5 +1,6 @@
 const Product  = require('../models/Product');
 const Category  = require('../models/Category');
+const cloudinary = require('../config/cloudinary');
 
 const addProduct = async (req, res) => {
     try {
@@ -10,7 +11,8 @@ const addProduct = async (req, res) => {
             description,
             category_id,
             stock,
-            image_url: req.imageUrl
+            image_url: req.imageUrl,
+            public_id: req.publicId
         });
         return res.status(201).json({
             message: "Thêm sản phẩm thành công!",
@@ -119,6 +121,12 @@ const deleteProduct = async(req,res) => {
         if (!product) {
             return res.status(404).json({ error: "Sản phẩm không tồn tại" });
         }
+        if (product.public_id) {
+            const cloudinaryResult = await cloudinary.uploader.destroy(product.public_id);
+            if (!['ok', 'not found'].includes(cloudinaryResult.result)) {
+                throw new Error(`Không thể xóa ảnh Cloudinary: ${cloudinaryResult.result}`);
+            }
+        }
         await product.destroy();
         return res.status(200).json({
             message: "Xóa thành công"
@@ -128,7 +136,6 @@ const deleteProduct = async(req,res) => {
             error: "Lỗi hệ thống khi xóa sản phẩm"
         })
     }
-
 }
 
 const deleteCategory = async(req,res) => {

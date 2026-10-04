@@ -161,7 +161,7 @@
 
                         <!-- IMAGE -->
                         <a
-                            href="/product/<%= product.id %>"
+                            href="/<%= product.slug %>"
                             class="product-image"
                         >
                             <img
@@ -174,7 +174,7 @@
                         <!-- INFO -->
                         <div class="product-info">
                             <a
-                                href="/product/<%= product.id %>"
+                                href="/<%= product.slug %>"
                                 class="product-name"
                             >
                                 <%= product.name %>
@@ -191,7 +191,9 @@
                             <div class="price-row">
 
                                 <span class="product-price">
-                                    <%= Number(product.price).toLocaleString('vi-VN') %>đ
+                                    <%= product.price == null || String(product.price).trim() === '' || !Number.isFinite(Number(product.price))
+                                        ? 'Giá liên hệ'
+                                        : `${Number(product.price).toLocaleString('vi-VN')}đ` %>
                                 </span>
 
                             </div>

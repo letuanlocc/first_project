@@ -5,6 +5,11 @@ const Product = sequelize.define('Product', {
     type: DataTypes.STRING(150),
     allowNull: false
   },
+  slug: {
+    type: DataTypes.STRING(200),
+    allowNull: true,
+    unique: true
+  },
   price: {
     type: DataTypes.DECIMAL(12, 2),
     allowNull: false
@@ -19,6 +24,10 @@ const Product = sequelize.define('Product', {
   image_url: {
     type: DataTypes.STRING(255)
   },
+  public_id: {
+  type: DataTypes.STRING(255),
+  allowNull: true
+},
   category_id: {
         type: DataTypes.INTEGER,
         allowNull: true

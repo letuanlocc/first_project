@@ -1032,15 +1032,15 @@
     "name_category": "nokia"
   },
   {
-    "name": "Nokia 3.2",
-    "price": "3.290.000đ",
-    "image_url": "https://cdn2.cellphones.com.vn/insecure/rs:fill:358:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/n/o/nokia-3.2-price-in-tanzania.jpg",
-    "name_category": "nokia"
-  },
-  {
     "name": "Nokia 7.2",
     "price": "6.190.000đ",
     "image_url": "https://cdn2.cellphones.com.vn/insecure/rs:fill:358:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/n/o/nokia_7.2_xanh.jpg",
+    "name_category": "nokia"
+  },
+  {
+    "name": "Nokia 3.2",
+    "price": "3.290.000đ",
+    "image_url": "https://cdn2.cellphones.com.vn/insecure/rs:fill:358:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/n/o/nokia-3.2-price-in-tanzania.jpg",
     "name_category": "nokia"
   },
   {
@@ -1284,15 +1284,15 @@
     "name_category": "huawei"
   },
   {
-    "name": "Huawei Nova 9 SE",
-    "price": "Giá Liên Hệ",
-    "image_url": "https://cdn2.cellphones.com.vn/insecure/rs:fill:358:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/a/6/a66788.jpg",
-    "name_category": "huawei"
-  },
-  {
     "name": "Huawei Nova 7 SE",
     "price": "Giá Liên Hệ",
     "image_url": "https://cdn2.cellphones.com.vn/insecure/rs:fill:358:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/h/u/huawei-nova-7-se.jpg",
+    "name_category": "huawei"
+  },
+  {
+    "name": "Huawei Nova 9 SE",
+    "price": "Giá Liên Hệ",
+    "image_url": "https://cdn2.cellphones.com.vn/insecure/rs:fill:358:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/a/6/a66788.jpg",
     "name_category": "huawei"
   },
   {

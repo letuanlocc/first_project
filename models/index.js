@@ -4,7 +4,7 @@ const Product = require('./Product');
 const User = require('./User');
 const Order = require('./Order');
 const OrderItem = require('./OrderItem');
-
+const ProductDescription = require('./ProductDescription');
 // 1. Category 1 - N Product
 Category.hasMany(Product, { foreignKey: 'category_id', onDelete: 'SET NULL' });
 Product.belongsTo(Category, { foreignKey: 'category_id' });
@@ -21,11 +21,15 @@ OrderItem.belongsTo(Order, { foreignKey: 'order_id' });
 Product.hasMany(OrderItem, { foreignKey: 'product_id', onDelete: 'SET NULL' });
 OrderItem.belongsTo(Product, { foreignKey: 'product_id' });
 
+Product.hasMany(ProductDescription, {foreignKey: 'product_id',as: 'descriptions',onDelete: 'CASCADE'});
+ProductDescription.belongsTo(Product, {foreignKey: 'product_id',as: 'product'});
+
 module.exports = {
   sequelize,
   Category,
   Product,
   User,
   Order,
-  OrderItem
+  OrderItem,
+  ProductDescription
 };
