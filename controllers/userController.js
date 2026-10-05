@@ -1,7 +1,6 @@
 
 const { Category, Product, ProductDescription } = require('../models/index');
 const { Op } = require("sequelize");
-
 const loadSearchOptions = async () => {
     const specifications = await ProductDescription.findAll({
         attributes: ['key', 'value'],
@@ -52,7 +51,7 @@ const loadSearchOptions = async () => {
         { label: 'Loại màn hình', options: displayOptions },
         {
             label: 'Tần số quét',
-            options: [...refreshRates].sort((first, second) => first - second).map(rate => ({
+            options: [60, 120, 144].filter(rate => refreshRates.has(rate)).map(rate => ({
                 label: `${rate} Hz`,
                 value: `${rate} Hz`
             }))
@@ -106,6 +105,7 @@ const getHome = async (req, res) => {
                 products,
                 user: req.data,
                 search: '',
+                suggestion: '',
                 searchOptions
             });
         }catch(err){
@@ -138,26 +138,29 @@ const detailProduct = async(req,res) => {
 
 const searchProduct = async(req,res) => {
     const search = String(req.query.search || '').trim();
-    
-    if (!search) {
+    const suggestion = String(req.query.suggestion || '').trim();
+    if (!search && !suggestion) {
         return getHome(req, res);
     }
 
     try{
+        const keyword = [search, suggestion]
+            .filter(Boolean)
+            .join(' ');
         const Categories = await Category.findAll();
-        const pattern = `%${search}%`;
+        const pattern = `%${keyword}%`;
         const productInclude = [{
             model: ProductDescription,
             as: 'descriptions',
             attributes: ['key', 'value'],
             required: false
         }];
-        const screenRange = search === 'Trên 6 inch' || search === 'Dưới 6 inch';
+        const screenRange = keyword === 'Trên 6 inch' || keyword === 'Dưới 6 inch';
         let products;
 
         if (screenRange) {
             const allProducts = await Product.findAll({ include: productInclude });
-            const isAboveSixInches = search === 'Trên 6 inch';
+            const isAboveSixInches = keyword === 'Trên 6 inch';
             products = allProducts.filter(product => {
                 const screenSpec = (product.descriptions || []).find(specification =>
                     specification.key === 'Kích thước màn hình'
@@ -168,7 +171,7 @@ const searchProduct = async(req,res) => {
                 return isAboveSixInches ? size > 6 : size < 6;
             });
         } else {
-            const refreshRate = search.match(/^(\d+(?:[.,]\d+)?)\s*Hz$/i);
+            const refreshRate = keyword.match(/^(\d+(?:[.,]\d+)?)\s*Hz$/i);
             const patterns = refreshRate
                 ? [`%${refreshRate[1]} Hz%`, `%${refreshRate[1]}Hz%`]
                 : [pattern];
@@ -195,6 +198,7 @@ const searchProduct = async(req,res) => {
             products,
             user: req.data,
             search,
+            suggestion,
             searchOptions
         });
     }catch(error){

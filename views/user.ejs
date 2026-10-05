@@ -47,12 +47,12 @@
                     value="<%= search || '' %>"
                     placeholder="Bạn muốn mua gì hôm nay?"
                 >
-                <select id="product-search-suggestions" aria-label="Gợi ý tìm kiếm">
+                <select id="product-search-suggestions" name="suggestion" aria-label="Gợi ý tìm kiếm">
                     <option value="">Gợi ý</option>
                     <% searchOptions.forEach(group => { %>
                         <optgroup label="<%= group.label %>">
                             <% group.options.forEach(option => { %>
-                                <option value="<%= option.value %>" <%= search === option.value ? 'selected' : '' %>>
+                                <option value="<%= option.value %>" <%= suggestion === option.value ? 'selected' : '' %> >
                                     <%= option.label %>
                                 </option>
                             <% }) %>
@@ -253,18 +253,6 @@
         <span>◉</span>
     </button>
 
-<script>
-    const searchInput = document.getElementById('product-search-input');
-    const searchSuggestions = document.getElementById('product-search-suggestions');
-    const productSearchForm = document.getElementById('product-search-form');
-
-    searchSuggestions.addEventListener('change', () => {
-        if (searchSuggestions.value) searchInput.value = searchSuggestions.value;
-    });
-
-    productSearchForm.addEventListener('submit', () => {
-        if (searchSuggestions.value) searchInput.value = searchSuggestions.value;
-    });
-</script>
+<script src="/js/user.js"></script>
 </body>
 </html>
