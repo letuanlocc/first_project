@@ -18,7 +18,7 @@ const loadSearchOptions = async () => {
     })
     const ram = [
         ...new Set(
-            data.filter(item => item.key === "Dung lượng RAM").map(item => ({label: item.value, value: item.value}))
+            data.filter(item => item.key === "Dung lượng RAM").map(item => item.value)
         )
     ]
     const screenSize = [
@@ -36,8 +36,11 @@ const loadSearchOptions = async () => {
             data.filter(item => item.key === 'Tính năng màn hình').map(item => item.value)
         )
     ];
-    return [
-
+    return[
+        ram,
+        dispglay,
+        screenSize,
+        screenFeature
     ]
 };
 
