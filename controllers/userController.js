@@ -1,63 +1,46 @@
 
 const { Category, Product, ProductDescription } = require('../models/index');
 const { Op } = require("sequelize");
+
 const loadSearchOptions = async () => {
-    const specifications = await ProductDescription.findAll({
-        attributes: ['key', 'value'],
-        where: { [Op.and]: [
-            { value: { [Op.not]: null } },
-            { [Op.or]: [
-                { key: { [Op.in]: ['Dung lượng RAM', 'Bộ nhớ trong', 'Kích thước màn hình', 'Công nghệ màn hình'] } },
-                { key: { [Op.iLike]: '%Hz%' } },
-                { value: { [Op.iLike]: '%Hz%' } }
-            ] }
-        ] }
-    });
-
-    const valuesFor = key => [...new Set(specifications
-        .filter(specification => specification.key === key)
-        .map(specification => String(specification.value).trim())
-        .filter(Boolean))];
-    const optionsFrom = (key, allowedValues) => {
-        const available = new Set(valuesFor(key));
-        return allowedValues.filter(value => available.has(value)).map(value => ({ label: value, value }));
-    };
-    const displayValues = valuesFor('Công nghệ màn hình').map(value => value.toLocaleLowerCase('vi'));
-    const displayOptions = ['AMOLED', 'OLED', 'LCD']
-        .filter(value => displayValues.some(display => display.includes(value.toLocaleLowerCase('vi'))))
-        .map(value => ({ label: value, value }));
-    const refreshRates = new Set();
-
-    for (const specification of specifications) {
-        const text = `${specification.key} ${specification.value}`;
-        for (const match of text.matchAll(/(\d+(?:[.,]\d+)?)\s*Hz/gi)) {
-            const rate = Number(match[1].replace(',', '.'));
-            if (rate >= 50 && rate <= 300) refreshRates.add(rate);
-        }
-    }
-
-    return [
-        { label: 'RAM', options: optionsFrom('Dung lượng RAM', ['4 GB', '6 GB', '8 GB', '12 GB', '16 GB']) },
-        { label: 'Bộ nhớ', options: optionsFrom('Bộ nhớ trong', ['128 GB', '256 GB', '512 GB', '1 TB', '2 TB']) },
-        {
-            label: 'Màn hình',
-            options: valuesFor('Kích thước màn hình').length > 0
-                ? [
-                    { label: 'Trên 6 inch', value: 'Trên 6 inch' },
-                    { label: 'Dưới 6 inch', value: 'Dưới 6 inch' }
+    const data = await ProductDescription.findAll({
+        where: {
+            key: {
+                [Op.in]: [
+                "Dung lượng RAM",
+                "Tính năng màn hình",
+                "Kích thước màn hình",
+                "Công nghệ màn hình",
                 ]
-                : []
+            }
         },
-        { label: 'Loại màn hình', options: displayOptions },
-        {
-            label: 'Tần số quét',
-            options: [60, 120, 144].filter(rate => refreshRates.has(rate)).map(rate => ({
-                label: `${rate} Hz`,
-                value: `${rate} Hz`
-            }))
-        }
-    ].filter(group => group.options.length > 0);
+        attributes: ['key','value']
+    })
+    const ram = [
+        ...new Set(
+            data.filter(item => item.key === "Dung lượng RAM").map(item => ({label: item.value, value: item.value}))
+        )
+    ]
+    const screenSize = [
+        ...new Set(
+            data.filter(item => item.key === "Kích thước màn hình").map(item => item.value)
+        )
+    ]
+    const display = [
+        ...new Set(
+            data.filter(item => item.key === 'Công nghệ màn hình').map(item => item.value)
+        )
+    ];
+    const screenFeature = [
+        ...new Set(
+            data.filter(item => item.key === 'Tính năng màn hình').map(item => item.value)
+        )
+    ];
+    return [
+
+    ]
 };
+
 
 const categoryDetailAndRender = async (req, res) => {
     try {
@@ -99,7 +82,6 @@ const getHome = async (req, res) => {
                 }),
                 loadSearchOptions()
             ]);
-
             res.render("user",{
                 Categories,
                 products,
