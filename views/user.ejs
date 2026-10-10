@@ -47,18 +47,6 @@
                     value="<%= search || '' %>"
                     placeholder="Bạn muốn mua gì hôm nay?"
                 >
-                <select id="product-search-suggestions" name="suggestion" aria-label="Gợi ý tìm kiếm">
-                    <option value="">Gợi ý</option>
-                    <% searchOptions.forEach(group => { %>
-                        <optgroup label="<%= group.label %>">
-                            <% group.options.forEach(option => { %>
-                                <option value="<%= option.value %>" <%= suggestion === option.value ? 'selected' : '' %> >
-                                    <%= option.label %>
-                                </option>
-                            <% }) %>
-                        </optgroup>
-                    <% }) %>
-                </select>
                 <button type="submit">⌕</button>
             </form>
 
