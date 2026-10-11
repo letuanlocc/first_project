@@ -2,49 +2,6 @@
 const { Category, Product, ProductDescription } = require('../models/index');
 const { Op } = require("sequelize");
 
-const loadSearchOptions = async () => {
-    const data = await ProductDescription.findAll({
-        where: {
-            key: {
-                [Op.in]: [
-                "Dung lượng RAM",
-                "Tính năng màn hình",
-                "Kích thước màn hình",
-                "Công nghệ màn hình",
-                ]
-            }
-        },
-        attributes: ['key','value']
-    })
-    const ram = [
-        ...new Set(
-            data.filter(item => item.key === "Dung lượng RAM").map(item => item.value)
-        )
-    ]
-    const screenSize = [
-        ...new Set(
-            data.filter(item => item.key === "Kích thước màn hình").map(item => item.value)
-        )
-    ]
-    const display = [
-        ...new Set(
-            data.filter(item => item.key === 'Công nghệ màn hình').map(item => item.value)
-        )
-    ];
-    const screenFeature = [
-        ...new Set(
-            data.filter(item => item.key === 'Tính năng màn hình').map(item => item.value)
-        )
-    ];
-    return[
-        ram,
-        dispglay,
-        screenSize,
-        screenFeature
-    ]
-};
-
-
 const categoryDetailAndRender = async (req, res) => {
     try {
         const categoryId = req.params.id;
@@ -69,34 +26,33 @@ const categoryDetailAndRender = async (req, res) => {
 
 
 const getHome = async (req, res) => {
-        const Categories = await Category.findAll();
+    try {
         if (req.data?.role === "admin") {
             return res.redirect("/admin");
         }
-        try{
-            const [products, searchOptions] = await Promise.all([
-                Product.findAll({
-                    include: [{
-                        model: ProductDescription,
-                        as: 'descriptions',
-                        attributes: ['key', 'value'],
-                        required: false
-                    }]
-                }),
-                loadSearchOptions()
-            ]);
-            res.render("user",{
-                Categories,
-                products,
-                user: req.data,
-                search: '',
-                suggestion: '',
-                searchOptions
-            });
-        }catch(err){
-            res.status(500).send("Internal Server Error");
-        }
-}
+        const [Categories, products] = await Promise.all([
+            Category.findAll(),
+            Product.findAll({
+                include: [{
+                    model: ProductDescription,
+                    as: 'descriptions',
+                    attributes: ['key', 'value'],
+                    required: false
+                }]
+            })
+        ]);
+
+        res.render("user", {
+            Categories,
+            products,
+            user: req.data,
+            search: ''
+        });
+    } catch (err) {
+        console.error("Lỗi tại getHome:", err);
+        res.status(500).send("Internal Server Error");
+    }
+};
 
 const detailProduct = async(req,res) => {
     try{
@@ -121,70 +77,151 @@ const detailProduct = async(req,res) => {
     }
 }
 
+const parseSearchQuery = (query) => {
+    let text = query.trim();
+    const tokens = [];
+
+    // 1. Nhận diện các cụm khoảng giá trị (range): e.g. "dưới 8 gb", "trên 16 gb", "dưới 6 inch", "trên 6.7 inch"
+    const rangeRegex = /\b(dưới|duoi|trên|tren|<|>)\s*(\d+(?:[.,]\d+)?)\s*(gb|tb|mb|hz|inch|inches|in)\b/gi;
+    text = text.replace(rangeRegex, (fullMatch, prefix, num, unit) => {
+        const isUnder = /dưới|duoi|</i.test(prefix);
+        tokens.push({
+            type: 'range',
+            raw: fullMatch,
+            op: isUnder ? '<' : '>',
+            num: parseFloat(num.replace(',', '.')),
+            unit: unit.toLowerCase()
+        });
+        return ' ';
+    });
+
+    // 2. Nhận diện cụm từ trong ngoặc kép: e.g. "màn hình gập"
+    const quoteRegex = /"([^"]+)"|'([^']+)'/g;
+    text = text.replace(quoteRegex, (fullMatch, q1, q2) => {
+        const phrase = (q1 || q2).trim();
+        if (phrase) tokens.push({ type: 'phrase', raw: phrase });
+        return ' ';
+    });
+
+    // 3. Nhận diện cụm thông số số + đơn vị: e.g. "12 gb", "12gb", "256gb", "120hz", "6.7 inch", "5000mah"
+    const specRegex = /\b(\d+(?:[.,]\d+)?)\s*(gb|tb|mb|hz|khz|mah|mp|inch|inches|in)\b/gi;
+    text = text.replace(specRegex, (fullMatch, num, unit) => {
+        tokens.push({
+            type: 'spec',
+            raw: fullMatch,
+            num: num.replace(',', '.'),
+            unit: unit.toLowerCase()
+        });
+        return ' ';
+    });
+
+    // 4. Các từ đơn lẻ còn lại: e.g. "samsung", "iphone"
+    const words = text.split(/\s+/).filter(Boolean);
+    for (const w of words) {
+        tokens.push({ type: 'word', raw: w });
+    }
+
+    return tokens;
+};
+
+const buildTokenCondition = (t) => {
+    if (t.type === 'range') {
+        if (t.unit.startsWith('in')) {
+            const re = '(?i)([0-9]+(?:\\.[0-9]+)?)\\s*inch';
+            return Product.sequelize.literal(`EXISTS (
+                SELECT 1 FROM product_descriptions pd
+                WHERE pd.product_id = "Product"."id"
+                  AND pd.key = 'Kích thước màn hình'
+                  AND pd.value ~ ${Product.sequelize.escape(re)}
+                  AND (substring(pd.value FROM ${Product.sequelize.escape(re)}))::numeric ${t.op} ${t.num}
+            )`);
+        } else {
+            const re = `(?i)^([0-9]+(?:\\.[0-9]+)?)\\s*${t.unit}`;
+            return Product.sequelize.literal(`EXISTS (
+                SELECT 1 FROM product_descriptions pd
+                WHERE pd.product_id = "Product"."id"
+                  AND pd.key IN ('Dung lượng RAM', 'Bộ nhớ trong')
+                  AND pd.value ~ ${Product.sequelize.escape(re)}
+                  AND (substring(pd.value FROM ${Product.sequelize.escape(re)}))::numeric ${t.op} ${t.num}
+            )`);
+        }
+    }
+
+    if (t.type === 'spec') {
+        // Cụm thông số: đúng dòng mô tả (hoặc tên sản phẩm) phải chứa cả số và đơn vị đi liền nhau
+        const regexPattern = `\\m${t.num}\\s*${t.unit}`;
+        return {
+            [Op.or]: [
+                Product.sequelize.literal(`"Product"."name" ~* ${Product.sequelize.escape(regexPattern)}`),
+                Product.sequelize.literal(`EXISTS (
+                    SELECT 1 FROM product_descriptions pd
+                    WHERE pd.product_id = "Product"."id"
+                      AND (pd.value ~* ${Product.sequelize.escape(regexPattern)} OR (pd.key || ' ' || pd.value) ~* ${Product.sequelize.escape(regexPattern)})
+                )`)
+            ]
+        };
+    }
+
+    // phrase hoặc word thông thường: tìm kiếm qua tên sản phẩm, danh mục, hoặc mô tả
+    const pattern = `%${t.raw}%`;
+    return {
+        [Op.or]: [
+            { name: { [Op.iLike]: pattern } },
+            { '$Category.name$': { [Op.iLike]: pattern } },
+            Product.sequelize.literal(`EXISTS (
+                SELECT 1 FROM product_descriptions pd
+                WHERE pd.product_id = "Product"."id"
+                  AND (pd.value ILIKE ${Product.sequelize.escape(pattern)} OR pd.key ILIKE ${Product.sequelize.escape(pattern)})
+            )`)
+        ]
+    };
+};
+
+const attachDescriptions = async (products) => {
+    if (!products || products.length === 0) return products;
+    const productIds = products.map(p => p.id);
+    const descriptions = await ProductDescription.findAll({
+        where: { product_id: productIds },
+        attributes: ['product_id', 'key', 'value']
+    });
+    const descMap = {};
+    descriptions.forEach(d => {
+        if (!descMap[d.product_id]) descMap[d.product_id] = [];
+        descMap[d.product_id].push(d);
+    });
+    products.forEach(p => {
+        p.descriptions = descMap[p.id] || [];
+    });
+    return products;
+};
+
 const searchProduct = async(req,res) => {
     const search = String(req.query.search || '').trim();
-    const suggestion = String(req.query.suggestion || '').trim();
-    if (!search && !suggestion) {
+    if (!search) {
         return getHome(req, res);
     }
 
     try{
-        const keyword = [search, suggestion]
-            .filter(Boolean)
-            .join(' ');
         const Categories = await Category.findAll();
-        const pattern = `%${keyword}%`;
-        const productInclude = [{
-            model: ProductDescription,
-            as: 'descriptions',
-            attributes: ['key', 'value'],
-            required: false
-        }];
-        const screenRange = keyword === 'Trên 6 inch' || keyword === 'Dưới 6 inch';
-        let products;
+        const tokens = parseSearchQuery(search);
 
-        if (screenRange) {
-            const allProducts = await Product.findAll({ include: productInclude });
-            const isAboveSixInches = keyword === 'Trên 6 inch';
-            products = allProducts.filter(product => {
-                const screenSpec = (product.descriptions || []).find(specification =>
-                    specification.key === 'Kích thước màn hình'
-                );
-                const sizeMatch = String(screenSpec?.value || '').match(/\d+(?:[.,]\d+)?/);
-                if (!sizeMatch) return false;
-                const size = Number(sizeMatch[0].replace(',', '.'));
-                return isAboveSixInches ? size > 6 : size < 6;
+        let products = [];
+        if (tokens.length > 0) {
+            const tokenConditions = tokens.map(buildTokenCondition);
+            const matchedProducts = await Product.findAll({
+                where: { [Op.and]: tokenConditions },
+                include: [{ model: Category, attributes: ['id', 'name'], required: false }],
+                attributes: ['id', 'name', 'slug', 'price', 'stock', 'image_url', 'category_id'],
+                order: [['id', 'ASC']]
             });
-        } else {
-            const refreshRate = keyword.match(/^(\d+(?:[.,]\d+)?)\s*Hz$/i);
-            const patterns = refreshRate
-                ? [`%${refreshRate[1]} Hz%`, `%${refreshRate[1]}Hz%`]
-                : [pattern];
-            const searchConditions = patterns.flatMap(searchPattern => [
-                { name: { [Op.iLike]: searchPattern } },
-                { '$descriptions.key$': { [Op.iLike]: searchPattern } },
-                { '$descriptions.value$': { [Op.iLike]: searchPattern } },
-                { '$Category.name$': { [Op.iLike]: searchPattern } }
-            ]);
-
-            products = await Product.findAll({
-                where: { [Op.or]: searchConditions },
-                include: [
-                    ...productInclude,
-                    { model: Category, attributes: [], required: false }
-                ],
-                distinct: true
-            });
+            products = await attachDescriptions(matchedProducts);
         }
-        const searchOptions = await loadSearchOptions();
 
-        res.render("user",{
+        res.render("user", {
             Categories,
             products,
             user: req.data,
-            search,
-            suggestion,
-            searchOptions
+            search
         });
     }catch(error){
         console.error("Lỗi tìm kiếm sản phẩm:", error);
@@ -192,7 +229,7 @@ const searchProduct = async(req,res) => {
             error: "Lỗi hệ thống khi tìm kiếm"
         });
     }
-}
+};
 module.exports = {
     categoryDetailAndRender,
     getHome,

@@ -21,6 +21,7 @@ OrderItem.belongsTo(Order, { foreignKey: 'order_id' });
 Product.hasMany(OrderItem, { foreignKey: 'product_id', onDelete: 'SET NULL' });
 OrderItem.belongsTo(Product, { foreignKey: 'product_id' });
 
+//
 Product.hasMany(ProductDescription, {foreignKey: 'product_id',as: 'descriptions',onDelete: 'CASCADE'});
 ProductDescription.belongsTo(Product, {foreignKey: 'product_id',as: 'product'});
 
