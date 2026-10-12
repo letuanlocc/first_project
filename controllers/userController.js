@@ -44,7 +44,7 @@ const getHome = async (req, res) => {
 
         res.render("user", {
             Categories,
-            products,
+            products: products,
             user: req.data,
             search: ''
         });
@@ -85,7 +85,7 @@ const parseSearchQuery = (query) => {
     const rangeRegex = /\b(dưới|duoi|trên|tren|<|>)\s*(\d+(?:[.,]\d+)?)\s*(gb|tb|mb|hz|inch|inches|in)\b/gi;
     text = text.replace(rangeRegex, (fullMatch, prefix, num, unit) => {
         const isUnder = /dưới|duoi|</i.test(prefix);
-        tokens.push({
+        tokens.push({   
             type: 'range',
             raw: fullMatch,
             op: isUnder ? '<' : '>',
@@ -177,23 +177,6 @@ const buildTokenCondition = (t) => {
     };
 };
 
-const attachDescriptions = async (products) => {
-    if (!products || products.length === 0) return products;
-    const productIds = products.map(p => p.id);
-    const descriptions = await ProductDescription.findAll({
-        where: { product_id: productIds },
-        attributes: ['product_id', 'key', 'value']
-    });
-    const descMap = {};
-    descriptions.forEach(d => {
-        if (!descMap[d.product_id]) descMap[d.product_id] = [];
-        descMap[d.product_id].push(d);
-    });
-    products.forEach(p => {
-        p.descriptions = descMap[p.id] || [];
-    });
-    return products;
-};
 
 const searchProduct = async(req,res) => {
     const search = String(req.query.search || '').trim();
@@ -210,16 +193,24 @@ const searchProduct = async(req,res) => {
             const tokenConditions = tokens.map(buildTokenCondition);
             const matchedProducts = await Product.findAll({
                 where: { [Op.and]: tokenConditions },
-                include: [{ model: Category, attributes: ['id', 'name'], required: false }],
+                include: [
+                    { model: Category, attributes: ['id', 'name'], required: false },
+                    {
+                        model: ProductDescription,
+                        as: 'descriptions',
+                        attributes: ['key', 'value'],
+                        required: false
+                    }
+                ],
                 attributes: ['id', 'name', 'slug', 'price', 'stock', 'image_url', 'category_id'],
                 order: [['id', 'ASC']]
             });
-            products = await attachDescriptions(matchedProducts);
+            products = matchedProducts;
         }
 
         res.render("user", {
             Categories,
-            products,
+            products: products,
             user: req.data,
             search
         });
@@ -230,6 +221,7 @@ const searchProduct = async(req,res) => {
         });
     }
 };
+
 module.exports = {
     categoryDetailAndRender,
     getHome,
