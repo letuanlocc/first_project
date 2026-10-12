@@ -19,17 +19,15 @@
 
             <!-- Logo -->
             <a href="/" class="logo">
-                PhoneShop
+                Phone<span>Shop</span>
             </a>
 
             <!-- Danh mục -->
             <div class="category-dropdown">
 
-                <button class="category-btn">
-                    ☰
-                    <span>Danh mục</span>
-                    <span>⌄</span>
-                </button>
+                    <button class="category-btn">
+                        ☰ <span>Danh mục</span>
+                    </button>
 
                 <div class="category-list">
 
@@ -47,22 +45,21 @@
 
             <!-- Location -->
             <button class="location-btn">
-                📍 Đà Nẵng
-                <span>⌄</span>
+                ◉ <span>Đà Nẵng</span>
             </button>
 
             <!-- Search -->
-            <div class="search-box">
-                <span>⌕</span>
-
+            <form class="search-box" action="/" method="GET">
                 <input
                     type="text"
+                    name="search"
                     placeholder="Bạn muốn mua gì hôm nay?"
                 >
-            </div>
+                <button type="submit" aria-label="Tìm kiếm">⌕</button>
+            </form>
 
             <!-- Cart -->
-            <a href="#" class="cart-btn">
+            <a href="/cart" class="header-link cart">
                 🛒
                 <span>Giỏ hàng</span>
             </a>
@@ -70,14 +67,19 @@
             <!-- Login -->
             <% if (user) { %>
 
-                <a href="#" class="login-btn">
-                    <%= user.username %>
-                </a>
+                <div class="user-menu">
+                    <span class="user-icon">◯</span>
+                    <span><%= user.userName %></span>
+
+                    <form action="/logout" method="POST">
+                        <button type="submit">Đăng xuất</button>
+                    </form>
+                </div>
 
             <% } else { %>
 
                 <a href="/login" class="login-btn">
-                    Đăng nhập
+                    ◯ <span>Đăng nhập</span>
                 </a>
 
             <% } %>
@@ -207,11 +209,11 @@
 
                 <div class="buy-section">
 
-                    <button class="btn-add-cart">
+                    <button class="btn-add-cart" id ="addCart" data-product-id="<%= product.id %>">
                         Thêm vào giỏ hàng
                     </button>
 
-                    <button class="btn-buy-now">
+                    <button class="btn-buy-now" id ="buyNow">
                         Mua ngay
                     </button>
 

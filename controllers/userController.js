@@ -1,5 +1,5 @@
 
-const { Category, Product, ProductDescription } = require('../models/index');
+const { Category, Product, ProductDescription, OrderItem, Order, User} = require('../models/index');
 const { Op } = require("sequelize");
 
 const categoryDetailAndRender = async (req, res) => {
@@ -69,7 +69,7 @@ const detailProduct = async(req,res) => {
             attributes: ['key', 'value']
         });
 
-        res.render('product-detail', { product, Categories, user: req.user, productDescriptions });
+        res.render('product-detail', { product, Categories, user: req.data, productDescriptions });
     }catch(error){
          return res.status(500).json({
             error: "Lỗi hệ thống khi tìm kiếm danh mục"
@@ -222,9 +222,129 @@ const searchProduct = async(req,res) => {
     }
 };
 
+const getCart = async(req,res) => {
+    try {
+        const Categories = await Category.findAll();
+        return res.render('cart', {
+            cartItems: [],
+            Categories,
+            user: req.data
+        });
+    } catch (error) {
+        console.error("Lỗi tải giỏ hàng:", error);
+        return res.status(500).send("Lỗi hệ thống khi tải giỏ hàng");
+    }
+};
+
+const addCart = async(req,res) => {
+    const productId = Number(req.body.productId);
+    const quantity = Number(req.body.quantity);
+    const userId = Number(req.data?.userId);
+
+    if (!Number.isInteger(productId) || productId <= 0) {
+        return res.status(400).json({ error: "Mã sản phẩm không hợp lệ" });
+    }
+    if (!Number.isInteger(quantity) || quantity <= 0) {
+        return res.status(400).json({ error: "Số lượng phải là số nguyên dương" });
+    }
+    if (!Number.isInteger(userId) || userId <= 0) {
+        return res.status(401).json({ error: "Vui lòng đăng nhập lại" });
+    }
+
+    try {
+        const result = await Product.sequelize.transaction(async transaction => {
+            const user = await User.findByPk(userId, {
+                transaction,
+                lock: transaction.LOCK.UPDATE
+            });
+
+            if (!user) {
+                return { status: 401, error: "Tài khoản không còn tồn tại" };
+            }
+
+            const product = await Product.findByPk(productId, {
+                transaction,
+                lock: transaction.LOCK.UPDATE
+            });
+
+            if (!product) {
+                return { status: 404, error: "Không tìm thấy sản phẩm" };
+            }
+
+            const order = await Order.findOne({
+                where: { user_id: userId, status: "pending" },
+                order: [['id', 'DESC']],
+                transaction,
+                lock: transaction.LOCK.UPDATE
+            });
+
+            const existingItem = order
+                ? await OrderItem.findOne({
+                    where: { order_id: order.id, product_id: product.id },
+                    transaction,
+                    lock: transaction.LOCK.UPDATE
+                })
+                : null;
+            const updatedQuantity = Number(existingItem?.quantity || 0) + quantity;
+
+            if (updatedQuantity > product.stock) {
+                return { status: 400, error: "Số lượng yêu cầu vượt quá tồn kho" };
+            }
+
+            const activeOrder = order || await Order.create({
+                user_id: userId,
+                total_amount: 0,
+                status: "pending"
+            }, { transaction });
+
+            if (existingItem) {
+                await existingItem.update({ quantity: updatedQuantity }, { transaction });
+            } else {
+                await OrderItem.create({
+                    order_id: activeOrder.id,
+                    product_id: product.id,
+                    quantity,
+                    price_at_that_time: product.price
+                }, { transaction });
+            }
+
+            const orderItems = await OrderItem.findAll({
+                where: { order_id: activeOrder.id },
+                attributes: ['quantity', 'price_at_that_time'],
+                transaction
+            });
+            const totalInCents = orderItems.reduce((total, item) => {
+                const [whole, fraction = ''] = String(item.price_at_that_time).split('.');
+                const priceInCents = Number(whole) * 100 + Number(fraction.padEnd(2, '0').slice(0, 2));
+                return total + priceInCents * Number(item.quantity);
+            }, 0);
+
+            await activeOrder.update({
+                total_amount: (totalInCents / 100).toFixed(2)
+            }, { transaction });
+
+            return {
+                status: order ? 200 : 201,
+                message: "Đã thêm sản phẩm vào giỏ hàng",
+                orderId: activeOrder.id,
+                quantity: updatedQuantity
+            };
+        });
+
+        if (result.error) {
+            return res.status(result.status).json({ error: result.error });
+        }
+        return res.status(result.status).json(result);
+    } catch (error) {
+        console.error("Lỗi thêm sản phẩm vào giỏ hàng:", error);
+        return res.status(500).json({ error: "Lỗi hệ thống khi thêm vào giỏ hàng" });
+    }
+};
 module.exports = {
     categoryDetailAndRender,
     getHome,
     detailProduct,
-    searchProduct
+    searchProduct,
+    getCart,
+    addCart
 };

@@ -1,0 +1,145 @@
+<%
+    const cartItemsList = typeof cartItems !== 'undefined' && Array.isArray(cartItems)
+        ? cartItems
+        : [];
+    const categoriesList = typeof Categories !== 'undefined' && Array.isArray(Categories)
+        ? Categories
+        : [];
+    const currentUser = typeof user !== 'undefined' ? user : null;
+    const cartTotal = cartItemsList.reduce((total, item) => {
+        const price = Number(item.price_at_that_time);
+        const quantity = Number(item.quantity);
+        return total + (Number.isFinite(price) && Number.isFinite(quantity) ? price * quantity : 0);
+    }, 0);
+    const formatPrice = value => `${Number(value).toLocaleString('vi-VN')}đ`;
+%>
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giỏ hàng - PhoneShop</title>
+    <link rel="stylesheet" href="/css/user.css">
+    <link rel="stylesheet" href="/css/cart.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-container">
+            <a href="/" class="logo">Phone<span>Shop</span></a>
+
+            <div class="category-dropdown">
+                <button class="category-btn" type="button">
+                    ☰ <span>Danh mục</span>
+                </button>
+                <div class="category-list">
+                    <% categoriesList.forEach(category => { %>
+                        <a href="/category/<%= category.id %>"><%= category.name %></a>
+                    <% }) %>
+                </div>
+            </div>
+
+            <button class="location-btn" type="button">◉ <span>Đà Nẵng</span></button>
+
+            <form class="search-box" action="/" method="GET">
+                <input type="text" name="search" placeholder="Bạn muốn mua gì hôm nay?">
+                <button type="submit" aria-label="Tìm kiếm">⌕</button>
+            </form>
+
+            <a href="/cart" class="header-link cart" aria-current="page">
+                🛒 <span>Giỏ hàng</span>
+            </a>
+
+            <% if (currentUser) { %>
+                <div class="user-menu">
+                    <span class="user-icon">◯</span>
+                    <span><%= currentUser.userName %></span>
+                    <form action="/logout" method="POST">
+                        <button type="submit">Đăng xuất</button>
+                    </form>
+                </div>
+            <% } else { %>
+                <a href="/login" class="login-btn">◯ <span>Đăng nhập</span></a>
+            <% } %>
+        </div>
+    </header>
+
+    <main class="cart-page">
+        <nav class="cart-breadcrumb" aria-label="Đường dẫn">
+            <a href="/">Trang chủ</a>
+            <span>/</span>
+            <span>Giỏ hàng</span>
+        </nav>
+
+        <h1>Giỏ hàng của bạn</h1>
+
+        <% if (cartItemsList.length > 0) { %>
+            <div class="cart-layout">
+                <section class="cart-items" aria-label="Sản phẩm trong giỏ hàng">
+                    <div class="cart-items-heading">
+                        <h2>Sản phẩm</h2>
+                        <span><%= cartItemsList.length %> sản phẩm</span>
+                    </div>
+
+                    <% cartItemsList.forEach(item => { %>
+                        <% const product = item.product; %>
+                        <% const quantity = Number(item.quantity); %>
+                        <% const price = Number(item.price_at_that_time); %>
+                        <% const lineTotal = Number.isFinite(quantity) && Number.isFinite(price) ? quantity * price : 0; %>
+                        <article class="cart-item">
+                            <a class="cart-item-image" href="<%= product && product.slug ? `/${product.slug}` : '/' %>">
+                                <% if (product && product.image_url) { %>
+                                    <img src="<%= product.image_url %>" alt="<%= product.name %>">
+                                <% } else { %>
+                                    <span>Không có ảnh</span>
+                                <% } %>
+                            </a>
+
+                            <div class="cart-item-details">
+                                <h3>
+                                    <% if (product) { %>
+                                        <a href="<%= product.slug ? `/${product.slug}` : '/' %>"><%= product.name %></a>
+                                    <% } else { %>
+                                        Sản phẩm không còn khả dụng
+                                    <% } %>
+                                </h3>
+                                <p class="cart-item-unit-price">
+                                    Đơn giá: <%= Number.isFinite(price) ? formatPrice(price) : 'Chưa có giá' %>
+                                </p>
+                                <p class="cart-item-quantity">Số lượng: <%= Number.isFinite(quantity) ? quantity : 0 %></p>
+                            </div>
+
+                            <strong class="cart-item-total"><%= formatPrice(lineTotal) %></strong>
+                        </article>
+                    <% }) %>
+
+                    <a class="continue-shopping" href="/">← Tiếp tục mua sắm</a>
+                </section>
+
+                <aside class="cart-summary">
+                    <h2>Tóm tắt đơn hàng</h2>
+                    <div class="cart-summary-row">
+                        <span>Tạm tính</span>
+                        <strong><%= formatPrice(cartTotal) %></strong>
+                    </div>
+                    <p class="cart-summary-note">Phí vận chuyển sẽ được xác nhận khi hoàn tất đặt hàng.</p>
+                    <div class="cart-summary-total">
+                        <span>Tổng tiền</span>
+                        <strong><%= formatPrice(cartTotal) %></strong>
+                    </div>
+                    <button class="checkout-button" type="button" disabled
+                        title="Chức năng đặt hàng chưa được kết nối">
+                        Tiến hành đặt hàng
+                    </button>
+                </aside>
+            </div>
+        <% } else { %>
+            <section class="empty-cart">
+                <div class="empty-cart-icon" aria-hidden="true">🛒</div>
+                <h2>Giỏ hàng đang trống</h2>
+                <p>Hãy khám phá các sản phẩm và chọn món đồ bạn yêu thích.</p>
+                <a href="/">Khám phá sản phẩm</a>
+            </section>
+        <% } %>
+    </main>
+</body>
+</html>
