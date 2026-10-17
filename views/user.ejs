@@ -7,8 +7,7 @@
     <link rel="stylesheet" href="/css/user.css">
 </head>
 
-<body>
-
+<body id = "top">
     <!-- HEADER -->
     <header class="header">
         <div class="header-container">
@@ -114,7 +113,6 @@
 
         <!-- PRODUCTS -->
         <div class="product-grid">
-
             <% if (products && products.length > 0) { %>
 
                 <% products.forEach(product => { %>
@@ -229,9 +227,8 @@
 
 
     <!-- BACK TO TOP -->
-    <button class="back-top">
-        Lên đầu
-        <span>⌃</span>
+    <button class="back-top" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">
+        Back Top
     </button>
 
 

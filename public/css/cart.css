@@ -111,6 +111,22 @@
     white-space: nowrap;
 }
 
+.remove-cart-item {
+    margin-top: 10px;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: #777;
+    font: inherit;
+    font-size: 13px;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.remove-cart-item:hover {
+    color: #d70018;
+}
+
 .continue-shopping {
     display: inline-block;
     margin-top: 18px;

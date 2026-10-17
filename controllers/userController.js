@@ -225,8 +225,16 @@ const searchProduct = async(req,res) => {
 const getCart = async(req,res) => {
     try {
         const Categories = await Category.findAll();
+        const userId = req.data?.userId
+        const order  = await Order.findOne({
+            where: {user_id: userId, status: 'pending'},
+            include: [{
+                model: OrderItem,
+                include: [Product]
+            }]
+        })
         return res.render('cart', {
-            cartItems: [],
+            cartItems: order ? order.OrderItems : [],
             Categories,
             user: req.data
         });
@@ -253,42 +261,33 @@ const addCart = async(req,res) => {
 
     try {
         const result = await Product.sequelize.transaction(async transaction => {
-            const user = await User.findByPk(userId, {
-                transaction,
-                lock: transaction.LOCK.UPDATE
-            });
-
-            if (!user) {
-                return { status: 401, error: "Tài khoản không còn tồn tại" };
-            }
-
-            const product = await Product.findByPk(productId, {
-                transaction,
-                lock: transaction.LOCK.UPDATE
-            });
-
-            if (!product) {
-                return { status: 404, error: "Không tìm thấy sản phẩm" };
-            }
 
             const order = await Order.findOne({
-                where: { user_id: userId, status: "pending" },
-                order: [['id', 'DESC']],
-                transaction,
-                lock: transaction.LOCK.UPDATE
-            });
+                where: {
+                    user_id: userId, 
+                    status: "pending"
+                },
+                transaction
+            })
 
-            const existingItem = order
-                ? await OrderItem.findOne({
-                    where: { order_id: order.id, product_id: product.id },
-                    transaction,
-                    lock: transaction.LOCK.UPDATE
-                })
-                : null;
-            const updatedQuantity = Number(existingItem?.quantity || 0) + quantity;
+            const product = await Product.findByPk(productId, {transaction})
 
-            if (updatedQuantity > product.stock) {
-                return { status: 400, error: "Số lượng yêu cầu vượt quá tồn kho" };
+            if (!product) {
+                return {status: 404, error: "Không tìm thấy sản phẩm"};
+            }
+            
+            const checkOrderItem = order ? await OrderItem.findOne({
+                    where: {
+                        order_id: order.id,
+                        product_id: productId
+                    },
+                    transaction
+                }): null;
+            
+            const newQuantity = Number(checkOrderItem?.quantity || 0) + quantity;
+
+            if (newQuantity > product.stock) {
+                return {status: 400, error: "Số lượng sản phẩm đã chọn lớn hơn số lượng tồn kho"};
             }
 
             const activeOrder = order || await Order.create({
@@ -297,40 +296,41 @@ const addCart = async(req,res) => {
                 status: "pending"
             }, { transaction });
 
-            if (existingItem) {
-                await existingItem.update({ quantity: updatedQuantity }, { transaction });
-            } else {
+            if (checkOrderItem) {
+                await checkOrderItem.update({
+                    quantity: newQuantity
+                }, { transaction });
+            }else {
                 await OrderItem.create({
                     order_id: activeOrder.id,
-                    product_id: product.id,
-                    quantity,
+                    product_id: productId,
+                    quantity: quantity,
                     price_at_that_time: product.price
                 }, { transaction });
             }
-
-            const orderItems = await OrderItem.findAll({
-                where: { order_id: activeOrder.id },
-                attributes: ['quantity', 'price_at_that_time'],
+            
+            const getOrderItem = await OrderItem.findAll({
+                where: {order_id: activeOrder.id},
                 transaction
-            });
-            const totalInCents = orderItems.reduce((total, item) => {
-                const [whole, fraction = ''] = String(item.price_at_that_time).split('.');
-                const priceInCents = Number(whole) * 100 + Number(fraction.padEnd(2, '0').slice(0, 2));
-                return total + priceInCents * Number(item.quantity);
-            }, 0);
+            })
+
+            let totalAmount = 0;
+
+            for (const item of getOrderItem) {
+                totalAmount += item.quantity * item.price_at_that_time;
+            }
 
             await activeOrder.update({
-                total_amount: (totalInCents / 100).toFixed(2)
-            }, { transaction });
+                total_amount: totalAmount
+            },{ transaction })
 
             return {
                 status: order ? 200 : 201,
                 message: "Đã thêm sản phẩm vào giỏ hàng",
                 orderId: activeOrder.id,
-                quantity: updatedQuantity
+                quantity: newQuantity
             };
         });
-
         if (result.error) {
             return res.status(result.status).json({ error: result.error });
         }
@@ -340,11 +340,19 @@ const addCart = async(req,res) => {
         return res.status(500).json({ error: "Lỗi hệ thống khi thêm vào giỏ hàng" });
     }
 };
+
+// const removeCartItem = async(req, res) => {
+//     const productId = req.query.id
+
+//     const order = await ()
+// };
+
 module.exports = {
     categoryDetailAndRender,
     getHome,
     detailProduct,
     searchProduct,
     getCart,
-    addCart
+    addCart,
+    removeCartItem
 };

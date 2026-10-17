@@ -81,7 +81,7 @@
                     </div>
 
                     <% cartItemsList.forEach(item => { %>
-                        <% const product = item.product; %>
+                        <% const product = item.Product; %>
                         <% const quantity = Number(item.quantity); %>
                         <% const price = Number(item.price_at_that_time); %>
                         <% const lineTotal = Number.isFinite(quantity) && Number.isFinite(price) ? quantity * price : 0; %>
@@ -106,6 +106,9 @@
                                     Đơn giá: <%= Number.isFinite(price) ? formatPrice(price) : 'Chưa có giá' %>
                                 </p>
                                 <p class="cart-item-quantity">Số lượng: <%= Number.isFinite(quantity) ? quantity : 0 %></p>
+                                <button type="button" class="remove-cart-item" id = "deleteCart" data-item-id="<%= item.id %>">
+                                    Xóa khỏi giỏ hàng
+                                </button>
                             </div>
 
                             <strong class="cart-item-total"><%= formatPrice(lineTotal) %></strong>
