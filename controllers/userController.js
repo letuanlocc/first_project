@@ -341,11 +341,25 @@ const addCart = async(req,res) => {
     }
 };
 
-// const removeCartItem = async(req, res) => {
-//     const productId = req.query.id
+const removeCartItem = async(req, res) => {
+    const productId = req.query.id
+    const userId = req.data?.id
 
-//     const order = await ()
-// };
+    const order = await Order.findAll({
+        where: {
+            user_id: userId,
+            status: "pending"
+        }
+    })
+
+    const orderItem = await orderItem.findAll({
+        where:{
+            order_id: order.id,
+            product_id: productId
+        }
+    })
+
+};
 
 module.exports = {
     categoryDetailAndRender,
