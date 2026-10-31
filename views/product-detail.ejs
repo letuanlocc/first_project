@@ -1,306 +1,185 @@
+<%
+    // reviews: [{ rating, content, createdAt, User: { userName } }] (chưa có dữ liệu, truyền từ controller sau)
+    const reviews = Array.isArray(locals.reviews) ? locals.reviews : [];
+    const reviewCount = reviews.length;
+    const averageRating = reviewCount ? reviews.reduce((sum, review) => sum + Number(review.rating), 0) / reviewCount : 0;
+    const averageText = reviewCount ? averageRating.toFixed(1).replace('.', ',') : '–';
+    const inStock = product.stock === undefined || product.stock === null || product.stock > 0;
+    const starSvg = (filled, size) => `<svg width="${size}" height="${size}" viewBox="0 0 24 24" fill="${filled ? '#f59e0b' : 'none'}" stroke="#f59e0b" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true"><polygon points="12 3 14.7 9 21 9.6 16.2 13.8 17.7 20 12 16.8 6.3 20 7.8 13.8 3 9.6 9.3 9"/></svg>`;
+%>
 <!DOCTYPE html>
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title><%= product.name %> - Chi tiết sản phẩm</title>
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/user.css">
     <link rel="stylesheet" href="/css/detail.css">
 </head>
 
-<body>
+<body id="top">
+    <%- include('partials/header') %>
 
-    <!-- ================= HEADER ================= -->
-    <header class="header">
-
-        <div class="header-container">
-
-            <!-- Logo -->
-            <a href="/" class="logo">
-                Phone<span>Shop</span>
-            </a>
-
-            <!-- Danh mục -->
-            <div class="category-dropdown">
-
-                    <button class="category-btn">
-                        ☰ <span>Danh mục</span>
-                    </button>
-
-                <div class="category-list">
-
-                    <% Categories.forEach(Category => { %>
-
-                        <a href="/category/<%= Category.id %>">
-                            <%= Category.name %>
-                        </a>
-
-                    <% }) %>
-
-                </div>
-
-            </div>
-
-            <!-- Location -->
-            <button class="location-btn">
-                ◉ <span>Đà Nẵng</span>
-            </button>
-
-            <!-- Search -->
-            <form class="search-box" action="/" method="GET">
-                <input
-                    type="text"
-                    name="search"
-                    placeholder="Bạn muốn mua gì hôm nay?"
-                >
-                <button type="submit" aria-label="Tìm kiếm">⌕</button>
-            </form>
-
-            <!-- Cart -->
-            <a href="/cart" class="header-link cart">
-                🛒
-                <span>Giỏ hàng</span>
-            </a>
-
-            <!-- Login -->
-            <% if (user) { %>
-
-                <div class="user-menu">
-                    <span class="user-icon">◯</span>
-                    <span><%= user.userName %></span>
-
-                    <form action="/logout" method="POST">
-                        <button type="submit">Đăng xuất</button>
-                    </form>
-                </div>
-
-            <% } else { %>
-
-                <a href="/login" class="login-btn">
-                    ◯ <span>Đăng nhập</span>
-                </a>
-
-            <% } %>
-
-        </div>
-
-    </header>
-
-
-    <!-- ================= MAIN ================= -->
-
-    <main class="detail-container">
-
-        <!-- Breadcrumb -->
-
-        <div class="breadcrumb">
-
+    <main class="page">
+        <nav class="breadcrumb" aria-label="Đường dẫn">
             <a href="/">Trang chủ</a>
+            <span aria-hidden="true">/</span>
+            <span class="current"><%= product.name %></span>
+        </nav>
 
-            <span>/</span>
-
-            <span><%= product.name %></span>
-
-        </div>
-
-
-        <!-- Product title -->
-
-        <h1 class="product-title">
-            <%= product.name %>
-        </h1>
-
-
-        <!-- Rating / actions -->
-
-        <div class="product-actions">
-
-            <span class="product-status">
-                ✓ Hàng mới
-            </span>
-
-            <span class="rating">
-                ⭐ 5
-            </span>
-
-            <span class="review">
-                (0 đánh giá)
-            </span>
-
-            <span class="action-item">
-                ♡ Yêu thích
-            </span>
-
-            <span class="action-item">
-                💬 Hỏi đáp
-            </span>
-
-            <span class="action-item">
-                ⚙ Thông số
-            </span>
-        </div>
-        <!-- ================= PRODUCT ================= -->
-        <div class="product-detail">
-            <!-- LEFT -->
-            <div class="product-left">
-                <div class="product-image-box">
-                    <img
-                        src="<%= product.image_url %>"
-                        alt="<%= product.name %>"
-                    >
-                </div>
+        <section class="detail-card">
+            <div class="detail-media">
+                <img src="<%= product.image_url %>" alt="<%= product.name %>">
             </div>
-            <!-- RIGHT -->
-            <div class="product-right">
-              <!-- Price -->
-                <div class="price-box">
-                    <div>
-                        <div class="current-price">
 
-                            <%= Number(product.price).toLocaleString('vi-VN') %>đ
-                        </div>
-                        <!-- <div class="old-price">
+            <div class="detail-info">
+                <h1 class="detail-title"><%= product.name %></h1>
 
-                            Giá niêm yết
-
-                        </div> -->
-                    </div>
-                    <div class="installment">
-
-                        Hoặc
-
-                        <strong>
-                            Trả góp
-                        </strong>
-
-                    </div>
-
+                <div class="detail-meta">
+                    <span class="badge badge-ok">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>
+                        Hàng mới
+                    </span>
+                    <span class="rating">
+                        <svg width="16" height="16" viewBox="0 0 24 24" stroke-width="1.5" stroke-linejoin="round" aria-hidden="true"><polygon points="12 3 14.7 9 21 9.6 16.2 13.8 17.7 20 12 16.8 6.3 20 7.8 13.8 3 9.6 9.3 9"/></svg>
+                        <%= averageText %>
+                    </span>
+                    <a class="muted" href="#reviews">(<%= reviewCount %> đánh giá)</a>
                 </div>
 
+                <div class="detail-actions">
+                    <button class="btn btn-outline" type="button" data-action-url="/favorites/<%= product.id %>">Yêu thích</button>
+                    <button class="btn btn-outline" type="button">Hỏi đáp</button>
+                    <a class="btn btn-outline" href="#specs">Thông số</a>
+                </div>
 
-                <!-- Stock -->
+                <div class="price-box">
+                    <div class="current-price">
+                        <%= Number.isFinite(Number(product.price)) ? `${Number(product.price).toLocaleString('vi-VN')}đ` : 'Giá liên hệ' %>
+                    </div>
+                    <div class="installment-note">Hoặc <strong>trả góp</strong></div>
+                </div>
 
                 <% if (product.stock !== undefined && product.stock !== null) { %>
-
-                    <div class="stock-box">
-
-                        <% if (product.stock > 0) { %>
-
-                            <span class="stock-success">
-                                ✓ Còn <%= product.stock %> sản phẩm
-                            </span>
-
-                        <% } else { %>
-
-                            <span class="stock-out">
-                                ✕ Hết hàng
-                            </span>
-
-                        <% } %>
-
-                    </div>
-
+                    <% if (product.stock > 0) { %>
+                        <div class="stock stock-success">✓ Còn <%= product.stock %> sản phẩm</div>
+                    <% } else { %>
+                        <div class="stock stock-out">✕ Hết hàng</div>
+                    <% } %>
                 <% } %>
 
-
-                <!-- Buttons -->
+                <% if (inStock) { %>
+                    <div class="qty-row">
+                        <span class="label-strong">Số lượng</span>
+                        <div class="qty-stepper" role="group" aria-label="Chọn số lượng">
+                            <button type="button" id="qtyMinus" aria-label="Giảm số lượng">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14"/></svg>
+                            </button>
+                            <span class="qty-value" id="qtyValue" data-max="<%= product.stock ?? '' %>">1</span>
+                            <button type="button" id="qtyPlus" aria-label="Tăng số lượng">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+                            </button>
+                        </div>
+                        <span class="field-error" id="qtyWarn" role="alert" hidden>Số lượng đã chọn lớn hơn số lượng tồn kho</span>
+                    </div>
+                <% } %>
 
                 <div class="buy-section">
-
-                    <button class="btn-add-cart" id ="addCart" data-product-id="<%= product.id %>">
+                    <button class="btn btn-primary btn-lg" type="button" id="addCart" data-product-id="<%= product.id %>" <%= inStock ? '' : 'disabled' %>>
                         Thêm vào giỏ hàng
                     </button>
-
-                    <button class="btn-buy-now" id ="buyNow">
-                        Mua ngay
-                    </button>
-
+                    <a class="btn btn-dark btn-lg" id="buyNow" href="/checkout">Mua ngay</a>
                 </div>
 
-
-                <!-- Benefits -->
-
-                <div class="benefits">
-
-                    <div class="benefit">
-                        <div>
-                            <strong>Giao hàng nhanh</strong>
-                            <p>Giao hàng tận nơi</p>
-                        </div>
-                    </div>
-
-                    <div class="benefit">
-                        <div>
-                            <strong>Đổi trả dễ dàng</strong>
-                            <p>Hỗ trợ đổi trả sản phẩm</p>
-                        </div>
-                    </div>
-
-                    <div class="benefit">
-                        <div>
-                            <strong>Cam kết chính hãng</strong>
-                            <p>Đảm bảo chất lượng</p>
-                        </div>
-                    </div>
-
-                </div>
-
+                <ul class="benefits">
+                    <li>
+                        <strong>Giao hàng nhanh</strong>
+                        <span>Giao hàng tận nơi</span>
+                    </li>
+                    <li>
+                        <strong>Đổi trả dễ dàng</strong>
+                        <span>Hỗ trợ đổi trả sản phẩm</span>
+                    </li>
+                    <li>
+                        <strong>Cam kết chính hãng</strong>
+                        <span>Đảm bảo chất lượng</span>
+                    </li>
+                </ul>
             </div>
+        </section>
 
-            <div class="technical-specs">
+        <section class="specs-card" id="specs">
+            <h2>Thông số kỹ thuật</h2>
 
-                <div class="specs-header">
-                    <h2>Thông số kỹ thuật</h2>
-
-                    <span class="view-all">
-                        Xem tất cả ›
-                    </span>
-                </div>
-
-                <% if (productDescriptions && productDescriptions.length > 0) { %>
-
-                    <div class="specs-table">
-
-                        <% productDescriptions.forEach(specification => { %>
-
-                            <div class="spec-row">
-
-                                <div class="spec-name">
-                                    <%= specification.key %>
-                                </div>
-
-                                <div class="spec-value">
-                                    <%= specification.value %>
-                                </div>
-
+            <% if (productDescriptions && productDescriptions.length > 0) { %>
+                <div class="specs-table">
+                    <% productDescriptions.forEach(specification => { %>
+                        <div class="spec-row">
+                            <div class="spec-name"><%= specification.key %></div>
+                            <div class="spec-value">
+                                <% String(specification.value ?? '').split(/\r?\n|;|\|/).map(part => part.trim()).filter(Boolean).forEach(part => { %>
+                                    <div class="spec-line"><%= part %></div>
+                                <% }) %>
                             </div>
+                        </div>
+                    <% }) %>
+                </div>
+            <% } else { %>
+                <p class="muted">Chưa có thông số kỹ thuật cho sản phẩm này.</p>
+            <% } %>
+        </section>
 
-                        <% }) %>
+        <section class="specs-card" id="reviews">
+            <h2>Đánh giá sản phẩm</h2>
 
+            <div class="review-summary">
+                <div class="review-score">
+                    <div class="review-score-number"><strong><%= averageText %></strong> <span>/ 5</span></div>
+                    <div class="stars" role="img" aria-label="Điểm trung bình <%= averageText %> trên 5 sao">
+                        <% for (let i = 1; i <= 5; i++) { %><%- starSvg(i <= Math.round(averageRating), 20) %><% } %>
                     </div>
+                    <span class="muted"><%= reviewCount %> đánh giá</span>
+                </div>
 
-                <% } else { %>
-
-                    <p class="empty-description">
-                        Chưa có thông số kỹ thuật cho sản phẩm này.
-                    </p>
-
-                <% } %>
-
+                <div class="review-bars">
+                    <% [5, 4, 3, 2, 1].forEach(star => { %>
+                        <% const starCount = reviews.filter(review => Number(review.rating) === star).length; %>
+                        <div class="review-bar-row">
+                            <span><%= star %> sao</span>
+                            <div class="review-bar"><div style="width: <%= reviewCount ? Math.round(starCount / reviewCount * 100) : 0 %>%"></div></div>
+                            <span class="muted"><%= starCount %></span>
+                        </div>
+                    <% }) %>
+                </div>
             </div>
 
-        </div>
-
+            <div class="review-list">
+                <% reviews.forEach(review => { %>
+                    <article class="review-item">
+                        <span class="user-avatar" aria-hidden="true"><%= String((review.User && review.User.userName) || '?').trim().charAt(0).toUpperCase() %></span>
+                        <div class="review-body">
+                            <div class="review-meta">
+                                <strong><%= review.User ? review.User.userName : 'Khách hàng' %></strong>
+                                <span class="badge badge-ok">Đã mua hàng</span>
+                                <span class="muted"><%= review.createdAt ? new Date(review.createdAt).toLocaleDateString('vi-VN') : '' %></span>
+                            </div>
+                            <div class="stars" role="img" aria-label="<%= review.rating %> trên 5 sao">
+                                <% for (let i = 1; i <= 5; i++) { %><%- starSvg(i <= review.rating, 16) %><% } %>
+                            </div>
+                            <p><%= review.content %></p>
+                        </div>
+                    </article>
+                <% }) %>
+                <% if (reviewCount === 0) { %>
+                    <p class="muted">Sản phẩm này chưa có đánh giá nào.</p>
+                <% } %>
+            </div>
+        </section>
     </main>
 
-
-    <!-- Contact -->
-
-    <button class="contact-button">
-        ☎ Liên hệ
-    </button>
+    <%- include('partials/floating') %>
 <script src="/js/user.js"></script>
 </body>
 </html>

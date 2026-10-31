@@ -1,0 +1,131 @@
+<%
+    const items = Array.isArray(locals.cartItems) ? locals.cartItems : [];
+    const addressList = Array.isArray(locals.addresses) ? locals.addresses : [];
+    const formatPrice = value => `${Number(value || 0).toLocaleString('vi-VN')}đ`;
+    const total = items.reduce((sum, item) => sum + Number(item.quantity) * Number(item.price_at_that_time), 0);
+    const defaultAddress = addressList.find(address => address.is_default) || addressList[0];
+%>
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thanh toán - PhoneShop</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/user.css">
+    <link rel="stylesheet" href="/css/account.css">
+</head>
+<body>
+    <%- include('partials/header') %>
+
+    <main class="page">
+        <nav class="breadcrumb" aria-label="Đường dẫn">
+            <a href="/">Trang chủ</a>
+            <span aria-hidden="true">/</span>
+            <a href="/cart">Giỏ hàng</a>
+            <span aria-hidden="true">/</span>
+            <span class="current">Thanh toán</span>
+        </nav>
+
+        <h1 class="page-title">Thanh toán</h1>
+
+        <% if (items.length === 0) { %>
+            <section class="empty-box big">
+                <h2>Chưa có sản phẩm để thanh toán</h2>
+                <p>Hãy thêm sản phẩm vào giỏ hàng trước khi đặt hàng.</p>
+                <a class="btn btn-primary btn-lg" href="/">Khám phá sản phẩm</a>
+            </section>
+        <% } else { %>
+            <form class="checkout-layout" data-ajax data-redirect="/profile#orders" action="/checkout" method="POST">
+
+                <div class="checkout-main">
+                    <section class="sub-card">
+                        <div class="panel-head">
+                            <h2>Địa chỉ nhận hàng</h2>
+                            <a class="link-accent" href="/profile#addresses">Quản lý địa chỉ</a>
+                        </div>
+
+                        <% if (addressList.length > 0) { %>
+                            <div class="radio-list" role="radiogroup" aria-label="Chọn địa chỉ nhận hàng">
+                                <% addressList.forEach(address => { %>
+                                    <label class="radio-card">
+                                        <input type="radio" name="address_id" value="<%= address.id %>" <%= defaultAddress && defaultAddress.id === address.id ? 'checked' : '' %>>
+                                        <span class="radio-text">
+                                            <span class="address-head">
+                                                <strong><%= address.name %></strong>
+                                                <span class="muted"><%= address.phone %></span>
+                                                <% if (address.is_default) { %><span class="tag">Mặc định</span><% } %>
+                                            </span>
+                                            <span><%= address.address %></span>
+                                        </span>
+                                    </label>
+                                <% }) %>
+                            </div>
+                        <% } else { %>
+                            <div class="form-grid">
+                                <div class="field">
+                                    <label for="co-name">Người nhận</label>
+                                    <input class="input" id="co-name" name="name" type="text" value="<%= (locals.user && user.userName) || '' %>" required>
+                                </div>
+                                <div class="field">
+                                    <label for="co-phone">Số điện thoại</label>
+                                    <input class="input" id="co-phone" name="phone" type="tel" required>
+                                </div>
+                                <div class="field full">
+                                    <label for="co-address">Địa chỉ nhận hàng</label>
+                                    <input class="input" id="co-address" name="address" type="text" placeholder="Số nhà, đường, phường/xã, quận/huyện, tỉnh/thành phố" required>
+                                </div>
+                            </div>
+                        <% } %>
+                    </section>
+
+                    <section class="sub-card">
+                        <h2>Phương thức thanh toán</h2>
+                        <label class="radio-card is-selected">
+                            <input type="radio" name="payment_method" value="cod" checked>
+                            <span class="radio-text">
+                                <strong>Thanh toán khi nhận hàng (COD)</strong>
+                                <span class="muted">Bạn thanh toán cho người giao hàng khi nhận máy.</span>
+                            </span>
+                        </label>
+                    </section>
+                </div>
+
+                <aside class="cart-summary">
+                    <h2>Đơn hàng của bạn</h2>
+
+                    <div class="order-items">
+                        <% items.forEach(item => { %>
+                            <div class="order-item">
+                                <span class="order-thumb">
+                                    <% if (item.Product && item.Product.image_url) { %><img src="<%= item.Product.image_url %>" alt="<%= item.Product.name %>"><% } %>
+                                </span>
+                                <div class="order-item-text">
+                                    <strong><%= item.Product ? item.Product.name : 'Sản phẩm không còn khả dụng' %></strong>
+                                    <span class="muted">Số lượng: <%= item.quantity %></span>
+                                </div>
+                                <strong><%= formatPrice(item.quantity * item.price_at_that_time) %></strong>
+                            </div>
+                        <% }) %>
+                    </div>
+
+                    <div class="cart-summary-row">
+                        <span>Tạm tính</span>
+                        <strong><%= formatPrice(total) %></strong>
+                    </div>
+                    <div class="cart-summary-total">
+                        <span>Tổng tiền</span>
+                        <strong><%= formatPrice(total) %></strong>
+                    </div>
+
+                    <button class="btn btn-primary btn-lg" type="submit">Đặt hàng</button>
+                    <p class="hint">Đơn hàng sẽ ở trạng thái "Chờ xác nhận" cho đến khi cửa hàng xác nhận.</p>
+                </aside>
+            </form>
+        <% } %>
+    </main>
+
+<script src="/js/user.js"></script>
+</body>
+</html>

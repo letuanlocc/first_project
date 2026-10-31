@@ -1,189 +1,212 @@
-
 <!DOCTYPE html>
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Admin Page</title>
+    <title>Trang quản trị - PhoneShop</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/user.css">
     <link rel="stylesheet" href="/css/admin.css">
 </head>
 <body>
 
-<div class="container">
-
-    <!-- Header -->
-    <div class="header">
-        <div>
-            <h1>Admin Page</h1>
-            <p>Quản lý danh mục và sản phẩm</p>
+<header class="admin-header">
+    <div class="admin-header-inner">
+        <div class="admin-title">
+            <span class="logo-mark" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="2.5" width="10" height="19" rx="2.5"/><path d="M11 18h2"/></svg>
+            </span>
+            <div>
+                <h1>Trang quản trị</h1>
+                <p>Quản lý danh mục và sản phẩm</p>
+            </div>
         </div>
 
-        <form class="logout" action="/logout" method="POST">
-            <button type="submit">Đăng xuất</button>
+        <form action="/logout" method="POST">
+            <button class="btn btn-outline" type="submit">Đăng xuất</button>
         </form>
     </div>
+</header>
 
+<%
+    // orders: [{ id, createdAt, status, total_amount, shipping_address, phone, User: { userName } }] (chưa có dữ liệu, truyền từ route sau)
+    const orders = Array.isArray(locals.orders) ? locals.orders : [];
+    const statusMap = {
+        processing: 'Chờ xác nhận',
+        shipping: 'Đang giao',
+        delivered: 'Đã giao',
+        cancelled: 'Đã hủy'
+    };
+    const countByStatus = status => orders.filter(order => order.status === status).length;
+%>
+<main class="admin-main">
 
-    <!-- Thêm danh mục -->
-    <div class="card">
-        <h2>Thêm danh mục</h2>
-        <form enctype="multipart/form-data">
-            <div class="form-group">
-                <label for="categoryName">Tên danh mục</label>
-
-                <input
-                    type="text"
-                    id="categoryName"
-                    name="name"
-                    placeholder="Nhập tên danh mục"
-                    required
-                >
-            </div>
-
-            <button class="btn btn-category" type="button" id="addCategoryBtn">
-                + Thêm danh mục
-            </button>
-            <label for="categoryToDelete">Danh mục cần xóa</label>
-            <select id="categoryToDelete">
-                <option value="">-- Chọn danh mục --</option>
-                <% Categories.forEach(Category => { %>
-                    <option value="<%= Category.id %>"><%= Category.name %></option>
-                <% }) %>
-            </select>
-            <button class="btn btn-category" type="button" id="deleteCategoryBtn">
-                + Xóa danh mục
-            </button>
-
-        </form>
+    <div class="admin-tabs" role="tablist" aria-label="Khu vực quản trị">
+        <button type="button" class="admin-tab active" role="tab" data-admin-tab="products">Sản phẩm &amp; danh mục</button>
+        <button type="button" class="admin-tab" role="tab" data-admin-tab="orders">Đơn hàng (<%= orders.length %>)</button>
     </div>
 
+    <div data-admin-panel="products">
+    <div class="admin-grid">
 
-    <!-- Thêm sản phẩm -->
-    <div class="card">
-        <h2>Thêm sản phẩm</h2>
-        <form>
+        <!-- Danh mục -->
+        <section class="card">
+            <h2>Danh mục</h2>
+
             <div class="form-group">
-                <label for="productName">Tên sản phẩm</label>
-
-                <input
-                    type="text"
-                    id="productName"
-                    name="name"
-                    placeholder="Nhập tên sản phẩm"
-                    required
-                >
+                <label for="categoryName">Thêm danh mục</label>
+                <input class="input" type="text" id="categoryName" name="name" placeholder="Nhập tên danh mục" required>
+                <button class="btn btn-primary" type="button" id="addCategoryBtn">Thêm danh mục</button>
             </div>
 
+            <hr>
 
             <div class="form-group">
-                <label for="price">Giá</label>
-
-                <input
-                    type="number"
-                    id="price"
-                    name="price"
-                    placeholder="Nhập giá sản phẩm"
-                    min="0"
-                    required
-                >
-            </div>
-
-
-            <div class="form-group">
-                <label for="specifications">Thông số kỹ thuật (JSON)</label>
-
-                <textarea
-                    id="specifications"
-                    name="specifications"
-                    placeholder='{"Kích thước màn hình":"6.7 inches","Bộ nhớ trong":"256 GB"}'
-                ></textarea>
-            </div>
-
-
-            <div class="form-group">
-                <label for="image">Ảnh sản phẩm</label>
-
-                <input 
-                    type="file"
-                    id="image"
-                    name="image"
-                    accept="image/*"
-                >
-                
-            </div>
-
-
-            <div class="form-group">
-                <label for="category">Danh mục</label>
-
-                <select name="category_id" id="category" required>
-
-                    <option value="">
-                        -- Chọn danh mục --
-                    </option>
-
+                <label for="categoryToDelete">Xóa danh mục</label>
+                <select class="input" id="categoryToDelete">
+                    <option value="">-- Chọn danh mục --</option>
                     <% Categories.forEach(Category => { %>
-
-                        <option value="<%= Category.id %>">
-                            <%= Category.name %>
-                        </option>
-
+                        <option value="<%= Category.id %>"><%= Category.name %></option>
                     <% }) %>
-
                 </select>
+                <button class="btn btn-danger" type="button" id="deleteCategoryBtn">Xóa danh mục</button>
+            </div>
+        </section>
+
+        <!-- Sản phẩm -->
+        <section class="card">
+            <h2>Sản phẩm</h2>
+
+            <div class="form-grid">
+                <div class="form-group full">
+                    <label for="productName">Tên sản phẩm</label>
+                    <input class="input" type="text" id="productName" name="name" placeholder="Nhập tên sản phẩm" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="price">Giá</label>
+                    <input class="input" type="number" id="price" name="price" placeholder="Nhập giá sản phẩm" min="0" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="stock">Số lượng</label>
+                    <input class="input" type="number" id="stock" name="stock" placeholder="Nhập số lượng" min="0" value="0">
+                </div>
+
+                <div class="form-group">
+                    <label for="category">Danh mục</label>
+                    <select class="input" name="category_id" id="category" required>
+                        <option value="">-- Chọn danh mục --</option>
+                        <% Categories.forEach(Category => { %>
+                            <option value="<%= Category.id %>"><%= Category.name %></option>
+                        <% }) %>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="image">Ảnh sản phẩm</label>
+                    <input class="input file-input" type="file" id="image" name="image" accept="image/*">
+                </div>
+
+                <div class="form-group full">
+                    <label for="specifications">Thông số kỹ thuật <span class="hint">(JSON)</span></label>
+                    <textarea class="input" id="specifications" name="specifications" rows="4" placeholder='{"Kích thước màn hình":"6.7 inches","Bộ nhớ trong":"256 GB"}'></textarea>
+                </div>
             </div>
 
-
-            <div class="form-group">
-                <label for="stock">Số lượng</label>
-
-                <input
-                    type="number"
-                    id="stock"
-                    name="stock"
-                    placeholder="Nhập số lượng"
-                    min="0"
-                    value="0"
-                >
+            <div class="action-row">
+                <button class="btn btn-primary" type="button" id="addProductBtn">Thêm sản phẩm</button>
+                <button class="btn btn-outline" type="button" id="updateProductBtn">Cập nhật sản phẩm</button>
+                <button class="btn btn-outline" type="button" id="searchProductBtn">Tìm sản phẩm</button>
+                <button class="btn btn-danger" type="button" id="deleteProductBtn">Xóa sản phẩm</button>
+                <button class="btn btn-dark" type="button" id="viewProductBtn">Xem tất cả sản phẩm</button>
             </div>
-
-
-            <button class="btn btn-product" type="button" id= "addProductBtn">
-                + Thêm sản phẩm
-            </button>
-             <button class="btn btn-product" type="button" id="searchProductBtn">
-                + Tìm sản phẩm
-            </button>
-             <button class="btn btn-product" type="button" id="updateProductBtn">
-                + Cập nhật sản phẩm
-            </button>
-            <button class="btn btn-product" type="button" id="deleteProductBtn">
-                + Xóa sản phẩm
-            </button>
-            <button class = "btn btn-product" type= "button" id="viewProductBtn">    
-                + Xem tất cả sản phẩm
-            </button>
-        </form>
+        </section>
     </div>
-    <div id="productTableContainer" style="display: none; margin-top: 20px; overflow-x: auto;">
-            <table border="1" cellpadding="10" cellspacing="0" style="width: 100%; border-collapse: collapse;">
+
+    <!-- Bảng sản phẩm (hiện khi bấm "Xem tất cả sản phẩm") -->
+    <section class="card" id="productTableContainer" style="display: none;">
+        <h2>Tất cả sản phẩm</h2>
+        <div class="table-wrap">
+            <table>
                 <thead>
-                    <tr style="background-color: #f2f2f2;">
-                        <th>ID</th>
-                        <th>Tên sản phẩm</th>
-                        <th>Giá</th>
-                        <th>Số lượng</th>
-                        <th>Thao tác</th>
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Tên sản phẩm</th>
+                        <th scope="col">Giá</th>
+                        <th scope="col">Số lượng</th>
+                        <th scope="col">Thao tác</th>
                     </tr>
                 </thead>
                 <tbody id="productTableBody">
-                    <!-- Dữ liệu sản phẩm từ JS sẽ được đổ vào đây sau -->
+                    <!-- Dữ liệu sản phẩm từ JS sẽ được đổ vào đây -->
                 </tbody>
             </table>
         </div>
+    </section>
     </div>
-</div>
+
+    <!-- Đơn hàng -->
+    <div data-admin-panel="orders" hidden>
+        <section class="card">
+            <div class="card-head">
+                <h2>Đơn hàng</h2>
+                <div class="chip-row" id="adminOrderFilters">
+                    <button type="button" class="sort-btn active" data-filter="all">Tất cả (<%= orders.length %>)</button>
+                    <button type="button" class="sort-btn" data-filter="processing">Chờ xác nhận (<%= countByStatus('processing') %>)</button>
+                    <button type="button" class="sort-btn" data-filter="shipping">Đang giao (<%= countByStatus('shipping') %>)</button>
+                    <button type="button" class="sort-btn" data-filter="delivered">Đã giao (<%= countByStatus('delivered') %>)</button>
+                    <button type="button" class="sort-btn" data-filter="cancelled">Đã hủy (<%= countByStatus('cancelled') %>)</button>
+                </div>
+            </div>
+
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th scope="col">Mã đơn</th>
+                            <th scope="col">Khách hàng</th>
+                            <th scope="col">Giao đến</th>
+                            <th scope="col">Tổng tiền</th>
+                            <th scope="col">Trạng thái</th>
+                            <th scope="col">Thao tác</th>
+                        </tr>
+                    </thead>
+                    <tbody id="adminOrderBody">
+                        <% orders.forEach(order => { %>
+                            <tr data-status="<%= order.status %>">
+                                <td>
+                                    <strong>DH<%= String(order.id).padStart(4, '0') %></strong>
+                                    <div class="cell-sub"><%= order.createdAt ? new Date(order.createdAt).toLocaleDateString('vi-VN') : '' %></div>
+                                </td>
+                                <td>
+                                    <%= order.User ? order.User.userName : '' %>
+                                    <div class="cell-sub"><%= order.phone || '' %></div>
+                                </td>
+                                <td class="cell-wide"><%= order.shipping_address || '' %></td>
+                                <td><strong><%= Number(order.total_amount || 0).toLocaleString('vi-VN') %>đ</strong></td>
+                                <td><span class="status-badge status-<%= order.status %>"><%= statusMap[order.status] || order.status %></span></td>
+                                <td>
+                                    <% if (order.status === 'processing') { %>
+                                        <button type="button" class="btn btn-primary btn-sm" data-action-url="/admin/orders/<%= order.id %>/status" data-method="PATCH" data-body='{"status":"shipping"}'>Xác nhận &amp; giao</button>
+                                    <% } %>
+                                    <% if (order.status === 'shipping') { %>
+                                        <button type="button" class="btn btn-outline btn-sm" data-action-url="/admin/orders/<%= order.id %>/status" data-method="PATCH" data-body='{"status":"delivered"}'>Đã giao</button>
+                                    <% } %>
+                                    <% if (order.status === 'processing' || order.status === 'shipping') { %>
+                                        <button type="button" class="btn btn-danger btn-sm" data-action-url="/admin/orders/<%= order.id %>/status" data-method="PATCH" data-body='{"status":"cancelled"}'>Hủy</button>
+                                    <% } %>
+                                </td>
+                            </tr>
+                        <% }) %>
+                    </tbody>
+                </table>
+                <div class="empty-box" id="adminOrderEmpty" <%= orders.length ? 'hidden' : '' %>>Chưa có đơn hàng nào.</div>
+            </div>
+        </section>
+    </div>
+</main>
 
 
 <!-- Alert -->

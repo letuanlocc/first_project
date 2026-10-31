@@ -1,7 +1,7 @@
 
 const { Category, Product, ProductDescription, OrderItem, Order, User} = require('../models/index');
 const { Op } = require("sequelize");
-
+const { Sequelize } = require('sequelize');
 const categoryDetailAndRender = async (req, res) => {
     try {
         const categoryId = req.params.id;
@@ -249,6 +249,10 @@ const addCart = async(req,res) => {
     const quantity = Number(req.body.quantity);
     const userId = Number(req.data?.userId);
 
+    // if(!userId){
+    //    return res.redirect("/login");
+    // }
+
     if (!Number.isInteger(productId) || productId <= 0) {
         return res.status(400).json({ error: "Mã sản phẩm không hợp lệ" });
     }
@@ -342,23 +346,72 @@ const addCart = async(req,res) => {
 };
 
 const removeCartItem = async(req, res) => {
-    const productId = req.query.id
-    const userId = req.data?.id
+    const productId = Number(req.params.id)
+    const userId = Number(req.data?.userId)
 
-    const order = await Order.findAll({
-        where: {
-            user_id: userId,
-            status: "pending"
-        }
-    })
+    if (!Number.isInteger(productId) || productId <= 0) {
+        return res.status(400).json({ error: "Mã sản phẩm không hợp lệ" });
+    }
+    if (!Number.isInteger(userId) || userId <= 0) {
+        return res.status(401).json({ error: "Vui lòng đăng nhập lại" });
+    }
 
-    const orderItem = await orderItem.findAll({
-        where:{
-            order_id: order.id,
-            product_id: productId
-        }
-    })
+    try{
+        const result = await Product.sequelize.transaction(async (transaction) => {
+            const order = await Order.findOne({
+                where: {
+                    user_id: userId,
+                    status: "pending"
+                },
+                 transaction
+            })
+             if (!order) {
+                return { status: 404, error: "Không tìm thấy giỏ hàng" };
+            }
+            const orderItem = await OrderItem.findOne({
+                where:{
+                    order_id: order.id,
+                    product_id: productId
+                },
+                transaction
+            })
+            if (!orderItem) {
+                return { status: 404, error: "Sản phẩm không có trong giỏ hàng" };
+            }
 
+            if(orderItem.quantity > 1){
+               await orderItem.update({quantity: orderItem.quantity - 1},{transaction})
+            }else{
+                await orderItem.destroy({transaction})
+            }
+
+            const remainingItems = await OrderItem.findAll({
+                where: {order_id: order.id},
+                transaction
+            })
+
+            if(remainingItems.length === 0){
+                await order.destroy({transaction})
+                return { status: 200, message: "Đã xóa giỏ hàng", orderDeleted: true };
+            }
+
+            let totalAmount = 0
+            for(const i of remainingItems){
+                totalAmount += i.quantity * i.price_at_that_time
+            }
+
+            await order.update({total_amount: totalAmount}, {transaction})
+
+            return { status: 200, message: "Đã xóa sản phẩm khỏi giỏ hàng", totalAmount };
+            })
+            if (result.error) {
+                return res.status(result.status).json({ error: result.error });
+            }
+             return res.status(result.status).json(result);
+    }catch(error){
+        console.error("Lỗi xóa sản phẩm khỏi giỏ hàng:", error);
+        return res.status(500).json({ error: "Lỗi hệ thống khi xóa sản phẩm" });
+    }
 };
 
 module.exports = {
