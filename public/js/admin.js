@@ -284,3 +284,36 @@ productTableBody.addEventListener("click" , async(e) =>{
     }
 })
 
+/// tabs & đơn hàng
+
+const adminTabs = document.querySelectorAll('[data-admin-tab]');
+const adminPanels = document.querySelectorAll('[data-admin-panel]');
+
+adminTabs.forEach((tab) => {
+    tab.addEventListener("click", () => {
+        adminTabs.forEach((other) => other.classList.toggle('active', other === tab));
+        adminPanels.forEach((panel) => {
+            panel.hidden = panel.dataset.adminPanel !== tab.dataset.adminTab;
+        });
+    });
+});
+
+const adminOrderFilters = document.querySelectorAll('#adminOrderFilters [data-filter]');
+const adminOrderRows = document.querySelectorAll('#adminOrderBody tr');
+const adminOrderEmpty = document.getElementById('adminOrderEmpty');
+
+adminOrderFilters.forEach((button) => {
+    button.addEventListener("click", () => {
+        const filter = button.dataset.filter;
+        let visible = 0;
+
+        adminOrderFilters.forEach((other) => other.classList.toggle('active', other === button));
+        adminOrderRows.forEach((row) => {
+            const show = filter === 'all' || row.dataset.status === filter;
+            row.hidden = !show;
+            if (show) visible += 1;
+        });
+        adminOrderEmpty.hidden = visible > 0;
+    });
+});
+

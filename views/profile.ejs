@@ -1,0 +1,347 @@
+<%
+    const profileUser = locals.user || {};
+    const addressList = Array.isArray(locals.addresses) ? locals.addresses : [];
+    const orderList = Array.isArray(locals.orders) ? locals.orders : [];
+    const favoriteList = Array.isArray(locals.favorites) ? locals.favorites : [];
+    const reviewList = Array.isArray(locals.reviews) ? locals.reviews : [];
+    const pendingList = Array.isArray(locals.pending) ? locals.pending : [];
+    const formatPrice = value => `${Number(value || 0).toLocaleString('vi-VN')}đ`;
+    const formatDate = value => value ? new Date(value).toLocaleDateString('vi-VN') : '';
+    const statusMap = {
+        processing: 'Chờ xác nhận',
+        shipping: 'Đang giao',
+        delivered: 'Đã giao',
+        cancelled: 'Đã hủy'
+    };
+    const orderCount = status => orderList.filter(order => order.status === status).length;
+    const starIcon = filled => `<svg width="16" height="16" viewBox="0 0 24 24" fill="${filled ? '#f59e0b' : 'none'}" stroke="#f59e0b" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true"><polygon points="12 3 14.7 9 21 9.6 16.2 13.8 17.7 20 12 16.8 6.3 20 7.8 13.8 3 9.6 9.3 9"/></svg>`;
+%>
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tài khoản của tôi - PhoneShop</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/user.css">
+    <link rel="stylesheet" href="/css/account.css">
+</head>
+<body>
+    <%- include('partials/header') %>
+
+    <main class="page">
+        <nav class="breadcrumb" aria-label="Đường dẫn">
+            <a href="/">Trang chủ</a>
+            <span aria-hidden="true">/</span>
+            <span class="current">Tài khoản của tôi</span>
+        </nav>
+
+        <div class="account-layout">
+
+            <!-- THANH BÊN -->
+            <aside class="account-side">
+                <div class="account-user">
+                    <span class="user-avatar user-avatar-lg" aria-hidden="true"><%= String(profileUser.userName || '?').trim().charAt(0).toUpperCase() %></span>
+                    <div class="account-user-text">
+                        <strong><%= profileUser.userName || '' %></strong>
+                        <span><%= profileUser.email || '' %></span>
+                    </div>
+                </div>
+
+                <nav class="account-nav" aria-label="Menu tài khoản">
+                    <button type="button" class="account-nav-item" data-tab="info">Thông tin cá nhân</button>
+                    <button type="button" class="account-nav-item" data-tab="addresses">
+                        Địa chỉ giao hàng <span class="count"><%= addressList.length %></span>
+                    </button>
+                    <button type="button" class="account-nav-item" data-tab="orders">
+                        Đơn hàng của tôi <span class="count"><%= orderList.length %></span>
+                    </button>
+                    <button type="button" class="account-nav-item" data-tab="favorites">
+                        Sản phẩm yêu thích <span class="count"><%= favoriteList.length %></span>
+                    </button>
+                    <button type="button" class="account-nav-item" data-tab="reviews">
+                        Đánh giá của tôi <span class="count"><%= reviewList.length %></span>
+                    </button>
+                </nav>
+            </aside>
+
+            <section class="account-content">
+
+                <!-- ===== THÔNG TIN CÁ NHÂN ===== -->
+                <div class="panel" data-panel="info" hidden>
+                    <h1 class="panel-title">Thông tin cá nhân</h1>
+                    <form class="form-grid" data-ajax action="/profile/info" method="POST">
+                        <div class="field">
+                            <label for="profile-name">Họ và tên</label>
+                            <input class="input" id="profile-name" name="name" type="text" value="<%= profileUser.userName || '' %>" required>
+                        </div>
+                        <div class="field">
+                            <label for="profile-phone">Số điện thoại</label>
+                            <input class="input" id="profile-phone" name="phone" type="tel" value="<%= profileUser.phone || '' %>">
+                        </div>
+                        <div class="field full">
+                            <label for="profile-email">Email</label>
+                            <input class="input" id="profile-email" type="email" value="<%= profileUser.email || '' %>" readonly>
+                            <span class="hint">Email dùng để đăng nhập nên không thể thay đổi.</span>
+                        </div>
+                        <div class="full">
+                            <button class="btn btn-primary" type="submit">Lưu thay đổi</button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- ===== ĐỊA CHỈ ===== -->
+                <div class="panel" data-panel="addresses" hidden>
+                    <div class="panel-head">
+                        <div>
+                            <h1 class="panel-title">Địa chỉ giao hàng</h1>
+                            <p class="hint">Địa chỉ mặc định sẽ được dùng khi đặt hàng.</p>
+                        </div>
+                        <button type="button" class="btn btn-primary" id="openAddressForm">+ Thêm địa chỉ</button>
+                    </div>
+
+                    <form class="address-form" id="addressForm" data-ajax action="/profile/addresses" method="POST" hidden>
+                        <h2>Địa chỉ mới</h2>
+                        <div class="form-grid">
+                            <div class="field">
+                                <label for="addr-name">Người nhận</label>
+                                <input class="input" id="addr-name" name="name" type="text" required>
+                            </div>
+                            <div class="field">
+                                <label for="addr-phone">Số điện thoại</label>
+                                <input class="input" id="addr-phone" name="phone" type="tel" required>
+                            </div>
+                            <div class="field">
+                                <label for="addr-city">Tỉnh / Thành phố</label>
+                                <input class="input" id="addr-city" name="city" type="text">
+                            </div>
+                            <div class="field">
+                                <label for="addr-district">Quận / Huyện</label>
+                                <input class="input" id="addr-district" name="district" type="text">
+                            </div>
+                            <div class="field">
+                                <label for="addr-ward">Phường / Xã</label>
+                                <input class="input" id="addr-ward" name="ward" type="text">
+                            </div>
+                            <div class="field">
+                                <label for="addr-street">Số nhà, tên đường</label>
+                                <input class="input" id="addr-street" name="street" type="text" required>
+                            </div>
+                            <label class="check full">
+                                <input type="checkbox" name="is_default"> Đặt làm địa chỉ mặc định
+                            </label>
+                        </div>
+                        <div class="row-actions">
+                            <button class="btn btn-primary" type="submit">Lưu địa chỉ</button>
+                            <button class="btn btn-outline" type="button" id="closeAddressForm">Hủy</button>
+                        </div>
+                    </form>
+
+                    <div class="address-list">
+                        <% addressList.forEach(address => { %>
+                            <article class="address-card <%= address.is_default ? 'is-default' : '' %>">
+                                <div class="address-main">
+                                    <div class="address-head">
+                                        <strong><%= address.name %></strong>
+                                        <span class="muted"><%= address.phone %></span>
+                                        <% if (address.is_default) { %><span class="tag">Mặc định</span><% } %>
+                                    </div>
+                                    <p><%= address.address %></p>
+                                </div>
+                                <div class="row-actions">
+                                    <% if (!address.is_default) { %>
+                                        <button type="button" class="btn btn-outline btn-sm"
+                                            data-action-url="/profile/addresses/<%= address.id %>/default">Đặt làm mặc định</button>
+                                    <% } %>
+                                    <span class="confirm-slot">
+                                        <button type="button" class="btn btn-danger btn-sm js-ask">Xóa</button>
+                                        <span class="confirm-box" hidden>
+                                            <button type="button" class="btn btn-danger-solid btn-sm"
+                                                data-action-url="/profile/addresses/<%= address.id %>" data-method="DELETE">Xác nhận xóa</button>
+                                            <button type="button" class="btn btn-outline btn-sm js-keep">Giữ lại</button>
+                                        </span>
+                                    </span>
+                                </div>
+                            </article>
+                        <% }) %>
+                        <% if (addressList.length === 0) { %>
+                            <div class="empty-box">Bạn chưa có địa chỉ giao hàng nào. Hãy thêm địa chỉ đầu tiên.</div>
+                        <% } %>
+                    </div>
+                </div>
+
+                <!-- ===== ĐƠN HÀNG ===== -->
+                <div class="panel" data-panel="orders" hidden>
+                    <h1 class="panel-title">Lịch sử mua hàng</h1>
+                    <div class="chip-row" id="orderFilters">
+                        <button type="button" class="sort-btn active" data-filter="all">Tất cả (<%= orderList.length %>)</button>
+                        <button type="button" class="sort-btn" data-filter="processing">Chờ xác nhận (<%= orderCount('processing') %>)</button>
+                        <button type="button" class="sort-btn" data-filter="shipping">Đang giao (<%= orderCount('shipping') %>)</button>
+                        <button type="button" class="sort-btn" data-filter="delivered">Đã giao (<%= orderCount('delivered') %>)</button>
+                        <button type="button" class="sort-btn" data-filter="cancelled">Đã hủy (<%= orderCount('cancelled') %>)</button>
+                    </div>
+
+                    <div class="order-list" id="orderList">
+                        <% orderList.forEach(order => { %>
+                            <article class="order-card" data-status="<%= order.status %>">
+                                <header class="order-head">
+                                    <span class="muted">Mã đơn <strong>DH<%= String(order.id).padStart(4, '0') %></strong> · <%= formatDate(order.createdAt) %></span>
+                                    <span class="status-badge status-<%= order.status %>"><%= statusMap[order.status] || order.status %></span>
+                                </header>
+
+                                <div class="order-items">
+                                    <% (order.OrderItems || []).forEach(item => { %>
+                                        <div class="order-item">
+                                            <span class="order-thumb">
+                                                <% if (item.Product && item.Product.image_url) { %>
+                                                    <img src="<%= item.Product.image_url %>" alt="<%= item.Product.name %>">
+                                                <% } %>
+                                            </span>
+                                            <div class="order-item-text">
+                                                <strong><%= item.Product ? item.Product.name : 'Sản phẩm không còn khả dụng' %></strong>
+                                                <span class="muted">Số lượng: <%= item.quantity %></span>
+                                            </div>
+                                            <strong><%= formatPrice(item.quantity * item.price_at_that_time) %></strong>
+                                        </div>
+                                    <% }) %>
+                                </div>
+
+                                <footer class="order-foot">
+                                    <span class="muted">Tổng tiền: <strong class="order-total"><%= formatPrice(order.total_amount) %></strong></span>
+                                    <div class="row-actions">
+                                        <% if (order.status === 'processing') { %>
+                                            <span class="confirm-slot">
+                                                <button type="button" class="btn btn-danger btn-sm js-ask">Hủy đơn</button>
+                                                <span class="confirm-box" hidden>
+                                                    <span class="muted">Bạn chắc chắn muốn hủy đơn này?</span>
+                                                    <button type="button" class="btn btn-danger-solid btn-sm"
+                                                        data-action-url="/orders/<%= order.id %>/cancel">Xác nhận hủy</button>
+                                                    <button type="button" class="btn btn-outline btn-sm js-keep">Giữ lại</button>
+                                                </span>
+                                            </span>
+                                        <% } %>
+                                        <% if (order.status === 'delivered') { %>
+                                            <button type="button" class="btn btn-outline btn-sm" data-tab-link="reviews">Đánh giá</button>
+                                        <% } %>
+                                        <% if (order.status === 'delivered' || order.status === 'cancelled') { %>
+                                            <a class="btn btn-primary btn-sm" href="/cart">Mua lại</a>
+                                        <% } %>
+                                    </div>
+                                </footer>
+                            </article>
+                        <% }) %>
+                        <div class="empty-box" id="orderEmpty" <%= orderList.length ? 'hidden' : '' %>>Chưa có đơn hàng nào ở mục này.</div>
+                    </div>
+                </div>
+
+                <!-- ===== YÊU THÍCH ===== -->
+                <div class="panel" data-panel="favorites" hidden>
+                    <h1 class="panel-title">Sản phẩm yêu thích</h1>
+                    <p class="hint"><%= favoriteList.length %> sản phẩm</p>
+
+                    <div class="product-grid">
+                        <% favoriteList.forEach(product => { %>
+                            <article class="product-card">
+                                <a href="/<%= product.slug %>" class="product-image" aria-label="<%= product.name %>">
+                                    <img src="<%= product.image_url %>" alt="<%= product.name %>">
+                                </a>
+                                <div class="product-info">
+                                    <a href="/<%= product.slug %>" class="product-name"><%= product.name %></a>
+                                    <div class="product-price"><%= formatPrice(product.price) %></div>
+                                    <div class="product-bottom">
+                                        <a class="btn btn-primary btn-sm" href="/<%= product.slug %>">Xem sản phẩm</a>
+                                        <button type="button" class="favorite" aria-pressed="true" aria-label="Bỏ yêu thích"
+                                            data-action-url="/favorites/<%= product.id %>">
+                                            <svg width="22" height="22" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-7.5-10A4.5 4.5 0 0 1 12 7.8 4.5 4.5 0 0 1 19.5 10.5c0 5.4-7.5 10-7.5 10z"/></svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </article>
+                        <% }) %>
+                    </div>
+                    <% if (favoriteList.length === 0) { %>
+                        <div class="empty-box">
+                            Bạn chưa có sản phẩm yêu thích nào.
+                            <a class="btn btn-primary" href="/">Khám phá sản phẩm</a>
+                        </div>
+                    <% } %>
+                </div>
+
+                <!-- ===== ĐÁNH GIÁ ===== -->
+                <div class="panel" data-panel="reviews" hidden>
+                    <h1 class="panel-title">Đánh giá của tôi</h1>
+
+                    <section class="sub-card">
+                        <h2>Chờ đánh giá (<%= pendingList.length %>)</h2>
+                        <% pendingList.forEach(item => { %>
+                            <div class="review-pending">
+                                <div class="order-item">
+                                    <span class="order-thumb">
+                                        <% if (item.Product && item.Product.image_url) { %><img src="<%= item.Product.image_url %>" alt="<%= item.Product.name %>"><% } %>
+                                    </span>
+                                    <div class="order-item-text">
+                                        <strong><%= item.Product ? item.Product.name : '' %></strong>
+                                        <span class="muted">Đơn DH<%= String(item.order_id).padStart(4, '0') %> · đã giao</span>
+                                    </div>
+                                    <button type="button" class="btn btn-outline btn-sm js-write-review">Viết đánh giá</button>
+                                </div>
+
+                                <form class="review-form" data-ajax action="/reviews" method="POST" hidden>
+                                    <input type="hidden" name="product_id" value="<%= item.Product ? item.Product.id : '' %>">
+                                    <input type="hidden" name="rating" value="5">
+                                    <div class="star-picker" role="group" aria-label="Chọn số sao">
+                                        <% for (let i = 1; i <= 5; i++) { %>
+                                            <button type="button" class="star-btn is-on" data-star="<%= i %>" aria-label="<%= i %> sao">
+                                                <svg width="26" height="26" viewBox="0 0 24 24" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true"><polygon points="12 3 14.7 9 21 9.6 16.2 13.8 17.7 20 12 16.8 6.3 20 7.8 13.8 3 9.6 9.3 9"/></svg>
+                                            </button>
+                                        <% } %>
+                                    </div>
+                                    <label for="review-<%= item.id %>" class="label-strong">Nhận xét của bạn</label>
+                                    <textarea class="input" id="review-<%= item.id %>" name="content" rows="3" placeholder="Chia sẻ trải nghiệm của bạn về sản phẩm" required></textarea>
+                                    <div class="row-actions">
+                                        <button class="btn btn-primary" type="submit">Gửi đánh giá</button>
+                                        <button class="btn btn-outline js-cancel-review" type="button">Hủy</button>
+                                    </div>
+                                </form>
+                            </div>
+                        <% }) %>
+                        <% if (pendingList.length === 0) { %>
+                            <p class="muted">Bạn đã đánh giá hết các sản phẩm đã mua.</p>
+                        <% } %>
+                    </section>
+
+                    <section class="sub-card">
+                        <h2>Đã đánh giá (<%= reviewList.length %>)</h2>
+                        <% reviewList.forEach(review => { %>
+                            <article class="review-card">
+                                <span class="order-thumb">
+                                    <% if (review.Product && review.Product.image_url) { %><img src="<%= review.Product.image_url %>" alt="<%= review.Product.name %>"><% } %>
+                                </span>
+                                <div class="review-body">
+                                    <div class="review-meta">
+                                        <strong><%= review.Product ? review.Product.name : '' %></strong>
+                                        <span class="muted"><%= formatDate(review.createdAt) %></span>
+                                    </div>
+                                    <div class="stars" role="img" aria-label="<%= review.rating %> trên 5 sao">
+                                        <% for (let i = 1; i <= 5; i++) { %><%- starIcon(i <= review.rating) %><% } %>
+                                    </div>
+                                    <p><%= review.content %></p>
+                                </div>
+                                <button type="button" class="btn btn-danger btn-sm"
+                                    data-action-url="/reviews/<%= review.id %>" data-method="DELETE">Xóa</button>
+                            </article>
+                        <% }) %>
+                        <% if (reviewList.length === 0) { %>
+                            <p class="muted">Bạn chưa có đánh giá nào.</p>
+                        <% } %>
+                    </section>
+                </div>
+            </section>
+        </div>
+    </main>
+
+<script src="/js/user.js"></script>
+<script src="/js/profile.js"></script>
+</body>
+</html>

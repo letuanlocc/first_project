@@ -1,65 +1,72 @@
-
 <!DOCTYPE html>
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Đăng ký</title>
+    <title>Đăng ký - PhoneShop</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/user.css">
 </head>
 <body>
+    <main class="auth-page">
+        <a href="/" class="logo" aria-label="PhoneShop - Trang chủ">
+            <span class="logo-mark" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="2.5" width="10" height="19" rx="2.5"/><path d="M11 18h2"/></svg>
+            </span>
+            <span>Phone<span class="logo-accent">Shop</span></span>
+        </a>
 
-    <h1>Đăng ký</h1>
+        <form class="auth-card" action="/register" method="POST">
+            <h1>Đăng ký</h1>
 
-    <form action="/register" method="POST">
+            <div class="field">
+                <label for="name">Tên</label>
+                <input class="input" type="text" id="name" name="username" required>
+            </div>
 
-        <div>
-            <label for="name">Tên</label>
-            <input
-                type="text"
-                id="name"
-                name="username"
-                required
-            >
-        </div>
+            <div class="field">
+                <label for="email">Email</label>
+                <input class="input" type="email" id="email" name="email" placeholder="ten@email.com" required>
+            </div>
 
-        <div>
-            <label for="email">Email</label>
-            <input
-                type="email"
-                id="email"
-                name="email"
-                required
-            >
-        </div>
+            <div class="field">
+                <label for="password">Mật khẩu</label>
+                <input class="input" type="password" id="password" name="password" required>
+            </div>
 
-        <div>
-            <label for="password">Mật khẩu</label>
-            <input
-                type="password"
-                id="password"
-                name="password"
-                required
-            >
-        </div>
+            <div class="field">
+                <label for="confirmPassword">Nhập lại mật khẩu</label>
+                <input class="input" type="password" id="confirmPassword" name="confirmPassword" aria-describedby="passwordError" required>
+                <span class="field-error" id="passwordError" role="alert" hidden>Mật khẩu nhập lại không khớp.</span>
+            </div>
 
-        <div>
-            <label for="confirmPassword">Nhập lại mật khẩu</label>
-            <input
-                type="password"
-                id="confirmPassword"
-                name="confirmPassword"
-                required
-            >
-        </div>
+            <button class="btn btn-primary btn-lg" type="submit">Đăng ký</button>
 
-        <button type="submit">Đăng ký</button>
+            <p class="auth-switch">Đã có tài khoản? <a href="/login">Đăng nhập</a></p>
+        </form>
+    </main>
 
-    </form>
+<script>
+    const registerForm = document.querySelector('form.auth-card');
+    const passwordInput = document.getElementById('password');
+    const confirmInput = document.getElementById('confirmPassword');
+    const passwordError = document.getElementById('passwordError');
 
-    <p>
-        Đã có tài khoản?
-        <a href="/login">Đăng nhập</a>
-    </p>
+    function checkPasswordMatch() {
+        const mismatch = confirmInput.value.length > 0 && passwordInput.value !== confirmInput.value;
+        passwordError.hidden = !mismatch;
+        confirmInput.classList.toggle('is-invalid', mismatch);
+        return !mismatch;
+    }
 
+    passwordInput.addEventListener('input', checkPasswordMatch);
+    confirmInput.addEventListener('input', checkPasswordMatch);
+    registerForm.addEventListener('submit', (event) => {
+        if (!checkPasswordMatch()) {
+            event.preventDefault();
+        }
+    });
+</script>
 </body>
 </html>

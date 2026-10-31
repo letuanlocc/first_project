@@ -3,6 +3,7 @@ const router = express.Router();
 const path = require('path');
 const { requireAuth, checkUser, requireAdmin } = require('../middleware/authMiddleware');
 const Category  = require('../models/Category');
+const { updateOrderStatus } = require('../controllers/accountController');
 
 router.get("/", checkUser, requireAdmin , async (req, res) => {
     try{
@@ -18,5 +19,8 @@ router.get("/", checkUser, requireAdmin , async (req, res) => {
         res.status(500).send("Internal Server Error");
     }
 });
+
+// Đổi trạng thái đơn hàng (mới dựng khung, xem accountController.js)
+router.patch("/orders/:id/status", requireAdmin, updateOrderStatus);
 
 module.exports = router;
