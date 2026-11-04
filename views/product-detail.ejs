@@ -50,7 +50,7 @@
                 </div>
 
                 <div class="detail-actions">
-                    <button class="btn btn-outline" type="button" data-action-url="/favorites/<%= product.id %>">Yêu thích</button>
+                    <button class="btn btn-outline" type="button" data-action-url="/api/me/favorites" data-body='{"productId":<%= product.id %>}'>Yêu thích</button>
                     <button class="btn btn-outline" type="button">Hỏi đáp</button>
                     <a class="btn btn-outline" href="#specs">Thông số</a>
                 </div>

@@ -71,7 +71,7 @@
                 <!-- ===== THÔNG TIN CÁ NHÂN ===== -->
                 <div class="panel" data-panel="info" hidden>
                     <h1 class="panel-title">Thông tin cá nhân</h1>
-                    <form class="form-grid" data-ajax action="/profile/info" method="POST">
+                    <form class="form-grid" data-ajax action="/api/me" method="POST" data-method="PATCH">
                         <div class="field">
                             <label for="profile-name">Họ và tên</label>
                             <input class="input" id="profile-name" name="name" type="text" value="<%= profileUser.userName || '' %>" required>
@@ -101,7 +101,7 @@
                         <button type="button" class="btn btn-primary" id="openAddressForm">+ Thêm địa chỉ</button>
                     </div>
 
-                    <form class="address-form" id="addressForm" data-ajax action="/profile/addresses" method="POST" hidden>
+                    <form class="address-form" id="addressForm" data-ajax action="/api/me/addresses" method="POST" hidden>
                         <h2>Địa chỉ mới</h2>
                         <div class="form-grid">
                             <div class="field">
@@ -152,13 +152,13 @@
                                 <div class="row-actions">
                                     <% if (!address.is_default) { %>
                                         <button type="button" class="btn btn-outline btn-sm"
-                                            data-action-url="/profile/addresses/<%= address.id %>/default">Đặt làm mặc định</button>
+                                            data-action-url="/api/me/addresses/<%= address.id %>" data-method="PATCH" data-body='{"is_default":true}'>Đặt làm mặc định</button>
                                     <% } %>
                                     <span class="confirm-slot">
                                         <button type="button" class="btn btn-danger btn-sm js-ask">Xóa</button>
                                         <span class="confirm-box" hidden>
                                             <button type="button" class="btn btn-danger-solid btn-sm"
-                                                data-action-url="/profile/addresses/<%= address.id %>" data-method="DELETE">Xác nhận xóa</button>
+                                                data-action-url="/api/me/addresses/<%= address.id %>" data-method="DELETE">Xác nhận xóa</button>
                                             <button type="button" class="btn btn-outline btn-sm js-keep">Giữ lại</button>
                                         </span>
                                     </span>
@@ -216,8 +216,19 @@
                                                 <span class="confirm-box" hidden>
                                                     <span class="muted">Bạn chắc chắn muốn hủy đơn này?</span>
                                                     <button type="button" class="btn btn-danger-solid btn-sm"
-                                                        data-action-url="/orders/<%= order.id %>/cancel">Xác nhận hủy</button>
+                                                        data-action-url="/api/orders/<%= order.id %>" data-method="PATCH" data-body='{"status":"cancelled"}'>Xác nhận hủy</button>
                                                     <button type="button" class="btn btn-outline btn-sm js-keep">Giữ lại</button>
+                                                </span>
+                                            </span>
+                                        <% } %>
+                                        <% if (order.status === 'shipping') { %>
+                                            <span class="confirm-slot">
+                                                <button type="button" class="btn btn-primary btn-sm js-ask">Đã nhận hàng</button>
+                                                <span class="confirm-box" hidden>
+                                                    <span class="muted">Bạn đã nhận được hàng?</span>
+                                                    <button type="button" class="btn btn-primary btn-sm"
+                                                        data-action-url="/api/orders/<%= order.id %>" data-method="PATCH" data-body='{"status":"delivered"}'>Xác nhận đã nhận</button>
+                                                    <button type="button" class="btn btn-outline btn-sm js-keep">Chưa nhận</button>
                                                 </span>
                                             </span>
                                         <% } %>
@@ -243,16 +254,16 @@
                     <div class="product-grid">
                         <% favoriteList.forEach(product => { %>
                             <article class="product-card">
-                                <a href="/<%= product.slug %>" class="product-image" aria-label="<%= product.name %>">
+                                <a href="/products/<%= product.slug %>" class="product-image" aria-label="<%= product.name %>">
                                     <img src="<%= product.image_url %>" alt="<%= product.name %>">
                                 </a>
                                 <div class="product-info">
-                                    <a href="/<%= product.slug %>" class="product-name"><%= product.name %></a>
+                                    <a href="/products/<%= product.slug %>" class="product-name"><%= product.name %></a>
                                     <div class="product-price"><%= formatPrice(product.price) %></div>
                                     <div class="product-bottom">
-                                        <a class="btn btn-primary btn-sm" href="/<%= product.slug %>">Xem sản phẩm</a>
+                                        <a class="btn btn-primary btn-sm" href="/products/<%= product.slug %>">Xem sản phẩm</a>
                                         <button type="button" class="favorite" aria-pressed="true" aria-label="Bỏ yêu thích"
-                                            data-action-url="/favorites/<%= product.id %>">
+                                            data-action-url="/api/me/favorites/<%= product.id %>" data-method="DELETE">
                                             <svg width="22" height="22" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-7.5-10A4.5 4.5 0 0 1 12 7.8 4.5 4.5 0 0 1 19.5 10.5c0 5.4-7.5 10-7.5 10z"/></svg>
                                         </button>
                                     </div>
@@ -287,7 +298,7 @@
                                     <button type="button" class="btn btn-outline btn-sm js-write-review">Viết đánh giá</button>
                                 </div>
 
-                                <form class="review-form" data-ajax action="/reviews" method="POST" hidden>
+                                <form class="review-form" data-ajax action="/api/products/<%= item.Product ? item.Product.id : '' %>/reviews" method="POST" hidden>
                                     <input type="hidden" name="product_id" value="<%= item.Product ? item.Product.id : '' %>">
                                     <input type="hidden" name="rating" value="5">
                                     <div class="star-picker" role="group" aria-label="Chọn số sao">
@@ -329,7 +340,7 @@
                                     <p><%= review.content %></p>
                                 </div>
                                 <button type="button" class="btn btn-danger btn-sm"
-                                    data-action-url="/reviews/<%= review.id %>" data-method="DELETE">Xóa</button>
+                                    data-action-url="/api/reviews/<%= review.id %>" data-method="DELETE">Xóa</button>
                             </article>
                         <% }) %>
                         <% if (reviewList.length === 0) { %>

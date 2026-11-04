@@ -69,6 +69,7 @@ document.getElementById('openAddressForm').addEventListener('click', () => {
     addressForm.hidden = false;
     addressForm.querySelector('input').focus();
 });
+
 document.getElementById('closeAddressForm').addEventListener('click', () => {
     addressForm.reset();
     addressForm.hidden = true;

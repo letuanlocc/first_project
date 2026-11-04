@@ -26,7 +26,7 @@ searchProductBtn.addEventListener("click", async () => {
 
     try {
         const response = await fetch(
-            `/api/products?name=${encodeURIComponent(name)}`
+            `/api/admin/products?name=${encodeURIComponent(name)}`
         );
 
         const result = await response.json();
@@ -77,7 +77,7 @@ updateProductBtn.addEventListener("click", async () => {
 
 
     try {
-        const response = await fetch(`/api/products/${productId}`, {
+        const response = await fetch(`/api/admin/products/${productId}`, {
             method: "PATCH",
             headers: {
                 "Content-Type": "application/json"
@@ -114,7 +114,7 @@ addProductBtn.addEventListener("click",async () => {
     }
 
     try{
-        const response = await fetch(`/api/products`,{
+        const response = await fetch(`/api/admin/products`,{
             method: "POST",
             body: formData
         })
@@ -147,7 +147,7 @@ deleteProductBtn.addEventListener("click", async ()=> {
         return; 
     }
     try{
-        const response = await fetch(`/api/products/${productId}`,{
+        const response = await fetch(`/api/admin/products/${productId}`,{
             method: "DELETE"
         })
         
@@ -168,7 +168,7 @@ deleteProductBtn.addEventListener("click", async ()=> {
 
 addCategoryBtn.addEventListener("click", async() => {
     try{
-        const response = await fetch(`/api/categories`, {
+        const response = await fetch(`/api/admin/categories`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -199,7 +199,7 @@ deleteCategoryBtn.addEventListener("click", async() =>{
         return;
     }
     try{
-        const response = await fetch(`/api/categories/${categoryId}`, {
+        const response = await fetch(`/api/admin/categories/${categoryId}`, {
             method: "DELETE"
         })
 
@@ -222,7 +222,7 @@ viewProductBtn.addEventListener("click", async() => {
         productTableContainer.style.display = 'block'
         viewProductBtn.innerText = 'Ẩn bảng sản phẩm'
         try {
-            const response = await fetch('/api/products'); 
+            const response = await fetch('/api/admin/products'); 
             const result = await response.json(); 
 
             if (response.ok && result.products) {
@@ -259,7 +259,7 @@ productTableBody.addEventListener("click" , async(e) =>{
     if(e.target.classList.contains("btn-edit") || e.target.classList.contains("btn-delete") ){
         const id = e.target.getAttribute('data-id')
         try{
-            const response = await fetch(`/api/products/${id}`)
+            const response = await fetch(`/api/admin/products/${id}`)
 
             const data = await response.json()
 
