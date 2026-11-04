@@ -37,7 +37,7 @@ function showToast(message, type = 'success') {
 if (addCart) {
     addCart.addEventListener("click", async ()=> {
         try{
-            const response = await fetch(`/addcart`,{
+            const response = await fetch(`/api/cart/items`,{
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
@@ -67,63 +67,44 @@ if (addCart) {
     })
 }
 
-deleteCartButtons.forEach((button) => {
-    button.addEventListener("click", async () => {
-        try{
-            const response = await fetch(`/deletecart/${button.dataset.productId}`,{
-                method: "DELETE",
-            })
+/* ===== Nút +/- trong giỏ hàng: PATCH /api/cart/items/:productId { quantity } ===== */
+async function changeCartQuantity(button, step) {
+    const stepper = button.closest('.qty-stepper');
+    const quantity = Number(stepper.dataset.quantity) + step;
 
-            if (response.redirected) {
-                window.location.href = response.url;
-                return;
-            }
-            const data = await response.json();
+    try{
+        const response = await fetch(`/api/cart/items/${stepper.dataset.productId}`,{
+            method: "PATCH",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({ quantity: Math.max(0, quantity) })
+        })
 
-            if (!response.ok) {
-                showToast(data.error || "Có lỗi xảy ra", 'error');
-                return;
-            }
-
-            window.location.reload();
-        }catch(err){
-            console.error("Lỗi xóa:", err);
-            showToast("Có lỗi xảy ra khi xóa sản phẩm khỏi giỏ hàng", 'error');
+        if (response.redirected) {
+            window.location.href = response.url;
+            return;
         }
-    })
+        const data = await response.json();
+
+        if (!response.ok) {
+            showToast(data.error || "Có lỗi xảy ra", 'error');
+            return;
+        }
+
+        window.location.reload();
+    }catch(err){
+        console.error("Lỗi cập nhật giỏ hàng:", err);
+        showToast("Có lỗi xảy ra khi cập nhật giỏ hàng", 'error');
+    }
+}
+
+deleteCartButtons.forEach((button) => {
+    button.addEventListener("click", () => changeCartQuantity(button, -1));
 })
 
 document.querySelectorAll('.add-cart-item').forEach((button) => {
-    button.addEventListener("click", async () => {
-        try{
-            const response = await fetch(`/addcart`,{
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify({
-                    productId: button.dataset.productId,
-                    quantity: 1
-                })
-            })
-
-            if (response.redirected) {
-                window.location.href = response.url;
-                return;
-            }
-            const data = await response.json();
-
-            if (!response.ok) {
-                showToast(data.error || "Có lỗi xảy ra", 'error');
-                return;
-            }
-
-            window.location.reload();
-        }catch(err){
-            console.error("Lỗi thêm:", err);
-            showToast("Có lỗi xảy ra khi thêm sản phẩm vào giỏ hàng", 'error');
-        }
-    })
+    button.addEventListener("click", () => changeCartQuantity(button, 1));
 })
 
 document.querySelectorAll('.favorite').forEach((button) => {
@@ -201,7 +182,8 @@ document.addEventListener('click', async (event) => {
 });
 
 /* ===== Form gửi JSON dùng chung =====
-   <form data-ajax action="/..." method="POST" data-redirect="/profile#orders"> */
+   <form data-ajax action="/api/..." method="POST" data-method="PATCH" data-redirect="/profile#orders">
+   data-method dùng cho PATCH/DELETE vì thẻ form HTML chỉ hỗ trợ GET/POST. */
 document.addEventListener('submit', async (event) => {
     const form = event.target.closest('form[data-ajax]');
     if (!form) return;
@@ -209,7 +191,8 @@ document.addEventListener('submit', async (event) => {
 
     try {
         const body = Object.fromEntries(new FormData(form));
-        const result = await sendJson(form.getAttribute('action'), (form.getAttribute('method') || 'POST').toUpperCase(), body);
+        const method = (form.dataset.method || form.getAttribute('method') || 'POST').toUpperCase();
+        const result = await sendJson(form.getAttribute('action'), method, body);
         if (!result) return;
 
         if (!result.ok) {
@@ -230,3 +213,4 @@ document.addEventListener('submit', async (event) => {
         showToast("Có lỗi xảy ra", 'error');
     }
 });
+

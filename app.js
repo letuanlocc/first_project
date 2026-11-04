@@ -2,13 +2,10 @@ const express = require('express')
 const dotenv = require('dotenv')
 // const sequelized = require('sequelzie')
 const path = require('path')
-const adminRoutes = require('./routes/adminRoutes')
 const connectDB = require('./config/db')
-const authRoutes = require("./routes/authRoutes");
 const cookieParser =  require('cookie-parser');
-const userRoutes = require('./routes/userRoutes')
-const productRoutes = require('./routes/productRoutes')
-const categoryRoutes = require('./routes/categoryRoutes')
+const apiRoutes = require('./routes/api')
+const webRoutes = require('./routes/web')
 const startServer = async () => {
 
   dotenv.config()
@@ -21,16 +18,11 @@ const startServer = async () => {
   
   app.use(cookieParser());
 
-  app.use("/", authRoutes);
-  // app.use('/order', orderRoutes)
-  // app.use('/admin', adminRoutes)
-
   app.set('view engine', 'ejs')
   app.set('views', path.join(__dirname, 'views'))
-  app.use('/api', productRoutes);
-  app.use('/admin', adminRoutes);
-  app.use('/', userRoutes);
-  app.use('/category', categoryRoutes);
+
+  app.use('/api', apiRoutes);   // REST API (JSON)
+  app.use('/', webRoutes);      // các trang HTML
 
   const port = process.env.PORT || 3000
   app.listen(port, () => {

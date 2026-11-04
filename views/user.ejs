@@ -34,13 +34,13 @@
                     <% const storageSpec = productSpecifications.find(spec => spec.key.includes("Bộ nhớ trong")); %>
 
                     <article class="product-card">
-                        <a href="/<%= product.slug %>" class="product-image" aria-label="<%= product.name %>">
+                        <a href="/products/<%= product.slug %>" class="product-image" aria-label="<%= product.name %>">
                             <span class="installment">Trả góp 0%</span>
                             <img src="<%= product.image_url %>" alt="<%= product.name %>">
                         </a>
 
                         <div class="product-info">
-                            <a href="/<%= product.slug %>" class="product-name"><%= product.name %></a>
+                            <a href="/products/<%= product.slug %>" class="product-name"><%= product.name %></a>
 
                             <div class="product-price">
                                 <%= product.price == null || String(product.price).trim() === '' || !Number.isFinite(Number(product.price))

@@ -24,7 +24,8 @@ const Order = sequelize.define('Order', {
 
     phone: {
         type: DataTypes.STRING(20)
-    }
+    },
+    receiver_name: { type: DataTypes.STRING(100) },
 
 }, {
     tableName: 'orders',
