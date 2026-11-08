@@ -289,14 +289,23 @@ productTableBody.addEventListener("click" , async(e) =>{
 const adminTabs = document.querySelectorAll('[data-admin-tab]');
 const adminPanels = document.querySelectorAll('[data-admin-panel]');
 
+function openAdminTab(name) {
+    if (![...adminTabs].some((tab) => tab.dataset.adminTab === name)) name = 'products';
+    adminTabs.forEach((tab) => tab.classList.toggle('active', tab.dataset.adminTab === name));
+    adminPanels.forEach((panel) => {
+        panel.hidden = panel.dataset.adminPanel !== name;
+    });
+}
+
 adminTabs.forEach((tab) => {
     tab.addEventListener("click", () => {
-        adminTabs.forEach((other) => other.classList.toggle('active', other === tab));
-        adminPanels.forEach((panel) => {
-            panel.hidden = panel.dataset.adminPanel !== tab.dataset.adminTab;
-        });
+        history.replaceState(null, '', '#' + tab.dataset.adminTab);
+        openAdminTab(tab.dataset.adminTab);
     });
 });
+
+// Giữ đúng tab sau khi tải lại trang (ví dụ sau khi hủy đơn)
+openAdminTab(window.location.hash.replace('#', ''));
 
 const adminOrderFilters = document.querySelectorAll('#adminOrderFilters [data-filter]');
 const adminOrderRows = document.querySelectorAll('#adminOrderBody tr');
@@ -317,3 +326,29 @@ adminOrderFilters.forEach((button) => {
     });
 });
 
+document.addEventListener('click', async (event) => {
+    const button = event.target.closest('[data-action-url]');
+    
+    if (!button) return;
+
+    try {
+        const response = await fetch(button.dataset.actionUrl, {
+            method: button.dataset.method || 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: button.dataset.body   // đã là chuỗi JSON; undefined nếu không có
+        });
+
+        const data = await response.json().catch(() => ({}));
+
+        if (!response.ok) {
+            alert(data.error || "Có lỗi xảy ra");
+            return;
+        }
+
+        alert(data.message || "Thành công");
+        window.location.reload();
+    } catch (err) {
+        console.error("Lỗi thao tác:", err);
+        alert("Có lỗi xảy ra");
+    }
+});
