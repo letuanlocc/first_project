@@ -181,7 +181,7 @@
                                     <div class="cell-sub"><%= order.createdAt ? new Date(order.createdAt).toLocaleDateString('vi-VN') : '' %></div>
                                 </td>
                                 <td>
-                                    <%= order.User ? order.User.username : '' %>
+                                    <%= order.receiver_name || (order.User ? order.User.username : '') %>
                                     <div class="cell-sub"><%= order.phone || '' %></div>
                                 </td>
                                 <td class="cell-wide"><%= order.shipping_address || '' %></td>

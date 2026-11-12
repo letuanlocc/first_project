@@ -75,8 +75,10 @@ const cancelOrder = async(req,res) => {
             if (!order) return { status: 404, error: "Không tìm thấy đơn có thể hủy" };
 
             const items = await OrderItem.findAll({
-                where: {order_id: order.id}
-            }, {transaction} )
+                where: {order_id: order.id},
+                order: [['product_id', 'ASC']],
+                transaction
+            })
             
             for (const i of items){
                 const product = await Product.findByPk(i.product_id, {transaction, lock: transaction.LOCK.UPDATE})
@@ -104,7 +106,34 @@ const cancelOrder = async(req,res) => {
 // Khách xác nhận đã nhận hàng.
 // Các bước gợi ý: tìm đơn theo id VÀ user_id = req.data.userId (không cho xác nhận đơn người khác),
 // chỉ cho đơn đang 'shipping', rồi đổi sang 'delivered'. Trả { message }.
-const receiveOrder = notImplemented;
+const receiveOrder = async(req,res) => {
+    const userId = req.data.userId
+    const orderId = req.params.id
+    try{
+        const result = await sequelize.transaction(async(transaction) => {
+            await User.findByPk(userId, {transaction, lock: transaction.LOCK.UPDATE})
+
+            const order = await Order.findOne({
+                where : {user_id: userId, id: orderId, status: "shipping"},
+                transaction,
+                lock: transaction.LOCK.UPDATE
+            })
+
+            if(!order) return { status: 404, error: "Không tìm thấy đơn đang giao" };
+
+            await order.update({
+                status: 'delivered'
+            }, {transaction})
+
+            return { status: 200, message: "Đã xác nhận nhận hàng" };
+        })
+        if (result.error) return res.status(result.status).json({ error: result.error });
+        return res.status(result.status).json(result);
+    }catch(error){
+        console.error("Lỗi giao hàng:", error);
+        return res.status(500).json({ error: "Lỗi hệ thống khi giao hàng" });
+    }
+};
 
 // PATCH /api/orders/:id      body: { status: 'cancelled' | 'delivered' }
 // Khách chỉ được đổi đơn của mình sang 2 trạng thái này.
