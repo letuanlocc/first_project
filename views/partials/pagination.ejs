@@ -1,0 +1,47 @@
+<%
+    // Cần: pagination = { page, totalPages }
+    // pageBase: phần đứng trước số trang trong URL. Mặc định '/?' -> /?page=2
+    //           Trang tìm kiếm sẽ truyền '/?search=iphone&' -> /?search=iphone&page=2
+    const info = locals.pagination;
+    const base = locals.pageBase || '/?';
+    const pageUrl = number => `${base}page=${number}`;
+
+    // Chỉ hiện: trang đầu, trang cuối, trang hiện tại và 1 trang mỗi bên.
+    // Chỗ bị bỏ qua thay bằng '…'  (vd: 1 … 4 [5] 6 … 20)
+    const items = [];
+    if (info && info.totalPages > 1) {
+        let previous = 0;
+        for (let number = 1; number <= info.totalPages; number++) {
+            const show = number === 1 || number === info.totalPages || Math.abs(number - info.page) <= 1;
+            if (!show) continue;
+            if (number - previous > 1) items.push('gap');
+            items.push(number);
+            previous = number;
+        }
+    }
+%>
+<% if (info && info.totalPages > 1) { %>
+    <nav class="pagination" aria-label="Phân trang">
+        <% if (info.page > 1) { %>
+            <a class="page-link" href="<%= pageUrl(info.page - 1) %>" rel="prev">&laquo; Trước</a>
+        <% } else { %>
+            <span class="page-link is-disabled" aria-disabled="true">&laquo; Trước</span>
+        <% } %>
+
+        <% items.forEach(item => { %>
+            <% if (item === 'gap') { %>
+                <span class="page-gap" aria-hidden="true">…</span>
+            <% } else if (item === info.page) { %>
+                <span class="page-link is-current" aria-current="page"><%= item %></span>
+            <% } else { %>
+                <a class="page-link" href="<%= pageUrl(item) %>"><%= item %></a>
+            <% } %>
+        <% }) %>
+
+        <% if (info.page < info.totalPages) { %>
+            <a class="page-link" href="<%= pageUrl(info.page + 1) %>" rel="next">Sau &raquo;</a>
+        <% } else { %>
+            <span class="page-link is-disabled" aria-disabled="true">Sau &raquo;</span>
+        <% } %>
+    </nav>
+<% } %>

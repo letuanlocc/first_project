@@ -10,28 +10,46 @@ const getHomeOrSearch = (req, res, next) => {
     return searchProduct(req, res, next);
 };
 
+const PAGE_SIZE = 12;   // số sản phẩm mỗi trang
+
 const getHome = async (req, res) => {
     try {
         if (req.data?.role === "admin") {
             return res.redirect("/admin");
         }
-        const [Categories, products] = await Promise.all([
+
+        // /?page=3 -> page = 3. Thiếu, sai (abc) hoặc < 1 thì quay về trang 1.
+        const page = Math.max(parseInt(req.query.page, 10) || 1, 1);
+
+        const [Categories, { count, rows: products }] = await Promise.all([
             Category.findAll(),
-            Product.findAll({
+            Product.findAndCountAll({
                 include: [{
                     model: ProductDescription,
                     as: 'descriptions',
                     attributes: ['key', 'value'],
                     required: false
-                }]
+                }],
+                distinct: true,                  // đếm số sản phẩm, không đếm số dòng sau JOIN
+                order: [['id', 'ASC']],          // bắt buộc có thứ tự cố định thì chia trang mới ổn định
+                limit: PAGE_SIZE,                // lấy tối đa ngần này sản phẩm
+                offset: (page - 1) * PAGE_SIZE   // bỏ qua các sản phẩm của những trang trước
             })
         ]);
+
+        const totalPages = Math.max(Math.ceil(count / PAGE_SIZE), 1);
+
+        // Gõ page quá lớn (vd ?page=999) thì đưa về trang cuối
+        if (page > totalPages) {
+            return res.redirect(`/?page=${totalPages}`);
+        }
 
         res.render("user", {
             Categories,
             products: products,
             user: req.data,
-            search: ''
+            search: '',
+            pagination: { page, totalPages, total: count }
         });
     } catch (err) {
         console.error("Lỗi tại getHome:", err);
