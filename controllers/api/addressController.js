@@ -58,9 +58,11 @@ const updateAddress = async(req,res) => {
             await t.rollback()
             return res.status(404).json({error: "Không tìm ra địa chỉ"})
         } 
-        if(is_default) await Address.update({ is_default: false }, { where: { user_id: userId }, transaction: t });
+        if(is_default) {
+            await Address.update({ is_default: false }, { where: { user_id: userId }, transaction: t });
 
-        await address.update({is_default: !!is_default}, {transaction: t})
+            await address.update({is_default: !!is_default}, {transaction: t})
+        }
 
         await t.commit()
         return res.status(200).json(address);
@@ -72,6 +74,43 @@ const updateAddress = async(req,res) => {
 };
 
 // DELETE /api/me/addresses/:id
-const deleteAddress = notImplemented;
+const deleteAddress = async(req,res) => {
+    const id = req.params.id
+    const userId = req.data.userId
+
+    const t = await sequelize.transaction();
+    try{
+        const address = await Address.findOne({
+            where: {id, user_id: userId},
+            transaction: t
+        })
+
+        if(!address){
+            await t.rollback()
+            return res.status(404).json({error: "Không tìm ra địa chỉ"})
+        } 
+
+        const wasDefault = address.is_default;
+        await address.destroy({transaction: t})
+
+        if(wasDefault){
+
+            const newest = await Address.findOne({
+                where: { user_id: userId },
+                order: [['createdAt', 'DESC']],
+                transaction: t
+            });
+
+            if(newest) await newest.update({is_default: true}, {transaction: t})
+        }
+
+        await t.commit()
+        return res.status(200).json(address);
+    }catch(error){
+        await t.rollback();
+        console.error("Lỗi khi xóa địa chỉ:", error);
+        return res.status(500).json({ error: "Lỗi hệ thống khi xóa địa chỉ" });
+    }
+};
 
 module.exports = { addAddress, updateAddress, deleteAddress };
