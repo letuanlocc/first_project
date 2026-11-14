@@ -20,14 +20,18 @@
         <form class="auth-card" action="/register" method="POST">
             <h1>Đăng ký</h1>
 
+            <% if (locals.error) { %>
+                <p class="field-error" role="alert"><%= error %></p>
+            <% } %>
+
             <div class="field">
                 <label for="name">Tên</label>
-                <input class="input" type="text" id="name" name="username" required>
+                <input class="input" type="text" id="name" name="username" value="<%= locals.username || '' %>" required>
             </div>
 
             <div class="field">
                 <label for="email">Email</label>
-                <input class="input" type="email" id="email" name="email" placeholder="ten@email.com" required>
+                <input class="input <%= locals.error ? 'is-invalid' : '' %>" type="email" id="email" name="email" placeholder="ten@email.com" value="<%= locals.email || '' %>" required>
             </div>
 
             <div class="field">
