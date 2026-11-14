@@ -7,12 +7,12 @@ const jwt = require("jsonwebtoken");
 
 // GET /register
 const showRegister = (req, res) => {
-    res.render("register");
+    res.render("register", { error: null, username: "", email: "" });
 };
 
 // GET /login
 const showLogin = (req, res) => {
-    res.render("login");
+    res.render("login", { error: null, email: "" });
 };
 
 // POST /register
@@ -24,7 +24,7 @@ const register = async (req, res) => {
         // Sequelize dùng cú pháp where: { email }
         const existingUser = await User.findOne({where: {email}})
         if (existingUser){
-            return res.status(400).json({ message: "User already exists" });
+            return res.status(409).render("register", { error: "Email này đã được đăng ký", username, email });
         }
 
         // Hash password
@@ -38,7 +38,12 @@ const register = async (req, res) => {
 
         res.redirect("/login");
     } catch (err){
-        res.status(500).json({ message: "Server error", error: err.message });
+        console.error("Lỗi đăng ký:", err);
+        res.status(500).render("register", {
+            error: "Lỗi hệ thống, vui lòng thử lại sau",
+            username: req.body.username || "",
+            email: req.body.email || ""
+        });
     }
 };
 
@@ -49,13 +54,15 @@ const login = async (req, res) => {
 
         // Sequelize tìm kiếm bằng cú pháp where
         const user = await User.findOne({ where: { email } });
+        // Dùng chung một thông báo cho cả hai trường hợp để không lộ email nào đã đăng ký
+        const loginError = "Email hoặc mật khẩu không đúng";
         if (!user){
-            return res.status(400).json({ message: "Invalid user" });
+            return res.status(401).render("login", { error: loginError, email });
         }
 
         const comparePassword = await bcrypt.compare(password, user.password);
         if (!comparePassword){
-            return res.status(400).json({ message: "Invalid email or password" });
+            return res.status(401).render("login", { error: loginError, email });
         }
 
         // PostgreSQL dùng khóa chính là id (số nguyên) thay vì _id của MongoDB
@@ -78,7 +85,11 @@ const login = async (req, res) => {
             res.redirect('/');
         }
     } catch (err){
-        res.status(500).json({ message: "Server error", error: err.message });
+        console.error("Lỗi đăng nhập:", err);
+        res.status(500).render("login", {
+            error: "Lỗi hệ thống, vui lòng thử lại sau",
+            email: req.body.email || ""
+        });
     }
 };
 

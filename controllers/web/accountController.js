@@ -13,11 +13,16 @@ const getProfilePage = async (req, res) => {
             order: [['createdAt', 'DESC']]
         });
 
+        const addresses = await Address.findAll({
+            where: { user_id: userId },
+            order: [['is_default', 'DESC'], ['createdAt', 'DESC']]
+        });
+
         return res.render('profile', {
             Categories,
             user: req.data,
             // TODO: lấy dữ liệu thật của khách hàng
-            addresses: [],   // [{ id, name, phone, address, is_default }]
+            addresses,       // [{ id, name, phone, address, is_default }]
             orders: orders,      // [{ id, createdAt, status, total_amount, OrderItems: [{ quantity, price_at_that_time, Product }] }]
             favorites: [],   // [Product]
             reviews: [],     // [{ id, rating, content, createdAt, Product }]
