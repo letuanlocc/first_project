@@ -1,11 +1,11 @@
-const { sequelize, Product, OrderItem, Order, User } = require('../../models/index');
+const { sequelize, Product, OrderItem, Order, User, Address } = require('../../models/index');
 const { notImplemented } = require('../../utils/http');
 
 // POST /api/orders        body: { name, phone, address }
 // Đặt hàng: chốt đơn 'pending' (giỏ hàng) thành 'processing'.
 const placeOrder = async(req,res) => {
     const userId = Number(req.data?.userId);
-    const {name, phone, address } = req.body;
+    let { name, phone, address, address_id } = req.body;
     try{
         const result = await sequelize.transaction(async (transaction) => {
             await User.findByPk(userId, { transaction, lock: transaction.LOCK.UPDATE });
@@ -20,6 +20,20 @@ const placeOrder = async(req,res) => {
             })
 
             if (!order) return { status: 404, error: "Không tìm thấy giỏ hàng" };
+
+            if (address_id) {
+                const saved = await Address.findOne({
+                    where: { id: address_id, user_id: userId },
+                    transaction
+                });
+                if (!saved) return { status: 400, error: "Địa chỉ không hợp lệ" };
+                name = saved.name;
+                phone = saved.phone;
+                address = saved.address;
+            }
+            if (!name || !phone || !address) {
+                return { status: 400, error: "Thiếu thông tin người nhận" };
+            }
 
             const orderItems = await OrderItem.findAll({
                 where: {order_id: order.id},
