@@ -1,0 +1,37 @@
+
+<%
+    // orders: [{ id, createdAt, status, total_amount, shipping_address, phone, receiver_name, User: { username } }] (chưa có dữ liệu, truyền từ route sau)
+    const orders = Array.isArray(locals.orders) ? locals.orders : [];
+    const statusMap = {
+        processing: 'Chờ xác nhận',
+        shipping: 'Đang giao',
+        delivered: 'Đã giao',
+        cancelled: 'Đã hủy'
+    };
+%>
+<% orders.forEach(order => { %>
+                            <tr data-status="<%= order.status %>">
+                                <td>
+                                    <strong>DH<%= String(order.id).padStart(4, '0') %></strong>
+                                    <div class="cell-sub"><%= order.createdAt ? new Date(order.createdAt).toLocaleDateString('vi-VN') : '' %></div>
+                                </td>
+                                <td>
+git                                     <%= order.receiver_name || (order.User ? order.User.username : '') %>
+                                    <div class="cell-sub"><%= order.phone || '' %></div>
+                                </td>
+                                <td class="cell-wide"><%= order.shipping_address || '' %></td>
+                                <td><strong><%= Number(order.total_amount || 0).toLocaleString('vi-VN') %>đ</strong></td>
+                                <td><span class="status-badge status-<%= order.status %>"><%= statusMap[order.status] || order.status %></span></td>
+                                <td>
+                                    <% if (order.status === 'processing') { %>
+                                        <button type="button" class="btn btn-primary btn-sm" data-action-url="/api/admin/orders/<%= order.id %>" data-method="PATCH" data-body='{"status":"shipping"}'>Xác nhận &amp; giao</button>
+                                    <% } %>
+                                    <% if (order.status === 'shipping') { %>
+                                        <span class="cell-sub">Chờ khách xác nhận đã nhận</span>
+                                    <% } %>
+                                    <% if (order.status === 'processing' || order.status === 'shipping') { %>
+                                        <button type="button" class="btn btn-danger btn-sm" data-action-url="/api/admin/orders/<%= order.id %>" data-method="PATCH" data-body='{"status":"cancelled"}'>Hủy</button>
+                                    <% } %>
+                                </td>
+                            </tr>
+<% }) %>

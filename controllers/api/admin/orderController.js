@@ -1,6 +1,8 @@
 const { notImplemented } = require('../../../utils/http');
 const { ORDER_STATUS_FLOW } = require('../../../constants/orderStatus');
-const { sequelize, Order, OrderItem, Product } = require('../../../models/index');
+const { sequelize, Order, OrderItem, Product, User } = require('../../../models/index');
+const { Op } = require('sequelize');
+
 
 // PATCH /api/admin/orders/:id      body: { status }
 // Các bước gợi ý (trong một transaction):
@@ -66,4 +68,50 @@ const updateOrderStatus = async(req,res) => {
     }
 }
 
-module.exports = { ORDER_STATUS_FLOW, updateOrderStatus };
+const getOrders = async(req,res) => {
+    const status = req.query.status
+    const page = Math.max(parseInt(req.query.page, 10) || 1, 1);
+    const PAGE_SIZE = 6;
+    const PAGINATED_STATUSES = ['all', 'cancelled', 'delivered'];
+    const VALID = ['all', 'processing', 'shipping', 'delivered', 'cancelled'];
+
+    try{
+
+        if(!VALID.includes(status)) return res.status(400).json({error: "Trạng thái không hợp lệ"})
+        
+        const paginated =  PAGINATED_STATUSES.includes(status)
+
+        const where = { status: { [Op.ne]: 'pending' } };
+        if (status !== 'all') where.status = status;
+
+        const {count, rows: orders} = await Order.findAndCountAll({
+            where,
+            include: [
+                { model: User, attributes: ['id', 'username'] }
+            ],
+            distinct: true,
+            order: [['createdAt', 'DESC'], ['id', 'DESC']],
+
+            ...(paginated &&{
+                limit: PAGE_SIZE, 
+                offset: (page - 1) * PAGE_SIZE
+            })
+        })
+
+        const totalPages = paginated ? Math.max(Math.ceil(count / PAGE_SIZE), 1) : 1;
+
+        res.render('partials/admin-order-rows', { 
+            orders,
+            pagination: { page, totalPages } 
+        }, (err, html) => {
+            if (err) { console.error(err); return res.status(500).json({ error: 'Lỗi hệ thống' }); }
+            res.json({ html, empty: orders.length === 0, page, totalPages});
+        });
+    }catch(error){
+        console.error("Lỗi khi tải đơn hàng:", error);
+        return res.status(500).json({ error: "Lỗi hệ thống khi tải đơn hàng" });
+    }
+    
+}
+
+module.exports = { ORDER_STATUS_FLOW, updateOrderStatus, getOrders };

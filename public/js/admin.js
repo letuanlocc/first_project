@@ -310,20 +310,54 @@ openAdminTab(window.location.hash.replace('#', ''));
 const adminOrderFilters = document.querySelectorAll('#adminOrderFilters [data-filter]');
 const adminOrderRows = document.querySelectorAll('#adminOrderBody tr');
 const adminOrderEmpty = document.getElementById('adminOrderEmpty');
+const adminOrderBody = document.getElementById('adminOrderBody');
+loadOrders('all', 1)
+
+async function loadOrders(status, pages){
+    try{
+        const response = await fetch(`/api/admin/orders?status=${status}&page=${pages}`)
+
+        if(!response.ok){
+            throw new Error('Lỗi tải đơn hàng')
+        }
+
+        const data = await response.json()
+
+        adminOrderBody.innerHTML = data.html
+        adminOrderEmpty.hidden = !data.empty
+        renderAdminPager(data.page, data.totalPages)
+    }catch(err){
+        console.error(err)
+    }
+}
+
+let currentStatus = 'all';
+
+const adminOrderPagination = document.getElementById('adminOrderPagination');
+
+function renderAdminPager(page, totalPages) {
+    if (totalPages <= 1) { adminOrderPagination.innerHTML = ''; return; }
+    let html = '<nav class="pagination" aria-label="Phân trang đơn hàng">';
+    for (let n = 1; n <= totalPages; n++) {
+        html += n === page
+            ? `<span class="page-link is-current" aria-current="page">${n}</span>`
+            : `<button type="button" class="page-link" data-page="${n}">${n}</button>`;
+    }
+    adminOrderPagination.innerHTML = html + '</nav>';
+}
 
 adminOrderFilters.forEach((button) => {
     button.addEventListener("click", () => {
-        const filter = button.dataset.filter;
-        let visible = 0;
-
         adminOrderFilters.forEach((other) => other.classList.toggle('active', other === button));
-        adminOrderRows.forEach((row) => {
-            const show = filter === 'all' || row.dataset.status === filter;
-            row.hidden = !show;
-            if (show) visible += 1;
-        });
-        adminOrderEmpty.hidden = visible > 0;
+        currentStatus = button.dataset.filter
+        loadOrders(currentStatus, 1)
     });
+});
+
+adminOrderPagination.addEventListener('click', (e) => {
+    const pageButton = e.target.closest('[data-page]');
+    if (!pageButton) return;
+    loadOrders(currentStatus, Number(pageButton.dataset.page));
 });
 
 document.addEventListener('click', async (event) => {
