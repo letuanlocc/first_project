@@ -32,35 +32,51 @@ openTab(window.location.hash.replace('#', ''));
 const orderFilters = document.querySelectorAll('#orderFilters [data-filter]');
 const orderCards = document.querySelectorAll('#orderList .order-card');
 const orderEmpty = document.getElementById('orderEmpty');
+const orderList = document.getElementById('orderList');
+loadOrders('all', 1);
+
+async function loadOrders(status, page){
+        try{
+            const response = await fetch(`/api/orders?status=${status}&page=${page}`)
+
+            if(!response.ok){
+                throw new Error('Lỗi tải đơn hàng')
+            }
+
+            const data = await response.json()
+            
+            orderList.innerHTML = data.html
+            orderEmpty.hidden = !data.empty
+        }catch(err){
+            console.error(err)
+        }
+    }
+let currentStatus = 'all';      // trạng thái đang chọn, khớp nút "Tất cả" đang active
 
 orderFilters.forEach((button) => {
     button.addEventListener('click', () => {
-        const filter = button.dataset.filter;
-        let visible = 0;
-
         orderFilters.forEach((other) => other.classList.toggle('active', other === button));
-        orderCards.forEach((card) => {
-            const show = filter === 'all' || card.dataset.status === filter;
-            card.hidden = !show;
-            if (show) visible += 1;
-        });
-        orderEmpty.hidden = visible > 0;
+        currentStatus = button.dataset.filter;
+        loadOrders(currentStatus, 1);
     });
 });
 
+orderList.addEventListener('click', (e) => {
+    const pageButton = e.target.closest('[data-page]');
+    if (!pageButton) return;
+    loadOrders(currentStatus, Number(pageButton.dataset.page));
+});
+// exmample: 
+
 /* ===== Hỏi lại trước khi hủy, xóa ===== */
-document.querySelectorAll('.confirm-slot').forEach((slot) => {
+orderList.addEventListener('click', (e) => {
+    const slot = e.target.closest('.confirm-slot');
+    if (!slot) return;                          // click không liên quan thì bỏ qua
     const askButton = slot.querySelector('.js-ask');
     const box = slot.querySelector('.confirm-box');
 
-    askButton.addEventListener('click', () => {
-        askButton.hidden = true;
-        box.hidden = false;
-    });
-    slot.querySelector('.js-keep').addEventListener('click', () => {
-        box.hidden = true;
-        askButton.hidden = false;
-    });
+    if (e.target.closest('.js-ask'))  { askButton.hidden = true;  box.hidden = false; }
+    if (e.target.closest('.js-keep')) { box.hidden = true;  askButton.hidden = false; }
 });
 
 /* ===== Form thêm địa chỉ ===== */

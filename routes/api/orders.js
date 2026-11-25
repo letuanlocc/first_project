@@ -6,7 +6,8 @@ const order = require('../../controllers/api/orderController');
 
 router.use(requireAuth);
 
-router.post('/', order.placeOrder);         // đặt hàng từ giỏ
+router.post('/', order.placeOrder);  
+router.get('/', order.getMyOrders)       // đặt hàng từ giỏ
 router.patch('/:id', order.updateOrder);    // { status: 'cancelled' | 'delivered' }
 
 module.exports = router;

@@ -32,7 +32,8 @@ router.route('/categories/:id')
     .delete(category.deleteCategory);
 
 // Đơn hàng
-router.patch('/orders/:id', order.updateOrderStatus);       // { status }
+router.get('/orders', order.getOrders) 
+router.patch('/orders/:id', order.updateOrderStatus);      // { status }
 
 // Giá
 router.route('/products/:id/price-changes')

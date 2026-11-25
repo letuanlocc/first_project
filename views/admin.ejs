@@ -30,21 +30,15 @@
 </header>
 
 <%
-    // orders: [{ id, createdAt, status, total_amount, shipping_address, phone, receiver_name, User: { username } }] (chưa có dữ liệu, truyền từ route sau)
-    const orders = Array.isArray(locals.orders) ? locals.orders : [];
-    const statusMap = {
-        processing: 'Chờ xác nhận',
-        shipping: 'Đang giao',
-        delivered: 'Đã giao',
-        cancelled: 'Đã hủy'
-    };
-    const countByStatus = status => orders.filter(order => order.status === status).length;
+    // orderCounts: { all, processing, shipping, delivered, cancelled }
+    // Danh sách đơn được tải (phân trang) bằng GET /api/admin/orders trong admin.js
+    const counts = locals.orderCounts || { all: 0, processing: 0, shipping: 0, delivered: 0, cancelled: 0 };
 %>
 <main class="admin-main">
 
     <div class="admin-tabs" role="tablist" aria-label="Khu vực quản trị">
         <button type="button" class="admin-tab active" role="tab" data-admin-tab="products">Sản phẩm &amp; danh mục</button>
-        <button type="button" class="admin-tab" role="tab" data-admin-tab="orders">Đơn hàng (<%= orders.length %>)</button>
+        <button type="button" class="admin-tab" role="tab" data-admin-tab="orders">Đơn hàng (<%= counts.all %>)</button>
     </div>
 
     <div data-admin-panel="products">
@@ -153,11 +147,11 @@
             <div class="card-head">
                 <h2>Đơn hàng</h2>
                 <div class="chip-row" id="adminOrderFilters">
-                    <button type="button" class="sort-btn active" data-filter="all">Tất cả (<%= orders.length %>)</button>
-                    <button type="button" class="sort-btn" data-filter="processing">Chờ xác nhận (<%= countByStatus('processing') %>)</button>
-                    <button type="button" class="sort-btn" data-filter="shipping">Đang giao (<%= countByStatus('shipping') %>)</button>
-                    <button type="button" class="sort-btn" data-filter="delivered">Đã giao (<%= countByStatus('delivered') %>)</button>
-                    <button type="button" class="sort-btn" data-filter="cancelled">Đã hủy (<%= countByStatus('cancelled') %>)</button>
+                    <button type="button" class="sort-btn active" data-filter="all">Tất cả (<%= counts.all %>)</button>
+                    <button type="button" class="sort-btn" data-filter="processing">Chờ xác nhận (<%= counts.processing %>)</button>
+                    <button type="button" class="sort-btn" data-filter="shipping">Đang giao (<%= counts.shipping %>)</button>
+                    <button type="button" class="sort-btn" data-filter="delivered">Đã giao (<%= counts.delivered %>)</button>
+                    <button type="button" class="sort-btn" data-filter="cancelled">Đã hủy (<%= counts.cancelled %>)</button>
                 </div>
             </div>
 
@@ -174,35 +168,10 @@
                         </tr>
                     </thead>
                     <tbody id="adminOrderBody">
-                        <% orders.forEach(order => { %>
-                            <tr data-status="<%= order.status %>">
-                                <td>
-                                    <strong>DH<%= String(order.id).padStart(4, '0') %></strong>
-                                    <div class="cell-sub"><%= order.createdAt ? new Date(order.createdAt).toLocaleDateString('vi-VN') : '' %></div>
-                                </td>
-                                <td>
-                                    <%= order.receiver_name || (order.User ? order.User.username : '') %>
-                                    <div class="cell-sub"><%= order.phone || '' %></div>
-                                </td>
-                                <td class="cell-wide"><%= order.shipping_address || '' %></td>
-                                <td><strong><%= Number(order.total_amount || 0).toLocaleString('vi-VN') %>đ</strong></td>
-                                <td><span class="status-badge status-<%= order.status %>"><%= statusMap[order.status] || order.status %></span></td>
-                                <td>
-                                    <% if (order.status === 'processing') { %>
-                                        <button type="button" class="btn btn-primary btn-sm" data-action-url="/api/admin/orders/<%= order.id %>" data-method="PATCH" data-body='{"status":"shipping"}'>Xác nhận &amp; giao</button>
-                                    <% } %>
-                                    <% if (order.status === 'shipping') { %>
-                                        <span class="cell-sub">Chờ khách xác nhận đã nhận</span>
-                                    <% } %>
-                                    <% if (order.status === 'processing' || order.status === 'shipping') { %>
-                                        <button type="button" class="btn btn-danger btn-sm" data-action-url="/api/admin/orders/<%= order.id %>" data-method="PATCH" data-body='{"status":"cancelled"}'>Hủy</button>
-                                    <% } %>
-                                </td>
-                            </tr>
-                        <% }) %>
                     </tbody>
                 </table>
-                <div class="empty-box" id="adminOrderEmpty" <%= orders.length ? 'hidden' : '' %>>Chưa có đơn hàng nào.</div>
+                <div class="empty-box" id="adminOrderEmpty" hidden>Chưa có đơn hàng nào.</div>
+                <div id="adminOrderPagination"></div>
             </div>
         </section>
     </div>
