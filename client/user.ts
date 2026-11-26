@@ -1,15 +1,13 @@
-const searchInput = document.getElementById('product-search-input');
-const productSearchForm = document.getElementById('product-search-form');
-const addCart = document.getElementById('addCart');
-// if (searchInput && productSearchForm) {
-//     productSearchForm.addEventListener('submit', () => {
-//         //
-//     });
-// }
-const deleteCartButtons = document.querySelectorAll('.remove-cart-item');
+import { byId, closestTarget, findById } from './dom.js';
+import type { ApiMessage } from './types.js';
 
-function showToast(message, type = 'success') {
-    let container = document.querySelector('.toast-container');
+const addCart = findById<HTMLButtonElement>('addCart');
+const deleteCartButtons = document.querySelectorAll<HTMLButtonElement>('.remove-cart-item');
+
+type ToastType = 'success' | 'error';
+
+function showToast(message: string, type: ToastType = 'success'): void {
+    let container = document.querySelector<HTMLDivElement>('.toast-container');
     if (!container) {
         container = document.createElement('div');
         container.className = 'toast-container';
@@ -35,24 +33,24 @@ function showToast(message, type = 'success') {
 }
 
 if (addCart) {
-    addCart.addEventListener("click", async ()=> {
-        try{
-            const response = await fetch(`/api/cart/items`,{
+    addCart.addEventListener("click", async () => {
+        try {
+            const response = await fetch(`/api/cart/items`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
                 },
                 body: JSON.stringify({
                     productId: addCart.dataset.productId,
-                    quantity: Number(document.getElementById('qtyValue')?.textContent) || 1
+                    quantity: Number(findById('qtyValue')?.textContent) || 1
                 })
-            })
+            });
 
             if (response.redirected) {
                 window.location.href = response.url;
                 return;
             }
-            const data = await response.json();
+            const data: ApiMessage = await response.json();
 
             if (!response.ok) {
                 showToast(data.error || "Có lỗi xảy ra", 'error');
@@ -60,32 +58,33 @@ if (addCart) {
             }
 
             showToast(data.message || "Đã thêm sản phẩm vào giỏ hàng!");
-        }catch(err){
+        } catch (err) {
             console.error("Lỗi update:", err);
             showToast("Có lỗi xảy ra khi thêm sản phẩm vào giỏ hàng", 'error');
         }
-    })
+    });
 }
 
 /* ===== Nút +/- trong giỏ hàng: PATCH /api/cart/items/:productId { quantity } ===== */
-async function changeCartQuantity(button, step) {
-    const stepper = button.closest('.qty-stepper');
+async function changeCartQuantity(button: HTMLElement, step: number): Promise<void> {
+    const stepper = button.closest<HTMLElement>('.qty-stepper');
+    if (!stepper) return;
     const quantity = Number(stepper.dataset.quantity) + step;
 
-    try{
-        const response = await fetch(`/api/cart/items/${stepper.dataset.productId}`,{
+    try {
+        const response = await fetch(`/api/cart/items/${stepper.dataset.productId}`, {
             method: "PATCH",
             headers: {
                 "Content-Type": "application/json"
             },
             body: JSON.stringify({ quantity: Math.max(0, quantity) })
-        })
+        });
 
         if (response.redirected) {
             window.location.href = response.url;
             return;
         }
-        const data = await response.json();
+        const data: ApiMessage = await response.json();
 
         if (!response.ok) {
             showToast(data.error || "Có lỗi xảy ra", 'error');
@@ -93,7 +92,7 @@ async function changeCartQuantity(button, step) {
         }
 
         window.location.reload();
-    }catch(err){
+    } catch (err) {
         console.error("Lỗi cập nhật giỏ hàng:", err);
         showToast("Có lỗi xảy ra khi cập nhật giỏ hàng", 'error');
     }
@@ -101,36 +100,36 @@ async function changeCartQuantity(button, step) {
 
 deleteCartButtons.forEach((button) => {
     button.addEventListener("click", () => changeCartQuantity(button, -1));
-})
+});
 
-document.querySelectorAll('.add-cart-item').forEach((button) => {
+document.querySelectorAll<HTMLButtonElement>('.add-cart-item').forEach((button) => {
     button.addEventListener("click", () => changeCartQuantity(button, 1));
-})
+});
 
-document.querySelectorAll('.favorite').forEach((button) => {
+document.querySelectorAll<HTMLButtonElement>('.favorite').forEach((button) => {
     button.addEventListener("click", () => {
         const pressed = button.getAttribute('aria-pressed') === 'true';
         button.setAttribute('aria-pressed', String(!pressed));
-    })
-})
+    });
+});
 
 /* ===== Chọn số lượng ở trang chi tiết ===== */
-const qtyValue = document.getElementById('qtyValue');
+const qtyValue = findById('qtyValue');
 if (qtyValue) {
-    const qtyWarn = document.getElementById('qtyWarn');
+    const qtyWarn = byId('qtyWarn');
     const qtyMax = Number(qtyValue.dataset.max);
 
-    document.getElementById('qtyMinus').addEventListener('click', () => {
-        qtyValue.textContent = Math.max(1, Number(qtyValue.textContent) - 1);
+    byId('qtyMinus').addEventListener('click', () => {
+        qtyValue.textContent = String(Math.max(1, Number(qtyValue.textContent) - 1));
         qtyWarn.hidden = true;
     });
-    document.getElementById('qtyPlus').addEventListener('click', () => {
+    byId('qtyPlus').addEventListener('click', () => {
         const next = Number(qtyValue.textContent) + 1;
         if (Number.isFinite(qtyMax) && qtyMax > 0 && next > qtyMax) {
             qtyWarn.hidden = false;
             return;
         }
-        qtyValue.textContent = next;
+        qtyValue.textContent = String(next);
         qtyWarn.hidden = true;
     });
 }
@@ -138,11 +137,11 @@ if (qtyValue) {
 /* ===== Nút gọi API dùng chung =====
    <button data-action-url="/..." data-method="DELETE" data-body="{...}">
    Thành công: hiện thông báo rồi tải lại trang. Lỗi: hiện thông báo lỗi. */
-async function sendJson(url, method, body) {
+async function sendJson(url: string, method: string, body?: unknown): Promise<{ ok: boolean; data: ApiMessage } | null> {
     const response = await fetch(url, {
         method,
         headers: { "Content-Type": "application/json" },
-        body: body === undefined ? undefined : JSON.stringify(body)
+        body: body === undefined ? null : JSON.stringify(body)
     });
 
     if (response.redirected) {
@@ -150,7 +149,7 @@ async function sendJson(url, method, body) {
         return null;
     }
 
-    let data = {};
+    let data: ApiMessage = {};
     try {
         data = await response.json();
     } catch (err) {
@@ -160,12 +159,12 @@ async function sendJson(url, method, body) {
 }
 
 document.addEventListener('click', async (event) => {
-    const button = event.target.closest('[data-action-url]');
+    const button = closestTarget(event, '[data-action-url]');
     if (!button) return;
 
     try {
         const body = button.dataset.body ? JSON.parse(button.dataset.body) : undefined;
-        const result = await sendJson(button.dataset.actionUrl, button.dataset.method || 'POST', body);
+        const result = await sendJson(button.dataset.actionUrl ?? '', button.dataset.method || 'POST', body);
         if (!result) return;
 
         if (!result.ok) {
@@ -185,14 +184,14 @@ document.addEventListener('click', async (event) => {
    <form data-ajax action="/api/..." method="POST" data-method="PATCH" data-redirect="/profile#orders">
    data-method dùng cho PATCH/DELETE vì thẻ form HTML chỉ hỗ trợ GET/POST. */
 document.addEventListener('submit', async (event) => {
-    const form = event.target.closest('form[data-ajax]');
+    const form = closestTarget<HTMLFormElement>(event, 'form[data-ajax]');
     if (!form) return;
     event.preventDefault();
 
     try {
         const body = Object.fromEntries(new FormData(form));
         const method = (form.dataset.method || form.getAttribute('method') || 'POST').toUpperCase();
-        const result = await sendJson(form.getAttribute('action'), method, body);
+        const result = await sendJson(form.getAttribute('action') ?? '', method, body);
         if (!result) return;
 
         if (!result.ok) {
@@ -213,4 +212,3 @@ document.addEventListener('submit', async (event) => {
         showToast("Có lỗi xảy ra", 'error');
     }
 });
-

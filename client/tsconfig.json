@@ -1,0 +1,24 @@
+{
+  // Code chạy trên trình duyệt: client/*.ts  ->  public/js/*.js
+  // Các view nạp bằng <script type="module" src="/js/...">.
+  "compilerOptions": {
+    "rootDir": ".",
+    "outDir": "../public/js",
+
+    "target": "es2022",
+    "module": "es2022",
+    "moduleResolution": "bundler",
+    "lib": ["es2022", "dom", "dom.iterable"],
+    "types": [],
+
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "noFallthroughCasesInSwitch": true,
+
+    "verbatimModuleSyntax": true,
+    "isolatedModules": true,
+    "moduleDetection": "force",
+    "skipLibCheck": true
+  },
+  "include": ["./**/*.ts"]
+}
