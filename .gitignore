@@ -3,3 +3,5 @@
 *.sql
 node_modules/
 data/**/*
+# JS build từ client/*.ts (npm run build:client)
+public/js/
