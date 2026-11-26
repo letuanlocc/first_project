@@ -12,9 +12,9 @@ const categoryName = document.getElementById("categoryName")
 const categoryToDelete = document.getElementById("categoryToDelete");
 const productTableContainer = document.getElementById("productTableContainer")
 const productTableBody = document.getElementById('productTableBody');
-
 console.log("ADMIN JS RUN");
 console.log(updateProductBtn);
+
 searchProductBtn.addEventListener("click", async () => {
     console.log("searchProduct ==========")
     const name = productName.value.trim();
@@ -60,6 +60,7 @@ searchProductBtn.addEventListener("click", async () => {
         alert("Có lỗi xảy ra khi tìm sản phẩm");
     }
 });
+
 updateProductBtn.addEventListener("click", async () => {
     
     if (!productId) {
@@ -221,8 +222,17 @@ viewProductBtn.addEventListener("click", async() => {
     if(productTableContainer.style.display === 'none'){
         productTableContainer.style.display = 'block'
         viewProductBtn.innerText = 'Ẩn bảng sản phẩm'
-        try {
-            const response = await fetch('/api/admin/products'); 
+
+        await loadProducts(1);
+    }else{
+        productTableContainer.style.display = 'none'
+        viewProductBtn.innerText = 'Xem tất cả sản phẩm'
+    }
+})
+
+async function loadProducts(page){
+    try {
+            const response = await fetch(`/api/admin/products?page=${page}`); 
             const result = await response.json(); 
 
             if (response.ok && result.products) {
@@ -232,7 +242,7 @@ viewProductBtn.addEventListener("click", async() => {
                 result.products.forEach((product, index) => {
                     const row = document.createElement('tr');
                     row.innerHTML = `
-                        <td>${index + 1}</td>
+                        <td>${product.id}</td>
                         <td>${product.name}</td>
                         <td>${product.price}</td>
                         <td>${product.stock}</td>
@@ -243,17 +253,50 @@ viewProductBtn.addEventListener("click", async() => {
                     `;
                     productTableBody.appendChild(row);
                 });
+
+                renderPagination(result.pagination.page, result.pagination.totalPages);
                 } else {
                     alert(result.error || "Không thể tải danh sách sản phẩm");
                 }
         }catch (error) {
             console.error('Lỗi kết nối:', error);
         }
-    }else{
-        productTableContainer.style.display = 'none'
-        viewProductBtn.innerText = 'Xem tất cả sản phẩm'
+}
+
+const productPagination = document.getElementById('productPagination');
+
+productPagination.addEventListener('click', async (event) => {
+    const button = event.target.closest('button[data-page]');
+
+    if (!button) return;
+
+    const page = Number(button.dataset.page);
+
+    await loadProducts(page)
+});
+
+// Trả về HTML các nút trang, rút gọn: 1 … 4 [5] 6 … 24
+function buildPageButtons(page, totalPages) {
+    let html = '';
+    let previous = 0;
+
+    for (let n = 1; n <= totalPages; n++) {
+        const show = n === 1 || n === totalPages || Math.abs(n - page) <= 1;
+        if (!show) continue;
+
+        if (n - previous > 1) html += '<span class="page-gap" aria-hidden="true">…</span>';
+        previous = n;
+
+        html += n === page
+            ? `<span class="page-link is-current" aria-current="page">${n}</span>`
+            : `<button type="button" class="page-link" data-page="${n}">${n}</button>`;
     }
-})
+    return html;
+}
+
+function renderPagination(page, totalPages){
+    productPagination.innerHTML = totalPages > 1 ? buildPageButtons(page, totalPages) : '';
+}
 
 productTableBody.addEventListener("click" , async(e) =>{
     if(e.target.classList.contains("btn-edit") || e.target.classList.contains("btn-delete") ){
@@ -337,13 +380,8 @@ const adminOrderPagination = document.getElementById('adminOrderPagination');
 
 function renderAdminPager(page, totalPages) {
     if (totalPages <= 1) { adminOrderPagination.innerHTML = ''; return; }
-    let html = '<nav class="pagination" aria-label="Phân trang đơn hàng">';
-    for (let n = 1; n <= totalPages; n++) {
-        html += n === page
-            ? `<span class="page-link is-current" aria-current="page">${n}</span>`
-            : `<button type="button" class="page-link" data-page="${n}">${n}</button>`;
-    }
-    adminOrderPagination.innerHTML = html + '</nav>';
+    adminOrderPagination.innerHTML =
+        `<nav class="pagination" aria-label="Phân trang đơn hàng">${buildPageButtons(page, totalPages)}</nav>`;
 }
 
 adminOrderFilters.forEach((button) => {
